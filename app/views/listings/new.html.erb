@@ -1,0 +1,9 @@
+<h1>List a New Property<h1>
+<p>Find me in app/views/listings/new.html.erb</p>
+
+
+
+
+<%= form_for :listing do |f| %>  
+  <%= f.select :homeType, options_for_select(Listing.allHomeType, 1) %>
+<% end %>

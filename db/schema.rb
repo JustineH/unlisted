@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160417002848) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> e904f85b169a7a3f704ef6982aa4763fae4a4cfb
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "bookmarks", force: true do |t|
     t.boolean  "favourite",  default: false
     t.integer  "user_id"
@@ -81,4 +86,6 @@ ActiveRecord::Schema.define(version: 20160417002848) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> e904f85b169a7a3f704ef6982aa4763fae4a4cfb
 end
