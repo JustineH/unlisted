@@ -172,7 +172,7 @@ end
 
 class Zolo_House_Search
 
-   attr_accessor :mortgage, :taxes, :type, :year, :walkscore, :about, :bedrooms, :full_bathrooms, :half_bathrooms, :fireplaces, :tax_year, :strata_fees, :area, :levels, :basement, :value, :size
+   attr_accessor :mortgage, :taxes, :type, :year, :walkscore, :about, :bedrooms, :full_bathrooms, :half_bathrooms, :fireplaces, :tax_year, :area, :levels, :basement, :value, :size
 
   def initialize(url3)
     @page = Nokogiri::HTML(open(url3))
@@ -189,10 +189,9 @@ class Zolo_House_Search
     @half_bathrooms = get_half_bathrooms[20]
     @fireplaces = get_fireplaces[21]
     @basement = get_basement[22]
-    @tax_year = get_tax_year
-    @strata_fees = get_strata_fees
-    @area = get_area  #i.e. Vancouver East
-    @size = get_size
+    @tax_year = get_tax_year[32]
+    @area = get_area[38]  #i.e. Vancouver East
+    @size = get_size[7]
   end
 
   def get_value
@@ -251,13 +250,12 @@ class Zolo_House_Search
     @page.search('.priv').map {|element| element.inner_text}
   end
 
-  def get_strata_fees
-  end
-
   def get_area
+    @page.search('.priv').map {|element| element.inner_text}
   end
 
   def get_size
+    @page.search('.priv').map {|element| element.inner_text}
   end
 
   def to_s
@@ -295,9 +293,10 @@ class Zolo_House_Search
     puts "-"*40
     puts "Tax Year: ".colorize(:green) + "#{@tax_year}"
     puts "-"*40
-    puts "Strata Fees: ".colorize(:green) + "#{@strata_fees}"
-    puts "-"*40
     puts "Area: ".colorize(:green) + "#{@area}"
+    puts "-"*40
+    puts "Size (sqft): ".colorize(:green) + "#{@size}"
+    puts "-"
   end
 
 end
