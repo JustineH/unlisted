@@ -1,33 +1,28 @@
 class CreateListings < ActiveRecord::Migration
   def change
    create_table :listings do |t|
-      t.belongs_to :user, index: true 
+      t.references :user, index: true 
 
-      Address
-      CityArea
+      # Address
+      # t.string :cityArea
       t.integer :numOfBed, default: 0 
       t.integer :numOfBath, default: 0 
       t.integer :sqft, default: 0 
-      t.integer YearBuilt
-      HomeType
-      TypeOfHome
-      TypeOwnership
+      t.date :yearBuilt
+      t.integer :homeType  
+      t.string :typeOwnership
       # Size
-      t.integer :yearBuilt
-      t.integer :age
-      t.integer :stories
       t.integer :levels, default: 0 
-      t.integer :bedrooms, default: 0 
       t.integer :fullBathrooms, default: 0 
       t.integer :halfBathrooms, default: 0 
       t.integer :fireplaces, default: 0 
       t.integer :taxes, default: 0 
-      t.integer :taxYear
+      t.date :taxYear
       t.integer :strataFees, default: 0 
-      lotSize(sq ft)
+      t.integer :lotSize  #sqft
       # Display: acres, sq m, hectares
       t.integer :walkscore, default: 0 
-      t.string :extraFeaturesDescription
+      t.text :extraFeaturesDescription
       #Condo Extras
       t.integer :parking, default: 0 
       t.integer :storage, default: 0 
@@ -42,7 +37,7 @@ class CreateListings < ActiveRecord::Migration
       t.boolean :gym, default: false
       t.boolean :amenitiesRoom, default: false
       # Other
-      t.boolean :airconditioning
+      t.boolean :airconditioning, default: false
       t.boolean :washer, default: false
       t.boolean :dishwasher, default: false
       t.boolean :stove, default: false
