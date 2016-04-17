@@ -296,19 +296,28 @@ class Zolo_House_Search
     puts "Area: ".colorize(:green) + "#{@area}"
     puts "-"*40
     puts "Size (sqft): ".colorize(:green) + "#{@size}"
-    puts "-"
+    puts "-"*40
+  end
+end
+
+class Zolo_Townhouse_Search
+  def initialize(url4)
+    @page = Nokogiri::HTML(open(url4))
   end
 
 end
 
 begin
-  url = 'https://www.zolo.ca/vancouver-real-estate'
-  url2 = 'https://www.zolo.ca/vancouver-real-estate/735-w-15th-avenue/105'
-  url3 = 'https://www.zolo.ca/west-vancouver-real-estate/5076-pinetree-crescent'
+  url = 'https://www.zolo.ca/vancouver-real-estate' #listings page
+  url2 = 'https://www.zolo.ca/vancouver-real-estate/735-w-15th-avenue/105' #condos
+  url3 = 'https://www.zolo.ca/west-vancouver-real-estate/5076-pinetree-crescent' #houses
+  url4 = 'https://www.zolo.ca/vancouver-real-estate/2128-adanac-street' #townhouses
   zolo = Zolo.new(url)
   # puts zolo.to_s
   zolo_condo = Zolo_Condo_Search.new(url2)
   # puts zolo_condo.to_s
   zolo_house = Zolo_House_Search.new(url3)
-  puts zolo_house.to_s
+  # puts zolo_house.to_s
+  zolo_townhouse = Zolo_Townhouse_Search.new(url4)
+  puts zolo_townhouse.to_s
 end
