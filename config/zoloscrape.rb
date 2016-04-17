@@ -304,7 +304,7 @@ end
 begin
   url = 'https://www.zolo.ca/vancouver-real-estate'
   url2 = 'https://www.zolo.ca/vancouver-real-estate/735-w-15th-avenue/105'
-  url3 = 'https://www.zolo.ca/vancouver-real-estate/1081-w-7-avenue'
+  url3 = 'https://www.zolo.ca/west-vancouver-real-estate/5076-pinetree-crescent'
   zolo = Zolo.new(url)
   # puts zolo.to_s
   zolo_condo = Zolo_Condo_Search.new(url2)
