@@ -46,6 +46,13 @@ class Zolo
     @page.search('.age>span').map {|element| element.inner_text}
   end
 
+  def csv
+    CSV.open("file.csv", "wb") do |csv|
+      csv << %w[city address price bedroom bathroom sqft age]
+        csv << [@city, @address, @price, @bedroom, @bathroom, @sqft, @age]
+    end
+  end
+  
   def to_s
     puts "-"*40
     puts "City:".colorize(:green) + " #{@city}"
@@ -157,6 +164,13 @@ class Zolo_Condo_Search
       end
     else 
       house_image
+    end
+  end
+
+  def csv
+    CSV.open("condos.csv", "wb") do |csv|
+      csv << %w[address mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year strata_fees area image]
+      csv << [address @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @strata_fees, @area, @image]
     end
   end
 
@@ -305,6 +319,13 @@ class Zolo_House_Search
       house_image
     end
   end
+  
+  def csv
+    CSV.open("homes.csv", "wb") do |csv|
+      csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
+      csv << [@address @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]
+    end
+  end
 
   def to_s
     puts "-".colorize(:yellow)*40 
@@ -446,6 +467,13 @@ class Zolo_Townhouse_Search
       end
     else 
       house_image
+    end
+  end
+
+  def csv
+    CSV.open("homes.csv", "wb") do |csv|
+      csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
+      csv << [@address @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]
     end
   end
 
