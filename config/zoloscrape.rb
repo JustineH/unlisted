@@ -7,7 +7,6 @@ class Zolo
 
   def initialize(url)
     @page = Nokogiri::HTML(open(url))
-    # @url = ARGV[0]
     @city = get_city
     @address = get_address
     @price = get_price
@@ -303,7 +302,7 @@ end
 class Zolo_Townhouse_Search
   def initialize(url4)
     @page = Nokogiri::HTML(open(url4))
- @value = get_value.join
+    @value = get_value.join
     @mortgage = get_mortgage[0]
     @taxes = get_taxes[0]
     @type = get_type[2] #house type
@@ -426,11 +425,11 @@ begin
   url3 = 'https://www.zolo.ca/west-vancouver-real-estate/5076-pinetree-crescent' #houses
   url4 = 'https://www.zolo.ca/vancouver-real-estate/3562-bella-vista-street' #townhouses
   zolo = Zolo.new(url)
-  # puts zolo.to_s
+  puts zolo.to_s
   zolo_condo = Zolo_Condo_Search.new(url2)
-  # puts zolo_condo.to_s
+  puts zolo_condo.to_s
   zolo_house = Zolo_House_Search.new(url3)
-  # puts zolo_house.to_s
+  puts zolo_house.to_s
   zolo_townhouse = Zolo_Townhouse_Search.new(url4)
   puts zolo_townhouse.to_s
 end
