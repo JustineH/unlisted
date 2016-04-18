@@ -25,12 +25,44 @@
     position: relative;
   }
 
-  #carousel-inside{
+  /*#carousel-inside{
     position: absolute;
+  }*/
+  .overlay { 
+/*    color:#fff;
+    position:absolute;
+    z-index:1;
+    top:10%;
+    left:0;
+    width:100%;
+    text-align:center;*/
+    position: absolute;
+    z-index:2;
+    top: 50px;
+    width: 100%;
+    color: #FFF;
+  }
+
+
+  .shadow-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f2;
+    background: -webkit-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: -webkit-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: -moz-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: -ms-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: -o-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background-color: transparent;
   }
 
   #tagline {
-    color: #000;
+    color: #fff;
   }
 
   .col-lg-6 {
