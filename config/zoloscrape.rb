@@ -1,5 +1,6 @@
 require 'nokogiri'
 require "css_parser"
+require 'csv'
 require 'open-uri'
 require 'colorize'
 
@@ -46,6 +47,13 @@ class Zolo
     @page.search('.age>span').map {|element| element.inner_text}
   end
 
+  def csv
+    CSV.open("file.csv", "wb") do |csv|
+      csv << %w[city address price bedroom bathroom sqft age]
+        csv << [@city, @address, @price, @bedroom, @bathroom, @sqft, @age]
+    end
+  end
+  
   def to_s
     puts "-"*40
     puts "City:".colorize(:green) + " #{@city}"
@@ -70,6 +78,7 @@ class Zolo_Condo_Search
 
   def initialize(url2)
     @page = Nokogiri::HTML(open(url2))
+    @address = get_address[0]
     @mortgage = get_mortgage[0]
     @taxes = get_taxes[0]
     @type = get_type[2] #house type
@@ -85,6 +94,10 @@ class Zolo_Condo_Search
     @strata_fees = get_strata_fees[29]
     @area = get_area.last  #i.e. Vancouver East
     @image = get_image
+  end
+
+  def get_address
+    @page.search('.address').map {|element| element.inner_text}
   end
 
   def get_mortgage
@@ -155,11 +168,20 @@ class Zolo_Condo_Search
     end
   end
 
+  def csv
+    CSV.open("condos.csv", "wb") do |csv|
+      csv << %w[address mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year strata_fees area image]
+      csv << [@address, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @strata_fees, @area, @image]
+    end
+  end
+
   def to_s
     puts "Condo listings Only: ".colorize(:red)
     puts "the url for this page will look like this for Vancouver:".colorize(:blue)
     puts "http://www.zolo.ca/vancouver-real-estate/(street address)/(house number)".colorize(:blue)
     puts "for example: ".colorize(:green) + "http://www.zolo.ca/vancouver-real-estate/3588-crowley-drive/1501".colorize(:magenta)
+    puts "-"*40
+    puts "Address: ".colorize(:green) + " #{@address}"
     puts "-"*40
     puts "Mortgage:(est): ".colorize(:green) + " #{@mortgage}"
     puts "-"*40
@@ -199,6 +221,7 @@ class Zolo_House_Search
 
   def initialize(url3)
     @page = Nokogiri::HTML(open(url3))
+    @address = get_address[0]
     @value = get_value.join
     @mortgage = get_mortgage[0]
     @taxes = get_taxes[0]
@@ -216,6 +239,10 @@ class Zolo_House_Search
     @area = get_area[38]  #i.e. Vancouver East
     @size = get_size[7]
     @image = get_image
+  end
+
+  def get_address
+    @page.search('.address').map {|element| element.inner_text}
   end
 
   def get_value
@@ -293,6 +320,13 @@ class Zolo_House_Search
       house_image
     end
   end
+  
+def csv
+  CSV.open("homes.csv", "wb") do |csv|
+    csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
+    csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]      
+  end
+end
 
   def to_s
     puts "-".colorize(:yellow)*40 
@@ -300,6 +334,8 @@ class Zolo_House_Search
     puts "the url for this page will look like this for Vancouver:".colorize(:blue)
     puts "http://www.zolo.ca/vancouver-real-estate/(street address)".colorize(:blue)
     puts "for example: ".colorize(:green) + "https://www.zolo.ca/vancouver-real-estate/1081-w-7-avenue".colorize(:magenta)
+    puts "-"*40
+    puts "Address: ".colorize(:green) + " #{@address}"
     puts "-"*40
     puts "House Value: ".colorize(:green) + " #{@value}"
     puts "-"*40
@@ -340,6 +376,7 @@ end
 class Zolo_Townhouse_Search
   def initialize(url4)
     @page = Nokogiri::HTML(open(url4))
+    @address = get_address[0]
     @value = get_value.join
     @mortgage = get_mortgage[0]
     @taxes = get_taxes[0]
@@ -356,6 +393,10 @@ class Zolo_Townhouse_Search
     @area = get_area[38]  #i.e. Vancouver East
     @size = get_size[7]
     @image = get_image
+  end
+
+  def get_address
+    @page.search('.address').map {|element| element.inner_text}
   end
 
   def get_value
@@ -430,12 +471,21 @@ class Zolo_Townhouse_Search
     end
   end
 
+  def csv
+    CSV.open("homes.csv", "wb") do |csv|
+      csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
+      csv << [@address.shift, @value.shift, @mortgage.shift, @taxes.shift, @type.shift, @year.shift, @walkscore.shift, @about.shift, @levels.shift, @bedrooms.shift, @full_bathrooms.shift, @half_bathrooms.shift, @fireplaces.shift, @tax_year.shift, @area.shift, @size.shift, @image.shift]      
+    end
+  end
+
   def to_s
     puts "-".colorize(:yellow)*40 
     puts "TOWNHOUSE listings Only: ".colorize(:red)
     puts "the url for this page will look like this for Vancouver:".colorize(:blue)
     puts "http://www.zolo.ca/vancouver-real-estate/(street address)".colorize(:blue)
     puts "for example: ".colorize(:green) + "https://www.zolo.ca/vancouver-real-estate/1081-w-7-avenue".colorize(:magenta)
+    puts "-"*40
+    puts "Address: ".colorize(:green) + " #{@address}"
     puts "-"*40
     puts "House Value: ".colorize(:green) + " #{@value}"
     puts "-"*40
@@ -478,13 +528,13 @@ end
   # url4 = 'https://www.zolo.ca/vancouver-real-estate/3562-bella-vista-street' #townhouses
   # zolo = Zolo.new(url)
   # puts zolo.to_s
-  # zolo_condo = Zolo_Condo_Search.new(url2)
-  # puts zolo_condo.to_s
-  # zolo_house = Zolo_House_Search.new(url3)
-  # puts zolo_house.to_s
-  # zolo_townhouse = Zolo_Townhouse_Search.new(url4)
-  # puts zolo_townhouse.to_s
-# end
+#   zolo_condo = Zolo_Condo_Search.new(url2)
+#   puts zolo_condo.to_s
+#   zolo_house = Zolo_House_Search.new(url3)
+#   puts zolo_house.to_s
+#   zolo_townhouse = Zolo_Townhouse_Search.new(url4)
+#   puts zolo_townhouse.to_s
+# # end
 
 
 # loop through listings pages
@@ -504,7 +554,9 @@ def format_address(arr)
   formated_arr = downcase_arr.map{|a| a.gsub(" ", "-")}
   # puts formated_arr
 end
+
 formated_address = format_address(unformatted_addresses)
+
 formated_address.each do |address|
   #condos
   if address.match(/\d{3,4}[-]\d{3,4}/)
@@ -512,11 +564,13 @@ formated_address.each do |address|
     condo_number = address.match(/\d{3,4}/)
     url2 = "https://www.zolo.ca/vancouver-real-estate/" + "#{condo_address}/" + "#{condo_number}"
     zolo_condo = Zolo_Condo_Search.new(url2)
-    puts zolo_condo.to_s
+    # puts zolo_condo.to_s
+    zolo_condo.csv
 else
     url = "https://www.zolo.ca/vancouver-real-estate/" + "#{address}"
     zolo_house = Zolo_House_Search.new(url)
-    puts zolo_house.to_s
+    # puts zolo_house.to_s
+    zolo_house.csv
   end
 end
 
