@@ -64,7 +64,7 @@
 
 /*Welcome Page*/
 
-  /*nav*/
+  /*nav bar*/
 
   .overlay { 
   /*color:#fff;
@@ -85,6 +85,7 @@
     background: transparent;
     width:100%;
     padding-right: 1.5em;
+     transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   }
   .nav a{
     color: #fff;
@@ -92,6 +93,13 @@
 
   .nav > li > a:hover, .nav > li > a:focus {
     background: transparent;
+  }
+
+  .navbar-bg {
+    position: fixed;
+    /*background: rgba(255, 255, 255, 0.95);*/
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
   }
 
   /*carousel*/
@@ -212,44 +220,47 @@
 
 
 /*test code*/
-  .jumbotron.vertical-center {
-    margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
-    /*position: relative*/
-  }
+ /*  .jumbotron.vertical-center {
+   margin-bottom: 0; Remove the default bottom margin of .jumbotron
+   position: relative
+ }
+ 
+ .vertical-center {
+   position: absolute;
+   min-height: 100%;
+    Fallback for vh unit
+   min-height: 50vh; 
+ 
+ 
+   You might also want to use
+                         'height' property instead.
+                         
+                         Note that for percentage values of
+                         'height' or 'min-height' properties,
+                         the 'height' of the parent element
+                         should be specified explicitly.
+   
+                         In this case the parent of '.vertical-center'
+                         is the <body> element
+ 
+   Make it a flex container
+ 
+   display: flex; 
+   
+   Align the bootstrap's container vertically
+   align-items : center;
+   
+   In legacy web browsers such as Firefox 9
+      we need to specify the width of the flex container
+   width: 100%;
+   
+   Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+      hence the bootstrap's container won't be aligned to the center anymore.
+   
+      Therefore, we should use the following declarations to get it centered again
+   justify-content : center;
+ } */
 
-  .vertical-center {
-    position: absolute;
-    /*min-height: 100%; */
-     /* Fallback for vh unit */
-    min-height: 50vh; 
 
 
-    /* You might also want to use
-                          'height' property instead.
-                          
-                          Note that for percentage values of
-                          'height' or 'min-height' properties,
-                          the 'height' of the parent element
-                          should be specified explicitly.
-    
-                          In this case the parent of '.vertical-center'
-                          is the <body> element */
-
-    /* Make it a flex container */
-
-    display: flex; 
-    
-    /* Align the bootstrap's container vertically */
-    align-items : center;
-    
-    /* In legacy web browsers such as Firefox 9
-       we need to specify the width of the flex container */
-    width: 100%;
-    
-    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
-       hence the bootstrap's container won't be aligned to the center anymore.
-    
-       Therefore, we should use the following declarations to get it centered again */
-    justify-content : center;
-  }
 
