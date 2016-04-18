@@ -78,7 +78,7 @@
     z-index:2;
   }
   .nav{
-    top:30px;
+    top:0px;
     z-index:10;
     background:#fff;
     color: #fff;
@@ -87,19 +87,30 @@
     padding-right: 1.5em;
      transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   }
-  .nav a{
-    color: #fff;
-  }
+
 
   .nav > li > a:hover, .nav > li > a:focus {
     background: transparent;
   }
 
+  .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
+  }
+  .navbar {
+    min-height:20px;
+  }
+
   .navbar-bg {
     position: fixed;
+    border-radius: 0px;
+    right: 0px;
     /*background: rgba(255, 255, 255, 0.95);*/
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+/*    padding-top: 0px;
+    padding-bottom: 15px;*/
   }
 
   /*carousel*/
