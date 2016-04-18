@@ -87,7 +87,7 @@ class Zolo_Condo_Search
     @levels = get_levels[16]
     @bedrooms = get_bedrooms[17]
     @bathrooms = get_bathrooms
-    @size = get_size
+    @size = get_size[7]
     @full_bathrooms = get_full_bathrooms[18]
     @half_bathrooms = get_half_bathrooms[19]
     @fireplaces = get_fireplaces[20]
@@ -179,7 +179,7 @@ class Zolo_Condo_Search
 
   def csv
     CSV.open("condos.csv", "ab") do |csv|
-      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @mortgage, @taxes, @type, @year, @walkscore, @about,   @fireplaces, @tax_year, @strata_fees, @area, @image]
+      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @size, @year, @type, @mortgage, @taxes,   @walkscore, @about,   @fireplaces, @tax_year, @strata_fees, @area, @image]
     end
   end
 
@@ -222,7 +222,8 @@ class Zolo_Condo_Search
     puts "Image(url(s)): ".colorize(:green) + "#{image}"
     puts "-"*40
     puts "total bathrooms: ".colorize(:green) + "#{@bathrooms}"
-    
+    puts "-"*40
+    puts "size: ".colorize(:green) + "#{@size}"
   end
 end
 
