@@ -1,185 +1,167 @@
 
 <div class="main-content">
 
-    <!-- You only need this form and the form-basic.css -->
+  <form class="form-basic" method="post" action="#">
 
-    <form class="form-basic" method="post" action="#">
+    <div class="form-title-row">
+        <h1>List Your Property</h1>
+    </div>
 
-        <div class="form-title-row">
-            <h1>List Your Property</h1>
-        </div>
+    <div class="form-row">
+        <label>
+            <span>Unit Number</span>
+            <input type="email" name="email" placeholder="Unit Number">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Street name</span>
+            <input type="text" name="name"placeholder="Street Name">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Size</span>
+            <input type="text" name="name" placeholder="sq ft">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Year Built</span>
+            <input type="text" name="name" placeholder="year">
+        </label>
+    </div>
 
-        <div class="form-row">
-            <label>
-                <span>Unit Number</span>
-                <input type="email" name="email">
-            </label>
-        </div>
-        <div class="form-row">
-            <label>
-                <span>Street name</span>
-                <input type="text" name="name">
-            </label>
-        </div>
-        <div class="form-row">
-            <label>
-                <span>Size</span>
-                <input type="text" name="name" placeholder="sq ft">
-            </label>
-        </div>
+    <div class="form-row">
+        <label>
+            <span>Type of Home</span>
+            <select name="dropdown">
+                <option>House</option>
+                <option>Condo</option>
+                <option>TownHouse</option>
+            </select>
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+          <span>Number of Rooms</span>
+          <select name="dropdown">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+          </select>
+        </label>
+        <label>
+            <span>Number of Bathrooms</span>
+            <select name="dropdown">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+        </label>
+    </div>
 
+    <div class="form-row">
+      <span>Common Area Amenities</span><br>
+        <label>
+            <span>Gym</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Amenities Room</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>            
+        <label>
+            <span>Elevator</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>          
+        <label>
+            <span>Bike Room</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Garden</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Hot Tube</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Pool</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br><br>
 
-        <div class="form-row">
-            <label>
-                <span>Type of Home</span>
-                <select name="dropdown">
-                    <option>House</option>
-                    <option>Condo</option>
-                    <option>TownHouse</option>
-                </select>
-            </label>
-        </div>
-        <div class="form-row">
-            <label>
-                <span>Number of Rooms</span>
-                <select name="dropdown">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                </select>
-            </label>
-            <label>
-                <span>Number of Bathrooms</span>
-                <select name="dropdown">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                </select>
-            </label>
-        </div>
+      <span>In Home Features</span><br>
+        <label>
+            <span>In Suite Laundry</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Dishwasher</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Stove</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Fridge</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Hot Tube</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Pool</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br><br>
 
+        <span>Other Features</span><br>
+        <label>
+            <span>Pet Friendly</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Wheel Chair Accessible</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+    </div>
 
-        <div class="form-row">
-          <span>Common Area Amenities</span><br>
-            <label>
-                <span>Gym</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>
-            <label>
-                <span>Amenities Room</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>            
-            <label>
-                <span>Elevator</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>          
-            <label>
-                <span>Bike Room</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-            <label>
-                <span>Garden</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>
-            <label>
-                <span>Hot Tube</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-            <label>
-                <span>Pool</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br><br>
+    <div class="form-row">
+        <label>
+            <span>Property Details</span>
+            <textarea name="textarea"></textarea>
+        </label>
+    </div>
 
-          <span>In Home</span><br>
-            <label>
-                <span>In Suite Laundry</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>
-            <label>
-                <span>Dishwasher</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-            <label>
-                <span>Stove</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>
-            <label>
-                <span>Fridge</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-            <label>
-                <span>Hot Tube</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label>
-            <label>
-                <span>Pool</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br><br>
+    <div class="form-row">
+        <label>
+            <span>Special Features</span>
+            <textarea name="textarea"></textarea>
+        </label>
+    </div>
 
-            <span>Other</span><br>
-            <label>
-                <span>Pet Friendly</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-            <label>
-                <span>Wheel Chair Accessible</span>
-                <input type="checkbox" name="checkbox" checked>
-            </label><br>
-        </div>
+      <div class="form-row">
+          <button type="submit">Submit Form</button>
+      </div>
 
-        <div class="form-row">
-            <label>
-                <span>Special Features</span>
-                <textarea name="textarea"></textarea>
-            </label>
-        </div>
-<!--         <div class="form-row">
-            <label><span>Radio</span></label>
-            <div class="form-radio-buttons">
-
-                <div>
-                    <label>
-                        <input type="radio" name="radio">
-                        <span>Radio option 1</span>
-                    </label>
-                </div>
-
-                <div>
-                    <label>
-                        <input type="radio" name="radio">
-                        <span>Radio option 2</span>
-                    </label>
-                </div>
-
-                <div>
-                    <label>
-                        <input type="radio" name="radio">
-                        <span>Radio option 3</span>
-                    </label>
-                </div>
-
-            </div>
-        </div> -->
-
-        <div class="form-row">
-            <button type="submit">Submit Form</button>
-        </div>
-
-    </form>
+  </form>
 
 </div>
 
