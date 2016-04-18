@@ -94,13 +94,6 @@
     background: transparent;
   }
 
-
-  .search{
-    top: 50px;
-    width: 100%;
-    color: #FFF;
-  }
-
   /*carousel*/
   .shadow-layer {
     position: absolute;
@@ -120,8 +113,16 @@
   }
 
   /*search cluster*/
+
+
   #tagline {
     color: #fff;
+  }
+
+  .search{
+    top: 100px;
+    width: 100%;
+    color: #FFF;
   }
 
   .col-lg-6 {
