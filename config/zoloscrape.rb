@@ -9,7 +9,6 @@ class Zolo
 
   def initialize(url)
     @page = Nokogiri::HTML(open(url))
-    # @url = ARGV[0]
     @city = get_city
     @address = get_address
     @price = get_price
@@ -48,7 +47,7 @@ class Zolo
   end
 
   def csv
-    CSV.open("file.csv", "wb") do |csv|
+    CSV.open("file.csv", "ab") do |csv|
       csv << %w[city address price bedroom bathroom sqft age]
         csv << [@city, @address, @price, @bedroom, @bathroom, @sqft, @age]
     end
@@ -87,6 +86,8 @@ class Zolo_Condo_Search
     @about = get_about
     @levels = get_levels[16]
     @bedrooms = get_bedrooms[17]
+    @bathrooms = get_bathrooms
+    @size = get_size
     @full_bathrooms = get_full_bathrooms[18]
     @half_bathrooms = get_half_bathrooms[19]
     @fireplaces = get_fireplaces[20]
@@ -120,8 +121,12 @@ class Zolo_Condo_Search
     @page.search('.column-value').map {|element| element.inner_text}
   end
 
+  def get_size
+    @page.search('.priv').map {|element| element.inner_text} 
+  end
+
   def get_about
-    @page.search('.priv > p').map {|element| element.inner_text}
+    @page.search('.priv > p').map {|element| element.inner_text }
   end
 
   def get_levels
@@ -130,6 +135,10 @@ class Zolo_Condo_Search
 
   def get_bedrooms
     @page.search('.column-value').map {|element| element.inner_text}
+  end
+
+  def get_bathrooms
+    get_full_bathrooms[18].to_i + get_half_bathrooms[19].to_i
   end
 
   def get_full_bathrooms
@@ -161,7 +170,7 @@ class Zolo_Condo_Search
     if house_image.length < 1
       format_img = @page.xpath("//div/@*[starts-with(name(), 'style')]").map{|e| e.value}
       image = format_img.map do |img|
-        img.gsub("background-image: url(", "").gsub(";", "").gsub(")", "").gsub("display: block", "")
+        img.gsub("background-image: url(", "").gsub(";", "").gsub(")", "").delete("display: block")
       end
     else 
       house_image
@@ -169,9 +178,8 @@ class Zolo_Condo_Search
   end
 
   def csv
-    CSV.open("condos.csv", "wb") do |csv|
-      csv << %w[address mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year strata_fees area image]
-      csv << [@address, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @strata_fees, @area, @image]
+    CSV.open("condos.csv", "ab") do |csv|
+      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @mortgage, @taxes, @type, @year, @walkscore, @about,   @fireplaces, @tax_year, @strata_fees, @area, @image]
     end
   end
 
@@ -212,6 +220,9 @@ class Zolo_Condo_Search
     puts "Area: ".colorize(:green) + "#{@area}"
     puts "-"*40
     puts "Image(url(s)): ".colorize(:green) + "#{image}"
+    puts "-"*40
+    puts "total bathrooms: ".colorize(:green) + "#{@bathrooms}"
+    
   end
 end
 
@@ -231,6 +242,7 @@ class Zolo_House_Search
     @about = get_about.join
     @levels = get_levels[17]
     @bedrooms = get_bedrooms[18]
+    @bathrooms = get_bathrooms
     @full_bathrooms = get_full_bathrooms[19]
     @half_bathrooms = get_half_bathrooms[20]
     @fireplaces = get_fireplaces[21]
@@ -289,6 +301,10 @@ class Zolo_House_Search
     @page.search('.column-value').map {|element| element.inner_text}
   end
 
+  def get_bathrooms
+    get_full_bathrooms[19].to_i + get_half_bathrooms[20].to_i
+  end
+
   def get_basement
     @page.search('.column-value').map {|element| element.inner_text}
   end
@@ -314,19 +330,18 @@ class Zolo_House_Search
     if house_image.length < 1
       format_img = @page.xpath("//div/@*[starts-with(name(), 'style')]").map{|e| e.value}
       image = format_img.map do |img|
-        img.gsub("background-image: url(", "").gsub(";", "").gsub(")", "").gsub("display: block", "")
+        img.gsub("background-image: url(", "").gsub(";", "").gsub(")", "").gsub("display: block", "").delete("")
       end
     else 
       house_image
     end
   end
   
-def csv
-  CSV.open("homes.csv", "wb") do |csv|
-    csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
-    csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]      
+  def csv
+    CSV.open("homes.csv", "ab") do |csv|
+      csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]      
+    end
   end
-end
 
   def to_s
     puts "-".colorize(:yellow)*40 
@@ -370,10 +385,13 @@ end
     puts "Size (sqft): ".colorize(:green) + "#{@size}"
     puts "-"*40
     puts "Image(url(s)): ".colorize(:green) + "#{@image}" 
+    puts "-"*40
+    puts "total bathrooms: ".colorize(:green) + "#{@bathrooms}"
   end
 end
 
 class Zolo_Townhouse_Search
+
   def initialize(url4)
     @page = Nokogiri::HTML(open(url4))
     @address = get_address[0]
@@ -386,6 +404,7 @@ class Zolo_Townhouse_Search
     @about = get_about.join
     @levels = get_levels[20]
     @bedrooms = get_bedrooms[21]
+    @bathrooms = get_bathrooms
     @full_bathrooms = get_full_bathrooms[22]
     @half_bathrooms = get_half_bathrooms[23]
     @fireplaces = get_fireplaces[24]
@@ -399,7 +418,7 @@ class Zolo_Townhouse_Search
     @page.search('.address').map {|element| element.inner_text}
   end
 
-  def get_value
+  def get_price
     @page.search('.listing-market-view--value').map {|element| element.inner_text}
   end
 
@@ -472,9 +491,8 @@ class Zolo_Townhouse_Search
   end
 
   def csv
-    CSV.open("homes.csv", "wb") do |csv|
-      csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
-      csv << [@address.shift, @value.shift, @mortgage.shift, @taxes.shift, @type.shift, @year.shift, @walkscore.shift, @about.shift, @levels.shift, @bedrooms.shift, @full_bathrooms.shift, @half_bathrooms.shift, @fireplaces.shift, @tax_year.shift, @area.shift, @size.shift, @image.shift]      
+    CSV.open("homes.csv", "ab") do |csv|
+      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @size, @type, @year, @area, @postal_code, @about, @strata_fees, @mortgage, @taxes, @walkscore, @levels, @fireplaces, @tax_year,  @image]      
     end
   end
 
@@ -518,6 +536,8 @@ class Zolo_Townhouse_Search
     puts "Size (sqft): ".colorize(:green) + "#{@size}"
     puts "-"*40
     puts "Image (url(s)): ".colorize(:green) + "#{@image}"
+    puts "-"*40
+    puts "bathrooms: ".colorize(:green) + "#{@bathrooms}"
   end
 end
 
@@ -549,6 +569,7 @@ end
 
 # loop through listings
 unformatted_addresses = ["708-518 W 14th Avenue", "1901-1331 Alberni Street", "2624 W 3rd Avenue", "201-5728 Berton Avenue", "210-6328 Larkin Drive", "1437 W 32nd Avenue", "2715 E 47th Avenue", "1603-8588 Cornish Street", "502-668 Citadel Parade ", "3706-928 Beatty Street", "6143 Victoria Drive", "5875 Angus Drive", "3617 W 12th Avenue", "406-5725 Agronomy Road", "204-3289 Riverwalk Avenue", "2595 W 1st Avenue", "1522 E 20th Avenue", "702-668 Citadel Parade ", "603-3289 Riverwalk Avenue", "509-977 Mainland Street", "510-3289 Riverwalk Avenue", "1845 W 11th Avenue", "1566 W 65th Avenue", "309-6268 Eagles Drive", "1005-1650 W 7th Avenue", "213-3289 Riverwalk Avenue", "203-33 N Templeton Drive", "1001-555 Jervis Street", "3517 W 3rd Avenue", "107-3289 Riverwalk Avenue", "204-830 E 7th Avenue", "301-5728 Berton Avenue", "202-1860 Robson Street", "1801-1438 Richards Street", "1401-181 W 1st Avenue", "2213 Renfrew Street", "501-6929 Cambie Street", "601-908 Keith Road", "2765 W 8th Avenue", "4655 W 6th Avenue", "2208 W 34th Avenue", "2703-1189 Melville Street", "2344 W 37th Avenue", "3535 Puget Drive", "645 W 7th Avenue", "1303 Park Drive", "6592 Maple Street", "2-2880 W 33rd Avenue", "2719 W 15th Avenue", "307-3520 Crowley Drive", "19-2156 W 12th Avenue", "6222 Mccleery Street", "PH6-5555 Victoria Drive", "4553 Fraser Street", "3342 W 5th Avenue", "3312 Parker Street", "608-5782 Berton Avenue", "209-3520 Crowley Drive", "2781 E 27th Avenue", "477 W 63rd Avenue", "218-2889 E 1st Avenue", "320-2889 E 1st Avenue", "1161 Keefer Street", "310-3289 Riverwalk Avenue", "5188 Main Street", "1250 W 40th Avenue", "1706-950 Cambie Street", "3503-128 W Cordova Street", "906-5775 Hampton Place", "3626 W 22nd Avenue", "3433 W 22nd Avenue", "4519 Culloden Street", "2309-938 Smithe Street", "302-5025 Joyce Street", "16 N Kaslo Street", "3715 W 22nd Avenue", "1046 Nicola Street", "4015 W 30th Avenue", "312-3727 W 10th Avenue", "10-1038 W 7th Avenue", "2401-1020 Harwood Street", "605-2770 Sophia Street", "4679 W 13th Avenue", "2375 W 45th Avenue", "3371 Napier Street", "4197 Fraser Street", "3898 W 3rd Avenue", "1501-1499 W Pender Street", "4509 Slocan Street", "5695 Ormidale Street", "1531 Barclay Street", "2227 E 37th Avenue", "3-4900 Cartier Street", "2006 W 48th Avenue", "PH1-289 E 6th Avenue", "3533 Point Grey Road", "501-560 Cardero Street", "731 W 17th Avenue", "8481 Quayside Court", "302-2040 Cornwall Avenue", "303-110 Switchmen Street", "111-6018 Iona Drive", "429 E Pender Street", "512-1485 W 6th Avenue", "6611 Cartier Street", "3095 W 5th Avenue", "108-1825 W 8th Avenue", "2032 E 22nd Avenue", "101-2006 W 2nd Avenue", "1459 W 41st Avenue", "1107-833 Homer Street", "1702-788 Richards Street", "1449 W 41st Avenue", "710-123 W 1st Avenue", "3998 Granville Street", "731 Union Street", "3460 E Georgia Street", "603-1388 Homer Street", "402-53 W Hastings Street", "307-1239 Kingsway ", "4903-1480 Howe Street", "907-1775 Quebec Street", "238 W 14th Avenue", "107-3382 Wesbrook Mall", "1384 E 63rd Avenue", "105-1066 E 8th Avenue", "5350 Slocan Street", "2003-8555 Granville Street", "4108 Gladstone Street", "2601-1166 Melville Street", "2817 Fraser Street", "403-3628 Rae Avenue", "2846 W 30th Avenue", "102-2338 Western Parkway", "7061 Adera Street", "2560 4th Avenue", "2849 W King Edward Avenue", "7-2088 W 11 Avenue", "119 W 41st Avenue", "2801-233 Robson Street", "81 W 49th Avenue", "2485 Wall Street", "2101-1328 Marinaside Crescent", "1102-1420 W Georgia Street"]
+
 def format_address(arr)
   downcase_arr = arr.map(&:downcase)
   formated_arr = downcase_arr.map{|a| a.gsub(" ", "-")}
@@ -564,15 +585,12 @@ formated_address.each do |address|
     condo_number = address.match(/\d{3,4}/)
     url2 = "https://www.zolo.ca/vancouver-real-estate/" + "#{condo_address}/" + "#{condo_number}"
     zolo_condo = Zolo_Condo_Search.new(url2)
-    # puts zolo_condo.to_s
-    zolo_condo.csv
-else
+    puts zolo_condo.to_s
+    # zolo_condo.csv
+  else #house && townhouse
     url = "https://www.zolo.ca/vancouver-real-estate/" + "#{address}"
     zolo_house = Zolo_House_Search.new(url)
-    # puts zolo_house.to_s
-    zolo_house.csv
+    puts zolo_house.to_s
+    # zolo_house.csv
   end
 end
-
-
-
