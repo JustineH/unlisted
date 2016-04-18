@@ -18,7 +18,20 @@
 
 
 
+
 /*Welcome Page*/
+
+  #welcome-carousel{
+    position: relative;
+  }
+
+  #carousel-inside{
+    position: absolute;
+  }
+
+  #tagline {
+    color: #000;
+  }
 
   .col-lg-6 {
     width: 100%;
@@ -37,6 +50,8 @@
 
 
 
+
+
 /* test code */
   .jumbotron.vertical-center {
     margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
@@ -44,8 +59,13 @@
   }
 
   .vertical-center {
-    min-height: 100%;  /* Fallback for vh unit */
-    min-height: 100vh; /* You might also want to use
+    position: absolute;
+    /*min-height: 100%; */
+     /* Fallback for vh unit */
+    min-height: 50vh; 
+
+
+    /* You might also want to use
                           'height' property instead.
                           
                           Note that for percentage values of
