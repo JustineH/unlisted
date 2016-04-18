@@ -14,6 +14,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+/*Hover Effects*/
+
+/* Underline Reveal */
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background: #2098d1;*/
+  background: #fff;
+  height: 2px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+
 /*$primary-color: #ccc;*/
 
 
@@ -21,15 +64,17 @@
 
 /*Welcome Page*/
 
-  #welcome-carousel{
-    position: relative;
+/*  #welcome-carousel{
+    position:absolute;
+    top:0;
+    z-index: -1;
   }
-
+*/
   /*#carousel-inside{
     position: absolute;
   }*/
   .overlay { 
-/*    color:#fff;
+  /*color:#fff;
     position:absolute;
     z-index:1;
     top:10%;
@@ -38,10 +83,31 @@
     text-align:center;*/
     position: absolute;
     z-index:2;
+  }
+  .nav{
+    top:30px;
+    z-index:10;
+    background:#fff;
+    color: #fff;
+    background: transparent;
+    width:100%;
+    padding-right: 1.5em;
+  }
+  .nav a{
+    color: #fff;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: transparent;
+  }
+
+
+  .search{
     top: 50px;
     width: 100%;
     color: #FFF;
   }
+
 
 
   .shadow-layer {
@@ -77,8 +143,50 @@
       float: none;
   }
 
+/*Vendor Page*/
 
 
+   #test-carousel {
+    position:absolute;
+    top:0;
+    z-index: -1;
+     
+}
+
+  .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 500px;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+
+
+        
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
 
 
 
