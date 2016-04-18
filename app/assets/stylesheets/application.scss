@@ -114,6 +114,40 @@
   }
 
   /*carousel*/
+
+  .carousel-fade {
+    .carousel-inner {
+      .item {
+        transition-property: opacity;
+      }
+      
+      .item,
+      .active.left,
+      .active.right {
+        opacity: 0;
+      }
+
+      .active,
+      .next.left,
+      .prev.right {
+        opacity: 1;
+      }
+
+      .next,
+      .prev,
+      .active.left,
+      .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .carousel-control {
+      z-index: 2;
+    }
+  }
+
+
   .shadow-layer {
     position: absolute;
     top: 0;
@@ -131,6 +165,10 @@
     background-color: transparent;
   }
 
+ /* .item img{
+    height: 10px;
+  }*/
+
   /*search cluster*/
 
 
@@ -139,7 +177,7 @@
   }
 
   .search{
-    top: 100px;
+    top: 150px;
     width: 100%;
     color: #FFF;
   }
@@ -183,6 +221,9 @@
   .listing{
     padding: 1em;
   }
+
+
+
 /*Vendor Page*/
 
 

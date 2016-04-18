@@ -24,6 +24,9 @@ window.addEventListener("scroll", function() {
             'color': '#262626',
             'padding-top': '10px'
         });
+        $('.hvr-underline-reveal:before').css({
+            'background': '#000'
+        });
         console.log("activated");
     }
     else {
@@ -31,6 +34,9 @@ window.addEventListener("scroll", function() {
         $('.navbar-nav > li > a').css({
             'color': '#fff',
             'padding-top': '20px'
+        });
+        $('.hvr-underline-reveal:before').css({
+            'background': '#fff'
         });
         console.log("deactivated");
     }
