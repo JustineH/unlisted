@@ -64,15 +64,8 @@
 
 /*Welcome Page*/
 
-/*  #welcome-carousel{
-    position:absolute;
-    top:0;
-    z-index: -1;
-  }
-*/
-  /*#carousel-inside{
-    position: absolute;
-  }*/
+  /*nav*/
+
   .overlay { 
   /*color:#fff;
     position:absolute;
@@ -108,8 +101,7 @@
     color: #FFF;
   }
 
-
-
+  /*carousel*/
   .shadow-layer {
     position: absolute;
     top: 0;
@@ -127,6 +119,7 @@
     background-color: transparent;
   }
 
+  /*search cluster*/
   #tagline {
     color: #fff;
   }
@@ -143,15 +136,36 @@
       float: none;
   }
 
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .welcome-selection{
+    width: 10%;
+    margin: 0 auto;
+  }
+
+
+  .seletion-menu{
+    width: 49%;
+    margin: 0 auto;
+  }
+
+  .col-sm-3{
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
+
+  }
 /*Vendor Page*/
 
 
-   #test-carousel {
+  #test-carousel {
     position:absolute;
     top:0;
     z-index: -1;
      
-}
+  }
 
   .flex-container {
     padding: 0;
@@ -190,9 +204,7 @@
 
 
 
-
-
-/* test code */
+/*test code*/
   .jumbotron.vertical-center {
     margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
     /*position: relative*/
