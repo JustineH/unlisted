@@ -88,12 +88,13 @@ class Zolo_Condo_Search
     @bedrooms = get_bedrooms[17]
     @bathrooms = get_bathrooms
     @size = get_size[7]
+    @ownership = get_owner[1]
     @full_bathrooms = get_full_bathrooms[18]
     @half_bathrooms = get_half_bathrooms[19]
     @fireplaces = get_fireplaces[20]
     @tax_year = get_tax_year[28]
     @strata_fees = get_strata_fees[29]
-    @area = get_area.last  #i.e. Vancouver East
+    @property_summary = get_area.last  #i.e. Vancouver East
     @image = get_image
   end
 
@@ -135,6 +136,10 @@ class Zolo_Condo_Search
 
   def get_bedrooms
     @page.search('.column-value').map {|element| element.inner_text}
+  end
+
+  def get_owner
+    @page.search('div:nth-child(3)>.column-value').map {|element| element.inner_text}
   end
 
   def get_bathrooms
@@ -179,7 +184,7 @@ class Zolo_Condo_Search
 
   def csv
     CSV.open("condos.csv", "ab") do |csv|
-      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @size, @year, @type, @mortgage, @taxes,   @walkscore, @about,   @fireplaces, @tax_year, @strata_fees, @area, @image]
+      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @size, @year, @type, @ownership, @area, @postal_code, @property_summary, @fireplaces, @taxes, @strata_fees, @mortgage, @walkscore, @days_listed, @last_updated, @image]
     end
   end
 
@@ -201,7 +206,7 @@ class Zolo_Condo_Search
     puts "-"*40
     puts "Walk score: ".colorize(:green) + "#{@walkscore}"
     puts "-"*40
-    puts "About: ".colorize(:green) + "#{@about}"
+    puts "About: ".colorize(:green) + "#{@property_summary}"
     puts "-"*40
     puts "Bedrooms: ".colorize(:green) + "#{@bedrooms}"
     puts "-"*40
@@ -219,11 +224,13 @@ class Zolo_Condo_Search
     puts "-"*40
     puts "Area: ".colorize(:green) + "#{@area}"
     puts "-"*40
-    puts "Image(url(s)): ".colorize(:green) + "#{image}"
+    puts "Image(url(s)): ".colorize(:green) + "#{images}"
     puts "-"*40
     puts "total bathrooms: ".colorize(:green) + "#{@bathrooms}"
     puts "-"*40
     puts "size: ".colorize(:green) + "#{@size}"
+    puts "-"*40
+    puts "owner: ".colorize(:green) + "#{@ownership}"
   end
 end
 
@@ -234,13 +241,13 @@ class Zolo_House_Search
   def initialize(url3)
     @page = Nokogiri::HTML(open(url3))
     @address = get_address[0]
-    @value = get_value.join
+    @price = get_value.join
     @mortgage = get_mortgage[0]
     @taxes = get_taxes[0]
     @type = get_type[2] #house type
     @year = get_year.join
     @walkscore = get_walkscore[7]
-    @about = get_about.join
+    @property_summary = get_about.join
     @levels = get_levels[17]
     @bedrooms = get_bedrooms[18]
     @bathrooms = get_bathrooms
@@ -251,7 +258,7 @@ class Zolo_House_Search
     @tax_year = get_tax_year[32]
     @area = get_area[38]  #i.e. Vancouver East
     @size = get_size[7]
-    @image = get_image
+    @images = get_image
   end
 
   def get_address
@@ -340,7 +347,7 @@ class Zolo_House_Search
   
   def csv
     CSV.open("homes.csv", "ab") do |csv|
-      csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]      
+      csv << [@address, @price, @bedrooms, @bathrooms, @full_bathrooms, @half_bathrooms, @levels, @size, @year, @type, @ownership, @area, @postal_code, @property_summary, @fireplaces, @taxes, @strata_fees, @mortgage, @walkscore, @days_listed, @last_updated, @images]     
     end
   end
 
@@ -353,7 +360,7 @@ class Zolo_House_Search
     puts "-"*40
     puts "Address: ".colorize(:green) + " #{@address}"
     puts "-"*40
-    puts "House Value: ".colorize(:green) + " #{@value}"
+    puts "House Value: ".colorize(:green) + " #{@price}"
     puts "-"*40
     puts "Mortgage:(est): ".colorize(:green) + " #{@mortgage}"
     puts "-"*40
@@ -365,7 +372,7 @@ class Zolo_House_Search
     puts "-"*40
     puts "Walk score: ".colorize(:green) + "#{@walkscore}"
     puts "-"*40
-    puts "About: ".colorize(:green) + "#{@about}"
+    puts "About: ".colorize(:green) + "#{@property_summary}"
     puts "-"*40
     puts "Full bathrooms: ".colorize(:green) + "#{@full_bathrooms}"
     puts "-"*40
@@ -385,7 +392,7 @@ class Zolo_House_Search
     puts "-"*40
     puts "Size (sqft): ".colorize(:green) + "#{@size}"
     puts "-"*40
-    puts "Image(url(s)): ".colorize(:green) + "#{@image}" 
+    puts "Image(url(s)): ".colorize(:green) + "#{@images}" 
     puts "-"*40
     puts "total bathrooms: ".colorize(:green) + "#{@bathrooms}"
   end
