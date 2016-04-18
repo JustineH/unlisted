@@ -321,12 +321,12 @@ class Zolo_House_Search
     end
   end
   
-  def csv
-    CSV.open("homes.csv", "wb") do |csv|
-      csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
-      csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]
-    end
+def csv
+  CSV.open("homes.csv", "wb") do |csv|
+    csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
+    csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]      
   end
+end
 
   def to_s
     puts "-".colorize(:yellow)*40 
@@ -474,7 +474,7 @@ class Zolo_Townhouse_Search
   def csv
     CSV.open("homes.csv", "wb") do |csv|
       csv << %w[address value mortgage taxes type year walkscore about levels bedrooms full_bathrooms half_bathrooms fireplaces tax_year area size image]
-      csv << [@address, @value, @mortgage, @taxes, @type, @year, @walkscore, @about, @levels, @bedrooms, @full_bathrooms, @half_bathrooms, @fireplaces, @tax_year, @area, @size, @image]
+      csv << [@address.shift, @value.shift, @mortgage.shift, @taxes.shift, @type.shift, @year.shift, @walkscore.shift, @about.shift, @levels.shift, @bedrooms.shift, @full_bathrooms.shift, @half_bathrooms.shift, @fireplaces.shift, @tax_year.shift, @area.shift, @size.shift, @image.shift]      
     end
   end
 
@@ -554,7 +554,9 @@ def format_address(arr)
   formated_arr = downcase_arr.map{|a| a.gsub(" ", "-")}
   # puts formated_arr
 end
+
 formated_address = format_address(unformatted_addresses)
+
 formated_address.each do |address|
   #condos
   if address.match(/\d{3,4}[-]\d{3,4}/)
