@@ -15,3 +15,25 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 11) {
+        $('.navbar').addClass("navbar-bg");
+        $('.navbar-nav > li > a').css({
+            'color': '#262626',
+            'padding-top': '10px'
+        });
+        console.log("activated");
+    }
+    else {
+      $('.navbar').removeClass("navbar-bg");
+        $('.navbar-nav > li > a').css({
+            'color': '#fff',
+            'padding-top': '20px'
+        });
+        console.log("deactivated");
+    }
+},false);
+
+

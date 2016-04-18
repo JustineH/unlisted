@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -64,7 +65,7 @@
 
 /*Welcome Page*/
 
-  /*nav*/
+  /*nav bar*/
 
   .overlay { 
   /*color:#fff;
@@ -78,28 +79,76 @@
     z-index:2;
   }
   .nav{
-    /*position: fixed;*/
-    top:30px;
+    top:0px;
     z-index:10;
     background:#fff;
     color: #fff;
     background: transparent;
     width:100%;
     padding-right: 1.5em;
+     transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
   }
-  .nav a{
-    color: #fff;
-  }
+
 
   .nav > li > a:hover, .nav > li > a:focus {
     background: transparent;
   }
 
-  .navbar-fixed-top{
-    padding-top: 2em;
-    padding-right: 1.5em;
+  .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
   }
+  .navbar {
+    min-height:20px;
+  }
+
+  .navbar-bg {
+    position: fixed;
+    border-radius: 0px;
+    right: 0px;
+    /*background: rgba(255, 255, 255, 0.95);*/
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+/*    padding-top: 0px;
+    padding-bottom: 15px;*/
+  }
+
   /*carousel*/
+
+  .carousel-fade {
+    .carousel-inner {
+      .item {
+        transition-property: opacity;
+      }
+      
+      .item,
+      .active.left,
+      .active.right {
+        opacity: 0;
+      }
+
+      .active,
+      .next.left,
+      .prev.right {
+        opacity: 1;
+      }
+
+      .next,
+      .prev,
+      .active.left,
+      .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .carousel-control {
+      z-index: 2;
+    }
+  }
+
+
   .shadow-layer {
     position: absolute;
     top: 0;
@@ -117,6 +166,10 @@
     background-color: transparent;
   }
 
+ /* .item img{
+    height: 10px;
+  }*/
+
   /*search cluster*/
 
 
@@ -125,7 +178,7 @@
   }
 
   .search{
-    top: 100px;
+    top: 150px;
     width: 100%;
     color: #FFF;
   }
@@ -169,6 +222,9 @@
   .listing{
     padding: 1em;
   }
+
+
+
 /*Vendor Page*/
 
 
@@ -217,44 +273,43 @@
 
 
 /*test code*/
-  .jumbotron.vertical-center {
-    margin-bottom: 0; /* Remove the default bottom margin of .jumbotron */
-    /*position: relative*/
-  }
-
-  .vertical-center {
-    position: absolute;
-    /*min-height: 100%; */
-     /* Fallback for vh unit */
-    min-height: 50vh; 
-
-
-    /* You might also want to use
-                          'height' property instead.
-                          
-                          Note that for percentage values of
-                          'height' or 'min-height' properties,
-                          the 'height' of the parent element
-                          should be specified explicitly.
-    
-                          In this case the parent of '.vertical-center'
-                          is the <body> element */
-
-    /* Make it a flex container */
-
-    display: flex; 
-    
-    /* Align the bootstrap's container vertically */
-    align-items : center;
-    
-    /* In legacy web browsers such as Firefox 9
-       we need to specify the width of the flex container */
-    width: 100%;
-    
-    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
-       hence the bootstrap's container won't be aligned to the center anymore.
-    
-       Therefore, we should use the following declarations to get it centered again */
-    justify-content : center;
-  }
-
+ /*  .jumbotron.vertical-center {
+   margin-bottom: 0; Remove the default bottom margin of .jumbotron
+   position: relative
+ }
+ 
+ .vertical-center {
+   position: absolute;
+   min-height: 100%;
+    Fallback for vh unit
+   min-height: 50vh; 
+ 
+ 
+   You might also want to use
+                         'height' property instead.
+                         
+                         Note that for percentage values of
+                         'height' or 'min-height' properties,
+                         the 'height' of the parent element
+                         should be specified explicitly.
+   
+                         In this case the parent of '.vertical-center'
+                         is the <body> element
+ 
+   Make it a flex container
+ 
+   display: flex; 
+   
+   Align the bootstrap's container vertically
+   align-items : center;
+   
+   In legacy web browsers such as Firefox 9
+      we need to specify the width of the flex container
+   width: 100%;
+   
+   Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+      hence the bootstrap's container won't be aligned to the center anymore.
+   
+      Therefore, we should use the following declarations to get it centered again
+   justify-content : center;
+ } */
