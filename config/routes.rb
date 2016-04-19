@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'vendors/index'
+  get 'vendors/new'
 
 
   get 'users/index'
