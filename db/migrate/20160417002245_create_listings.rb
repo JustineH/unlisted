@@ -4,13 +4,19 @@ class CreateListings < ActiveRecord::Migration
       t.references :user, index: true 
 
       # Address
-      # t.string :cityArea
+      t.string :unitNumber
+      t.string :streetNumber
+      t.string :streetName
+      t.integer :city
+      t.string :postalCode
+      t.integer :neighbourhood
+      #Key Facts
       t.integer :numOfBed, default: 0 
       t.integer :numOfBath, default: 0 
       t.integer :sqft, default: 0 
       t.date :yearBuilt
       t.integer :homeType  
-      t.string :typeOwnership
+      t.integer :typeOwnership
       # Size
       t.integer :levels, default: 0 
       t.integer :fullBathrooms, default: 0 
@@ -26,6 +32,8 @@ class CreateListings < ActiveRecord::Migration
       #Condo Extras
       t.integer :parking, default: 0 
       t.integer :storage, default: 0 
+      t.integer :basementArea, default: 0 
+      t.boolean :basement, default: false
 
       # Amenities
       t.boolean :bikeRoom, default: false

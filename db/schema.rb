@@ -29,12 +29,18 @@ ActiveRecord::Schema.define(version: 20160417002848) do
 
   create_table "listings", force: true do |t|
     t.integer  "user_id"
+    t.string   "unitNumber"
+    t.string   "streetNumber"
+    t.string   "streetName"
+    t.integer  "city"
+    t.string   "postalCode"
+    t.integer  "neighbourhood"
     t.integer  "numOfBed",                 default: 0
     t.integer  "numOfBath",                default: 0
     t.integer  "sqft",                     default: 0
     t.date     "yearBuilt"
     t.integer  "homeType"
-    t.string   "typeOwnership"
+    t.integer  "typeOwnership"
     t.integer  "levels",                   default: 0
     t.integer  "fullBathrooms",            default: 0
     t.integer  "halfBathrooms",            default: 0
@@ -47,6 +53,8 @@ ActiveRecord::Schema.define(version: 20160417002848) do
     t.text     "extraFeaturesDescription"
     t.integer  "parking",                  default: 0
     t.integer  "storage",                  default: 0
+    t.integer  "basementArea",             default: 0
+    t.boolean  "basement",                 default: false
     t.boolean  "bikeRoom",                 default: false
     t.boolean  "elevator",                 default: false
     t.boolean  "garden",                   default: false
