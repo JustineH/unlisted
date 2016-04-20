@@ -4,30 +4,25 @@
  *= require vendors
  *= require welcome
  */
-
 /*Font*/
-
- /* use Proxima Nova? need to import font */
+/* use Proxima Nova? need to import font */
 body {
-  // font-family: "SOURCE SANS PRO", serif;
-  height: 100%;
-}
+  height: 100%; }
 
 /*Hover Effects*/
-
 /* Underline Reveal */
 .hvr-underline-reveal {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 .hvr-underline-reveal:before {
   content: "";
   position: absolute;
@@ -45,56 +40,42 @@ body {
   -webkit-transition-duration: 0.2;
   transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
+  transition-timing-function: ease-out; }
+
 .hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
   -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
+  transform: translateY(0); }
 
 /*$primary-color: #ccc;*/
-
 /*Vendor Page*/
+#test-carousel {
+  position: absolute;
+  top: 0;
+  z-index: -1; }
 
-  #test-carousel {
-    position:absolute;
-    top:0;
-    z-index: -1;
-  }
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 500px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; }
 
-  .flex-container {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 500px;
-    
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-  .flex-item {
-    background: tomato;
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-
-
-        
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-  }
-
-
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center; }

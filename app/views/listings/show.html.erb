@@ -1,128 +1,46 @@
-<div id="wrapper">
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+      <div id="sidebar-menu">
+        <ul id="side-ul">
+          <li class="text-muted menu-title">Main</li>
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <!-- <a href="#">
-                       List a New Home
-                    </a> -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle fa-5x" aria-hidden="true"></i><!-- <img src="/assets/chris.jpg" alt="Description"  class="side-nav-button"> --></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle fa-5x" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle fa-5x" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle fa-5x" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle fa-5x" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-            <div class="line">
-        </div>
-        </div>
 
-        <!-- /#sidebar-wrapper -->
+          <li>
+            <a class="subdrop" href=
+            "#"><i class="md md-dashboard"></i>
+            <span>Basic</span></a>
+          </li>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-content">
 
-  <form class="form-basic" method="post" action="#">
+          <li>
+            <a href="#"><span>Details</span></a>
+          </li>
 
-    <div class="form-title-row">
-        <h1>List Your Property</h1>
-    </div>
 
-    <div class="form-row">
-        <label>
-            <span>Size</span>
-            <input type="text" name="name" placeholder="sq ft">
-        </label>
-    </div>
-    <div class="form-row">
-        <label>
-            <span>Year Built</span>
-            <input type="text" name="name" placeholder="year">
-        </label>
-    </div>
-   
+          <li>
+            <a href="#"><span>Amenities</span></a>
+          </li>
 
-    <div class="form-row">
-        <label>
-            <span>Type of Home</span>
-            <select name="dropdown">
-                <option>House</option>
-                <option>Condo</option>
-                <option>TownHouse</option>
-            </select>
-        </label>
-    </div>
-    <div class="form-row">
-        <label>
-          <span>Number of Rooms</span>
-          <select name="dropdown">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-          </select>
-        </label>
-        <label>
-            <span>Number of Bathrooms</span>
-            <select name="dropdown">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
-        </label>
-    </div>
 
-    
-      <div class="form-row">
-          <button type="submit">Submit Form</button>
+          <li>
+            <a href="#"><span>Photos</span></a>
+          </li>
+
+
+          <li>
+            <a href="#"><span>Extra</span></a>
+          </li>
+        </ul>
       </div>
-
-  </form>
-
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
+  </div>
 
-<!-- 
-<div class="main-content">
+  <div class="main-content">
 
   <form class="form-basic" method="post" action="#">
 
     <div class="form-title-row">
-        <h1>List Your Property</h1>
+        <h1>Basic</h1>
     </div>
 
     <div class="form-row">
@@ -178,138 +96,8 @@
         </label>
     </div>
 
-    <div class="form-row">
-        <label>
-            <span>Type of Home</span>
-            <select name="dropdown">
-                <option>House</option>
-                <option>Condo</option>
-                <option>TownHouse</option>
-            </select>
-        </label>
-    </div>
-    <div class="form-row">
-        <label>
-          <span>Number of Rooms</span>
-          <select name="dropdown">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-          </select>
-        </label>
-        <label>
-            <span>Number of Bathrooms</span>
-            <select name="dropdown">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
-        </label>
-    </div>
-
-    <div class="form-row">
-      <span>Common Area Amenities</span><br>
-        <label>
-            <span>Gym</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Amenities Room</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>            
-        <label>
-            <span>Elevator</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>          
-        <label>
-            <span>Bike Room</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>
-        <label>
-            <span>Garden</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Hot Tube</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>
-        <label>
-            <span>Pool</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br><br>
-
-      <span>In Home Features</span><br>
-        <label>
-            <span>In Suite Laundry</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Dishwasher</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>
-        <label>
-            <span>Stove</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Fridge</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>
-        <label>
-            <span>Hot Tube</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Pool</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br><br>
-
-        <span>Other Features</span><br>
-        <label>
-            <span>Pet Friendly</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label>
-        <label>
-            <span>Wheel Chair Accessible</span>
-            <input type="checkbox" name="checkbox" unchecked>
-        </label><br>
-    </div>
-
-    <div class="form-row">
-        <label>
-            <span>Property Details</span>
-            <textarea name="textarea"></textarea>
-        </label>
-    </div>
-
-    <div class="form-row">
-        <label>
-            <span>Special Features</span>
-            <textarea name="textarea"></textarea>
-        </label>
-    </div>
-
-      <div class="form-row">
-          <button type="submit">Submit Form</button>
-      </div>
+   
 
   </form>
 
 </div>
-
-
- -->

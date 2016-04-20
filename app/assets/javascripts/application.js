@@ -67,6 +67,10 @@ $('.carousel').carousel({
   interval: false
 });
 
+// add class on sidenav click
+$('a').on('click', function(){
+    $(this).addClass('.active');
+});
 });
 
 
