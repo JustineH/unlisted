@@ -1,15 +1,21 @@
 class ListingsController < ApplicationController
   def index
-
+    @listings = Listing.all
   end
 
   def show
+
   end
 
   def new
+    @listing = Listing.new
   end
 
   def edit
-    @listings = Listing.all
+    
+  end
+
+  def search
+    @query = params[:query]
   end
 end
