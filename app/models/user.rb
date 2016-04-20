@@ -3,16 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  has_many :listings
-  has_many :bookmarks
-
+  
   validates :password, :presence => true,
-            :on => :create,
-            :length => {:within=>6..100},
-            :format => {:with => /\A.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\@\#\$\%\^\&\+\=]).*\Z/ }
+                     :on => :create,
+                     :format => {:with => /\A.*(?=.{8,})(?=.*\d)(?=.*[a-z]).*\Z/ }
 
-  validates_presence_of :email
-  validates_uniqueness_of :email
-
+  validates :email, :presence => true,
+            :uniqueness =>true,
+            :format => {:with => /.+@.+\..+/i}
 end
