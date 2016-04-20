@@ -1,1 +1,6 @@
-<h1>You are looking for...<%= @query %></h1>
+<h1>You found <%= @results.count %> results</h1>
+<ul>
+<% @results.each do |result| %>
+  <li><%= result.address %>
+<% end %>
+</ul>

@@ -12,32 +12,31 @@ csv = CSV.parse(csv_text, :headers => true)
 
 csv.each do |row|
   t = Listing.new
-  t.address = row['address']
-  t.city = row['city']
-  t.price = row['price']
-  t.numOfBed = row['numOfBed']
-  t.numOfBath = row['numOfBath']
-  t.fullBathrooms = row['fullBathrooms']
-  t.halfBathrooms = row['halfBathrooms']
-  t.levels = row['levels']
-  t.sqft = row['sqft']
-  t.lotSize = row['lotSize']
-  t.yearBuilt = row['yearBuilt']
-  t.homeType = row['homeType']
-  t.typeOwnership = row['typeOwnership']
-  t.extraFeaturesDescription = row['extraFeaturesDescription']
-  t.propertySummary = row['propertySummary']
-  t.postalCode = row['postalCode']
-  t.fireplaces = row['fireplaces']
-  t.basementArea = row['basementArea']
-  t.taxes = row['taxes']
-  t.strataFees = row['strataFees']
-  t.propertySummary = row['propertySummary']
-  t.walkscore = row['walkscore']
-  t.daysListed = row['daysListed']
-  t.lastUpdated = row['lastUpdated']
+  t.address = Faker::Address.street_address
+  t.city = Faker::Address.city
+  t.price = Faker::Commerce.price
+  t.numOfBed = Faker::Number.digit
+  t.numOfBath = Faker::Number.digit
+  t.fullBathrooms = Faker::Number.digit
+  t.halfBathrooms = Faker::Number.digit
+  t.levels = Faker::Number.digit
+  t.sqft = Faker::Number.between(500, 12,000)
+  t.lotSize = Faker::Number.between(1000, 20,000)
+  t.yearBuilt = Faker::Base.rand_in_range(1900, 2015) 
+  t.homeType = row['random_type'] # FIX
+  t.typeOwnership = row['random_ownership']
+  t.extraFeaturesDescription = row['extraFeaturesDescription'] # REMOVE
+  t.propertySummary = row['propertySummary'] # Change to automatically generated home info e.g., "5 bedroom, 4 bathroom house in Shaughnessy."
+  t.postalCode = Faker::Address.postcode
+  t.fireplaces = Faker::Number.digit
+  t.basementArea = Faker::Boolean.boolean(0.2)
+  t.taxes = Faker::Commerce.price
+  t.strataFees = Faker::Commerce.price
+  t.walkscore = Faker::Number.between(20, 99)
+  t.daysListed = Faker::Number.between(1, 40)
+  t.lastUpdated = Faker::Date.between(35.days.ago, Date.today)
   t.save
   puts row.to_hash
 end
 
-puts "there are now #{Listing.count} rows in the Listing table"
+puts "There are now #{Listing.count} rows in the Listing table."
