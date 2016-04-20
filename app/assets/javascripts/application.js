@@ -16,24 +16,59 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(function(){
+if ($('.home-page').length > 0){
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 11) {
+            $('.navbar').addClass("navbar-bg");
+            $('.navbar-nav > li > a').css({
+                'color': '#262626',
+                'padding-top': '10px'
+            });
+            console.log("activated");
+        }
+        else {
+          $('.navbar').removeClass("navbar-bg");
+            $('.navbar-nav > li > a').css({
+                'color': '#fff',
+                'padding-top': '20px'
+            });
+            console.log("deactivated");
+        }
+    },false);
+}else{
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 11) {
+            $('.navbar').addClass("navbar-bg");
+            $('.navbar-nav > li > a').css({
+                'color': '#262626',
+                'padding-top': '10px'
+            });
+            console.log("activated");
+        }
+        else {
+          $('.navbar').removeClass("navbar-bg");
+            $('.navbar-nav > li > a').css({
+                'color': '#262626',
+                'padding-top': '20px'
+            });
+            console.log("deactivated");
+        }
+    },false);
+}
 
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 11) {
-        $('.navbar').addClass("navbar-bg");
-        $('.navbar-nav > li > a').css({
-            'color': '#262626',
-            'padding-top': '10px'
-        });
-        console.log("activated");
-    }
-    else {
-      $('.navbar').removeClass("navbar-bg");
-        $('.navbar-nav > li > a').css({
-            'color': '#fff',
-            'padding-top': '20px'
-        });
-        console.log("deactivated");
-    }
-},false);
+
+$('#welcome-carousel.carousel').carousel({
+  interval: 4000
+});
+
+
+$('.carousel').carousel({
+  interval: false
+});
+
+});
+
+
 
 

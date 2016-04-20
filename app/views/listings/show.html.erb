@@ -1,2 +1,196 @@
-<h1>Listings#show</h1>
-<p>Find me in app/views/listings/show.html.erb</p>
+
+<div class="main-content">
+
+  <form class="form-basic" method="post" action="#">
+
+    <div class="form-title-row">
+        <h1>List Your Property</h1>
+    </div>
+
+    <div class="form-row">
+        <label>
+            <span>Unit Number</span>
+            <input type="email" name="email" placeholder="Unit Number">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Street name</span>
+            <input type="text" name="name"placeholder="Street Name">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Size</span>
+            <input type="text" name="name" placeholder="sq ft">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Year Built</span>
+            <input type="text" name="name" placeholder="year">
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+            <span>Neighbourhood</span>
+            <select name="dropdown">
+                <option>Gastown</option>
+                <option>Yaletown</option>
+                <option>Kitsilano</option>
+                <option>Granville Entertainment</option>
+                <option>West End</option>
+                <option>The Drive</option>
+                <option>Mount Pleasant</option>
+                <option>Downtown</option>
+                <option>South Granville</option>
+                <option>Point Grey</option>
+                <option>The Drive</option>
+                <option>Strathcona</option>
+                <option>Coal Harbour</option>
+                <option>Chinatown</option>
+                <option>Killarney</option>
+                <option>Marpole</option>
+                <option>Shaunghnessy</option>
+                <option>Oakridge</option>
+                <option>Kerrisdale</option>
+                <option>Fairview</option>
+                <option>Central Lonsdale</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="form-row">
+        <label>
+            <span>Type of Home</span>
+            <select name="dropdown">
+                <option>House</option>
+                <option>Condo</option>
+                <option>TownHouse</option>
+            </select>
+        </label>
+    </div>
+    <div class="form-row">
+        <label>
+          <span>Number of Rooms</span>
+          <select name="dropdown">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+          </select>
+        </label>
+        <label>
+            <span>Number of Bathrooms</span>
+            <select name="dropdown">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="form-row">
+      <span>Common Area Amenities</span><br>
+        <label>
+            <span>Gym</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Amenities Room</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>            
+        <label>
+            <span>Elevator</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>          
+        <label>
+            <span>Bike Room</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Garden</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Hot Tube</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Pool</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br><br>
+
+      <span>In Home Features</span><br>
+        <label>
+            <span>In Suite Laundry</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Dishwasher</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Stove</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Fridge</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+        <label>
+            <span>Hot Tube</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Pool</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br><br>
+
+        <span>Other Features</span><br>
+        <label>
+            <span>Pet Friendly</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label>
+        <label>
+            <span>Wheel Chair Accessible</span>
+            <input type="checkbox" name="checkbox" unchecked>
+        </label><br>
+    </div>
+
+    <div class="form-row">
+        <label>
+            <span>Property Details</span>
+            <textarea name="textarea"></textarea>
+        </label>
+    </div>
+
+    <div class="form-row">
+        <label>
+            <span>Special Features</span>
+            <textarea name="textarea"></textarea>
+        </label>
+    </div>
+
+      <div class="form-row">
+          <button type="submit">Submit Form</button>
+      </div>
+
+  </form>
+
+</div>
+
+
