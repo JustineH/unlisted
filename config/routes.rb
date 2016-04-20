@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get 'vendors/index'
-  get 'vendors/new'
 
+  get 'vendors/new'
 
   get 'users/index'
 
@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   get 'users/edit'
 
   get 'users/show'
-
-  
 
   get 'listings/index'
 
