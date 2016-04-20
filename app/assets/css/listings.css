@@ -115,13 +115,13 @@
   left: 18em;
   top: -1.4em; }
 
-/*SIDE MENU*/
+/*SIDEBAR NAV MENU*/
 .side-menu {
   bottom: 0;
   top: 0;
   width: 240px;
   z-index: 2;
-  height: 620px;
+  height: 885px;
   position: relative; }
 
 .side-menu.left {
@@ -228,3 +228,13 @@
   transition: all 200ms ease-out;
   width: 270px;
   height: 100%; }
+
+/*Google maps*/
+#map-title {
+  text-align: left;
+  margin-left: 38px; }
+
+#map {
+  height: 250px;
+  width: 450px;
+  margin: 0 auto; }

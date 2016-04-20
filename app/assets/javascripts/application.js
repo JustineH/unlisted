@@ -15,7 +15,27 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+// google maps
 
+var map;
+function initMap() {
+  var myLatLng = {
+    lat: 49.2821055,
+    lng: -123.1104596
+  };
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 15,
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP
+ });
+};
 $(function(){
 if ($('.home-page').length > 0){
     window.addEventListener("scroll", function() {
@@ -67,10 +87,8 @@ $('.carousel').carousel({
   interval: false
 });
 
-// add class on sidenav click
-$('a').on('click', function(){
-    $(this).addClass('.active');
-});
+
+
 });
 
 
