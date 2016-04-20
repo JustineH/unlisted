@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'welcome/index'
 
   get 'vendors/index'
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
 
   
 
-  get 'listings/index'
+  get 'listings/index' => 'listings#index'
 
   get 'listings/show'
 
