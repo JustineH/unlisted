@@ -130,7 +130,28 @@ $font_0: sans-serif;
 .featureList{
   margin: 40px 0;
   padding-bottom: 60px;
-  background: $white;
+  background: white;
   box-shadow: 0 2px 3px #ccc;
-  height: 350px;
+  /*height: 350px;*/
+  height: 200px;
+}
+
+.property-price{
+  position: relative;
+  text-align: left;
+  top: -1.5em;
+  left: 1.5em;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.feature-short-info{
+  position: relative;
+  text-align: left;
+  top: -2.2em;
+}
+
+.bedbath{
+  position: relative;
+  left: 18em;
+  top: -1.4em;
 }
