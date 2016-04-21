@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'welcome#index'
   resources :user
   resources :listings do
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   # get 'listings/show'
   # get 'listings/new'
   # get 'listings/edit'
+
   # resources :listings
 
   # root 'welcome#index'

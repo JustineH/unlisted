@@ -54,7 +54,11 @@
   }
 
   /*carousel*/
+.carousel{
 
+  position: relative;
+  top: -50px;
+}
   .carousel-fade {
     .carousel-inner {
       .item {
@@ -160,8 +164,32 @@
 
   }
 
+/*choose us*/
+.choose-us{
+  text-align: center;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 10em; 
+}
+
+.choose-us.row{
+  padding-top: 10em;
+}
+
+
+
 
   /*Listings*/
+
+  .heading{
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .sub-heading{
+    text-align: center;
+    font-weight: 100;
+  }
 
   #home-page-listing{
     padding-top: 2em;
@@ -200,5 +228,7 @@
     position: relative;
     top: -3em;*/
   }
+
+
 
 
