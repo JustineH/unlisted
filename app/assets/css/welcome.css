@@ -121,6 +121,14 @@
   padding-left: 2px; }
 
 /*Listings*/
+.heading {
+  text-align: center;
+  font-weight: 600; }
+
+.sub-heading {
+  text-align: center;
+  font-weight: 100; }
+
 #home-page-listing {
   padding-top: 2em; }
 

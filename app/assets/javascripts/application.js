@@ -15,8 +15,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
-// google maps
 
+// google maps
 var map;
 function initMap() {
   var myLatLng = {
@@ -36,6 +36,7 @@ function initMap() {
     animation: google.maps.Animation.DROP
  });
 };
+
 $(function(){
 if ($('.home-page').length > 0){
     window.addEventListener("scroll", function() {
@@ -88,7 +89,10 @@ $('.carousel').carousel({
 });
 
 
-
+// Add/remove class on sidenav bar when clicked
+$('#side-ul li').click(function(){
+    $(this).addClass('subdrop').siblings().removeClass('subdrop');
+ });
 });
 
 

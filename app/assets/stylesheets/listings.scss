@@ -31,7 +31,7 @@ $font_0: sans-serif;
     > label span {
       display: inline-block;
       box-sizing: border-box;
-      color: $color_chicago_approx;
+      /*color: $color_chicago_approx;*/
       /*width: 180px;*/
       text-align: left;
       vertical-align: top;
@@ -41,7 +41,7 @@ $font_0: sans-serif;
   .form-title-row {
     text-align: left;
     margin-left: 18px;
-    margin-bottom: 55px;
+    margin-bottom: 15px;
   }
   .form-row {
     margin: 0;
@@ -52,16 +52,16 @@ $font_0: sans-serif;
     color: $color_trout_approx;
     font-size: 24px;
     padding: 0 10px 15px;
-    border-bottom: 2px solid $color_cornflower_blue_approx;
+    /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
     margin: 0;
-    margin-left: 10px;
+    margin-left: 11px;
   }
   input {
     color: $color_chicago_approx;
     box-sizing: border-box;
     width: 240px;
     box-shadow: 1px 2px 4px 0 $black_8;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid $alto;
     margin-left: 38px;
   }
@@ -119,7 +119,7 @@ $font_0: sans-serif;
       text-align: right;
     }
   }
-  button {
+  /*button {
     display: block;
     border-radius: 2px;
     background-color: $color_cornflower_blue_approx;
@@ -129,7 +129,7 @@ $font_0: sans-serif;
     padding: 14px 22px;
     border: 0;
     margin: 40px 183px 0;
-  }
+  }*/
 }
 
 #feature-search{
@@ -177,8 +177,9 @@ $font_0: sans-serif;
   top: 0;
   width: 240px;
   z-index: 2;
-  height: 984px;
+  height: 720px;
   position: relative;
+  margin-top: -20px;
 }
 
 .side-menu.left {
@@ -198,7 +199,7 @@ $font_0: sans-serif;
 #sidebar-menu a {
   border: 0;
   font-weight: normal;
-  line-height: 1;
+  line-height: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -264,10 +265,6 @@ $font_0: sans-serif;
   border-left: 2px solid #228bdf !important;
 }
 
-#sidebar-menu > ul > li > a.active i {
-  color: #228bdf !important;
-}
-
 #sidebar-menu > ul > li > a.active span {
   color: #4c5667;
 }
@@ -314,14 +311,20 @@ $font_0: sans-serif;
 }
 
 #map {
-  height: 250px;
-  width: 450px;
+  height: 729px;
+  width: 650px;
+  float: right;
   margin: 0 auto;
+  margin-bottom: 50px;
+  top: -670px;
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1280px){
 .side-menu {
   width: 200px;
+}
+#map {
+  width: 400px;
 }
 }
 
@@ -329,6 +332,9 @@ $font_0: sans-serif;
   .side-menu {
     width: 180px;
   }
+  #map {
+  width: 300px;
+}
 }
 
 @media screen and (max-width: 700px){
@@ -337,6 +343,16 @@ $font_0: sans-serif;
     height: 250px;
   }
   #map {
-    width: 280px;
+    width: 380px;
+  }
+}
+
+#next {
+  margin-left: -74%;
+}
+
+@media screen and (min-width: 1081px){
+  .form-basic {
+    margin-left: 20%;
   }
 }

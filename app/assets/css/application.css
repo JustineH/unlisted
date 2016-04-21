@@ -9,6 +9,9 @@
 body {
   height: 100%; }
 
+html {
+  height: 80px; }
+
 /*Hover Effects*/
 /* Underline Reveal */
 .hvr-underline-reveal {
