@@ -93,6 +93,34 @@ $('.carousel').carousel({
 $('#side-ul li').click(function(){
     $(this).addClass('subdrop').siblings().removeClass('subdrop');
  });
+
+// // basic page loader
+// var basicsLoader = function(html){
+//     $('#show').click(function(html){
+//         var basicsPage = html;
+//         $.each(html, function(i, it){
+//             $('#page-wrap').load('/listings/show')
+//         });
+//     });
+// }
+// $.get('/listings/show', basicsLoader);
+
+// details page loader
+var detailsLoader = function(html){
+    $('#details').click(function(html){
+    var detailsPage = html;
+    $.each(html, function (i, it){
+        console.log('wat')
+        $('#page-wrap').load('/listings/details')
+        // $('#page-wrap').text(html)
+    });
+});
+}
+$.get('/listings/details', detailsLoader)
+ 
+
+
+
 });
 
 

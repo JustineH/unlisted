@@ -12,4 +12,8 @@ class ListingsController < ApplicationController
   def edit
     @listings = Listing.all
   end
+
+  def details
+    render :layout => false
+  end
 end

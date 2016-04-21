@@ -181,14 +181,15 @@ $font_0: sans-serif;
   top: 0;
   width: 240px;
   z-index: 2;
-  height: 726px;
+  height: 707px;
   position: relative;
   margin-top: -20px;
 }
 
 .side-menu.left {
   background: #ffffff;
-  box-shadow: -4px 4px 40px rgba(0, 0, 0, 0.15);
+  // box-shadow: -4px 4px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 70px;
 }
@@ -359,4 +360,8 @@ $font_0: sans-serif;
   .form-basic {
     margin-left: 20%;
   }
+}
+
+.test {
+  text-align: center;
 }

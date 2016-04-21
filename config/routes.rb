@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'listings/edit'
 
-  get 'listings/details'
+  get 'listings/details' 
 
   get 'listings/amenities'
 
