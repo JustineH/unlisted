@@ -1,7 +1,6 @@
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
-
   end
 
   def show
@@ -11,5 +10,13 @@ class ListingsController < ApplicationController
   end
 
   def edit
+  end
+
+  def basic
+    render :layout => false
+  end
+
+  def details
+    render :layout => false
   end
 end

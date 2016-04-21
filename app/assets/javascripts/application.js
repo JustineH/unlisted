@@ -19,6 +19,28 @@
 
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
+
+// google maps
+var map;
+function initMap() {
+  var myLatLng = {
+    lat: 49.2821055,
+    lng: -123.1104596
+  };
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 15,
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP
+ });
+};
+
 $(function(){
 if ($('.home-page').length > 0){
     window.addEventListener("scroll", function() {
@@ -71,6 +93,33 @@ $('.carousel').carousel({
   interval: false
 });
 
+
+// Add/remove class on sidenav bar when clicked
+$('#side-ul li').click(function(){
+    $(this).addClass('subdrop').siblings().removeClass('subdrop');
+ });
+
+
+// details page loader
+var detailsLoader = function(html){
+    $('#details').click(function(){
+        console.log(html)
+        $('#page-wrap').html(html);
+    });
+}
+$.get('/listings/details', detailsLoader);
+
+// // basic page loader
+
+var basicLoader = function(html){
+    console.log("a")
+   $('#basic').click(function(){
+    console.log('b')
+        $('#page-wrap').html(html)
+        console.log('c')
+    });
+}
+$.get('/listings/basic', basicLoader);
 });
 
 

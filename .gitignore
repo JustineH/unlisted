@@ -15,4 +15,8 @@
 /log/*.log
 /tmp
 
+
+config.codekit
+
 .DS_Store
+

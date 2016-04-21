@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Unlisted</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <title>Unlisted</title>
 </head>
 <body>
   <%= render 'layouts/header' %>
@@ -20,6 +22,34 @@
   <div id="content_container">
     <%= yield %>
   </div>
-  <%= render 'layouts/footer' %>
+<!-- <section class="overlay nav navbar">
+  <div class="navbar-collapse collapse navbar-right">
+    <ul class="nav navbar-nav">
+      <li class="hvr-underline-reveal"><a href="#">Home</a></li>
+      <li class="hvr-underline-reveal"><a href="#">Why us?</a></li>
+      <li class="hvr-underline-reveal"><a href="#">Terms & Policies</a></li>
+      <li class="hvr-underline-reveal"><a href="#">Log in</a></li>
+      <li class="hvr-underline-reveal"><a href="#">Sign up</a></li> -->
+      <!-- <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+        </ul>
+      </li> -->
+     <!--  <li class="hvr-underline-reveal"><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+</section> -->
+
+<!--Nav Bar Ends -->
+
+<!-- <br>
+<br>
+<hr> -->
+<%= render 'layouts/footer' %>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxtuexS3LgdiMGA4Z5Syb2ZHGy9_1b3s&callback=initMap"></script>
 </body>
 </html>
