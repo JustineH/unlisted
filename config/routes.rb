@@ -24,16 +24,6 @@ Rails.application.routes.draw do
 
   get 'listings/edit'
 
-  get 'listings/details' 
-
-  get 'listings/amenities'
-
-  get 'listings/photos'
-
-  get 'listings/extra'
-
-  get 'listings/basic'
-
   # resources :listings
 
 
