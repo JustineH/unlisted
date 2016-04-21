@@ -16,6 +16,6 @@ class ListingsController < ApplicationController
   end
 
   def search
-    @results = Listing.where(extraFeaturesDescription: params[:query])
+    @results = Listing.where(params[:results])
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417002848) do
+ActiveRecord::Schema.define(version: 20160421012011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,31 +31,31 @@ ActiveRecord::Schema.define(version: 20160417002848) do
     t.integer  "user_id"
     t.string   "address"
     t.integer  "city"
-    t.string   "postalCode"
+    t.string   "postal_code"
     t.integer  "neighbourhood"
     t.integer  "price",                    default: 0
-    t.integer  "numOfBed",                 default: 0
-    t.integer  "numOfBath",                default: 0
-    t.integer  "sqft",                     default: 0
-    t.date     "yearBuilt"
-    t.integer  "homeType"
-    t.integer  "typeOwnership"
-    t.integer  "daysListed",               default: 0
-    t.integer  "lastUpdated",              default: 0
+    t.integer  "bedrooms",                 default: 0
+    t.integer  "bathrooms",                default: 0
+    t.integer  "size",                     default: 0
+    t.date     "year_built"
+    t.integer  "home_type"
+    t.integer  "type_ownership"
+    t.integer  "days_listed",              default: 0
+    t.integer  "last_updated",             default: 0
     t.integer  "levels",                   default: 0
-    t.integer  "fullBathrooms",            default: 0
-    t.integer  "halfBathrooms",            default: 0
+    t.integer  "full_bathrooms",           default: 0
+    t.integer  "half_bathrooms",           default: 0
     t.integer  "fireplaces",               default: 0
     t.date     "taxYear"
     t.integer  "taxes",                    default: 0
-    t.integer  "strataFees",               default: 0
-    t.integer  "lotSize"
+    t.integer  "strata_fees",              default: 0
+    t.integer  "lot_size"
     t.integer  "walkscore",                default: 0
-    t.text     "propertySummary"
+    t.text     "property_summary"
     t.text     "extraFeaturesDescription"
     t.integer  "parking",                  default: 0
     t.integer  "storage",                  default: 0
-    t.integer  "basementArea",             default: 0
+    t.integer  "basement_area",            default: 0 # Text instead?
     t.boolean  "basement",                 default: false
     t.boolean  "bikeRoom",                 default: false
     t.boolean  "elevator",                 default: false
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160417002848) do
     t.boolean  "wheelchairAccessible",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "area"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
