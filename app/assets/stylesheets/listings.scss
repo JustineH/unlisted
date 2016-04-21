@@ -133,7 +133,7 @@ $font_0: sans-serif;
   background: white;
   box-shadow: 0 2px 3px #ccc;
   /*height: 350px;*/
-  height: 200px;
+  height: 210px;
 }
 
 .property-price{
@@ -141,6 +141,9 @@ $font_0: sans-serif;
   text-align: left;
   top: -1.5em;
   left: 1.5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  width: 30%;
   background: rgba(255, 255, 255, 0.85);
 }
 
@@ -150,8 +153,13 @@ $font_0: sans-serif;
   top: -2.2em;
 }
 
+.area{
+  position: relative;
+  left: 16em;
+  top: -1.4em;
+}
+
 .bedbath{
   position: relative;
-  left: 18em;
-  top: -1.4em;
+  top: -1.6em;
 }
