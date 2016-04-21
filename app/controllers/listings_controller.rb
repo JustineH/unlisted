@@ -13,6 +13,10 @@ class ListingsController < ApplicationController
     @listings = Listing.all
   end
 
+  def basic
+    render :layout => false
+  end
+
   def details
     render :layout => false
   end

@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   get 'listings/extra'
 
+  get 'listings/basic'
+
   # resources :listings
 
 
