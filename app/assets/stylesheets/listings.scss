@@ -174,13 +174,15 @@ $font_0: sans-serif;
 }
 
 /*SIDEBAR NAV MENU*/
-
+.nav {
+  margin: 0;
+}
 .side-menu {
   bottom: 0;
   top: 0;
   width: 240px;
   z-index: 2;
-  height: 707px;
+  height: 100%;
   position: relative;
   margin-top: -20px;
 }
@@ -330,6 +332,9 @@ $font_0: sans-serif;
   height: 100%;
 }
 
+.details-wrap {
+  margin-left: -100px;
+}
 
 @media screen and (max-width: 1280px){
 .side-menu {
