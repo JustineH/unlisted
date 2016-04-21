@@ -72,7 +72,7 @@ class Lilypad_Condo_Search
     @bedrooms = get_bedrooms[4]
     @bathrooms = get_bathrooms[5]
     @size = get_size[6]
-    @type = get_type[12]
+    @home_type = get_type[12]
     @year_built = get_year_built[13]
     @neighbourhood = get_neighbourhood
     @postal_code = get_postal_code.join

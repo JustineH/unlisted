@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160420204440) do
 
   # These are extensions that must be enabled in order to support this database
@@ -78,6 +79,7 @@ ActiveRecord::Schema.define(version: 20160420204440) do
     t.boolean  "wheelchair_accessible", default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "area"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree

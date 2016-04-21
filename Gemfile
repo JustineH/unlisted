@@ -35,6 +35,7 @@ gem 'rails_12factor', group: :production
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.4.1'
 gem 'sass-rails', '~> 5.0'
+gem 'faker', '~> 1.6.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
