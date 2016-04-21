@@ -1,4 +1,8 @@
-if Rails.env.development?
+  neighbourhoods = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
+
+  neighbourhoods.each do |neighbourhood|
+    Neighbourhood.create(name:neighbourhood)
+  end
 
   condo_1 = Listing.new
     condo_1.address = "201 - 2560 4th Avenue"
@@ -240,7 +244,7 @@ if Rails.env.development?
     townhouse_2.walkscore = 97
     townhouse_2.save
 
-   townhouse_3 = Listing.new
+  townhouse_3 = Listing.new
     townhouse_3.address = "312 - 3727 10th Avenue W"
     townhouse_3.city = "Vancouver"
     townhouse_3.price = 728000
@@ -287,7 +291,5 @@ if Rails.env.development?
     townhouse_4.strata_fees = 868
     townhouse_4.walkscore = 74
     townhouse_4.save
-
-end
 
 puts "There are now #{Listing.count} rows in the Listings table."
