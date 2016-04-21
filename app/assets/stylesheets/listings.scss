@@ -4,7 +4,6 @@
 
 
 
-
 //form colors
 $white: #ffffff;
 $black_10: rgba(0, 0, 0, 0.1);
@@ -324,6 +323,14 @@ $font_0: sans-serif;
   top: -670px;
 }
 
+
+// details page
+.details-bg{
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+
 @media screen and (max-width: 1280px){
 .side-menu {
   width: 200px;
@@ -362,6 +369,3 @@ $font_0: sans-serif;
   }
 }
 
-.test {
-  text-align: center;
-}

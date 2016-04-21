@@ -253,6 +253,10 @@
   margin-bottom: 50px;
   top: -670px; }
 
+.details-bg {
+  background-color: #F5F5F5;
+  height: 100%; }
+
 @media screen and (max-width: 1280px) {
   .side-menu {
     width: 200px; }
@@ -278,5 +282,3 @@
 @media screen and (min-width: 1081px) {
   .form-basic {
     margin-left: 20%; } }
-.test {
-  text-align: center; }

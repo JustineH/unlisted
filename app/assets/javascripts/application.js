@@ -115,7 +115,6 @@ var basicLoader = function(html){
     });
 }
 $.get('/listings/basic', basicLoader);
-
 });
 
 
