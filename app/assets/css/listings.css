@@ -63,7 +63,7 @@
     background-color: #ffffff;
     color: #5f5f5f;
     box-sizing: border-box;
-    max-width: 240px;
+    width: 240px;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     padding: 12px 8px;
     border: 1px solid #dbdbdb;
@@ -134,7 +134,7 @@
   top: 0;
   width: 240px;
   z-index: 2;
-  height: 720px;
+  height: 726px;
   position: relative;
   margin-top: -20px; }
 
