@@ -4,36 +4,29 @@
  *= require vendors
  *= require welcome
  */
-
-
 /*Font*/
-
- /* use Proxima Nova? need to import font */
+/* use Proxima Nova? need to import font */
 body {
   font-family: "SOURCE SANS PRO", serif;
-  font-family: "arial", sans-serif;
-}
+  font-family: "arial", sans-serif; }
 
-#content_container{
-  
-  padding-top: 50px;
-}
+#content_container {
+  padding-top: 50px; }
 
 /*Hover Effects*/
-
 /* Underline Reveal */
 .hvr-underline-reveal {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 .hvr-underline-reveal:before {
   content: "";
   position: absolute;
@@ -51,11 +44,8 @@ body {
   -webkit-transition-duration: 0.2;
   transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
+  transition-timing-function: ease-out; }
+
 .hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
   -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-
+  transform: translateY(0); }
