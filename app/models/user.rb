@@ -11,4 +11,19 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
             :uniqueness =>true,
             :format => {:with => /.+@.+\..+/i}
+  has_many :listings
+  has_many :bookmarks
+
+  def self.new_guest
+    new { |u| u.guest = true }
+  end
+  
+  def name
+    guest ? "Guest" : firstname
+  end
+  
+  def move_to(user)
+    tasks.update_all(user_id: user.id)
+  end
+
 end
