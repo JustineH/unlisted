@@ -1,0 +1,6 @@
+<h1>You found <%= @results.count %> results</h1>
+<ul>
+<% @results.each do |result| %>
+  <li><%= result.address %>
+<% end %>
+</ul>
