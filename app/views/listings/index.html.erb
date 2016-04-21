@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-
-      <!-- Optional Selection -->
 <section id="feature-search">
       <div class='row seletion-menu'>
         <div class='col-sm-3'>    
@@ -108,15 +105,16 @@
 <section id="feature-listing"> 
 
 <div class="container feature-listing">
+  <div class="row">
+    <% @listings.each do |listing| %>
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
 
 
-      <div class="col-md-4 col-sm-6 cols-xs-12">
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="featureList text-center">
           
-            <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
+          <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner">
               <div class="item active">
@@ -141,25 +139,24 @@
           </div>
 
           <div class="title">
-            <h4 class="regular property-price">$1,400,000</h4>
+            <h4 class="regular property-price"><%= listing.price %></h4>
             <div class="feature-short-info">
-              <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
+              <p class="muted regular address"><em><%= listing.address %></em></p>
               <div class="bedbath">
-                <p class="muted regular bedroom"><em>bed</em>
-                <container class="bathroom"><em>bath</em></container></p>
+
+                <p class="muted regular bedroom"><em><%= listing.numOfBed %> bed</em>
+                <container class="bathroom"><em><%= listing.numOfBath %> bath</em></container>
+                <container class="bathroom"><em><%= listing.sqft %> sqft</em></container></p>
               </div>
             </div>
             <p><a class="btn btn-default listing-property-button" href="#" role="button">Property details &raquo;</a></p>
           </div>
+          </div>
         </div>
       </div>
-
-
-  
+        <% end %>
 </section>
 <!-- Listings Ends -->
 
 <style>
 
-=======
->>>>>>> 7f19761241a3df52928ead050e7f7c746c131e32
