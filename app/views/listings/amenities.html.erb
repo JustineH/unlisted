@@ -1,0 +1,56 @@
+<%= form_for @listing do |f| %>
+  <div class="form-row">
+    <%= f.label "Fireplaces" %>
+    <%= f.check_box :fireplaces %>
+ </div>
+    
+  <div class="form-row">
+    <%= f.label "Gym" %>
+    <%= f.check_box :gym %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Amenities Room" %>
+    <%= f.check_box :amenities_room%>
+ </div>
+
+<div class="form-row">
+    <%= f.label "A/C" %>
+    <%= f.check_box :air_conditioning %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Insuite Laundry" %>
+    <%= f.check_box :insuite_laundry %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Stove" %>
+    <%= f.check_box :stove %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Fridge" %>
+    <%= f.check_box :fridge %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Hot Tub" %>
+    <%= f.check_box :hot_tub %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "pool" %>
+    <%= f.check_box :pool %>
+ </div>
+
+<div class="form-row">
+    <%= f.label "Weelchair Accessible" %>
+    <%= f.check_box :wheelchair_accessible %>
+ </div>
+
+    </div>
+    <div>
+    <%= f.submit "Submit" %> 
+  </div>
+<% end %>

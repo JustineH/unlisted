@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'puma'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,6 +37,9 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 3.4.1'
 gem 'sass-rails', '~> 5.0'
 gem 'faker', '~> 1.6.3'
+gem 'pry'
+gem 'searchkick'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -2,6 +2,15 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19115",
 "files": {
+	"\/app\/assets\/css\/listings.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/css\/listings.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/assets\/images\/chris.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -178,17 +187,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/app\/assets\/javascripts\/application.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/application.js",
-		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/application-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/app\/assets\/javascripts\/listings.js.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
@@ -200,6 +198,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/assets\/javascripts\/min\/application-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/application-min.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/min\/application-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/app\/assets\/javascripts\/users.js.coffee": {
@@ -241,22 +250,6 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
-	"\/app\/assets\/stylesheets\/application.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/application.scss",
-		"outputAbbreviatedPath": "\/app\/assets\/css\/application.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/app\/assets\/stylesheets\/carousel.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -265,22 +258,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/app\/assets\/stylesheets\/listings.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/listings.scss",
-		"outputAbbreviatedPath": "\/app\/assets\/css\/listings.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
 		},
 	"\/app\/assets\/stylesheets\/unlisted_custom.css": {
 		"fileType": 16,
@@ -316,22 +293,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/vendors.scss",
 		"outputAbbreviatedPath": "\/app\/assets\/css\/vendors.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/app\/assets\/stylesheets\/welcome.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/welcome.scss",
-		"outputAbbreviatedPath": "\/app\/assets\/css\/welcome.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -438,29 +399,38 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/views\/layouts\/_footer.html.erb": {
+	"\/app\/views\/layouts\/_sidebar.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/layouts\/_footer.html.erb",
+		"inputAbbreviatedPath": "\/app\/views\/layouts\/_sidebar.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/views\/layouts\/_header.html.erb": {
+	"\/app\/views\/listings\/amenities.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/layouts\/_header.html.erb",
+		"inputAbbreviatedPath": "\/app\/views\/listings\/amenities.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/views\/layouts\/application.html.erb": {
+	"\/app\/views\/listings\/basic.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/layouts\/application.html.erb",
+		"inputAbbreviatedPath": "\/app\/views\/listings\/basic.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/listings\/details.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/details.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -474,11 +444,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/views\/listings\/index.html.erb": {
+	"\/app\/views\/listings\/extras.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/listings\/index.html.erb",
+		"inputAbbreviatedPath": "\/app\/views\/listings\/extras.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -492,20 +462,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/views\/listings\/new.html.erb": {
+	"\/app\/views\/listings\/photos.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/listings\/new.html.erb",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/app\/views\/listings\/show.html.erb": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/listings\/show.html.erb",
+		"inputAbbreviatedPath": "\/app\/views\/listings\/photos.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -551,24 +512,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/views\/vendors\/index.html.erb",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/app\/views\/vendors\/new.html.erb": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/vendors\/new.html.erb",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/app\/views\/welcome\/index.html.erb": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/views\/welcome\/index.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
