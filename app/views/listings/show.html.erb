@@ -14,7 +14,7 @@
     </div>
     <div class="form-row">
         <label>
-            <span>Street name</span>
+            <span>Street Name</span>
             <input type="text" name="name"placeholder="Street Name">
         </label>
     </div>
@@ -45,8 +45,9 @@
         <label>
             <span>Type of Home</span>
             <select name="type_property">
-              <%= @type_property.each do |type| %>
+              <%= type_property.each do |type| %>
                 <option value="<%= type %>"><%= type %></option>
+              <% end %>
             </select>
         </label>
     </div>
@@ -55,8 +56,9 @@
         <label>
             <span>Type of Ownership</span>
             <select name="type_ownership">
-              <%= @type_ownership.each do |type| %>
+              <%= type_ownership.each do |type| %>
                 <option value="<%= type %>"><%= type %></option>
+              <% end %>
             </select>
         </label>
     </div>
@@ -117,7 +119,7 @@
             <input type="checkbox" name="checkbox" unchecked>
         </label>
         <label>
-            <span>Hot Tube</span>
+            <span>Hot Tub</span>
             <input type="checkbox" name="checkbox" unchecked>
         </label><br>
         <label>
@@ -157,7 +159,7 @@
             <input type="checkbox" name="checkbox" unchecked>
         </label>
         <label>
-            <span>Wheel Chair Accessible</span>
+            <span>Wheelchair Accessible</span>
             <input type="checkbox" name="checkbox" unchecked>
         </label><br>
     </div>
