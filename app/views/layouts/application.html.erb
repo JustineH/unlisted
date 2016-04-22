@@ -3,7 +3,12 @@
 <head>
   <title>Unlisted</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- include specific stylesheet for each view and layouts -->
+  <%= stylesheet_link_tag controller.controller_name %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -11,36 +16,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
-<!-- Nav bar -->
+  <%= render 'layouts/header' %>
 
-<section class="overlay nav navbar">
-  <div class="navbar-collapse collapse navbar-right">
-    <ul class="nav navbar-nav">
-      <li class="hvr-underline-reveal"><a href="#">Home</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Why us?</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Terms & Policies</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Log in</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Sign up</a></li>
-      <!-- <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-        </ul>
-      </li> -->
-      <li class="hvr-underline-reveal"><a href="#">FAQ</a></li>
-    </ul>
+  <% flash.each do |name, msg| %>
+       <%= content_tag(:div, msg, class: "alert alert-info") %>
+  <% end %>
+
+  <div id="content_container">
+    <%= yield %>
   </div>
-</section>
-
-<!--Nav Bar Ends -->
-<%= yield %>
-
-<br>
-<br>
-<hr>
-<%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' %>
 </body>
 </html>

@@ -16,8 +16,11 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+// Top nav bar behaviour
+// Creates bg and font colour when scrolled
 $(function(){
-if ($('.home-page').length > 0){
+if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
             $('.navbar').addClass("navbar-bg");
@@ -57,12 +60,13 @@ if ($('.home-page').length > 0){
     },false);
 }
 
-
+// Home page carousel
+// rotate every 4 sec
 $('#welcome-carousel.carousel').carousel({
   interval: 4000
 });
 
-
+// Pause all other carousel
 $('.carousel').carousel({
   interval: false
 });

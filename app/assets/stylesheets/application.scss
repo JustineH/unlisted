@@ -1,20 +1,99 @@
 /*
  *= require_self
- *= require listings
- *= require vendors
- *= require welcome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 
+
+
 /*Font*/
 
  /* use Proxima Nova? need to import font */
-body {
+/*body {
   font-family: "SOURCE SANS PRO", serif;
+  font-family: "arial", sans-serif;
+}*/
+
+#content_container{
+  
+  padding-top: 50px;
 }
+
+/*Anchor*/
+.anchor:before { 
+  display: block; 
+  content: " "; 
+    height: 50px;      /* Give height of your fixed element */
+        margin-top: -50px; /* Give negative margin of your fixed element */    
+        visibility: hidden; 
+}
+/* Scrolling
+
+a[ id= "welcome-carousel" ]:target ~ .carousel div.section1 {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "choose-us" ]:target ~ section.anchor {
+    -webkit-transform: translateY( -500px );
+    transform: translateY( -500px );
+}
+a[ id= "feature-listing" ]:target ~ section.feature-listing {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+} */
+
+
+/*nav bar*/
+
+  .overlay { 
+  /*color:#fff;
+    position:absolute;
+    z-index:1;
+    top:10%;
+    left:0;
+    width:100%;
+    text-align:center;*/
+    position: absolute;
+    z-index:2;
+  }
+  .nav{
+    top:0px;
+    z-index:10;
+    background:#fff;
+    background: transparent;
+    font-weight: 200;
+    width:100%;
+    padding-right: 1.5em;
+    transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  }
+
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: transparent;
+  }
+
+  .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
+  }
+  .navbar {
+    min-height:20px;
+  }
+
+  .navbar-bg {
+    position: fixed;
+    border-radius: 0px;
+    right: 0px;
+    /*background: rgba(255, 255, 255, 0.95);*/
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+/*    padding-top: 0px;
+    padding-bottom: 15px;*/
+  }
 
 /*Hover Effects*/
 
@@ -55,101 +134,69 @@ body {
   transform: translateY(0);
 }
 
+/*Listing Box*/
+
+#feature-listing{
+  padding: 5em 5em 1em 5em; 
+}
+.featureList{
+  margin: 40px 0;
+  padding-bottom: 60px;
+  background: white;
+  box-shadow: 0 2px 3px #ccc;
+  /*height: 350px;*/
+  height: 220px;
+}
+
+/*
+.listing > .item > img{
+  width:100%;
+  max-height: 220px;
+}
+*/
+.listing-box-info{
+  position: relative;
+  top: -3.7em;
+  left: 1.0em;
+}
+
+.featureList .carousel .item {
+  height: 220px;
+}
+
+.featureList .item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 220px;
+}
+
+.property-price{
+  position: relative;
+  text-align: left;
+  top: -1.5em;
+  padding-left: .5em;
+  padding-right: .5em;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.85);
+}
 
 
-/*$primary-color: #ccc;*/
+.feature-short-info{
+  position: relative;
+  text-align: left;
+  top: -2.3em;
+}
 
+.area{
+  position: relative;
+  float: right;
+  right: 30px;
+  top: -2.1em;
+}
 
-
-
-
-
-/*Vendor Page*/
-
-
-  #test-carousel {
-    position:absolute;
-    top:0;
-    z-index: -1;
-     
-  }
-
-  .flex-container {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 500px;
-    
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-  }
-
-  .flex-item {
-    background: tomato;
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-
-
-        
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-  }
-
-
-
-/*test code*/
- /*  .jumbotron.vertical-center {
-   margin-bottom: 0; Remove the default bottom margin of .jumbotron
-   position: relative
- }
- 
- .vertical-center {
-   position: absolute;
-   min-height: 100%;
-    Fallback for vh unit
-   min-height: 50vh; 
- 
- 
-   You might also want to use
-                         'height' property instead.
-                         
-                         Note that for percentage values of
-                         'height' or 'min-height' properties,
-                         the 'height' of the parent element
-                         should be specified explicitly.
-   
-                         In this case the parent of '.vertical-center'
-                         is the <body> element
- 
-   Make it a flex container
- 
-   display: flex; 
-   
-   Align the bootstrap's container vertically
-   align-items : center;
-   
-   In legacy web browsers such as Firefox 9
-      we need to specify the width of the flex container
-   width: 100%;
-   
-   Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
-      hence the bootstrap's container won't be aligned to the center anymore.
-   
-      Therefore, we should use the following declarations to get it centered again
-   justify-content : center;
- } */
+.bedbath{
+  position: relative;
+  top: -1em;
+}
 
