@@ -1,26 +1,41 @@
+
 <div class="details-bg">
 <div class="details-wrap">
-    <%= form_tag("/search", method: "get", class: "form-basic") do %>
+<!-- <div class="container"> -->
+<div class="row">
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- HOUSE -->
+<!-- //////////// -->
+<!-- //////////// -->
+<div class="col-md-4 col-sm-4 col-xs-12">
+    <%= form_tag("/search", method: "post", class: "form-basic") do %>
 
     <div class="form-row">
       <label><span class="form-span">Price</span><br>
       <%= text_field_tag "price", nil, placeholder: "Enter price" %></label>
     </div>
-
-
     <div class="form-row">
       <label><span class="form-span">Year built</span><br>
       <%= text_field_tag "year", nil, placeholder: "e.g., 2005" %></label>
     </div>
+    <% end %>
 
+
+    <%= form_tag("/search", method: "post", class: "form-basic") do %>
     <div class="form-row">
       <label><span class="form-span">Lot Size (sqft)</span><br>
-      <%= text_field_tag "year", nil, placeholder: "e.g., 500" %></label>
+      <%= text_field_tag "lot_size", nil, placeholder: "e.g., 500" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Property Size (sqft)</span><br>
+      <%= text_field_tag "size", nil, placeholder: "e.g., 1500" %></label>
     </div>
 
     <div class="form-row">
       <label><span class="form-span">Levels</span><br>
-      <%= text_field_tag "levels", "", placeholder: "e.g., 2" %></label>
+      <%= text_field_tag "levels", nil, placeholder: "e.g., 2" %></label>
     </div>
     <div class="form-row">
       <label><span class="form-span">Basement</span><br>
@@ -50,6 +65,148 @@
     </div>
  <button id="details" class="btn btn-default listing-property-button">Next &raquo;</button>
 <%end %>
+</div>
+
+
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- //////////// -->
+  <!-- CONDO -->
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- //////////// -->
+<div class="col-md-4 col-sm-4 col-xs-12">
+<%= form_tag("/search", method: "post", class: "form-basic") do %>
+    <div class="form-row">
+      <label><span class="form-span">Lot Size (sqft)</span><br>
+      <%= text_field_tag "year", nil, placeholder: "e.g., 500" %></label>
+    </div>
+
+      <div class="form-row">
+      <label><span class="form-span">Property Size (sqft)</span><br>
+      <%= text_field_tag "size", nil, placeholder: "e.g., 1500" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Strata Fee</span><br>
+      <%= text_field_tag "strata_fees", nil, placeholder: "enter monthly strata fee" %></label>
+    </div>
+    <div class="form-row">
+      <label><span class="form-span">Elevator</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Parking</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Storage</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+     <div class="form-row">
+      <label><span class="form-span">Bike room</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+     <div class="form-row">
+      <label><span class="form-span">Laundry Room</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+     <div class="form-row">
+      <label><span class="form-span">Pet Friendly</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+ <button id="details" class="btn btn-default listing-property-button">Next &raquo;</button>
+<%end %>
+</div>
+
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- TOWNHOUSE -->
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- //////////// -->
+
+<div class="col-md-4 col-sm-4 col-xs-12">
+<%= form_tag("/search", method: "post", class: "form-basic") do %>
+    <div class="form-row">
+      <label><span class="form-span">Lot Size (sqft)</span><br>
+      <%= text_field_tag "year", nil, placeholder: "e.g., 500" %></label>
+    </div>
+
+      <div class="form-row">
+      <label><span class="form-span">Property Size (sqft)</span><br>
+      <%= text_field_tag "size", nil, placeholder: "e.g., 1500" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Strata Fee</span><br>
+      <%= text_field_tag "strata_fees", nil, placeholder: "enter monthly strata fee" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Parking</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Storage</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+   
+     <div class="form-row">
+      <label><span class="form-span">Laundry Room</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+ <button id="details" class="btn btn-default listing-property-button">Next &raquo;</button>
+<%end %>
+</div>
+
+
+
+</div> <!-- row -->
+<!-- </div> --> <!-- container -->
 </div> <!-- details wrap -->
 </div> <!-- details-bg -->
-  
+
+
