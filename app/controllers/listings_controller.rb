@@ -24,5 +24,12 @@ class ListingsController < ApplicationController
   def basic
   end
 
+  def amenities
+    # double check this! 
+    @listing = Listing.new
+  end
+
+  def photos
+  end
   
 end
