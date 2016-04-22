@@ -5,8 +5,8 @@ class ListingsController < ApplicationController
 
   def show
     @neighbourhoods = Neighbourhood.all 
-    @type_ownership = Listing::TYPE_OWNERSHIP
-    @type_property = Listing::TYPE_PROPERTY
+    # @type_ownership = Listing::TYPE_OWNERSHIP
+    # @type_property = Listing::TYPE_PROPERTY
   end
 
   def new
