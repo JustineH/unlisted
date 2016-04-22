@@ -1,0 +1,55 @@
+<div class="details-bg">
+<div class="details-wrap">
+    <%= form_tag("/search", method: "get", class: "form-basic") do %>
+
+    <div class="form-row">
+      <label><span class="form-span">Price</span><br>
+      <%= text_field_tag "price", nil, placeholder: "Enter price" %></label>
+    </div>
+
+
+    <div class="form-row">
+      <label><span class="form-span">Year built</span><br>
+      <%= text_field_tag "year", nil, placeholder: "e.g., 2005" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Lot Size (sqft)</span><br>
+      <%= text_field_tag "year", nil, placeholder: "e.g., 500" %></label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Levels</span><br>
+      <%= text_field_tag "levels", "", placeholder: "e.g., 2" %></label>
+    </div>
+    <div class="form-row">
+      <label><span class="form-span">Basement</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Garage</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label><span class="form-span">Garden</span><br>
+        <select name="dropdown">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+    </div>
+ <button id="details" class="btn btn-default listing-property-button">Next &raquo;</button>
+<%end %>
+</div> <!-- details wrap -->
+</div> <!-- details-bg -->
+  

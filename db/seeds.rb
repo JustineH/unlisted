@@ -5,7 +5,7 @@
   end
 
   condo_1 = Listing.new
-    condo_1.address = "201 - 2560 4th Avenue"
+    condo_1.address = "201 - 2560 4th Avenue W"
     condo_1.city = "Vancouver"
     condo_1.price = 470139
     condo_1.bedrooms = 1

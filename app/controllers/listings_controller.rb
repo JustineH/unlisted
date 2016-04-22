@@ -20,4 +20,9 @@ class ListingsController < ApplicationController
   def search
     @results = Listing.where(params[:text])
   end
+
+  def basic
+  end
+
+  
 end
