@@ -17,6 +17,11 @@
 //= require_tree .
 
 
+// modernizr
+var modernizr = function (){
+var div = document.createElement('div');
+return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)
+};
 // google maps
 var map;
 function initMap() {
