@@ -1,9 +1,10 @@
+
 <section class="overlay nav navbar">
   <div class="navbar-collapse collapse navbar-right">
     <ul class="nav navbar-nav">
-      <li class="hvr-underline-reveal"><a href="#">Home</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Why us?</a></li>
-      <li class="hvr-underline-reveal"><a href="#">Terms & Policies</a></li>
+      <li class="hvr-underline-reveal"><a href="#welcome-carousel">Home</a></li>
+      <li class="hvr-underline-reveal"><a href="#choose-us">Why us?</a></li>
+      <li class="hvr-underline-reveal"><a href="#feature-listing">Featured Listings</a></li>
 
      <% if user_signed_in? %>
       
@@ -12,7 +13,7 @@
      <% else %>
         <li class="hvr-underline-reveal"><%= link_to "Log in", new_user_session_path%></a></li>
         <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li>
-    <% end %>  
+    <% end %> 
 
 
       <!-- <li class="dropdown">
