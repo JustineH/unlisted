@@ -29,8 +29,8 @@ module Unlisted
     config.assets.initialize_on_precompile = false
     
     # Added per instructed to get assets to load
-    config.serve_static_assets = true
-    config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
-    config.assets.compile = true
+    # config.serve_static_assets = true
+    # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+    # config.assets.compile = true
   end
 end
