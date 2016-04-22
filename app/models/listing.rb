@@ -46,4 +46,5 @@ class Listing < ActiveRecord::Base
   validates :pet_friendly, inclusion: [true, false]
   validates :wheelchair_accessible, inclusion: [true, false]
 
+
 end

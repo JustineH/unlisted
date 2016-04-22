@@ -32,11 +32,11 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
-    zoom: 15,
+    zoom: 10,
     scrollwheel: false
   });
   var marker = new google.maps.Marker({
-    position: myLatLng,
+    address: '6696 Wellington Ave',
     map: map,
     draggable: true,
     animation: google.maps.Animation.DROP
