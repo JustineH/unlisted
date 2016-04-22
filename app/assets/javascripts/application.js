@@ -18,10 +18,10 @@
 
 
 // modernizr
-var modernizr = function (){
-var div = document.createElement('div');
-return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)
-};
+// var modernizr = function (){
+// var div = document.createElement('div');
+// return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)
+// };
 // google maps
 var map;
 function initMap() {
@@ -111,16 +111,25 @@ $.get('/listings/details', detailsLoader);
 // // basic page loader
 
 var basicLoader = function(html){
-    console.log("a")
+    console.log("a");
    $('#basic').click(function(){
-    console.log('b')
-        $('#page-wrap').html()
-        console.log('c')
+    console.log('b');
+        $('#page-wrap').html();
+        console.log('c');
     });
 }
 $.get('/listings/basic', basicLoader);
 
+// photo page loader 
+var photoLoader = function(html){
+    $('#photo').click(function(){
+        $('#page-wrap').html();
+    });
+}
+$.get('/listings/photos', photoLoader);
+
 });
+
 
 
 
