@@ -8,9 +8,6 @@ class ListingsController < ApplicationController
 
   def show
     @neighbourhoods = Neighbourhood.all 
-    # @type_ownership = Listing::TYPE_OWNERSHIP
-    # @type_property = Listing::TYPE_PROPERTY
-    # @listing = Listing.find(params[:id])
   end
 
   def new
@@ -19,7 +16,9 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    # @listing = Listing.new(listing_params)
+    # @listing.user = current_user
+    @listing = current_user.listings.build(listing_params)
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully entered'
     else
@@ -31,8 +30,8 @@ class ListingsController < ApplicationController
   end
 
   def update
-    if @listing.update_attributes(listing_params)
-    redirect_to listing_path(@listing)
+    if @listing.update(listing_params)
+    redirect_to @listing, notice: "Your Listing was successfully updated."
     else
       render :edit      
     end

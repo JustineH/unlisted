@@ -9,14 +9,11 @@
         <p><%= @listing.bedrooms %> bathrooms</p>
         <p><%= @listing.bathrooms %> bathrooms</p>
         <p>Size: <%= @listing.size %> sqft</p>
-        <p>Price: <%= @listing.prise %></p>
+        <p>Price: <%= @listing.price %></p>
         <p>Year Built: <%= @listing.year_built %></p>
         <%= @listing.year_built %>
       </p>
 
-      <% if @listing.user == current_user %>
-        <%= link_to 'Edit', edit_listing_path(@listing) %> 
-      <% end %>
 
     </div>
   </div>
