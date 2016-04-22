@@ -1,4 +1,7 @@
 class ListingsController < ApplicationController
+
+  before_action :set_listing, only: [:show, :edit, :update, :destroy]
+
   def index
     @listings = Listing.all
   end
@@ -16,7 +19,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = current_user.listings.build(listing_params)
+    @listing = Listing.new(listing_params)
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully entered'
     else
@@ -24,12 +27,10 @@ class ListingsController < ApplicationController
     end
   end
 
-  def edit
-    @listing = Listing.find(params[:id])    
+  def edit 
   end
 
   def update
-    @listing = Listing.find(params[:id])
     if @listing.update_attributes(listing_params)
     redirect_to listing_path(@listing)
     else
@@ -38,7 +39,6 @@ class ListingsController < ApplicationController
   end
 
   def destroy
-    @listing = Listing.find(params[:id])
     @listing.destroy
     redirect_to listings_path
   end
@@ -49,6 +49,9 @@ class ListingsController < ApplicationController
 
   private
 
+  def set_listing
+    @listing = Listing.find(params[:id])
+  end
   def listing_params
     params.require(:listing).permit(
       :address, :unit_number, :street_name, :city, :postal_code, :price, :bedrooms, :bathrooms, :size, :year_built, :home_type, :type_ownership, :levels, :full_bathrooms, :half_bathrooms, :fireplaces, :taxes, :strata_fees, :lot_size, :walkscore, :property_summary, :features_description, :parking, :storage, :basement, :bike_room, :elevator, :garden, :insuite_laundry, :garage, :doorman, :gym, :amenities_room, :air_conditioning, :washer, :dishwasher, :stove, :fridge, :hot_tub, :pool, :pet_friendly, :wheelchair_accessible, :neighbourhood_id
