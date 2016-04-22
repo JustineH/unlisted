@@ -71,7 +71,7 @@
 
   #tagline {
     color: #fff;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 100;
     padding-bottom: .5em;
   }
@@ -79,24 +79,28 @@
   .search{
     top: 150px;
     width: 100%;
-    color: #FFF;
-    font-weight: 200;
   }
 
   .col-lg-6 {
     width: 100%;
   }
   .input-group {
-     width: 50%;
+     width: 60%;
      margin: 0 auto;
   }
   .col-centered{
-      margin: 0 auto;
-      float: none;
+    margin: 0 auto;
+    float: none;
   }
 
   .form-group {
     margin-bottom: 15px;
+  }
+
+  .form-control{
+  /*  color: #FFF;*/
+    font-weight: 200;
+    font-size: 18px;
   }
 
   .welcome-selection{
@@ -106,7 +110,7 @@
 
 
   .seletion-menu{
-    width: 49%;
+    width: 59%;
     margin: 0 auto;
   }
 
@@ -120,11 +124,13 @@
 /*section global*/
   .heading{
     text-align: center;
+    font-size: 30px;
     font-weight: 600;
   }
 
   .sub-heading{
     text-align: center;
+    font-size: 18px;
     font-weight: 200;
     padding-bottom: 3em;
   }
@@ -138,6 +144,10 @@
   #choose-us .fa{
     color: #5083B2;
     padding-bottom: .3em;
+  }
+
+  #choose-us p{
+    font-size: 18px;
   }
 
 /*Listings*/
@@ -174,11 +184,6 @@
   .listing .col-lg-4 p {
     margin-right: 10px;
     margin-left: 10px;
-  }
-  .listing-property-button{
-/*    float: right;
-    position: relative;
-    top: -3em;*/
   }
 
 
