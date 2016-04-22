@@ -27,6 +27,10 @@ module Unlisted
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.initialize_on_precompile = false
+    
+    # Added per instructed to get assets to load
     config.serve_static_assets = true
+    config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+    config.assets.compile = true
   end
 end
