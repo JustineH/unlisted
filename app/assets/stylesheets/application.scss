@@ -138,7 +138,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     padding-bottom: 60px;
     background: white;
     box-shadow: 0 2px 3px #ccc;
-    height: 270px;
+    height: 275px;
     /*width: 420px;*/
     /*max-width: 420px;*/
     /*need to center this block*/
@@ -148,6 +148,10 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     padding-top: 2em;
     background-color: #E7E9EB;
   }*/
+
+  .listing{
+    padding: 0em 5em 0em 5em;
+  }
 
   #home-page-listing{
     padding-top: 2em;
@@ -185,7 +189,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     padding-left: .5em;
     padding-right: .5em;
     font-size: 20px;
-    width: 30%;
+    width: 150px;
     background: rgba(255, 255, 255, 0.85);
     /*top: -1.5em;*/
     top: 1em;
@@ -234,5 +238,14 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
       padding-top: 5em;
       left: -140px;
     }
-
   }
+
+/*Bookmark Bar*/
+  .bookmark-bar{
+    background: white;
+    box-shadow: 0 2px 3px #ccc;
+    width: 500px;
+    height: 1500px;
+  }
+
+
