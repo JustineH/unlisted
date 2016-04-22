@@ -20,7 +20,7 @@
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
 $(function(){
-if ($('.home-page').length > 0){
+if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
             $('.navbar').addClass("navbar-bg");
