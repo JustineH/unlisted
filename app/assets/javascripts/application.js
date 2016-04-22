@@ -17,8 +17,31 @@
 //= require_tree .
 
 
+// google maps
+var map;
+function initMap() {
+  var myLatLng = {
+    lat: 49.2821055,
+    lng: -123.1104596
+  };
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 15,
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP
+ });
+};
+
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
+
+
 $(function(){
 if ($('.home-page').length > 0){
     window.addEventListener("scroll", function() {
