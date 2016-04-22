@@ -18,6 +18,6 @@ class ListingsController < ApplicationController
   end
 
   def search
-    @results = Listing.where(params[:results])
+    @results = Listing.where(params[:text])
   end
 end
