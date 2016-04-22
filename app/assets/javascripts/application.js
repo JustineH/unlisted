@@ -62,7 +62,7 @@ if ($('#welcome-carousel').length > 0){
 
 // Home page carousel
 // rotate every 4 sec
-$('#welcome-carousel.carousel').carousel({
+$('section.carousel').carousel({
   interval: 4000
 });
 
