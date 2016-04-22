@@ -4,6 +4,21 @@
     Neighbourhood.create(name:neighbourhood)
   end
 
+# user = User.create(
+#   email: "john@gmail.com",
+#   password: "hello",
+#   password_confirmation: "123hello",
+#   firstname: "john",
+#   lastname: "doe",
+# )
+# user1 = User.create(
+#   email: "jane@gmail.com",
+#   password: "123hello",
+#   password_confirmation: "123hello",
+#   firstname: "jane",
+#   lastname: "doe",
+# )
+
   condo_1 = Listing.new
     condo_1.address = "201 - 2560 4th Avenue"
     condo_1.city = "Vancouver"
