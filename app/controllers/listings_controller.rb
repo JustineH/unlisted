@@ -20,11 +20,7 @@ class ListingsController < ApplicationController
   end
 
   def basic
-    render :layout => false
   end
 
-  def details
-    render :layout => false
-  end
-
+  
 end

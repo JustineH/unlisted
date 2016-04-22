@@ -97,7 +97,7 @@ $('.carousel').carousel({
 
 var detailsLoader = function(html){
     $('#details').click(function(){
-        console.log(html)
+        console.log(html);
         $('#page-wrap').html(html);
     });
 }
@@ -109,7 +109,7 @@ var basicLoader = function(html){
     console.log("a")
    $('#basic').click(function(){
     console.log('b')
-        $('#page-wrap').html(html)
+        $('#page-wrap').html()
         console.log('c')
     });
 }

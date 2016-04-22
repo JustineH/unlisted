@@ -1,24 +1,17 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 
   root to: 'welcome#index'
-  resources :user
   resources :listings do
     collection do
       get :search
+      get :details
+      get :basic
+      get :amenities
+      get :photos
     end
   end
-
-  get 'listings/details' 
-
-  get 'listings/amenities'
-
-  get 'listings/photos'
-
-  get 'listings/extra'
-
-  get 'listings/basic'
-
 
   # get 'welcome/index'
   # get 'vendors/index'

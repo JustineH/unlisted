@@ -57,7 +57,7 @@ $font_0: sans-serif;
     margin: 0;
     margin-left: 11px;
   }
-  .form-input {
+  input {
     color: $color_chicago_approx;
     box-sizing: border-box;
     width: 240px;
@@ -83,11 +83,12 @@ $font_0: sans-serif;
     color: $color_chicago_approx;
     box-sizing: border-box;
     width: 240px;
+    height: 40px !important;
     box-shadow: 1px 2px 4px 0 $black_8;
     padding: 12px 8px;
     border: 1px solid $alto;
     margin-top: 10px;
-    margin-left: 0px;
+    margin-left: 38px;
   }
 
   .form-span {
@@ -187,18 +188,16 @@ $font_0: sans-serif;
 // main
 .main-content {
   float: left;
-  margin-left: -14.7%;
   width: 100%;
+  height: 100px;
 }
 
 // side nav
 .side-bar {
-  background-color: #FDFDFB;
+  background-color: #565A5C;
   height: 550px;
   width: 250px;
-  margin-bottom: 8px;
   border-right: 1px solid #c4c4c4;
-  border-bottom: 1px solid #c4c4c4;
 }
 
 #side-ul  {
@@ -216,7 +215,7 @@ $font_0: sans-serif;
 }
 
 #side-ul a{
-  color: #040500;
+  color: #ECECEC;
   position: relative;
   z-index: 1;
 }
@@ -233,11 +232,12 @@ $font_0: sans-serif;
 
 #map {
   height: 550px;
-  width: 350px;
-  // margin-right: 40%;
+  width: 100%;
 }
 
-
+.no-padding {
+  padding-right: 0;
+}
 
 @media screen and (max-width: 1280px){
 .side-menu {
@@ -255,7 +255,7 @@ $font_0: sans-serif;
   }
   #map {
   width: 300px;
-}
+ }
 }
 
 @media screen and (max-width: 700px){
@@ -274,15 +274,6 @@ $font_0: sans-serif;
   margin-left: 37%;
 }
 
-@media screen and (min-width: 1040px){
-  .form-basic {
-    margin-right: -20%;
-  }
-
- 
-
-
-}
 
 footer {
   margin-top: -4.65%;
