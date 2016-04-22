@@ -11,11 +11,11 @@
       
         <strong><%= current_user.name %></strong>
         <li class="hvr-underline-reveal"><%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <!--  <% else %>
-        <li class="hvr-underline-reveal"><%#= link_to "Log in", new_user_session_path%></a></li>
-        <li class="hvr-underline-reveal"><%#= link_to "Sign up", new_user_registration_path%></a></li> 
+     <% else %>
+        <li class="hvr-underline-reveal"><%= link_to "Log in", new_user_session_path%></a></li>
+        <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li> 
     <% end %>  
-    -->
+   
 
 
       <!-- <li class="dropdown">

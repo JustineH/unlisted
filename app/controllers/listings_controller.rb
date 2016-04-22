@@ -18,4 +18,13 @@ class ListingsController < ApplicationController
   def search
     @results = Listing.where(params[:results])
   end
+
+  def basic
+    render :layout => false
+  end
+
+  def details
+    render :layout => false
+  end
+
 end

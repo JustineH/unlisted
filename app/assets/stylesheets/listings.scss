@@ -91,7 +91,7 @@ $font_0: sans-serif;
   }
 
   .form-span {
-    margin-left: 18px;
+    margin-left: -24px;
   }
 
   textarea {
@@ -116,12 +116,12 @@ $font_0: sans-serif;
     }
   
     label > span {
-      margin-left: 8px;
+      margin-left: 18px;
       color: $color_chicago_approx;
       font-weight: normal;
       display: inline-block;
       width: 140px;
-      text-align: right;
+      text-align: left;
     }
   }
 
@@ -193,10 +193,12 @@ $font_0: sans-serif;
 
 // side nav
 .side-bar {
-  background-color: #fff;
-  height: 573px;
+  background-color: #FDFDFB;
+  height: 550px;
   width: 250px;
+  margin-bottom: 8px;
   border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
 }
 
 #side-ul  {
@@ -210,10 +212,11 @@ $font_0: sans-serif;
 #side-ul li {
   padding-top: 5%;
   font-size: 18px;
+
 }
 
 #side-ul a{
-  color: #0B0D00;
+  color: #040500;
   position: relative;
   z-index: 1;
 }
@@ -229,9 +232,9 @@ $font_0: sans-serif;
 }
 
 #map {
-  height: 573px;
-  width: 750px;
-  margin-right: 40%;
+  height: 550px;
+  width: 350px;
+  // margin-right: 40%;
 }
 
 
@@ -271,8 +274,16 @@ $font_0: sans-serif;
   margin-left: 37%;
 }
 
-@media screen and (min-width: 1081px){
+@media screen and (min-width: 1040px){
   .form-basic {
-    margin-left: 20%;
+    margin-right: -20%;
   }
+
+ 
+
+
+}
+
+footer {
+  margin-top: -4.65%;
 }

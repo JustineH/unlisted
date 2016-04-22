@@ -94,6 +94,27 @@ $('.carousel').carousel({
   interval: false
 });
 
+
+var detailsLoader = function(html){
+    $('#details').click(function(){
+        console.log(html)
+        $('#page-wrap').html(html);
+    });
+}
+$.get('/listings/details', detailsLoader);
+
+// // basic page loader
+
+var basicLoader = function(html){
+    console.log("a")
+   $('#basic').click(function(){
+    console.log('b')
+        $('#page-wrap').html(html)
+        console.log('c')
+    });
+}
+$.get('/listings/basic', basicLoader);
+
 });
 
 

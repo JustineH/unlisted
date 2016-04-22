@@ -9,6 +9,16 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'listings/details' 
+
+  get 'listings/amenities'
+
+  get 'listings/photos'
+
+  get 'listings/extra'
+
+  get 'listings/basic'
+
 
   # get 'welcome/index'
   # get 'vendors/index'
