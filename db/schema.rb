@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420204440) do
+ActiveRecord::Schema.define(version: 20160421220628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,35 +29,32 @@ ActiveRecord::Schema.define(version: 20160420204440) do
 
   create_table "listings", force: true do |t|
     t.integer  "user_id"
+    t.integer  "neighbourhood_id"
     t.string   "address"
     t.string   "unit_number"
     t.string   "street_number"
     t.string   "street_name"
-    t.integer  "city"
+    t.string   "city",                  default: "Vancouver"
     t.string   "postal_code"
-    t.integer  "neighbourhood"
     t.integer  "price",                 default: 0
     t.integer  "bedrooms",              default: 0
     t.integer  "bathrooms",             default: 0
     t.integer  "size",                  default: 0
-    t.date     "year_built"
-    t.integer  "home_type"
-    t.integer  "type_ownership"
-    t.integer  "days_listed",           default: 0
-    t.integer  "last_updated",          default: 0
+    t.integer  "year_built"
+    t.string   "home_type"
+    t.string   "type_ownership"
     t.integer  "levels",                default: 0
     t.integer  "full_bathrooms",        default: 0
     t.integer  "half_bathrooms",        default: 0
     t.integer  "fireplaces",            default: 0
     t.integer  "taxes",                 default: 0
     t.integer  "strata_fees",           default: 0
-    t.integer  "lot_size"
+    t.integer  "lot_size",              default: 0
     t.integer  "walkscore",             default: 0
     t.text     "property_summary"
     t.text     "features_description"
     t.integer  "parking",               default: 0
-    t.integer  "storage",               default: 0
-    t.integer  "basement_area",         default: 0
+    t.boolean  "storage",               default: false
     t.boolean  "basement",              default: false
     t.boolean  "bike_room",             default: false
     t.boolean  "elevator",              default: false
@@ -80,7 +77,14 @@ ActiveRecord::Schema.define(version: 20160420204440) do
     t.datetime "updated_at"
   end
 
+  add_index "listings", ["neighbourhood_id"], name: "index_listings_on_neighbourhood_id", using: :btree
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
+
+  create_table "neighbourhoods", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "firstname"

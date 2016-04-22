@@ -1,4 +1,4 @@
-<!-- Nav bar -->
+<!-- Nav Bar Begins-->
 
 <section class="overlay nav navbar">
   <div class="navbar-collapse collapse navbar-right">
@@ -7,14 +7,7 @@
       <li class="hvr-underline-reveal"><a href="#choose-us">Why us?</a></li>
       <li class="hvr-underline-reveal"><a href="#feature-listing">Featured Listings</a></li>
 
-      <% if user_signed_in? %>
-      
-        <strong><%= current_user.name %></strong>
-        <li class="hvr-underline-reveal"><%= link_to "Log out", destroy_user_session_path, method: :delete %>
-     <% else %>
-        <li class="hvr-underline-reveal"><%= link_to "Log in", new_user_session_path%></a></li>
-        <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li>
-    <% end %>  
+ 
 
 
       <!-- <li class="dropdown">

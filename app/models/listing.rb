@@ -1,12 +1,9 @@
 class Listing < ActiveRecord::Base
   belongs_to :user
+  belongs_to :neighbourhood
 
-  def self.allHomeType
-    [["House", 0], ["Condo", 1], ["Townhouse", 2]]
-  end
+  TYPE_OWNERSHIP = ["Freehold Strata", "Freehold NonStrata", "Leasehold Prepaid-Strata", "Cooperative Ownership"]
 
-  def self.allNeighbourhoods
-    [["Gastown", 0], ["Yaletown", 1], ["Chinatown", 2], ["Kitsilano", 3], ["Main Street", 4]]
-  end
+  TYPE_PROPERTY = ["Condo", "House", "Townhouse"]
 
 end
