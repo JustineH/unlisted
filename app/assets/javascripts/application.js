@@ -32,11 +32,14 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
-    zoom: 10,
+    zoom: 15,
     scrollwheel: false
   });
+
+
+
   var marker = new google.maps.Marker({
-    address: '6696 Wellington Ave',
+    position: myLatLng,
     map: map,
     draggable: true,
     animation: google.maps.Animation.DROP
@@ -48,6 +51,7 @@ function initMap() {
 
 
 $(function(){
+
 if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
@@ -99,34 +103,21 @@ $('.carousel').carousel({
   interval: false
 });
 
+$('#basic').on("click", function(){
+    $('#load').load('/listings/basic #load > *')
+});
 
-var detailsLoader = function(html){
-    $('#details').click(function(){
-        console.log(html);
-        $('#page-wrap').html(html);
-    });
-}
-$.get('/listings/details', detailsLoader);
+$('#details').on("click", function(){
+    $('#load').load('/listings/details #load > *')
+});
 
-// // basic page loader
+$('#amenities').on("click", function(){
+    $("#load").load('/listings/amenities #load > *')
+})
 
-var basicLoader = function(html){
-    console.log("a");
-   $('#basic').click(function(){
-    console.log('b');
-        $('#page-wrap').html();
-        console.log('c');
-    });
-}
-$.get('/listings/basic', basicLoader);
-
-// photo page loader 
-var photoLoader = function(html){
-    $('#photo').click(function(){
-        $('#page-wrap').html();
-    });
-}
-$.get('/listings/photos', photoLoader);
+$('#photos').on("click", function(){
+    $('#load').load('/listings/photos #load > *')
+});
 
 });
 
