@@ -40,7 +40,7 @@ class ListingsController < ApplicationController
 
   def destroy
     @listing.destroy
-
+    redirect_to action: "index"
   end
 
   def search
