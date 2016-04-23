@@ -5,6 +5,7 @@
 <!-- HOUSE -->
 <!-- //////////// -->
 <!-- //////////// -->
+<h2>House</h2>
 <%= form_for @listing do |f| %>
 <div class="form-row">
   <%= f.label :price %>
@@ -39,12 +40,14 @@
   <%= f.select :garden, [['Yes', true], ['No', false]] %>
 </div>
 <%end %>
+<br>
 <!-- <div class="container"> -->
 <!-- //////////// -->
 <!-- //////////// -->
 <!-- Condo -->
 <!-- //////////// -->
 <!-- //////////// -->
+<h2>Condo</h2>
 <%= form_for @listing do |f| %>
 <div class="form-row">
   <%= f.label :price %>
@@ -84,15 +87,17 @@
   <%= f.select :insuite_laundry, [['Yes', true], ['No', false]] %>
 </div>
 <div class="form-row">
-  <%= f.label :pet_firendly, "Pet Friendly" %>
-  <%= f.select :pet_firendly, [['Yes', true], ['No', false]] %>
+  <%= f.label :pet_friendly, "Pet Friendly" %>
+  <%= f.select :pet_friendly, [['Yes', true], ['No', false]] %>
 </div>
 <%end %>
+<br>
 <!-- //////////// -->
 <!-- //////////// -->
 <!-- Townhouse -->
 <!-- //////////// -->
 <!-- //////////// -->
+<h2>Town House</h2>
 <%= form_for @listing do |f| %>
 <div class="form-row">
   <%= f.label :price %>
