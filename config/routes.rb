@@ -3,16 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'welcome#index'
-  resources :listings do
-    collection do
-      get :search
-      get :details
-      get :basic
-      get :amenities
-      get :photos
-    end
-  end
-
+  resources :listings 
   # get 'welcome/index'
   # get 'vendors/index'
   # get 'vendors/new'

@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
 
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy] 
 
   def index
     @listings = Listing.all
@@ -11,8 +12,8 @@ class ListingsController < ApplicationController
   end
 
   def new
-    @listing = Listing.new
-    # @listing = current_user.listings.build
+    # @listing = Listing.new
+    @listing = current_user.listings.build
   end
 
   def create
@@ -39,7 +40,7 @@ class ListingsController < ApplicationController
 
   def destroy
     @listing.destroy
-    redirect_to listings_path
+    redirect_to action: "index"
   end
 
   def search
@@ -50,7 +51,7 @@ class ListingsController < ApplicationController
 
   def amenities
     # double check this! 
-    @listing = Listing.new
+    # @listing = Listing.new
   end
 
   def photos
@@ -60,6 +61,10 @@ class ListingsController < ApplicationController
 
   def set_listing
     @listing = Listing.find(params[:id])
+  end
+  def correct_user
+    @listing = current_user.listings.find_by(id: params[:id])
+    redirect_to listings_path, notice: "Not authorized to edit this listing" if @listing.nil?
   end
   def listing_params
     params.require(:listing).permit(
