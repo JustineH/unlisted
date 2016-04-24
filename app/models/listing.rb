@@ -45,6 +45,6 @@ class Listing < ActiveRecord::Base
   # validates :pool, inclusion: [true, false]
   # validates :pet_friendly, inclusion: [true, false]
   # validates :wheelchair_accessible, inclusion: [true, false]
-
+  # validates :image, presence: true, :file_size {maximum: 1.0.megabytes.to_i}
 
 end
