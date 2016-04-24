@@ -7,15 +7,23 @@
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
 
-      <p>
-        <p>$<%= @listing.price %></p>
+     
+        <p>Address: <%= @listing.address %></p>
+        <p>Price: $<%= @listing.price %></p>
         <p><%= @listing.bedrooms %> bathrooms</p>
         <p><%= @listing.bathrooms %> bathrooms</p>
         <p>Size: <%= @listing.size %> sqft</p>
-        <p>Price: <%= @listing.price %></p>
-        <p>Year Built: <%= @listing.year_built %></p>
-        <%= @listing.year_built %>
-      </p>
+        <p>Neighbourhood: <%= @listing.neighbourhood.name%></p>
+        <p>Storage: <%= @listing.storage%></p>
+        <p>Insuite laundry: <%= @listing.insuite_laundry%></p>
+        <p>Gym: <%= @listing.gym%></p>
+        <p>Doorman: <%= @listing.doorman%></p>
+      <% if @listing.user == current_user %>
+        <%= link_to 'Edit', edit_listing_path(@listing) %> 
+      <% end %>
+
+      <%= link_to 'Listings Page', listings_path %> 
+
 
 
     </div>
