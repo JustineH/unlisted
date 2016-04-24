@@ -1,12 +1,11 @@
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
+    @user = current_user.id
   end
 
   def show
     @listings = Listing.all
-
-
     @neighbourhoods = Neighbourhood.all 
 
     # @type_ownership = Listing::TYPE_OWNERSHIP
@@ -14,7 +13,7 @@ class ListingsController < ApplicationController
   end
 
   def add_bookmark
-    @bookmark = Bookmark.create user_id: session[:user_id], listing_id: params[:listing_id]
+    @bookmark = Bookmark.create user_id: current_user.id, listing_id: params[:listing_id]
     
 
   end

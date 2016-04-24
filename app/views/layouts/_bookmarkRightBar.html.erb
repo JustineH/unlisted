@@ -2,6 +2,18 @@
 
 BOOKMARK BAR
 
+<ol>
+<% Bookmark.where(user_id: current_user.id) do |bm| %>
+<p><%= bm.listing_id %></p>
+<% end %>
+</ol>
+
+<p><%= Bookmark.where(user_id: current_user.id).first.listing_id %></p>
+<p><%= Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id) %></p>
+
+
+
+<p><%= @user %></p>
 
 
 

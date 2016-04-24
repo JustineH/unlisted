@@ -1,149 +1,60 @@
 
-<!-- Listings -->
-<section id="feature-listing">
 
-<div class="container feature-listing">
-  <div class="row">
-    <!-- PLACE HOLDER FOR CSS TESTING -->
+<%= render 'layouts/bookmarkRightBar' %>
 
-         <div class="col-md-4 col-sm-6 cols-xs-12">
-       <div class="featureList text-center">
-         
-           <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
-           <div class="carousel-inner">
-             <div class="item active">
-               <img src="/assets/listing_images/property1_1.jpg" alt="..."
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_2.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_3.jpg" alt="...">
-             </div>
-           </div>
-
-           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-             <span class="icon-prev" aria-hidden="true"></span>
-             <span class="sr-only">Previous</span>
-           </a>
-           <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-             <span class="icon-next" aria-hidden="true"></span>
-             <span class="sr-only">Next</span>
-           </a>
-         </div>
-
-         <div class="title">
-           <h4 class="regular property-price">$1,400,000</h4>
-           <div class="feature-short-info">
-             <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-             <div class="muted regular area">
-               2,345 sqr/ft
-             </div>
-             <div class="bedbath">
-               <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-               <container class="bathroom"><em>bath</em></container></p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    <!-- PLACE HOLDER FOR CSS TESTING ENDS-->
-
+   <div class="row listing">
     <% @listings.each do |listing| %>
-     <div class="col-md-4 col-sm-6 cols-xs-12">
-       <div class="featureList text-center">
-         
-           <div id="carousel-listing-1" class="carousel slide carousel-listing" data-ride="carousel">
+    <!-- Listing box Begins-->
+    <div class=" col-md-4 col-sm-6 cols-xs-12 ">
+      <div class="featureList text-center">
 
-           <div class="carousel-inner">
-             <div class="item active">
-               <img src="/assets/listing_images/property1_1.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_2.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_3.jpg" alt="...">
-             </div>
-           </div>
+        <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
 
-           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-             <span class="icon-prev" aria-hidden="true"></span>
-             <span class="sr-only">Previous</span>
-           </a>
-           <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-             <span class="icon-next" aria-hidden="true"></span>
-             <span class="sr-only">Next</span>
-           </a>
-         </div>
-
-         <div class="title">
-           <h4 class="regular property-price"><%= listing.price %></h4>
-           <div class="feature-short-info">
-             <p class="muted regular address"><em><%= listing.address %></em></p>
-             <div class="muted regular area"><%= listing.size %>sqft
-             </div>
-             <div class="bedbath">
-               <p class="muted regular bedroom"><em><%= listing.bedrooms %><i class="fa fa-bed" aria-hidden="true"></i></em>
-               <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container></p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    <%end%>
-   </div>
- </div>
-
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-
-
-      <div class="col-md-4 col-sm-6 cols-xs-12">
-        <div class="featureList text-center">
-          
-            <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="/assets/listing_images/property1_1.jpg" alt="...">
-              </div>
-              <div class="item">
-                <img src="/assets/listing_images/property1_2.jpg" alt="...">
-              </div>
-              <div class="item">
-                <img src="/assets/listing_images/property1_3.jpg" alt="...">
-              </div>
+          <div class="carousel-inner">
+            <div class="item active">
+               <%= image_tag "listing_images/property1_1.jpg" %>
             </div>
-
-            <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-              <span class="icon-prev" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-              <span class="icon-next" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <div class="item">
+               <%= image_tag "listing_images/property1_2.jpg" %>
+            </div>
+            <div class="item">
+               <%= image_tag "listing_images/property1_3.jpg" %>
+            </div>
           </div>
+        
+        
+          
+          <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
+        <div class="listing-box-info">
+          <h4 class="regular property-price">$<%= listing.price %></h4>
           <div class="feature-short-info">
-            <h4 class="regular property-price">$1,400,000</h4>
-              <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-              <div class="bedbath">
-                <p class="muted regular bedroom"><em>bed</em>
-                <container class="bathroom"><em>bath</em></container></p>
-              </div>
+            <p class="muted regular address"><em><%= listing.address %></em></p>
+            <div class="muted regular area">
+              <%= listing.lot_size %> sqr/ft
+            </div>
+            <div class="bedbath"><%= listing.bedrooms %>
+              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
+                <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+                <p><%= listing.id %></p>
+            <%= link_to 'BookMark',listing_add_bookmark_path(:listing_id=>listing.id) %>
+    <!-- Listing box Ends-->
+<% end %>
 
-
-  
-</section>
-<!-- Listings Ends -->
-
-<style>
-</section>
-
+   <!--
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem soluta cupiditate, unde totam culpa velit ipsa nostrum nihil, tenetur iure sed, odit quae magnam praesentium quos. Magnam, at praesentium modi sit accusantium qui nemo dolorum delectus officiis error corporis libero, fugiat a aspernatur ab laboriosam quidem debitis dolores tempore, deleniti quaerat nesciunt consequuntur exercitationem perferendis! Quia aliquam repellat dolorem neque fuga quas minus obcaecati quam delectus incidunt officiis nihil, eligendi deleniti, explicabo nisi optio impedit ab ipsum aut! Nostrum temporibus aliquam assumenda nesciunt officia cupiditate error atque dolorum dicta vero recusandae laudantium soluta culpa, cum officiis quo repellendus velit expedita autem ducimus doloribus explicabo cumque. Provident repellendus neque facilis, molestias doloremque architecto odio. Dignissimos laboriosam doloribus sit natus magnam voluptatem reiciendis iusto vitae, odit illo, aperiam, libero dolore a fugiat nemo ipsa deserunt vel ex explicabo mollitia officiis! Eveniet praesentium eius sequi repellendus maiores dicta reiciendis dolorum blanditiis quisquam debitis corporis enim error excepturi non veniam voluptatum provident facilis numquam expedita, earum delectus voluptates aspernatur inventore dignissimos? Earum libero illo odio repudiandae autem accusamus qui vel! Nobis impedit harum aperiam amet sunt iusto esse beatae molestias aspernatur? Nostrum voluptas, doloremque natus debitis suscipit quo non, ex voluptatum illo aliquam. Unde nisi sint iusto nostrum blanditiis libero illum, rerum qui eaque repellat, et cupiditate excepturi alias. Sapiente doloremque illum veniam nisi unde autem tempore fugiat id odit. Consequuntur adipisci esse, qui odit fugiat velit hic maiores ab sequi distinctio, voluptas amet quia nostrum odio ad totam numquam! Natus accusantium eius perspiciatis ut similique ab sed, dolorem et? Fugiat veniam, dolor tenetur, ipsum debitis magni rerum, accusamus eius nostrum qui amet voluptatibus aspernatur excepturi ea necessitatibus ipsa molestiae alias maxime rem distinctio, dolores mollitia architecto earum assumenda! At, harum quaerat beatae! Assumenda neque labore, obcaecati tempore, sint officiis officia commodi itaque dignissimos. Expedita facilis debitis, incidunt rerum est, voluptas alias. Labore nihil minima tempore dolore expedita facilis debitis, quis enim tempora praesentium? Natus iusto ad quos perferendis maxime ratione? Unde reiciendis id ipsum velit laborum animi ea quibusdam eum est, maiores atque delectus facere dolorem voluptates eveniet repellat nulla, numquam! Esse eligendi, commodi dolorem ad repellendus consequatur, ipsum accusantium explicabo omnis, quibusdam tempore natus obcaecati. Quas provident velit a similique possimus eligendi eius doloremque ratione fugit explicabo fuga sit quaerat modi itaque quis ipsa maiores obcaecati, id iure, vero necessitatibus! Molestias soluta quasi explicabo modi asperiores sunt ad doloribus, vel laudantium aspernatur, qui voluptate voluptatum sint maiores ratione quisquam excepturi non repellendus mollitia, aut placeat sequi. Fuga labore culpa ut necessitatibus placeat, at corporis libero non odit officiis iure odio expedita tenetur magni ratione sed, molestias nesciunt reiciendis sit cumque veniam. Cum assumenda, omnis nostrum illo, amet quis nihil nulla non, placeat soluta pariatur eaque facere veniam quo id perferendis numquam explicabo dolores! Ex excepturi, assumenda sit! Expedita, modi doloremque aliquid laborum, nemo consequatur explicabo repellat quam magnam quidem omnis voluptates inventore molestias asperiores amet aperiam! Quas atque aut labore molestias animi officiis illum ratione iure ad quam, odit quae recusandae natus? Voluptatem provident at ad, omnis voluptas, eos, sit ipsum autem nostrum non voluptatum necessitatibus officiis dolore porro nulla repudiandae? Cum enim reprehenderit, voluptatem aliquid ullam, officia nulla? Repellendus voluptatem nostrum, esse et molestiae alias explicabo libero. Laborum repellat delectus, optio consequuntur consectetur. Sequi sed veniam, vero ratione ipsum odit provident repudiandae a unde aliquam similique itaque delectus iste nulla, ab sunt dolore, eveniet illo rerum at quis voluptatibus necessitatibus. Sunt dolore ab repudiandae, perferendis pariatur. Aut molestias animi iste beatae totam saepe, necessitatibus sit, fugit explicabo cupiditate magnam odio deserunt vitae aperiam molestiae officiis tenetur eaque et minima error quo autem nisi magni asperiores! Praesentium libero enim, autem nobis omnis! Inventore accusantium, blanditiis, voluptate dolore cupiditate soluta doloribus nihil molestias qui voluptates, earum officiis accusamus veniam ab placeat tempore quibusdam? Facere quisquam maxime, assumenda iusto sunt quod enim mollitia, nostrum debitis excepturi illum illo, id voluptatibus velit impedit asperiores minus quo possimus consequatur error eaque reiciendis? Consequuntur sint atque delectus esse aperiam voluptatem? Beatae animi hic quam eveniet impedit, libero perspiciatis magnam provident laudantium, cupiditate debitis cum distinctio labore repellat veritatis ipsa! Velit vero consequatur, itaque veniam ipsa, incidunt. Et placeat cumque commodi nemo possimus cupiditate sint magnam a sed fuga repellendus consequuntur harum omnis aperiam atque optio fugiat, illum autem dolore dolores natus blanditiis nesciunt. Enim amet dicta deleniti quod voluptates laborum porro a, repellendus maiores? Ullam unde explicabo perspiciatis quaerat architecto doloribus, ipsa hic maiores minima ab cum blanditiis alias culpa ipsam in ea at laudantium voluptas praesentium laborum voluptate. Perferendis amet consequatur in dignissimos reiciendis hic soluta corporis quam esse quod consectetur sequi itaque quasi dolorum, perspiciatis voluptatum, eaque porro illum. Tenetur voluptate, veniam fugit dolores officiis molestias optio eligendi quam incidunt enim error eaque iure sint aperiam dolore nemo, placeat voluptas ipsum saepe dolorum ducimus aliquam. Architecto, excepturi, debitis. Eum, laboriosam consequuntur. Possimus quae odio officia libero cupiditate placeat, explicabo provident eius. Repellat ex temporibus doloribus, asperiores ad, dolor. Molestiae possimus ad dolores, neque laborum! Earum odio quaerat, maiores voluptatibus, rerum molestias. Officiis, tempore iure earum minus dolorem odio at beatae neque delectus necessitatibus voluptatibus laborum id numquam eaque recusandae, maiores rerum totam cupiditate velit omnis, alias pariatur. Quo laborum saepe totam cupiditate quasi possimus nobis dolorem veritatis! Ad architecto nemo repellat adipisci, praesentium hic et excepturi vel illo quaerat, sapiente aspernatur numquam. Sit rem doloribus, iste assumenda. Iure adipisci ab magni totam facere delectus et hic, voluptatem velit nesciunt dolorum omnis accusamus aliquam voluptas commodi fugiat ullam tempore esse dicta quidem explicabo vero fugit quas, beatae eaque! Molestiae maxime voluptatibus saepe molestias incidunt earum nihil quo ea cum modi minima aut, eos expedita perferendis? Aut rem omnis ullam repellendus provident natus aperiam vitae, eos sequi repellat ratione aliquid qui laboriosam a veritatis adipisci enim unde dolor, facilis hic maiores temporibus eaque amet illum. Debitis quisquam voluptate nemo dolore quis aliquam facere omnis ullam possimus dolor saepe, cumque, vel ipsa voluptas, animi itaque deleniti, atque officia asperiores soluta rem fugit harum perferendis. Ex deserunt, eius veniam, dolorum exercitationem sint id dignissimos ipsum unde distinctio quam quibusdam voluptatibus nulla quis odio, eos dolore quasi sed, aut vero. Asperiores vero atque fugiat neque quasi minima, debitis porro laborum ullam provident iusto optio dolor voluptatibus excepturi inventore sit reprehenderit eveniet sapiente cum officia. Assumenda odit voluptatum reiciendis unde praesentium! Eveniet nemo, natus esse in obcaecati molestias nisi aperiam blanditiis eum quibusdam recusandae neque nam deserunt, repellat error dignissimos cupiditate consequuntur accusantium repudiandae veniam impedit itaque dolore porro! Quo itaque sapiente vitae fuga. Quidem, cumque animi praesentium iste mollitia soluta error eum minima nobis autem nostrum aut facilis repudiandae beatae, amet ratione repellendus numquam libero sequi a! Officia, cum vero impedit quas, qui non aspernatur sed totam quasi laborum tempora, amet. Accusantium deserunt est porro incidunt expedita, alias excepturi. Repudiandae quia, eveniet quam numquam placeat architecto adipisci odit quo tempora fuga est nemo quas voluptatibus, soluta neque! Inventore, vitae, dolorum. Delectus quod est accusamus, consectetur. Voluptates facere dolorem distinctio minima molestias sint nesciunt non autem maiores, labore omnis atque quaerat, vero expedita porro iure veritatis nostrum. Porro, laborum. Cum quis sunt quas numquam. Veniam labore esse ea, dolorum magni sequi explicabo nesciunt illum est illo inventore, earum eum laboriosam. Explicabo.</p> -->
+  </div>
