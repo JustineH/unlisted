@@ -12,3 +12,8 @@ $(document).on('click', 'a#to-amenities', function(){
   $('#details-page').hide();
   $('#amenities-page').show();
 });
+
+$(document).on('click', 'a#back-to-details', function(){
+  $('#details-page').show();
+  $('#amenities-page').hide();
+})

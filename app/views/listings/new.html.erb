@@ -7,12 +7,7 @@
       <%= form_for @listing do |f| %>
 
       <div class="form-row">
-        <%= f.label :unit_number, "Unit number" %><%= f.text_field :unit_number %>
-      </div>
-
-
-      <div class="form-row">
-        <%= f.label :street_name, "Street name" %><%= f.text_field :street_name %>
+        <%= f.label :address, "Address" %><%= f.text_field :address %>
       </div>
 
 
@@ -131,6 +126,7 @@
           <%= f.label "doorman" %><%= f.check_box :doorman %>
         </div>
         <div>
+        <a href="#" id="back-to-details">Back</a>
         <%= f.submit "Submit" %>
       </div>
       </div>
