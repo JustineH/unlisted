@@ -52,29 +52,29 @@
 #     condo_1.walkscore = 94
 #     condo_1.save
 
-#   condo_2 = Listing.new
-#     condo_2.address = "309 - 6268 Eagles Drive"
-#     condo_2.city = "Vancouver"
-#     condo_2.price = 580879
-#     condo_2.bedrooms = 2
-#     condo_2.bathrooms = 2
-#     condo_2.full_bathrooms = 2
-#     condo_2.half_bathrooms = 0
-#     condo_2.levels = 1
-#     condo_2.size = 1096
-#     condo_2.lot_size = 0
-#     condo_2.year_built = 2006
-#     condo_2.home_type =  "Apartment/Condo"
-#     condo_2.type_ownership = "Leasehold Prepaid-Strata"
-#     # condo_2.neighbourhood = "Point Grey" 
-#     condo_2.postal_code = "V6T 0A2" 
-#     condo_2.property_summary = "2 bedroom 2 bathroom condo in Point Grey."
-#     condo_2.fireplaces = 0
-#     condo_2.basement = false
-#     condo_2.taxes = 1930
-#     condo_2.strata_fees = 2015
-#     condo_2.walkscore = 69
-#     condo_2.save
+  condo_2 = Listing.new
+    condo_2.address = "309 - 6268 Eagles Drive"
+    condo_2.city = "Vancouver"
+    condo_2.price = 580879
+    condo_2.bedrooms = 2
+    condo_2.bathrooms = 2
+    condo_2.full_bathrooms = 2
+    condo_2.half_bathrooms = 0
+    condo_2.levels = 1
+    condo_2.size = 1096
+    condo_2.lot_size = 0
+    condo_2.year_built = 2006
+    condo_2.home_type =  "Apartment/Condo"
+    condo_2.type_ownership = "Leasehold Prepaid-Strata"
+    condo_2.neighbourhood_id = 2
+    condo_2.postal_code = "V6T 0A2" 
+    condo_2.property_summary = "2 bedroom 2 bathroom condo in Point Grey."
+    # condo_2.fireplaces = 0
+    # condo_2.basement = false
+    # condo_2.taxes = 1930
+    # condo_2.strata_fees = 2015
+    # condo_2.walkscore = 69
+    condo_2.save
 
 #   condo_3 = Listing.new
 #     condo_3.address = "204 - 830 7th Avenue E"
