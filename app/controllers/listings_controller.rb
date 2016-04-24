@@ -48,14 +48,19 @@ class ListingsController < ApplicationController
     @results = Listing.where(params[:text])
   end
   def basic
+    @listing = Listing.new
+  end
+
+  def details
+    @listing = Listing.new
   end
 
   def amenities
-    # double check this! 
-    # @listing = Listing.new
+    @listing = Listing.new
   end
 
   def photos
+    @listing = Listing.new
   end
 
   private
