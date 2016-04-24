@@ -47,4 +47,6 @@ class Listing < ActiveRecord::Base
   # validates :wheelchair_accessible, inclusion: [true, false]
   # validates :image, presence: true, :file_size {maximum: 1.0.megabytes.to_i}
 
+private 
+ 
 end

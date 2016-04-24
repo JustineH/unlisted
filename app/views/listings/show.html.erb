@@ -16,7 +16,7 @@
         <p>Neighbourhood: <%= @listing.neighbourhood.name%></p>
         <p>Storage: <%= @listing.storage%></p>
         <p>Insuite laundry: <%= @listing.insuite_laundry%></p>
-        <p>Gym: <%= @listing.gym%></p>
+        <p>Gym: <%= human_boolean(@listing.gym) %></p>
         <p>Doorman: <%= @listing.doorman%></p>
       <% if @listing.user == current_user %>
         <%= link_to 'Edit', edit_listing_path(@listing) %> 
