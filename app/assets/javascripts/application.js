@@ -120,6 +120,9 @@ $('#photos').on("click", function(){
     $('#load').load('/listings/photos #load > *')
 });
 
+var address = document.getElementById('#address').innerHTML;
+$('#potatoes').html('This house is located on');
+
 });
 
 
