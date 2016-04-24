@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
   resources :listings 
+
   # get 'welcome/index'
   # get 'vendors/index'
   # get 'vendors/new'

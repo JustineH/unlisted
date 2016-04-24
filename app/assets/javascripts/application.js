@@ -15,6 +15,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require ./googlemaps
+//= require ./form-wizard
 //= require_tree .
 
 
@@ -49,7 +50,6 @@
 
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
-
 
 $(function(){
 
