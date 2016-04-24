@@ -8,7 +8,7 @@
     <div class="panel panel-default">
 
      
-        <p>Address: <%= @listing.address %></p>
+        <p>Address: <span id="address"><%= @listing.address %></span></p>
         <p>Price: $<%= @listing.price %></p>
         <p><%= @listing.bedrooms %> bathrooms</p>
         <p><%= @listing.bathrooms %> bathrooms</p>
@@ -21,7 +21,7 @@
       <% if @listing.user == current_user %>
         <%= link_to 'Edit', edit_listing_path(@listing) %> 
       <% end %>
-
+<div id="map"></div>
       <%= link_to 'Listings Page', listings_path %> 
 
 
@@ -29,4 +29,3 @@
     </div>
   </div>
 </div>
-
