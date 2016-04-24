@@ -8,7 +8,8 @@ class ListingsController < ApplicationController
   end
 
   def show
-    @neighbourhoods = Neighbourhood.all 
+    
+    # @neighbourhoods = Neighbourhood.all 
   end
 
   def new
