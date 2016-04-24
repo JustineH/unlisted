@@ -8,8 +8,10 @@
   <%= stylesheet_link_tag controller.controller_name %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   
 <script src="
 https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> 
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -25,7 +27,7 @@ https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></scrip
 
   <% flash.each do |name, msg| %>
        <%= content_tag(:div, msg, class: "alert alert-info") %>
-  <% end %>
+  <% end %>s
 
   <!-- <div id="content_container"> -->
     <%= yield %>

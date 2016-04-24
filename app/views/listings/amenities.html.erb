@@ -1,3 +1,4 @@
+<div id="load">
 <%= form_for @listing do |f| %>
   <div class="form-row">
     <%= f.label "Fireplaces" %>
@@ -48,9 +49,14 @@
     <%= f.label "Weelchair Accessible" %>
     <%= f.check_box :wheelchair_accessible %>
  </div>
+ <div class="form-row">
+    <%= f.label "doorman" %>
+    <%= f.check_box :doorman %>
+ </div>
 
     </div>
     <div>
     <%= f.submit "Submit" %> 
   </div>
 <% end %>
+</div>
