@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
-// require ./googlemaps
 //= require listings
+//= require welcome
 //= require ./form-wizard
+//= require ./googlemaps
 // require_tree .
 
 
@@ -94,16 +95,6 @@ if ($('#welcome-carousel').length > 0){
     },false);
 }
 
-// Home page carousel
-// rotate every 4 sec
-$('section.carousel').carousel({
-  interval: 4000
-});
-
-// Pause all other carousel
-$('.carousel').carousel({
-  interval: false
-});
 
 
 
