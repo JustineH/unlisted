@@ -14,12 +14,45 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
+//= require ./googlemaps
+//= require ./form-wizard
 //= require_tree .
 
 
+// modernizr
+// var modernizr = function (){
+// var div = document.createElement('div');
+// return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)
+// };
+// google maps
+// var map;
+// function initMap() {
+//   var myLatLng = {
+//     lat: 49.2821055,
+//     lng: -123.1104596
+//   };
+
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: myLatLng,
+//     zoom: 15,
+//     scrollwheel: false
+//   });
+
+
+
+//   var marker = new google.maps.Marker({
+//     position: myLatLng,
+//     map: map,
+//     draggable: true,
+//     animation: google.maps.Animation.DROP
+//  });
+// };
+
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
+
 $(function(){
+
 if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
@@ -71,7 +104,27 @@ $('.carousel').carousel({
   interval: false
 });
 
+$('#basic').on("click", function(){
+    $('#load').load('/listings/basic #load > *')
 });
+
+$('#details').on("click", function(){
+    $('#load').load('/listings/details #load > *')
+});
+
+$('#amenities').on("click", function(){
+    $("#load").load('/listings/amenities #load > *')
+})
+
+$('#photos').on("click", function(){
+    $('#load').load('/listings/photos #load > *')
+});
+
+var address = document.getElementById('#address').innerHTML;
+$('#potatoes').html('This house is located on');
+
+});
+
 
 
 

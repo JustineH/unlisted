@@ -1,6 +1,136 @@
-<h1>List a New Property<h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+<br>
+<br>
+<br>
+<br>
+<div id="basic-page">
+    <!-- <div id="load"> -->
+      <%= form_for @listing do |f| %>
+
+      <div class="form-row">
+        <%= f.label :address, "Address" %><%= f.text_field :address %>
+      </div>
 
 
+      <div class="form-row">
+        <%= f.label :postal_code, "Postal Code" %><%= f.text_field :postal_code %>
+      </div>
 
 
+      <div class="form-row">
+        <%= f.label :city %><%= f.text_field :city %>
+      </div>
+
+
+      <div>
+        <%= f.label :neighbourhood_id, "Neighbourhood" %><%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
+      </div>
+      <a href="#" id="to-details">Next</a>
+     </div>
+
+      <div id="details-page">
+        <div class="form-row">
+          <%= f.label :price %><%= f.text_field :price %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :year_built, "year built" %><%= f.text_field :year_built %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :lot_size, "lot size" %><%= f.text_field :lot_size %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :size %><%= f.text_field :size %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :levels %><%= f.text_field :levels%>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :basement %><%= f.select :basement, [['Yes', true], ['No', false]] %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :garage %><%= f.select :garage, [['Yes', true], ['No', false]] %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :garden %><%= f.select :garden, [['Yes', true], ['No', false]] %>
+        </div>
+        <a href="#" id="back-to-basic">Back</a>
+        <a href="#" id="to-amenities">Next</a>
+      </div>
+
+
+      <div id="amenities-page">
+        <div class="form-row">
+          <%= f.label "Fireplaces" %><%= f.check_box :fireplaces %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Gym" %><%= f.check_box :gym %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Amenities Room" %><%= f.check_box :amenities_room%>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "A/C" %><%= f.check_box :air_conditioning %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Insuite Laundry" %><%= f.check_box :insuite_laundry %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Stove" %><%= f.check_box :stove %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Fridge" %><%= f.check_box :fridge %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Hot Tub" %><%= f.check_box :hot_tub %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "pool" %><%= f.check_box :pool %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Weelchair Accessible" %><%= f.check_box :wheelchair_accessible %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "doorman" %><%= f.check_box :doorman %>
+        </div>
+        <div>
+        <a href="#" id="back-to-details">Back</a>
+        <%= f.submit "Submit" %>
+      </div>
+      </div>
+      
+    </div>
+    <%end%>
+  </div>

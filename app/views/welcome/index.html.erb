@@ -1,3 +1,5 @@
+<!-- require 'pry' -->
+
 <!-- Carousel Begins-->
 
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
@@ -26,16 +28,18 @@
   <div class="vertical-center">
     <div class="container text-center">
       <h1 id="tagline">The easiest way to list and buy a home.</h1>
-      <div class="col-lg-6 col-md-6 col-xs-6">
-        <div class="input-group">
-          <input name="text" class="form-control" placeholder="Location, Price, Address, Neighbourhood, # of Bedrooms">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+          <form action="/listings/search" method="get">
+            <div class="input-group">
+              <input name="text" class="form-control" placeholder="Location, Price, Address, Neighbourhood, # of Bedrooms">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </form>
         </div>
-      </div>
       <!-- </div> -->
 
       <!-- Search Box Ends -->

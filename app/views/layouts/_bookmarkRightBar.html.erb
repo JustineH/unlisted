@@ -1,21 +1,17 @@
 <section class="bookmark-bar pull-right">
 
-BOOKMARK BAR
+<h4>Bookmarked Listing</h4>
 
-<ol>
-<% Bookmark.where(user_id: current_user.id) do |bm| %>
-<p><%= bm.listing_id %></p>
+<ul>
+
+<% current_user.bookmarked_listings.each do |listing|  %>
+<li>
+  Size: <%= listing.size %>
+  Address: <%= listing.address %>
+  </li>
 <% end %>
-</ol>
-
-<p><%= Bookmark.where(user_id: current_user.id).first.listing_id %></p>
-<p><%= Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id) %></p>
 
 
-
-<p><%= @user %></p>
-
-
-
+</ul>
 </section>
 
