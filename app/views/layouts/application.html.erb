@@ -23,7 +23,7 @@ https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></scrip
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
-  <%#= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
 
   <% flash.each do |name, msg| %>
        <%= content_tag(:div, msg, class: "alert alert-info") %>

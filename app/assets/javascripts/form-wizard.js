@@ -27,3 +27,11 @@ $(document).on('click', 'a#back-to-amenities', function(){
   $('#photos-page').hide();
   $('#amenities-page').show();
 });
+
+$(document).on('keyup', 'input.address-form', function(){
+  var sellerAddress = $('input.address-form').val();
+  sellerAddress = sellerAddress.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    return letter.toUpperCase();
+});
+  $('#address-title').text(sellerAddress);
+});

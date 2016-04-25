@@ -50,15 +50,15 @@
     <div class="home-neighborhood-form">
     <div class="row">
     <div class="col-md-6 col-sm-6 col-xs-6">
-       <div class="home-neighbor-wrap"> 
-        <%= f.label :home_type, "Type of Home"%><br>
+       <div class="home-neighbor-wrap home-arrow"> 
+        <%= f.label :home_type, "TYPE OF HOME"%><br>
         <%= f.select :home_type, type_property %>
         </div>
     </div>
 
      <div class"col-md-6 col-sm-6 col-xs-6">
-        <div class="home-neighbor-wrap">
-        <%= f.label :neighbourhood_id, "Neighbourhood" %><br>
+        <div class="home-neighbor-wrap neighbour-arrow">
+        <%= f.label :neighbourhood_id, "NEIGHBOURHOOD" %><br>
         <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
         </div>
     </div>

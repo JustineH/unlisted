@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html, body{
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -461,6 +462,12 @@ footer {
   text-align: center;
   position: relative;
 }
+
+#address-title {
+  overflow-x: hidden;
+  width: 80%;
+}
+
 .form-head {
   background-color: #fff;
   height: 60px;
@@ -470,14 +477,14 @@ footer {
 }
 
 .form-header {
-  text-align: center;
+  text-align: left;
   padding: 12px;
 }
 // SIDEBAR
 .side-bar {
   height: 100vh;
   width: 200px;
-  background-color: #F5F5F5;
+  background-color: #FFE8E8;
 }
 
 
@@ -612,17 +619,33 @@ footer {
 
 .home-neighbor-wrap select {
   -webkit-appearance: menulist-button;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+      -webkit-writing-mode: horizontal-tb;
+  letter-spacing: normal;
   background-color: #fff;
   height: 40px;
   width: 280px;
+  padding-left: 1em;
+  color: #565a5c;
+  font-weight: bold;
 }
+
 
 #to-details {
   float: right;
-  background-color: #ffaaaa;
-  padding: 10px 15px;
+  background-color: #ff5a5f;
+  padding: 9px 27px;
   margin-top: 20px;
-  border: 1px solid red;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 1.43;
+  font-weight: 600;
+}
+
+#to-details:hover {
+  text-decoration: none;
+  background-color: #ff1a1f;
 }
 
 
