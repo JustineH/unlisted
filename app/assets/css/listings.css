@@ -1,89 +1,5 @@
-.form-basic {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 55px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  /*box-shadow: 0 1px 3px 0 $black_10;*/
-  font: bold 14px sans-serif;
-  text-align: center; }
-  .form-basic .form-row {
-    text-align: left;
-    margin-bottom: 22px; }
-    .form-basic .form-row > label span {
-      display: inline-block;
-      box-sizing: border-box;
-      /*color: $color_chicago_approx;*/
-      /*width: 180px;*/
-      text-align: left;
-      vertical-align: top;
-      padding: 12px 25px; }
-  .form-basic .form-title-row {
-    text-align: left;
-    margin-left: 18px;
-    margin-bottom: 15px; }
-  .form-basic .form-row {
-    margin: 0; }
-  .form-basic h1 {
-    display: inline-block;
-    box-sizing: border-box;
-    color: #4c565e;
-    font-size: 24px;
-    padding: 0 10px 15px;
-    /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
-    margin: 0;
-    margin-left: 11px; }
-  .form-basic input {
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 10px;
-    border: 1px solid #dbdbdb;
-    margin-left: 38px; }
-  .form-basic .form-input[type=radio] {
-    box-shadow: none;
-    width: auto; }
-  .form-basic .form-input[type=checkbox] {
-    box-shadow: none;
-    width: auto;
-    margin-top: 13px; }
-  .form-basic select {
-    background-color: #ffffff;
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    height: 40px !important;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 12px 8px;
-    border: 1px solid #dbdbdb;
-    margin-top: 10px;
-    margin-left: 38px; }
-  .form-basic .form-span {
-    margin-left: -24px; }
-  .form-basic textarea {
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    height: 80px;
-    font: normal 13px sans-serif;
-    padding: 12px;
-    border: 1px solid #dbdbdb;
-    resize: vertical; }
-  .form-basic .form-radio-buttons {
-    display: inline-block;
-    vertical-align: top; }
-    .form-basic .form-radio-buttons > div {
-      margin-top: 10px; }
-    .form-basic .form-radio-buttons .form-input {
-      width: auto; }
-    .form-basic .form-radio-buttons label > span {
-      margin-left: 18px;
-      color: #5f5f5f;
-      font-weight: normal;
-      display: inline-block;
-      width: 140px;
-      text-align: left; }
+html, body {
+  overflow-x: hidden; }
 
 #next {
   float: left;
@@ -332,16 +248,25 @@ footer {
 #photos-page {
   display: none; }
 
-.form-head {
-  background-color: #565A5C;
+.form-head-left {
   height: 80px;
+  width: 200px;
+  background-color: #fff;
+  float: left;
+  border-right: 1px solid #DCE0E0;
+  text-align: center;
+  position: relative; }
+
+.form-head {
+  background-color: #fff;
+  height: 60px;
   width: 100%;
-  margin-top: 0; }
+  margin-top: 0;
+  border-bottom: 1px solid #DCE0E0; }
 
 .form-header {
   text-align: center;
-  padding: 12px;
-  color: #CACCCD; }
+  padding: 12px; }
 
 .side-bar {
   height: 100vh;
@@ -403,3 +328,73 @@ footer {
 
 #photodiv:hover {
   opacity: 0.5; }
+
+.basics-header {
+  text-align: center;
+  padding-bottom: 15px; }
+
+.address-label {
+  font-size: 22px; }
+
+.unit-number-form {
+  width: 20%;
+  height: 40px;
+  text-align: center; }
+
+.address-form {
+  width: 60%;
+  height: 40px;
+  padding-left: 10px; }
+
+.bed-bath-half {
+  margin-top: 20px; }
+
+.bed-bath-half-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 100px; }
+
+.home-neighborhood-form {
+  margin-top: 20px; }
+
+.form-button-container {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 auto; }
+
+.home-neighbor-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 280px; }
+
+#to-details {
+  float: right;
+  background-color: #ffaaaa;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: 1px solid red; }
+
+@media screen and (min-width: 1880px) {
+  .unit-number-form {
+    width: 20%;
+    height: 50px;
+    text-align: center; }
+
+  .address-form {
+    width: 60%;
+    height: 50px;
+    padding-left: 10px; }
+
+  .bed-bath-half-wrap select {
+    -webkit-appearance: menulist-button;
+    background-color: #fff;
+    height: 50px;
+    width: 160px; }
+
+  .home-neighbor-wrap select {
+    -webkit-appearance: menulist-button;
+    background-color: #fff;
+    height: 50px;
+    width: 430px; } }

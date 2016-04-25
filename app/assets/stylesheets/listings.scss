@@ -1,7 +1,9 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+html, body{
+  overflow-x: hidden;
+}
 
 
 //form colors
@@ -16,116 +18,116 @@ $alto: #dbdbdb;
 //form fonts
 $font_0: sans-serif;
 //form scss
-.form-basic {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 55px;
-  box-sizing: border-box;
-  background-color: $white;
-  /*box-shadow: 0 1px 3px 0 $black_10;*/
-  font: bold 14px $font_0;
-  text-align: center;
-  .form-row {
-    text-align: left;
-    margin-bottom: 22px;
-    > label span {
-      display: inline-block;
-      box-sizing: border-box;
-      /*color: $color_chicago_approx;*/
-      /*width: 180px;*/
-      text-align: left;
-      vertical-align: top;
-      padding: 12px 25px;
-    }
-  }
-  .form-title-row {
-    text-align: left;
-    margin-left: 18px;
-    margin-bottom: 15px;
-  }
-  .form-row {
-    margin: 0;
-  }
-  h1 {
-    display: inline-block;
-    box-sizing: border-box;
-    color: $color_trout_approx;
-    font-size: 24px;
-    padding: 0 10px 15px;
-    /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
-    margin: 0;
-    margin-left: 11px;
-  }
-  input {
-    color: $color_chicago_approx;
-    box-sizing: border-box;
-    width: 240px;
-    box-shadow: 1px 2px 4px 0 $black_8;
-    padding: 10px;
-    border: 1px solid $alto;
-    margin-left: 38px;
-  }
+// .form-basic {
+//   max-width: 640px;
+//   margin: 0 auto;
+//   padding: 55px;
+//   box-sizing: border-box;
+//   background-color: $white;
+//   /*box-shadow: 0 1px 3px 0 $black_10;*/
+//   font: bold 14px $font_0;
+//   text-align: center;
+//   .form-row {
+//     text-align: left;
+//     margin-bottom: 22px;
+//     > label span {
+//       display: inline-block;
+//       box-sizing: border-box;
+//       /*color: $color_chicago_approx;*/
+//       /*width: 180px;*/
+//       text-align: left;
+//       vertical-align: top;
+//       padding: 12px 25px;
+//     }
+//   }
+//   .form-title-row {
+//     text-align: left;
+//     margin-left: 18px;
+//     margin-bottom: 15px;
+//   }
+//   .form-row {
+//     margin: 0;
+//   }
+//   h1 {
+//     display: inline-block;
+//     box-sizing: border-box;
+//     color: $color_trout_approx;
+//     font-size: 24px;
+//     padding: 0 10px 15px;
+//     /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
+//     margin: 0;
+//     margin-left: 11px;
+//   }
+//   input {
+//     color: $color_chicago_approx;
+//     box-sizing: border-box;
+//     width: 240px;
+//     box-shadow: 1px 2px 4px 0 $black_8;
+//     padding: 10px;
+//     border: 1px solid $alto;
+//     margin-left: 38px;
+//   }
   
-  .form-input[type=radio] {
-    box-shadow: none;
-    width: auto;
-  }
+//   .form-input[type=radio] {
+//     box-shadow: none;
+//     width: auto;
+//   }
 
-  .form-input[type=checkbox] {
-    box-shadow: none;
-    width: auto;
-    margin-top: 13px;
-  }
+//   .form-input[type=checkbox] {
+//     box-shadow: none;
+//     width: auto;
+//     margin-top: 13px;
+//   }
 
-  select {
-    background-color: $white;
-    color: $color_chicago_approx;
-    box-sizing: border-box;
-    width: 240px;
-    height: 40px !important;
-    box-shadow: 1px 2px 4px 0 $black_8;
-    padding: 12px 8px;
-    border: 1px solid $alto;
-    margin-top: 10px;
-    margin-left: 38px;
-  }
+//   select {
+//     background-color: $white;
+//     color: $color_chicago_approx;
+//     box-sizing: border-box;
+//     width: 240px;
+//     height: 40px !important;
+//     box-shadow: 1px 2px 4px 0 $black_8;
+//     padding: 12px 8px;
+//     border: 1px solid $alto;
+//     margin-top: 10px;
+//     margin-left: 38px;
+//   }
 
-  .form-span {
-    margin-left: -24px;
-  }
+//   .form-span {
+//     margin-left: -24px;
+//   }
 
-  textarea {
-    color: $color_chicago_approx;
-    box-sizing: border-box;
-    width: 240px;
-    height: 80px;
-    // box-shadow: 1px 2px 4px 0 $black_8;
-    font: normal 13px $font_0;
-    padding: 12px;
-    border: 1px solid $alto;
-    resize: vertical;
-  }
-  .form-radio-buttons {
-    display: inline-block;
-    vertical-align: top;
-    > div {
-      margin-top: 10px;
-    }
-    .form-input {
-      width: auto;
-    }
+//   textarea {
+//     color: $color_chicago_approx;
+//     box-sizing: border-box;
+//     width: 240px;
+//     height: 80px;
+//     // box-shadow: 1px 2px 4px 0 $black_8;
+//     font: normal 13px $font_0;
+//     padding: 12px;
+//     border: 1px solid $alto;
+//     resize: vertical;
+//   }
+//   .form-radio-buttons {
+//     display: inline-block;
+//     vertical-align: top;
+//     > div {
+//       margin-top: 10px;
+//     }
+//     .form-input {
+//       width: auto;
+//     }
   
-    label > span {
-      margin-left: 18px;
-      color: $color_chicago_approx;
-      font-weight: normal;
-      display: inline-block;
-      width: 140px;
-      text-align: left;
-    }
-  }
+//     label > span {
+//       margin-left: 18px;
+//       color: $color_chicago_approx;
+//       font-weight: normal;
+//       display: inline-block;
+//       width: 140px;
+//       text-align: left;
+//     }
+//   }
 
-}
+// }
 
 #next {
   float: left;
@@ -450,17 +452,26 @@ footer {
 
 
 // FORMHEAD
-.form-head {
-  background-color: #565A5C;
+.form-head-left {
   height: 80px;
+  width: 200px;
+  background-color: #fff;
+  float: left;
+  border-right: 1px solid #DCE0E0;
+  text-align: center;
+  position: relative;
+}
+.form-head {
+  background-color: #fff;
+  height: 60px;
   width: 100%;
   margin-top: 0;
+  border-bottom: 1px solid #DCE0E0;
 }
 
 .form-header {
   text-align: center;
   padding: 12px;
-  color: #CACCCD;
 }
 // SIDEBAR
 .side-bar {
@@ -546,8 +557,97 @@ footer {
 
 
 
+//----------
+//----------
+// form-main 
+//----------
+//----------
+
+// basic-page
+//----------
 
 
 
+.basics-header {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.address-label {
+  font-size: 22px;
+}
+
+.unit-number-form{
+  width: 20%;
+  height: 40px;
+  text-align: center;
+}
+
+.address-form {
+  width: 60%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.bed-bath-half {
+  margin-top: 20px;
+}
+
+.bed-bath-half-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 100px;
+}
+
+.home-neighborhood-form{
+  margin-top: 20px;
+}
+
+.form-button-container {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.home-neighbor-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 280px;
+}
+
+#to-details {
+  float: right;
+  background-color: #ffaaaa;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: 1px solid red;
+}
 
 
+@media screen and (min-width: 1880px){
+  .unit-number-form{
+  width: 20%;
+  height: 50px;
+  text-align: center;
+}
+
+.address-form {
+  width: 60%;
+  height: 50px;
+  padding-left: 10px;
+}
+  .bed-bath-half-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 50px;
+  width: 160px;
+}
+.home-neighbor-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 50px;
+  width: 430px;
+}
+}

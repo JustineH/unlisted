@@ -1,7 +1,6 @@
 
 <!-- ##################### -->
 
-
     <!-- <div id="load"> -->
       <%= form_for @listing, html: { multipart: true } do |f| %>
   <% if @listing.errors.any? %>
@@ -17,38 +16,57 @@
   <% end %>
 
 <div id="basic-page">
-<h1>Basics</h1>
-
+<h1 class="basics-header">Basics</h1>
+    
       <div class="form-row">
-        <%= f.label :address, "Address" %><%= f.text_field :address %>
+        <%= f.label :address, "ADDRESS", class: "address-label" %><br>
+        
+        <%=f.text_field :unit_number, placeholder: "Unit # (optional)", class: "unit-number-form" %><%= f.text_field :address, class: 'address-form', placeholder: "Enter your Address" %>
       </div>
 
-      <div class="form-row">
-        <%= f.label :bedrooms, "Number of Rooms"%>
-        <%= f.select :bedrooms, (1..10).to_a%>
+
+      <div class="bed-bath-half">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap">
+                <%= f.label :bedrooms, "BED"%><br>
+                <%= f.select :bedrooms, (1..10).to_a%>
+                </div>
+            </div>
+
+         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap">
+            <%= f.label :bathrooms, "BATH"%><br>
+            <%= f.select :bathrooms, (1..10).to_a%>
+            </div>
+        </div>
+
+         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap">
+             <%= f.label :half_bathrooms, "HALF BATH"%><br>
+            <%= f.select :half_bathrooms, (1..10).to_a%>
+            </div>
+        </div>
+      </div>
     </div>
 
-    <div class="form-row">
-        <%= f.label :bathrooms, "Number of Bathrooms"%>
-        <%= f.select :bathrooms, (1..10).to_a%>
-    </div>
-
-    <div class="form-row">
-        <%= f.label :half_bathrooms, "Number of Half Bathrooms"%>
-        <%= f.select :half_bathrooms, (1..10).to_a%>
-    </div>
-
-    <div class="form-row">
-        <%= f.label :home_type, "Type of Property"%>
+    <div class="home-neighborhood-form">
+    <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+       <div class="home-neighbor-wrap"> 
+        <%= f.label :home_type, "Type of Home"%><br>
         <%= f.select :home_type, type_property %>
+        </div>
     </div>
 
-     <div class"form-row">
-        <%= f.label :neighbourhood_id, "Neighbourhood" %>
+     <div class"col-md-6 col-sm-6 col-xs-6">
+        <div class="home-neighbor-wrap">
+        <%= f.label :neighbourhood_id, "Neighbourhood" %><br>
         <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
+        </div>
     </div>
-      
-      <a href="#" id="to-details">Next</a>
+    </div>
+      </div>
+      <div class="form-button-container">
+        <a href="#" id="to-details">Next</a>
+      </div>
      </div> <!-- basic-page -->
 
 <!-- ##################### -->
