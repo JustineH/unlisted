@@ -2,21 +2,42 @@
 <div id="listing-details">
 
 <div class="row">
-<div class="col-md-4 col-sm-6 cols-xs-12">
-<p>testing</p>
-</div>
-<div class="row">
-<div class="col-md-4 col-sm-6 cols-xs-12">
-<p>testing</p>
-</div>
-<div class="row">
-<div class="col-md-4 col-sm-6 cols-xs-12">
-<p>testing</p>
+
+
+<!-- <div class="col-md-12 col-sm-12 cols-xs-12" id="address">
+<h3>Address: <%= @listing.address.titleize %></h3>
 </div>
 
-<!-- <div class=".col-md-4">
-<p>testing</p>
+ -->
+<div class="col-md-12 col-sm-12 cols-xs-12" id="image">
+
+<p>image</p>
+
+
 </div>
-</div> -->
+
+
+
+<div class="col-md-6 col-sm-6 cols-xs-12">
+<p id="address"><%= @listing.address.titleize %></p>
+</div>
+
+<div class="col-md-6 col-sm-6 cols-xs-12">
+<p id="price">$<%= @listing.price %></p>
+</div>
+  
+<div class="col-md-12 col-sm-12 cols-xs-12">
+<p class="listing-heading">General Features</p>
+</div>
+<div class="col-md-12 col-sm-12 cols-xs-12">
+<p class="listing-heading">Indoor Features</p>
+</div>
+<div class="col-md-12 col-sm-12 cols-xs-12">
+<p class="listing-heading">Outdoor Features</p>
+</div>
+<div class="col-md-12 col-sm-12 cols-xs-12">
+<p>Map</p>
+</div>
+
 
 </div>

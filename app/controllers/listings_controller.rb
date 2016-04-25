@@ -7,7 +7,7 @@ class ListingsController < ApplicationController
     @listings = Listing.all
     @user = current_user.id
 
-    @bookmarked_listings = current_user.bookmarked_listings
+    # @bookmarked_listings = current_user.bookmarked_listings
     # @bookmarked_listing = Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id)
     # @test = current_user.bookmarked_listings.create(listing_id: params[:listing_id])
 
@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
 
   def add_bookmark
     @bookmark = Bookmark.create user_id: current_user.id, listing_id: params[:listing_id]
+    render json: @bookmark.as_json(include: :listing)
   end
 
   def new

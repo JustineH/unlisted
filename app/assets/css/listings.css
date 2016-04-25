@@ -1,89 +1,6 @@
-.form-basic {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 55px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  /*box-shadow: 0 1px 3px 0 $black_10;*/
-  font: bold 14px sans-serif;
-  text-align: center; }
-  .form-basic .form-row {
-    text-align: left;
-    margin-bottom: 22px; }
-    .form-basic .form-row > label span {
-      display: inline-block;
-      box-sizing: border-box;
-      /*color: $color_chicago_approx;*/
-      /*width: 180px;*/
-      text-align: left;
-      vertical-align: top;
-      padding: 12px 25px; }
-  .form-basic .form-title-row {
-    text-align: left;
-    margin-left: 18px;
-    margin-bottom: 15px; }
-  .form-basic .form-row {
-    margin: 0; }
-  .form-basic h1 {
-    display: inline-block;
-    box-sizing: border-box;
-    color: #4c565e;
-    font-size: 24px;
-    padding: 0 10px 15px;
-    /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
-    margin: 0;
-    margin-left: 11px; }
-  .form-basic input {
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 10px;
-    border: 1px solid #dbdbdb;
-    margin-left: 38px; }
-  .form-basic .form-input[type=radio] {
-    box-shadow: none;
-    width: auto; }
-  .form-basic .form-input[type=checkbox] {
-    box-shadow: none;
-    width: auto;
-    margin-top: 13px; }
-  .form-basic select {
-    background-color: #ffffff;
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    height: 40px !important;
-    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
-    padding: 12px 8px;
-    border: 1px solid #dbdbdb;
-    margin-top: 10px;
-    margin-left: 38px; }
-  .form-basic .form-span {
-    margin-left: -24px; }
-  .form-basic textarea {
-    color: #5f5f5f;
-    box-sizing: border-box;
-    width: 240px;
-    height: 80px;
-    font: normal 13px sans-serif;
-    padding: 12px;
-    border: 1px solid #dbdbdb;
-    resize: vertical; }
-  .form-basic .form-radio-buttons {
-    display: inline-block;
-    vertical-align: top; }
-    .form-basic .form-radio-buttons > div {
-      margin-top: 10px; }
-    .form-basic .form-radio-buttons .form-input {
-      width: auto; }
-    .form-basic .form-radio-buttons label > span {
-      margin-left: 18px;
-      color: #5f5f5f;
-      font-weight: normal;
-      display: inline-block;
-      width: 140px;
-      text-align: left; }
+html, body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
 
 #next {
   float: left;
@@ -99,30 +16,6 @@
   float: left;
   width: 100%;
   height: 100px; }
-
-.side-bar {
-  background-color: #565A5C;
-  height: 550px;
-  width: 250px;
-  border-right: 1px solid #c4c4c4; }
-
-#side-ul {
-  list-style: none; }
-
-#side-ul li:first-child {
-  padding-top: 15%; }
-
-#side-ul li {
-  padding-top: 5%;
-  font-size: 18px; }
-
-#side-ul a {
-  color: #ECECEC;
-  position: relative;
-  z-index: 1; }
-
-#side-ul a:hover {
-  text-decoration: none; }
 
 /*Google maps*/
 #map-title {
@@ -352,3 +245,175 @@ footer {
 
 #details-page {
   display: none; }
+
+#photos-page {
+  display: none; }
+
+.form-head-left {
+  height: 80px;
+  width: 200px;
+  background-color: #fff;
+  float: left;
+  border-right: 1px solid #DCE0E0;
+  text-align: center;
+  position: relative; }
+
+#address-title {
+  overflow-x: hidden;
+  width: 80%; }
+
+.form-head {
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  margin-top: 0;
+  border-bottom: 1px solid #DCE0E0; }
+
+.form-header {
+  text-align: left;
+  padding: 12px; }
+
+.side-bar {
+  height: 100vh;
+  width: 200px;
+  background-color: #FFE8E8; }
+
+#head-top {
+  margin-top: -20px; }
+
+.side-nav-a {
+  text-align: center;
+  color: #fff;
+  padding-top: 40px; }
+
+#basicdiv {
+  height: 100px;
+  width: 100%;
+  background-color: #84C7FF;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#detaildiv {
+  height: 100px;
+  width: 100%;
+  background-color: #D1EAFF;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#amenitydiv {
+  height: 100px;
+  width: 100%;
+  background-color: #A7BBCC;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#photodiv {
+  height: 100px;
+  width: 100%;
+  background-color: #536B7F;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#basicdiv:hover {
+  opacity: 0.5; }
+
+#detaildiv:hover {
+  opacity: 0.5; }
+
+#amenitydiv:hover {
+  opacity: 0.5; }
+
+#photodiv:hover {
+  opacity: 0.5; }
+
+.basics-header {
+  text-align: center;
+  padding-bottom: 15px; }
+
+.address-label {
+  font-size: 22px; }
+
+.unit-number-form {
+  width: 20%;
+  height: 40px;
+  text-align: center; }
+
+.address-form {
+  width: 60%;
+  height: 40px;
+  padding-left: 10px; }
+
+.bed-bath-half {
+  margin-top: 20px; }
+
+.bed-bath-half-wrap select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 100px; }
+
+.home-neighborhood-form {
+  margin-top: 20px; }
+
+.form-button-container {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 auto; }
+
+.home-neighbor-wrap select {
+  -webkit-appearance: menulist-button;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-writing-mode: horizontal-tb;
+  letter-spacing: normal;
+  background-color: #fff;
+  height: 40px;
+  width: 280px;
+  padding-left: 1em;
+  color: #565a5c;
+  font-weight: bold; }
+
+#to-details {
+  float: right;
+  background-color: #ff5a5f;
+  padding: 9px 27px;
+  margin-top: 20px;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 1.43;
+  font-weight: 600; }
+
+#to-details:hover {
+  text-decoration: none;
+  background-color: #ff1a1f; }
+
+@media screen and (min-width: 1880px) {
+  .unit-number-form {
+    width: 20%;
+    height: 50px;
+    text-align: center; }
+
+  .address-form {
+    width: 60%;
+    height: 50px;
+    padding-left: 10px; }
+
+  .bed-bath-half-wrap select {
+    -webkit-appearance: menulist-button;
+    background-color: #fff;
+    height: 50px;
+    width: 160px; }
+
+  .home-neighbor-wrap select {
+    -webkit-appearance: menulist-button;
+    background-color: #fff;
+    height: 50px;
+    width: 430px; } }

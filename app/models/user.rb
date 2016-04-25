@@ -11,10 +11,11 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
             :uniqueness =>true,
             :format => {:with => /.+@.+\..+/i}
-  has_many :listings
-  has_many :bookmarks
 
-  has_many :bookmarked_listings, through: :bookmarks, source: :listing
+  has_many :listings
+  has_many :bookmarks, -> {order('created_at DESC')}
+
+  # has_many :bookmarked_listings, through: :bookmarks, source: :listing
 
   def self.new_guest
     new { |u| u.guest = true }
