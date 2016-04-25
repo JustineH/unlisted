@@ -16,4 +16,14 @@ $(document).on('click', 'a#to-amenities', function(){
 $(document).on('click', 'a#back-to-details', function(){
   $('#details-page').show();
   $('#amenities-page').hide();
-})
+});
+
+$(document).on('click', 'a#to-photos', function(){
+  $('#amenities-page').hide();
+  $('#photos-page').show();
+});
+
+$(document).on('click', 'a#back-to-amenities', function(){
+  $('#photos-page').hide();
+  $('#amenities-page').show();
+});
