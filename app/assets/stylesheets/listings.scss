@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html, body{
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -210,232 +209,6 @@ footer {
 }
 
 
-/////////////
-/////////////
-// PHOTO PAGE
-/////////////
-/////////////
-
-
-      .container
-      {
-        width: 100%;
-        max-width: 680px; /* 800 */
-        text-align: center;
-        margin: 0 auto;
-      }
-
-        .container h1
-        {
-          font-size: 42px;
-          font-weight: 300;
-          color: #0f3c4b;
-          margin-bottom: 40px;
-        }
-        .container h1 a:hover,
-        .container h1 a:focus
-        {
-          color: #39bfd3;
-        }
-
-        .container nav
-        {
-          margin-bottom: 40px;
-        }
-          .container nav a
-          {
-            border-bottom: 2px solid #c8dadf;
-            display: inline-block;
-            padding: 4px 8px;
-            margin: 0 5px;
-          }
-          .container nav a.is-selected
-          {
-            font-weight: 700;
-            color: #39bfd3;
-            border-bottom-color: currentColor;
-          }
-          .container nav a:not( .is-selected ):hover,
-          .container nav a:not( .is-selected ):focus
-          {
-            border-bottom-color: #0f3c4b;
-          }
-
-        /*.container footer
-        {
-          color: #92b0b3;
-          margin-top: 40px;
-        }
-          .container footer p + p
-          {
-            margin-top: 1em;
-          }
-          .container footer a:hover,
-          .container footer a:focus
-          {
-            color: #39bfd3;
-          }*/
-
-        .box
-        {
-          font-size: 1.25rem; /* 20 */
-          background-color: #c8dadf;
-          position: relative;
-          padding: 100px 20px;
-          margin-top: 10%;
-          margin-left: 15%;
-        }
-        .box.has-advanced-upload
-        {
-          outline: 2px dashed #92b0b3;
-          outline-offset: -10px;
-
-          -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-          transition: outline-offset .15s ease-in-out, background-color .15s linear;
-        }
-        .box.is-dragover
-        {
-          outline-offset: -20px;
-          outline-color: #c8dadf;
-          background-color: #fff;
-        }
-          .box__dragndrop,
-          .box__icon
-          {
-            display: none;
-          }
-          .box.has-advanced-upload .box__dragndrop
-          {
-            display: inline;
-          }
-          .box.has-advanced-upload .box__icon
-          {
-            width: 100%;
-            height: 80px;
-            fill: #92b0b3;
-            display: block;
-            margin-bottom: 40px;
-          }
-
-          .box.is-uploading .box__input,
-          .box.is-success .box__input,
-          .box.is-error .box__input
-          {
-            visibility: hidden;
-          }
-
-          .box__uploading,
-          .box__success,
-          .box__error
-          {
-            display: none;
-          }
-          .box.is-uploading .box__uploading,
-          .box.is-success .box__success,
-          .box.is-error .box__error
-          {
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            left: 0;
-
-            -webkit-transform: translateY( -50% );
-            transform: translateY( -50% );
-          }
-          .box__uploading
-          {
-            font-style: italic;
-          }
-          .box__success
-          {
-            -webkit-animation: appear-from-inside .25s ease-in-out;
-            animation: appear-from-inside .25s ease-in-out;
-          }
-            @-webkit-keyframes appear-from-inside
-            {
-              from  { -webkit-transform: translateY( -50% ) scale( 0 ); }
-              75%   { -webkit-transform: translateY( -50% ) scale( 1.1 ); }
-              to    { -webkit-transform: translateY( -50% ) scale( 1 ); }
-            }
-            @keyframes appear-from-inside
-            {
-              from  { transform: translateY( -50% ) scale( 0 ); }
-              75%   { transform: translateY( -50% ) scale( 1.1 ); }
-              to    { transform: translateY( -50% ) scale( 1 ); }
-            }
-
-          .box__restart
-          {
-            font-weight: 700;
-          }
-          .box__restart:focus,
-          .box__restart:hover
-          {
-            color: #39bfd3;
-          }
-
-          .js .box__file
-          {
-            width: 0.1px;
-            height: 0.1px;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-            z-index: -1;
-          }
-          .js .box__file + label
-          {
-            max-width: 80%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            cursor: pointer;
-            display: inline-block;
-            overflow: hidden;
-          }
-          .js .box__file + label:hover strong,
-          .box__file:focus + label strong,
-          .box__file.has-focus + label strong
-          {
-            color: #39bfd3;
-          }
-          .js .box__file:focus + label,
-          .js .box__file.has-focus + label
-          {
-            outline: 1px dotted #000;
-            outline: -webkit-focus-ring-color auto 5px;
-          }
-            .js .box__file + label *
-            {
-              /* pointer-events: none; */ /* in case of FastClick lib use */
-            }
-
-          .no-js .box__file + label
-          {
-            display: none;
-          }
-
-          .no-js .box__button
-          {
-            display: block;
-          }
-          .box__button
-          {
-            font-weight: 700;
-            color: #e5edf1;
-            background-color: #39bfd3;
-            display: none;
-            padding: 8px 16px;
-            margin: 40px auto 0;
-          }
-            .box__button:hover,
-            .box__button:focus
-            {
-              background-color: #0f3c4b;
-            }
-            #below-nav {
-              margin: 0 !important;
-            }
 
 
 // form wizard css
@@ -470,21 +243,22 @@ footer {
 
 .form-head {
   background-color: #fff;
-  height: 60px;
+  height: 70px;
   width: 100%;
   margin-top: 0;
   border-bottom: 1px solid #DCE0E0;
 }
 
 .form-header {
-  text-align: left;
-  padding: 12px;
+  text-align: center;
+  padding: 1.5%;
+  padding-right: 75%;
 }
 // SIDEBAR
 .side-bar {
   height: 100vh;
   width: 200px;
-  background-color: #FFE8E8;
+  background-color: #F5F5F5;
 }
 
 
@@ -492,20 +266,19 @@ footer {
   margin-top: -20px;
 }
 
-.side-nav-a{
+.side-nav-a {
   text-align: center;
-  color: #fff;
+  color: #7B7E7F;
   padding-top: 40px;
-  // position: relative;
-  // display: inline-block;
-  // margin-top: 5%;
-  // vertical-align: middle;
+}
+
+.side-nav-a:hover {
+  text-decoration: none;
 }
 
 #basicdiv{
   height: 100px;
   width: 100%;
-  background-color: #84C7FF;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -516,7 +289,6 @@ footer {
 #detaildiv{
   height: 100px;
   width: 100%;
-  background-color: #D1EAFF;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -527,7 +299,6 @@ footer {
 #amenitydiv{
   height: 100px;
   width: 100%;
-  background-color: #A7BBCC;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -537,7 +308,6 @@ footer {
 #photodiv{
   height: 100px;
   width: 100%;
-  background-color: #536B7F;
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -574,14 +344,14 @@ footer {
 //----------
 
 
-
 .basics-header {
   text-align: center;
+  margin-top: 50px;
   padding-bottom: 15px;
 }
 
 .address-label {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .unit-number-form{
@@ -591,7 +361,7 @@ footer {
 }
 
 .address-form {
-  width: 60%;
+  width: 80%;
   height: 40px;
   padding-left: 10px;
 }
@@ -600,11 +370,25 @@ footer {
   margin-top: 20px;
 }
 
-.bed-bath-half-wrap select {
+.bed-bath-half-wrap1 select {
   -webkit-appearance: menulist-button;
   background-color: #fff;
   height: 40px;
-  width: 100px;
+  width: 100%;
+}
+
+.bed-bath-half-wrap2 select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+}
+
+.bed-bath-half-wrap3 select {
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
 }
 
 .home-neighborhood-form{
@@ -613,7 +397,7 @@ footer {
 
 .form-button-container {
   margin-top: 10px;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -621,17 +405,36 @@ footer {
   -webkit-appearance: menulist-button;
   -webkit-border-radius: 0;
   -webkit-font-smoothing: antialiased;
-      -webkit-writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb;
   letter-spacing: normal;
   background-color: #fff;
   height: 40px;
-  width: 280px;
+  width: 49%;
+  padding-left: 1em;
+  color: #565a5c;
+  font-weight: bold;
+}
+
+.home-neighbor-wrap-home select {
+  -webkit-appearance: menulist-button;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-writing-mode: horizontal-tb;
+  letter-spacing: normal;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
   padding-left: 1em;
   color: #565a5c;
   font-weight: bold;
 }
 
 
+// form buttons
+.form-container {
+  width: 80%;
+  padding-right: 20% !important;
+}
 #to-details {
   float: right;
   background-color: #ff5a5f;
@@ -648,6 +451,38 @@ footer {
   background-color: #ff1a1f;
 }
 
+#to-amenities {
+  float: right;
+  background-color: #ff5a5f;
+  padding: 9px 27px;
+  margin-top: 20px;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 1.43;
+  font-weight: 600;
+}
+
+#to-amenities:hover{
+  text-decoration: none;
+  background-color: #ff1a1f;
+}
+
+#back-to-basic{
+  float: left;
+  background-color: #ff5a5f;
+  padding: 9px 27px;
+  margin-top: 20px;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 1.43;
+  font-weight: 600;
+}
+
+#back-to-basic:hover{
+  text-decoration: none;
+  background-color: #ff1a1f;
+}
+// end form buttons
 
 @media screen and (min-width: 1880px){
   .unit-number-form{
@@ -674,3 +509,40 @@ footer {
   width: 430px;
 }
 }
+
+
+// DETAILS
+
+.details-head {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.details-label-lg {
+  padding-top: 15px;
+}
+
+.details-input-lg {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.details-input-sm {
+  width: 100%;
+  height: 40px;
+}
+
+
+// AMENITIES
+.amenities-label {
+  padding-right: 10px;
+}
+
+.amenities-check-box {
+    vertical-align: middle;
+    float: right;
+    margin-right: 10px;
+}
+
+
