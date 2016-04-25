@@ -1,5 +1,9 @@
 
-<%= form_for @listing, html: { multipart: true } do |f| %>
+<!-- ##################### -->
+
+
+    <!-- <div id="load"> -->
+      <%= form_for @listing, html: { multipart: true } do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
@@ -12,25 +16,26 @@
     </div>
   <% end %>
 
-    <div class="form-title-row">
-        <h1>List Your Property</h1>
+<div id="basic-page">
+<h1>Basics</h1>
+
+      <div class="form-row">
+        <%= f.label :address, "Address" %><%= f.text_field :address %>
+      </div>
+
+      <div class="form-row">
+        <%= f.label :bedrooms, "Number of Rooms"%>
+        <%= f.select :bedrooms, (1..10).to_a%>
     </div>
+
     <div class="form-row">
-        <%= f.label :size%>
-        <%= f.text_field :size %>
+        <%= f.label :bathrooms, "Number of Bathrooms"%>
+        <%= f.select :bathrooms, (1..10).to_a%>
     </div>
+
     <div class="form-row">
-        <%= f.label :price%>
-        <%= f.text_field :price %>
-    </div>
-    <div class="form-row">
-        <%= f.label :address%>
-        <%= f.text_field :address %>
-    </div>
-    
-    <div class"form-row">
-        <%= f.label :neighbourhood_id, "Neighbourhood" %>
-        <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
+        <%= f.label :half_bathrooms, "Number of Half Bathrooms"%>
+        <%= f.select :half_bathrooms, (1..10).to_a%>
     </div>
 
     <div class="form-row">
@@ -38,63 +43,169 @@
         <%= f.select :home_type, type_property %>
     </div>
 
-    <div class="form-row">
-        <%= f.label :type_ownership, "Type of Ownership"%>
-        <%= f.select :type_ownership, type_ownership %>
+     <div class"form-row">
+        <%= f.label :neighbourhood_id, "Neighbourhood" %>
+        <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
     </div>
+      
+      <a href="#" id="to-details">Next</a>
+     </div> <!-- basic-page -->
 
-    <div class="form-row">
-        <%= f.label :bedrooms, "Number of Rooms"%>
-        <%= f.select :bedrooms, (1..10).to_a%>
-    </div>
-    <div class="form-row">
-        <%= f.label :bathrooms, "Number of Bathrooms"%>
-        <%= f.select :bathrooms, (1..10).to_a%>
-    </div>
+<!-- ##################### -->
 
-    <div class="form-row">
-      <span>Common Area Amenities</span><br>
-        <%= f.label :gym %>
-            <%= f.check_box :gym %>
-        <%= f.label :amenities_room %>
-            <%= f.check_box :amenities_room %>            
+      <div id="details-page">
+<h1>Details</h1>
+
+        <div class="form-row">
+        <%= f.label :postal_code, "Postal Code" %><%= f.text_field :postal_code %>
+      </div>
+
+        <div class="form-row">
+          <%= f.label :price %><%= f.text_field :price %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label :size %><%= f.text_field :size %>
+        </div>
+
+         <div class="form-row">
+          <%= f.label :lot_size, "Lot Size" %><%= f.text_field :lot_size %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label :year_built, "Year Built" %><%= f.text_field :year_built %>
+        </div>
+
+
+         <div class="form-row">
+          <%= f.label :type_ownership, "Type Ownership" %><%= f.text_field :type_ownership %>
+        </div>
+
+          <div class="form-row">
+          <%= f.label :taxes, "Taxes" %><%= f.text_field :taxes %>
+        </div>
+
+
+          <div class="form-row">
+          <%= f.label :strata_fees, "Strata Fees" %><%= f.text_field :strata_fees %>
+        </div>
+        
+        <a href="#" id="back-to-basic">Back</a>
+        <a href="#" id="to-amenities">Next</a>
+      </div> <!-- details-page -->
+
+<!-- ##################### -->
+
+      <div id="amenities-page">
+      <h1>Amenities</h1>
+
+      <h3>Indoors</h3>
+        <div class="form-row">
+          <%= f.label "Basement" %><%= f.check_box :basement %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Storage" %><%= f.check_box :storage %>
+        </div>
+
+         <div class="form-row">
+          <%= f.label "Fireplaces" %><%= f.check_box :fireplaces %>
+        </div>
+        <div class="form-row">
+          <%= f.label "A/C" %><%= f.check_box :air_conditioning %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Insuite Laundry" %><%= f.check_box :insuite_laundry %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Washer" %><%= f.check_box :washer %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Dishwasher" %><%= f.check_box :dishwasher %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Stove" %><%= f.check_box :stove %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Fridge" %><%= f.check_box :fridge %>
+        </div>
+
+
+        <div class="form-row">
+          <%= f.label "Pet Friendly" %><%= f.check_box :pet_friendly %>
+        </div>
+
+
+      <h3>Outdoors</h3>
+         <div class="form-row">
         <%= f.label :elevator%>
-            <%= f.check_box :elevator %>          
+          <%= f.check_box :elevator %> 
+          </div>         
+         <div class="form-row">
         <%= f.label :bike_room %>
             <%= f.check_box :bike_room %>
+            </div>
+ <div class="form-row">
         <%= f.label :garden%>
             <%= f.check_box :garden %>
-        <%= f.label :pool%>
-            <%= f.check_box :pool %>
-        <%= f.label :insuite_laundry, "In Home Laundry"%>
-            <%= f.check_box :insuite_laundry %>
-        <%= f.label :dishwasher%>
-            <%= f.check_box :dishwasher %>
-        <%=f.label :stove%>       
-            <%= f.check_box :stove %>
-        <%=f.label :fridge%>
-            <%= f.check_box :fridge %>
-        <%= f.label :hot_tub%>
-            <%= f.check_box :hot_tub %>
+            </div>
+       
+        <div class="form-row">
+          <%= f.label "Gym" %><%= f.check_box :gym %>
+        </div>
 
-        <span>Other Features</span><br>
-        <%= f.label :pet_friendly%>          
-            <%= f.check_box :pet_friendly %>
-        <%= f.label :wheelchair_accessible%>
-            <%= f.check_box :wheelchair_accessible %>
-    </div>
 
-    <div class="form-row">
-        <%= f.label :property_summary%>
+        <div class="form-row">
+          <%= f.label "Amenities Room" %><%= f.check_box :amenities_room%>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Hot Tub" %><%= f.check_box :hot_tub %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "pool" %><%= f.check_box :pool %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "Weelchair Accessible" %><%= f.check_box :wheelchair_accessible %>
+        </div>
+
+        <div class="form-row">
+          <%= f.label "doorman" %><%= f.check_box :doorman %>
+        </div>
+
+        <div class="form-row">
+        <h3>Property Summary</h3>
         <%= f.text_field :property_summary%>
-    </div>
-    <div class="form-row">
+        </div>
+        <div class="form-row">
+        <h3>Features Description</h3>
+        <%= f.text_field :features_description%>
+        </div>
+        <a href="#" id="back-to-details">Back</a>
+        <a href="#" id="to-photos">Next</a>
+      </div> <!-- amenities-page -->
+
+        <!-- ######## PHOTOS ######### -->
+        <div id="photos-page">
+        <h1>Photos</h1>
+        <div class="form-row">
         <%= f.label :image %>
         <%= f.file_field :image%>
     </div>
-
-
-      <div class="form-row">
-          <button type="submit">Submit Form</button>
+        <a href="#" id="back-to-amenities">Back</a>
+        <div>
+        <%= f.submit "Submit" %>
       </div>
-<%end%>
+    </div> <!-- photos-page -->
+      
+    </div>
+    <%end%>
+  </div>

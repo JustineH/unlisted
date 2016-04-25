@@ -100,30 +100,6 @@
   width: 100%;
   height: 100px; }
 
-.side-bar {
-  background-color: #565A5C;
-  height: 550px;
-  width: 250px;
-  border-right: 1px solid #c4c4c4; }
-
-#side-ul {
-  list-style: none; }
-
-#side-ul li:first-child {
-  padding-top: 15%; }
-
-#side-ul li {
-  padding-top: 5%;
-  font-size: 18px; }
-
-#side-ul a {
-  color: #ECECEC;
-  position: relative;
-  z-index: 1; }
-
-#side-ul a:hover {
-  text-decoration: none; }
-
 /*Google maps*/
 #map-title {
   text-align: left;
@@ -355,3 +331,75 @@ footer {
 
 #photos-page {
   display: none; }
+
+.form-head {
+  background-color: #565A5C;
+  height: 80px;
+  width: 100%;
+  margin-top: 0; }
+
+.form-header {
+  text-align: center;
+  padding: 12px;
+  color: #CACCCD; }
+
+.side-bar {
+  height: 100vh;
+  width: 200px;
+  background-color: #F5F5F5; }
+
+#head-top {
+  margin-top: -20px; }
+
+.side-nav-a {
+  text-align: center;
+  color: #fff;
+  padding-top: 40px; }
+
+#basicdiv {
+  height: 100px;
+  width: 100%;
+  background-color: #84C7FF;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#detaildiv {
+  height: 100px;
+  width: 100%;
+  background-color: #D1EAFF;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#amenitydiv {
+  height: 100px;
+  width: 100%;
+  background-color: #A7BBCC;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#photodiv {
+  height: 100px;
+  width: 100%;
+  background-color: #536B7F;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding-top: 20px; }
+
+#basicdiv:hover {
+  opacity: 0.5; }
+
+#detaildiv:hover {
+  opacity: 0.5; }
+
+#amenitydiv:hover {
+  opacity: 0.5; }
+
+#photodiv:hover {
+  opacity: 0.5; }
