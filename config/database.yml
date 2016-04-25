@@ -83,3 +83,12 @@ production:
   database: unlisted_production
   username: unlisted
   password: <%= ENV['UNLISTED_DATABASE_PASSWORD'] %>
+
+# Faker data locale specified to Vancouver, BC Canada
+  en-CA:
+  faker:
+    address:
+      postcode: /[V][0-9][A-CEJ-NPR-TV-Z] ?[0-9][A-CEJ-NPR-TV-Z][0-9]/
+      state: [British Columbia]
+      state_abbr: ["BC"]
+      default_country: [Canada]

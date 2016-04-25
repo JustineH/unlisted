@@ -1,12 +1,11 @@
 class ListingsController < ApplicationController
+
   def index
     @listings = Listing.all
   end
 
   def show
     @neighbourhoods = Neighbourhood.all 
-    # @type_ownership = Listing::TYPE_OWNERSHIP
-    # @type_property = Listing::TYPE_PROPERTY
   end
 
   def new
@@ -17,12 +16,23 @@ class ListingsController < ApplicationController
     
   end
 
-  def search
-    @results = Listing.where(params[:text])
+  def search     
+    @results = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
+  end
+
+  def autocomplete
+    render json: Listing.search(params[:query], {
+      fields: ["neighbourhood_id"],
+      limit: 10,
+      load: false,
+      misspellings: {below: 3}
+    }).map(&:neighbourhood_id)
   end
 
   def basic
+
   end
 
   
 end
+
