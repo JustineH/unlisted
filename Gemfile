@@ -39,8 +39,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'faker', '~> 1.6.3'
 gem 'pry'
 gem 'searchkick'
-gem 'paperclip', '~> 4.2'
-gem 'dropzonejs-rails'
+
 
 gem 'postoffice'
 
