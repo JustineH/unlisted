@@ -131,7 +131,8 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 /*Listing Box*/
 
   #feature-listing{
-    padding: 5em 5em 1em 5em; 
+    padding: 1em 5em 1em 5em; 
+    background: #E3E5EB;
   }
   .featureList{
     margin: 40px 0;
@@ -263,6 +264,21 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
       transition: all 0.4s ease 0s;
     }
   }*/
+
+
+
+/*Details Listing Page*/
+#listing-details {
+  padding-top: 2em;
+  width: 100%;
+  max-width: 80%; /* 800 */
+  text-align: center;
+  margin: 0 auto;
+  border: 1px dashed black;
+  /*display:none;*/
+}
+
+
 
 
 

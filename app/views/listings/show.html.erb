@@ -1,32 +1,22 @@
 
-<div class="main-content">
-
+<div id="listing-details">
 
 <div class="row">
-  <div class="col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
+<div class="col-md-4 col-sm-6 cols-xs-12">
+<p>testing</p>
+</div>
+<div class="row">
+<div class="col-md-4 col-sm-6 cols-xs-12">
+<p>testing</p>
+</div>
+<div class="row">
+<div class="col-md-4 col-sm-6 cols-xs-12">
+<p>testing</p>
+</div>
 
-        <p><%= image_tag @listing.image.url(:medium) %><p>
-     
-        <p>Address: <span id="address"><%= @listing.address.titleize %></span></p>
-        <p>Price: $<%= @listing.price %></p>
-        <p><%= @listing.bedrooms %> bathrooms</p>
-        <p><%= @listing.bathrooms %> bathrooms</p>
-        <p>Size: <%= @listing.size %> sqft</p>
-        <p>Neighbourhood: <%= @listing.neighbourhood.name%></p>
-        <p>Storage: <%= human_boolean(@listing.storage) %></p>
-        <p>Insuite laundry: <%= human_boolean(@listing.insuite_laundry) %></p>
-        <p>Gym: <%= human_boolean(@listing.gym) %></p>
-        <p>Doorman: <%= human_boolean(@listing.doorman) %></p>
-      <% if @listing.user == current_user %>
-        <%= link_to 'Edit', edit_listing_path(@listing) %> 
-      <% end %>
+<!-- <div class=".col-md-4">
+<p>testing</p>
+</div>
+</div> -->
 
-<div id="map"></div>
-      <%= link_to 'Listings Page', listings_path %> 
-
-
-
-    </div>
-  </div>
 </div>
