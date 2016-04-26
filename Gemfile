@@ -39,6 +39,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'faker', '~> 1.6.3'
 gem 'pry'
 gem 'searchkick'
+gem 'paperclip', '~> 4.2'
+
+gem 'postoffice'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

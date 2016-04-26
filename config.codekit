@@ -187,6 +187,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/app\/assets\/javascripts\/application.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/application.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/application-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/assets\/javascripts\/form-wizard.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/form-wizard.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/form-wizard-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/assets\/javascripts\/googlemaps.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/googlemaps.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/googlemaps-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/app\/assets\/javascripts\/listings.js.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
@@ -206,6 +239,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/application-min.js",
 		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/min\/application-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/assets\/javascripts\/min\/form-wizard-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/form-wizard-min.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/min\/form-wizard-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/app\/assets\/javascripts\/min\/googlemaps-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/googlemaps-min.js",
+		"outputAbbreviatedPath": "\/app\/assets\/javascripts\/min\/min\/googlemaps-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -250,6 +305,22 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
+	"\/app\/assets\/stylesheets\/application.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/application.scss",
+		"outputAbbreviatedPath": "\/app\/assets\/css\/application.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/app\/assets\/stylesheets\/carousel.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -258,6 +329,22 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/app\/assets\/stylesheets\/listings.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/listings.scss",
+		"outputAbbreviatedPath": "\/app\/assets\/css\/listings.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
 	"\/app\/assets\/stylesheets\/unlisted_custom.css": {
 		"fileType": 16,
@@ -293,6 +380,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/vendors.scss",
 		"outputAbbreviatedPath": "\/app\/assets\/css\/vendors.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/app\/assets\/stylesheets\/welcome.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/assets\/stylesheets\/welcome.scss",
+		"outputAbbreviatedPath": "\/app\/assets\/css\/welcome.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -399,11 +502,47 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/views\/layouts\/_footer.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/layouts\/_footer.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/layouts\/_header.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/layouts\/_header.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/views\/layouts\/_sidebar.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/views\/layouts\/_sidebar.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/layouts\/application.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/layouts\/application.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/listings\/_form.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/_form.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -453,6 +592,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/views\/listings\/index.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/index.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/views\/listings\/indexedit.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -462,11 +610,38 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/views\/listings\/new.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/new.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/views\/listings\/photos.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/views\/listings\/photos.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/listings\/search.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/search.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/listings\/show.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/listings\/show.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -516,6 +691,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/views\/vendors\/new.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/vendors\/new.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/welcome\/index.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/welcome\/index.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/public\/404.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -542,6 +735,138 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/002\/medium\/578f00c5947262805134ef22591cc041.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12919,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/medium\/578f00c5947262805134ef22591cc041.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/medium\/578f00c5947262805134ef22591cc041.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/002\/original\/578f00c5947262805134ef22591cc041.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17556,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/original\/578f00c5947262805134ef22591cc041.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/original\/578f00c5947262805134ef22591cc041.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/002\/thumb\/578f00c5947262805134ef22591cc041.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2222,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/thumb\/578f00c5947262805134ef22591cc041.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/002\/thumb\/578f00c5947262805134ef22591cc041.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/003\/medium\/pexels-photo-69354.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33489,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/medium\/pexels-photo-69354.jpeg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/medium\/pexels-photo-69354.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/003\/original\/pexels-photo-69354.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95295,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/original\/pexels-photo-69354.jpeg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/original\/pexels-photo-69354.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/003\/thumb\/pexels-photo-69354.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8612,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/thumb\/pexels-photo-69354.jpeg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/003\/thumb\/pexels-photo-69354.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/016\/medium\/contemporary-bedroom.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19848,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/medium\/contemporary-bedroom.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/medium\/contemporary-bedroom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/016\/original\/contemporary-bedroom.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 65856,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/original\/contemporary-bedroom.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/original\/contemporary-bedroom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/016\/thumb\/contemporary-bedroom.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3927,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/thumb\/contemporary-bedroom.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/016\/thumb\/contemporary-bedroom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/017\/medium\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32196,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/medium\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/medium\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/017\/original\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 50167,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/original\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/original\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/system\/listings\/images\/000\/000\/017\/thumb\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4649,
+		"inputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/thumb\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputAbbreviatedPath": "\/public\/system\/listings\/images\/000\/000\/017\/thumb\/delightful-scandinavians-interior-design-with-bamboo-furniture-scandinavian-living-room-design-inspiration-458x343.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		}
 	},
 "hooks": [

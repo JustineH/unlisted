@@ -1,149 +1,59 @@
+<%= render 'layouts/bookmarkRightBar' %>
 
-<!-- Listings -->
-<section id="feature-listing">
 
-<div class="container feature-listing">
-  <div class="row">
-    <!-- PLACE HOLDER FOR CSS TESTING -->
-
-         <div class="col-md-4 col-sm-6 cols-xs-12">
-       <div class="featureList text-center">
-         
-           <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
-           <div class="carousel-inner">
-             <div class="item active">
-               <img src="/assets/listing_images/property1_1.jpg" alt="..."
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_2.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_3.jpg" alt="...">
-             </div>
-           </div>
-
-           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-             <span class="icon-prev" aria-hidden="true"></span>
-             <span class="sr-only">Previous</span>
-           </a>
-           <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-             <span class="icon-next" aria-hidden="true"></span>
-             <span class="sr-only">Next</span>
-           </a>
-         </div>
-
-         <div class="title">
-           <h4 class="regular property-price">$1,400,000</h4>
-           <div class="feature-short-info">
-             <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-             <div class="muted regular area">
-               2,345 sqr/ft
-             </div>
-             <div class="bedbath">
-               <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-               <container class="bathroom"><em>bath</em></container></p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    <!-- PLACE HOLDER FOR CSS TESTING ENDS-->
-
+<br>
+   <div class="row listing">
     <% @listings.each do |listing| %>
-     <div class="col-md-4 col-sm-6 cols-xs-12">
-       <div class="featureList text-center">
-         
-           <div id="carousel-listing-1" class="carousel slide carousel-listing" data-ride="carousel">
+    <!-- Listing box Begins-->
+    <div class=" col-md-4 col-sm-6 cols-xs-12 ">
+      <div class="featureList text-center">
 
-           <div class="carousel-inner">
-             <div class="item active">
-               <img src="/assets/listing_images/property1_1.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_2.jpg" alt="...">
-             </div>
-             <div class="item">
-               <img src="/assets/listing_images/property1_3.jpg" alt="...">
-             </div>
-           </div>
+        <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
 
-           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-             <span class="icon-prev" aria-hidden="true"></span>
-             <span class="sr-only">Previous</span>
-           </a>
-           <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-             <span class="icon-next" aria-hidden="true"></span>
-             <span class="sr-only">Next</span>
-           </a>
-         </div>
-
-         <div class="title">
-           <h4 class="regular property-price"><%= listing.price %></h4>
-           <div class="feature-short-info">
-             <p class="muted regular address"><em><%= listing.address %></em></p>
-             <div class="muted regular area"><%= listing.size %>sqft
-             </div>
-             <div class="bedbath">
-               <p class="muted regular bedroom"><em><%= listing.bedrooms %><i class="fa fa-bed" aria-hidden="true"></i></em>
-               <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container></p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    <%end%>
-   </div>
- </div>
-
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-
-
-      <div class="col-md-4 col-sm-6 cols-xs-12">
-        <div class="featureList text-center">
-          
-            <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="/assets/listing_images/property1_1.jpg" alt="...">
-              </div>
-              <div class="item">
-                <img src="/assets/listing_images/property1_2.jpg" alt="...">
-              </div>
-              <div class="item">
-                <img src="/assets/listing_images/property1_3.jpg" alt="...">
-              </div>
+          <div class="carousel-inner">
+            <div class="item active">
+               <%= link_to image_tag(listing.image.url), listing %>
             </div>
-
-            <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
-              <span class="icon-prev" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
-              <span class="icon-next" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+            <div class="item">
+               <%= image_tag "listing_images/property1_2.jpg" %>
+            </div>
+            <div class="item">
+               <%= image_tag "listing_images/property1_3.jpg" %>
+            </div>
           </div>
+        
+        
+          
+          <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
+        <div class="listing-box-info">
+          <h4 class="regular property-price">$<%= listing.price %></h4>
           <div class="feature-short-info">
-            <h4 class="regular property-price">$1,400,000</h4>
-              <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-              <div class="bedbath">
-                <p class="muted regular bedroom"><em>bed</em>
-                <container class="bathroom"><em>bath</em></container></p>
-              </div>
+            <p class="muted regular address"><em><%= listing.address %></em></p>
+            <div class="muted regular area">
+              <%= listing.size %> sqr/ft
+            </div>
+            <div class="bedbath"><%= listing.bedrooms %>
+              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
+                <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+                <p><%= listing.id %></p>
+            <%= link_to 'Bookmark',listing_add_bookmark_path(:listing_id=>listing.id) %>
+    <!-- Listing box Ends-->
+<% end %>
 
-
-  
-</section>
-<!-- Listings Ends -->
-
-<style>
-</section>
+</div>
 

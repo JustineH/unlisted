@@ -37,6 +37,7 @@ def condo_address_factory
   add
 end
 
+
 def townhouse_address_factory
   if @townhouse_addresses.length == 0
     return Faker::Address.street_address

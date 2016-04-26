@@ -1,55 +1,139 @@
-<div class="details-bg">
-<div class="details-wrap">
-    <%= form_tag("/search", method: "get", class: "form-basic") do %>
-
-    <div class="form-row">
-      <label><span class="form-span">Price</span><br>
-      <%= text_field_tag "price", nil, placeholder: "Enter price" %></label>
-    </div>
-
-
-    <div class="form-row">
-      <label><span class="form-span">Year built</span><br>
-      <%= text_field_tag "year", nil, placeholder: "e.g., 2005" %></label>
-    </div>
-
-    <div class="form-row">
-      <label><span class="form-span">Lot Size (sqft)</span><br>
-      <%= text_field_tag "year", nil, placeholder: "e.g., 500" %></label>
-    </div>
-
-    <div class="form-row">
-      <label><span class="form-span">Levels</span><br>
-      <%= text_field_tag "levels", "", placeholder: "e.g., 2" %></label>
-    </div>
-    <div class="form-row">
-      <label><span class="form-span">Basement</span><br>
-        <select name="dropdown">
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label><span class="form-span">Garage</span><br>
-        <select name="dropdown">
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label><span class="form-span">Garden</span><br>
-        <select name="dropdown">
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-      </label>
-    </div>
- <button id="details" class="btn btn-default listing-property-button">Next &raquo;</button>
+<div id="load">
+<!-- <div class="container"> -->
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- HOUSE -->
+<!-- //////////// -->
+<!-- //////////// -->
+<h2>House</h2>
+<%= form_for @listing do |f| %>
+<br>
+<div class="form-row">
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+</div>
+<div class="form-row">
+  <%= f.label :year_built, "year built" %>
+  <%= f.text_field :year_built %>
+</div>
+<div class="form-row">
+  <%= f.label :lot_size, "lot size" %>
+  <%= f.text_field :lot_size %>
+</div>
+<div class="form-row">
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+</div>
+<div class="form-row">
+  <%= f.label :levels %>
+  <%= f.text_field :levels%>
+</div>
+<div class="form-row">
+  <%= f.label :basement %>
+  <%= f.select :basement, [['Yes', true], ['No', false]] %>
+</div>
+<div class="form-row">
+  <%= f.label :garage %>
+  <%= f.select :garage, [['Yes', true], ['No', false]] %>
+</div>
+  <div class="form-row">
+  <%= f.label :garden %>
+  <%= f.select :garden, [['Yes', true], ['No', false]] %>
+</div>
 <%end %>
-</div> <!-- details wrap -->
-</div> <!-- details-bg -->
-  
+<br>
+<!-- <div class="container"> -->
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- Condo -->
+<!-- //////////// -->
+<!-- //////////// -->
+<h2>Condo</h2>
+<%= form_for @listing do |f| %>
+<div class="form-row">
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+</div>
+<div class="form-row">
+  <%= f.label :year_built, "year built" %>
+  <%= f.text_field :year_built %>
+</div>
+
+<div class="form-row">
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+</div>
+<div class="form-row">
+  <%= f.label :strata_fees, "Strata Fees" %>
+  <%= f.text_field :strata_fees%>
+</div>
+<div class="form-row">
+  <%= f.label :elevator %>
+  <%= f.select :elevator, [['Yes', true], ['No', false]] %>
+</div>
+<div class="form-row">
+  <%= f.label :parking %>
+  <%= f.select :parking, [['Yes', true], ['No', false]] %>
+</div>
+  <div class="form-row">
+  <%= f.label :storage %>
+  <%= f.select :storage, [['Yes', true], ['No', false]] %>
+</div>
+ <div class="form-row">
+  <%= f.label :bike_room, "Bike Room" %>
+  <%= f.select :bike_room, [['Yes', true], ['No', false]] %>
+</div>
+<div class="form-row">
+  <%= f.label :insuite_laundry, "Laundry Room" %>
+  <%= f.select :insuite_laundry, [['Yes', true], ['No', false]] %>
+</div>
+<div class="form-row">
+  <%= f.label :pet_friendly, "Pet Friendly" %>
+  <%= f.select :pet_friendly, [['Yes', true], ['No', false]] %>
+</div>
+<%end %>
+<br>
+<!-- //////////// -->
+<!-- //////////// -->
+<!-- Townhouse -->
+<!-- //////////// -->
+<!-- //////////// -->
+<h2>Town House</h2>
+<%= form_for @listing do |f| %>
+<div class="form-row">
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+</div>
+<div class="form-row">
+  <%= f.label :year_built, "year built" %>
+  <%= f.text_field :year_built %>
+</div>
+
+<div class="form-row">
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+</div>
+<div class="form-row">
+  <%= f.label :strata_fees, "Strata Fees" %>
+  <%= f.text_field :strata_fees%>
+</div>
+
+<div class="form-row">
+  <%= f.label :parking %>
+  <%= f.select :parking, [['Yes', true], ['No', false]] %>
+</div>
+  <div class="form-row">
+  <%= f.label :storage %>
+  <%= f.select :storage, [['Yes', true], ['No', false]] %>
+</div>
+ 
+<div class="form-row">
+  <%= f.label :insuite_laundry, "Laundry Room" %>
+  <%= f.select :insuite_laundry, [['Yes', true], ['No', false]] %>
+</div>
+
+<%end %>
+
+
+</div>
+

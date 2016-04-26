@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
+//= require ./googlemaps
+//= require ./form-wizard
 //= require_tree .
 
 
@@ -23,31 +25,34 @@
 // return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)
 // };
 // google maps
-var map;
-function initMap() {
-  var myLatLng = {
-    lat: 49.2821055,
-    lng: -123.1104596
-  };
+// var map;
+// function initMap() {
+//   var myLatLng = {
+//     lat: 49.2821055,
+//     lng: -123.1104596
+//   };
 
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: myLatLng,
-    zoom: 15,
-    scrollwheel: false
-  });
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    draggable: true,
-    animation: google.maps.Animation.DROP
- });
-};
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: myLatLng,
+//     zoom: 15,
+//     scrollwheel: false
+//   });
+
+
+
+//   var marker = new google.maps.Marker({
+//     position: myLatLng,
+//     map: map,
+//     draggable: true,
+//     animation: google.maps.Animation.DROP
+//  });
+// };
 
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
 
-
 $(function(){
+
 if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
@@ -99,34 +104,6 @@ $('.carousel').carousel({
   interval: false
 });
 
-
-var detailsLoader = function(html){
-    $('#details').click(function(){
-        console.log(html);
-        $('#page-wrap').html(html);
-    });
-}
-$.get('/listings/details', detailsLoader);
-
-// // basic page loader
-
-var basicLoader = function(html){
-    console.log("a");
-   $('#basic').click(function(){
-    console.log('b');
-        $('#page-wrap').html();
-        console.log('c');
-    });
-}
-$.get('/listings/basic', basicLoader);
-
-// photo page loader 
-var photoLoader = function(html){
-    $('#photo').click(function(){
-        $('#page-wrap').html();
-    });
-}
-$.get('/listings/photos', photoLoader);
 
 });
 
