@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require ./googlemaps
 //= require ./form-wizard
-//= require_tree .
+//= require ./googlemaps
+// require_tree .
 
 
 // modernizr
