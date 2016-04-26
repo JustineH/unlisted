@@ -243,6 +243,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
 /*Bookmark Bar*/
   .bookmark-bar{
+    margin-top: 5em;
     background: white;
     box-shadow: 0 2px 3px #ccc;
     width: 500px;
@@ -257,6 +258,10 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     right: 0;
     transform: translate(510px);
     /*transform: translate(0);*/
+  }
+
+  .bookmark-bar-toggle{
+    transform: translate(0);
   }
 
 

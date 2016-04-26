@@ -1,5 +1,6 @@
 $(function(){
 
+
 if ($('#welcome-carousel').length > 0){
     window.addEventListener("scroll", function() {
         if (window.scrollY > 11) {
@@ -49,6 +50,12 @@ $('section.carousel').carousel({
 $('.carousel').carousel({
   interval: false
 });
+
+$('#bookmark-btn').click(function() {
+    $('.bookmark-bar').toggleClass("bookmark-bar-toggle");
+});
+
+
 
 
 
