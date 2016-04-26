@@ -1,75 +1,25 @@
-<div class="details-bg">
-
-<div class="row">
-<div class="col-md-2 col-sm-3 col-xs-4">
-    <div class="side-bar">
-    <%= render 'layouts/sidebar' %>
+     
+ <h1>Photo Edit</h1>
+ <% if @listing.user == current_user %>
+  <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
+    <%= f.hidden_field :listing_id, value: @listing.id%>
+    <div class="fallback">
+      <%= f.file_field :image %><br>
+      <%= f.submit "Upload my image" %>
     </div>
-</div>
+  <% end %>
+<% end %>
 
-<div id="page-wrap">
-<div class="col-md-6 col-sm-6 col-xs-6">
-<div class="main-content">
 
-  <form class="form-basic" method="post" action="#">
+<% @listing.images.each do |image| %>
+  <div class="img-thumbnail">
+    <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
+  </div>
+  <%= link_to "Delete", image, method: :delete %>
+<% end %>
+<br>
 
-    <div class="form-row">
-        <label>
-            <span class="form-span">Unit Number</span><br>
-            <input type="email" name="email" placeholder="Unit Number">
-        </label>
-    </div>
-    <div class="form-row">
-        <label>
-            <span class="form-span">Address</span><br>
-            <input type="text" name="name"placeholder="Street Name">
-        </label>
-    </div>
-    <div class="form-row">
-        <label>
-            <span class="form-span">Postal Code</span><br>
-            <input type="text" name="name" placeholder="Postal Code">
-        </label>
-    </div><br>
-    <div class="form-row">
-         <label>
-            <span class="form-span">City</span><br>
-            <input type="text" name="name"placeholder="City Name">
-        </label>
-    </div>
-   <div class="form-row">
-        <label>
-            <span class="form-span">Province</span><br>
-            <select name="dropdown">
-                <option>BC</option>
-                <option>AB</option>
-                <option>MB</option>
-                <option>NB</option>
-                <option>NL</option>
-                <option>NS</option>
-                <option>NU</option>
-                <option>ON</option>
-                <option>PE</option>
-                <option>QC</option>
-                <option>SK</option>
-                <option>YT</option>
-            </select>
-        </label>
-    </div>
-    <br>
- <button id="next" class="btn btn-default listing-property-button">Next &raquo;</button>
- 
-  </form>
-</div>
-</div>
-<div class="col-md-4 col-sm-2 col-xs-2 no-padding">
-  <div id="map"></div>
-<!-- </div> -->
-</div>
-
-</div>
-</div>
-</div>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxtuexS3LgdiMGA4Z5Syb2ZHGy9_1b3s&callback=initMap"></script>
-
+<%= link_to 'Listings Page', listings_path %> 
+<% if @listing.user == current_user %>
+  <%= link_to 'Edit', edit_listing_path(@listing) %> 
+<% end %>

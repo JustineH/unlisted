@@ -1,0 +1,193 @@
+<div class="form-container">
+    <!-- <div id="load"> -->
+      <%= form_for @listing do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="basic-page">
+<h1 class="basics-header">Basics</h1>
+    
+      <div class="form-row">
+        <%= f.label :address, "ADDRESS", class: "address-label" %><br>
+        
+        <%=f.text_field :unit_number, placeholder: "Unit # (optional)", class: "unit-number-form" %><%= f.text_field :address, class: 'address-form', placeholder: "Enter your Address" %>
+      </div>
+
+
+      <div class="bed-bath-half">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap1">
+                <%= f.label :bedrooms, "BED"%><br>
+                <%= f.select :bedrooms, (1..10).to_a%>
+                </div>
+            </div>
+
+         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap2">
+            <%= f.label :bathrooms, "BATH"%><br>
+            <%= f.select :bathrooms, (1..10).to_a%>
+            </div>
+        </div>
+
+         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap3">
+             <%= f.label :half_bathrooms, "HALF BATH"%><br>
+            <%= f.select :half_bathrooms, (1..10).to_a%>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-neighborhood-form">
+    <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+       <div class="home-neighbor-wrap-home home-arrow"> 
+        <%= f.label :home_type, "TYPE OF HOME"%><br>
+        <%= f.select :home_type, type_property %>
+        </div>
+    </div>
+
+     <div class"col-md-6 col-sm-6 col-xs-6">
+        <div class="home-neighbor-wrap neighbour-arrow">
+        <%= f.label :neighbourhood_id, "NEIGHBOURHOOD" %><br>
+        <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
+        </div>
+    </div>
+    </div>
+      </div>
+      <div class="form-button-container">
+        <a href="#" id="to-details">Next</a>
+      </div>
+
+<br>
+    <% unless @listing.nil? %>
+        <%=link_to 'edit photos', listing_basic_path(@listing) %> 
+    <% end %>
+
+     </div> <!-- basic-page -->
+
+
+
+<!-- ##################### -->
+
+      <div id="details-page">
+<h1 class="details-head">Details</h1>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
+            
+            <div class="form-row">
+              <%= f.label :postal_code, "POSTAL CODE", class: "details-label-lg" %><br><%= f.text_field :postal_code, class: "details-input-lg" %>
+            </div>
+
+            <div class="form-row">
+              <%= f.label :price, "PRICE", class: "details-label-lg" %><br><%= f.text_field :price, class: "details-input-lg" %>
+            </div>
+
+            <div class="form-row">
+              <%= f.label :size, class: "details-label-lg" %><br><%= f.text_field :size, class: "details-input-lg" %>
+            </div>
+
+        </div>
+
+         <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
+            <div class="form-row">
+              <%= f.label :year_built, "YEAR BUILT", class: "details-label-lg" %><br><%= f.text_field :year_built, class: "details-input-lg" %>
+            </div>
+
+            <div class="form-row">
+              <%= f.label :type_ownership, "TYPE OWNERSHIP", class: "details-label-lg" %><br><%= f.text_field :type_ownership, class: "details-input-lg" %>
+            </div>
+
+            <div class="form-row">
+              <%= f.label :lot_size, "LOT SIZE", class: "details-label-lg" %><br><%= f.text_field :lot_size, class: "details-input-lg" %>
+            </div>
+
+        </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <%= f.label :levels, "LEVEL", class: "details-label-lg" %><br><%= f.text_field :levels, class: "details-input-sm" %>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <%= f.label :taxes, "TAXES", class: "details-label-lg" %><br><%= f.text_field :taxes, class: "details-input-sm" %>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+          <%= f.label :strata_fees, "STRATA", class: "details-label-lg" %><br><%= f.text_field :strata_fees, class: "details-input-sm" %>
+
+          </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12"> 
+          <a href="#" id="back-to-basic">Back</a>
+          <a href="#" id="to-amenities">Next</a>
+        </div>
+      </div> <!-- details-page -->
+        </div> <!-- row end -->
+
+<!-- ##################### -->
+
+      <div id="amenities-page">
+      <h1>Amenities</h1>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
+            <h3>Insuite</h3>
+              <%= f.label "Basement", class: "amenities-label" %><%= f.check_box :basement, class:"amenities-check-box" %><br>
+              <%= f.label "Storage", class: "amenities-label" %><%= f.check_box :storage, class:"amenities-check-box" %><br>
+              <%= f.label "Fireplaces", class: "amenities-label" %><%= f.check_box :fireplaces, class:"amenities-check-box" %><br>
+              <%= f.label "A/C", class: "amenities-label" %><%= f.check_box :air_conditioning, class:"amenities-check-box" %><br>
+              <%= f.label "Insuite Laundry", class: "amenities-label" %><%= f.check_box :insuite_laundry, class:"amenities-check-box" %><br>
+              <%= f.label "Washer", class: "amenities-label" %><%= f.check_box :washer, class:"amenities-check-box" %><br>
+              <%= f.label "Dishwasher", class: "amenities-label" %><%= f.check_box :dishwasher, class:"amenities-check-box" %><br>
+              <%= f.label "Stove", class: "amenities-label" %><%= f.check_box :stove, class:"amenities-check-box" %><br>
+              <%= f.label "Fridge", class: "amenities-label" %><%= f.check_box :fridge, class:"amenities-check-box" %><br>
+              <%= f.label "Pet Friendly", class: "amenities-label" %><%= f.check_box :pet_friendly, class:"amenities-check-box" %><br>
+          </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
+            <h3>Other</h3>
+              <%= f.label :elevator, class: "amenities-label" %><%= f.check_box :elevator, class: "amenities-check-box" %> <br>
+              <%= f.label :bike_room, class: "amenities-label"%><%= f.check_box :bike_room, class: "amenities-check-box" %><br>
+              <%= f.label :garden, class: "amenities-label" %><%= f.check_box :garden, class: "amenities-check-box" %><br>
+              <%= f.label "Gym", class: "amenities-label" %><%= f.check_box :gym, class: "amenities-check-box" %><br>
+              <%= f.label "Amenities Room", class: "amenities-label" %><%= f.check_box :amenities_room, class: "amenities-check-box" %><br>
+              <%= f.label "Hot Tub", class: "amenities-label" %><%= f.check_box :hot_tub, class: "amenities-check-box" %><br>
+              <%= f.label "pool", class: "amenities-label" %><%= f.check_box :pool, class: "amenities-check-box" %><br>
+              <%= f.label "Weelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
+              <%= f.label "doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
+
+          <div class="col-md-12 col-sm-12 col-xs-12"> <!-- summary and desc. -->
+                 <div id="server-wrap">
+                    <h3>Property Summary</h3>
+                    <%= f.text_field :property_summary%>
+                    <h3>Features Description</h3>
+                    <%= f.text_field :features_description%><br>
+                    <a href="#" id="back-to-details">Back</a>
+                    <a href="#" id="to-photos">Next</a>
+                  </div> <!-- end server wrap -->
+        <%= f.submit "Submit" %>
+    <%end%>
+                </div>
+          </div> <!-- end row -->
+
+      </div> <!-- amenities-page -->
+
+        <!-- ######## PHOTOS ######### -->
+        <div id="photos-page">
+        <h1>Photos</h1>
+        <div class="form-row">
+        
+    </div>
+        <a href="#" id="back-to-amenities">Back</a>
+        <div>
+      </div>
+    </div> <!-- photos-page -->
+      
+    </div>
+  </div>
+</div> <!-- form-container end -->
+

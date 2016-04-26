@@ -1,0 +1,19 @@
+<section class="bookmark-bar pull-right">
+
+<h4>Bookmarked Listing</h4>
+
+<ul>
+
+<% if current_user %>
+  <% current_user.bookmarked_listings.each do |listing|  %>
+  <li>
+    Size: <%= listing.size %>
+    Address: <%= listing.address %>
+    </li>
+  <% end %>
+<% end %>
+
+
+</ul>
+</section>
+
