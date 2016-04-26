@@ -254,6 +254,9 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     z-index: 1000;
     padding-right: 250px;
     transition: all 0.4s ease 0s;
+    right: 0;
+    transform: translate(510px);
+    /*transform: translate(0);*/
   }
 
 
