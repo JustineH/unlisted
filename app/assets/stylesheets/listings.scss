@@ -351,7 +351,7 @@ footer {
 }
 
 .address-label {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .unit-number-form{
@@ -452,7 +452,7 @@ footer {
 }
 
 #to-amenities {
-  float: left;
+  float: right;
   background-color: #ff5a5f;
   padding: 9px 27px;
   margin-top: 20px;
@@ -468,37 +468,6 @@ footer {
 }
 
 #back-to-basic{
-  float: right;
-  background-color: #ff5a5f;
-  padding: 9px 27px;
-  margin-top: 20px;
-  border-radius: 2px;
-  color: #fff;
-  line-height: 1.43;
-  font-weight: 600;
-}
-
-#back-to-basic:hover{
-  text-decoration: none;
-  background-color: #ff1a1f;
-}
-
-#back-to-details{
-  float: right;
-  background-color: #ff5a5f;
-  padding: 9px 27px;
-  margin-top: 20px;
-  border-radius: 2px;
-  color: #fff;
-  line-height: 1.43;
-  font-weight: 600;
-}
-#back-to-details::hover{
-  text-decoration: none;
-  background-color: #ff1a1f;
-}
-
-#to-photos{
   float: left;
   background-color: #ff5a5f;
   padding: 9px 27px;
@@ -509,7 +478,7 @@ footer {
   font-weight: 600;
 }
 
-#to-photos:hover{
+#back-to-basic:hover{
   text-decoration: none;
   background-color: #ff1a1f;
 }
@@ -566,65 +535,14 @@ footer {
 
 
 // AMENITIES
-#amenities-head {
-  margin-top: 20px;
-  margin-right: 25%;
-  text-align: center;
-}
-
 .amenities-label {
-  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .amenities-check-box {
-  vertical-align: middle;
-  float: left;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  background: #FFAAAA;
-  border-radius: 1px;
-  box-sizing: border-box;
-  position: relative;
-  box-sizing: content-box ;
-  width: 20px;
-  height: 20px;
-  border-width: 0;
-  transition: all .3s linear;
+    vertical-align: middle;
+    float: right;
+    margin-right: 10px;
 }
-
-.amenities-check-box:checked{
-  background-color: #34495E;
-}
-
-.amenities-check-box:focus{
-  outline: 0 none;
-  box-shadow: none;
-}
-.summary-text-area {
-  width: 80%;
-  height: 80px;
-  border: 1px solid #C4C4C4;
-}
-
-.amenities-wrap {
-  width: 60%;
-}
-
-.hint-one {
-  margin-top: 14%;
-  height: 120px;
-  width: 150px;
-  background-color: #AA3939;
-  color: #fff;
-}
-
-.hint-two {
-  margin-top: 50%;
-}
-
-
-
-
 
 

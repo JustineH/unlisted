@@ -35,7 +35,3 @@ $(document).on('keyup', 'input.address-form', function(){
 });
   $('#address-title').text(sellerAddress);
 });
-
-// function validateForm(){
-  
-// }
