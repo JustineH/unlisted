@@ -14,10 +14,12 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
+
 //= require dropzone
 //= require ./googlemaps
 //= require ./form-wizard
-//= require_tree .
+//= require ./googlemaps
+// require_tree .
 
 
 // modernizr
