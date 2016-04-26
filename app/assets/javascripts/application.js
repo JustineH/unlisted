@@ -110,24 +110,6 @@ $('.carousel').carousel({
   interval: false
 });
 
-$('#basic').on("click", function(){
-    $('#load').load('/listings/basic #load > *')
-});
-
-$('#details').on("click", function(){
-    $('#load').load('/listings/details #load > *')
-});
-
-$('#amenities').on("click", function(){
-    $("#load").load('/listings/amenities #load > *')
-})
-
-$('#photos').on("click", function(){
-    $('#load').load('/listings/photos #load > *')
-});
-
-var address = document.getElementById('#address').innerHTML;
-$('#potatoes').html('This house is located on');
 
 });
 
