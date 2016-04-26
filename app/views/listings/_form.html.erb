@@ -1,8 +1,6 @@
-
-<!-- ##################### -->
 <div class="form-container">
     <!-- <div id="load"> -->
-      <%= form_for @listing, html: { multipart: true } do |f| %>
+      <%= form_for @listing do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
@@ -67,7 +65,19 @@
       <div class="form-button-container">
         <a href="#" id="to-details">Next</a>
       </div>
+
      </div> <!-- basic-page -->
+
+    <% unless @listing.nil? %>
+        <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
+        <%= f.hidden_field :listing_id, value: @listing.id %>
+        <div class="fallback">
+          <%= f.file_field :image %><br>
+          <%= f.submit "Upload my image" %>
+        </div>
+        <% end %>
+    <% end %>
+
 
 <!-- ##################### -->
 
@@ -163,6 +173,8 @@
                     <a href="#" id="back-to-details">Back</a>
                     <a href="#" id="to-photos">Next</a>
                   </div> <!-- end server wrap -->
+        <%= f.submit "Submit" %>
+    <%end%>
                 </div>
           </div> <!-- end row -->
 
@@ -172,16 +184,14 @@
         <div id="photos-page">
         <h1>Photos</h1>
         <div class="form-row">
-        <%= f.label :image %>
-        <%= f.file_field :image%>
+        
     </div>
         <a href="#" id="back-to-amenities">Back</a>
         <div>
-        <%= f.submit "Submit" %>
       </div>
     </div> <!-- photos-page -->
       
     </div>
-    <%end%>
   </div>
 </div> <!-- form-container end -->
+

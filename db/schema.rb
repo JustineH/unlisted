@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20160425234250) do
 
   # These are extensions that must be enabled in order to support this database
@@ -27,6 +26,16 @@ ActiveRecord::Schema.define(version: 20160425234250) do
 
   add_index "bookmarks", ["listing_id"], name: "index_bookmarks_on_listing_id", using: :btree
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
+
+  create_table "images", force: true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "listings", force: true do |t|
     t.integer  "user_id"
@@ -75,12 +84,11 @@ ActiveRecord::Schema.define(version: 20160425234250) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.boolean  "dryer",                 default: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-
+    t.boolean  "dryer",                 default: false
   end
 
   add_index "listings", ["neighbourhood_id"], name: "index_listings_on_neighbourhood_id", using: :btree
