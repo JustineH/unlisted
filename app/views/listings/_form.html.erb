@@ -39,7 +39,7 @@
 
          <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap3">
              <%= f.label :half_bathrooms, "HALF BATH"%><br>
-            <%= f.select :half_bathrooms, (1..10).to_a%>
+            <%= f.select :half_bathrooms, (0..10).to_a%>
             </div>
         </div>
       </div>
@@ -67,10 +67,6 @@
       </div>
 
 <br>
-    <% unless @listing.nil? %>
-        <%=link_to 'edit photos', listing_basic_path(@listing) %> 
-    <% end %>
-
      </div> <!-- basic-page -->
 
 
@@ -102,7 +98,7 @@
             </div>
 
             <div class="form-row">
-              <%= f.label :type_ownership, "TYPE OWNERSHIP", class: "details-label-lg" %><br><%= f.text_field :type_ownership, class: "details-input-lg" %>
+              <%= f.label :type_ownership, "TYPE OF OWNERSHIP", class: "details-label-lg" %><br><%= f.text_field :type_ownership, class: "details-input-lg" %>
             </div>
 
             <div class="form-row">
@@ -112,13 +108,13 @@
         </div>
 
           <div class="col-md-4 col-sm-4 col-xs-4">
-            <%= f.label :levels, "LEVEL", class: "details-label-lg" %><br><%= f.text_field :levels, class: "details-input-sm" %>
+            <%= f.label :levels, "LEVELS", class: "details-label-lg" %><br><%= f.text_field :levels, class: "details-input-sm" %>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
             <%= f.label :taxes, "TAXES", class: "details-label-lg" %><br><%= f.text_field :taxes, class: "details-input-sm" %>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
-          <%= f.label :strata_fees, "STRATA", class: "details-label-lg" %><br><%= f.text_field :strata_fees, class: "details-input-sm" %>
+          <%= f.label :strata_fees, "STRATA FEES", class: "details-label-lg" %><br><%= f.text_field :strata_fees, class: "details-input-sm" %>
 
           </div>
 
@@ -140,7 +136,7 @@
               <%= f.label "Storage", class: "amenities-label" %><%= f.check_box :storage, class:"amenities-check-box" %><br>
               <%= f.label "Fireplaces", class: "amenities-label" %><%= f.check_box :fireplaces, class:"amenities-check-box" %><br>
               <%= f.label "A/C", class: "amenities-label" %><%= f.check_box :air_conditioning, class:"amenities-check-box" %><br>
-              <%= f.label "Insuite Laundry", class: "amenities-label" %><%= f.check_box :insuite_laundry, class:"amenities-check-box" %><br>
+              <%= f.label "In-suite Laundry", class: "amenities-label" %><%= f.check_box :insuite_laundry, class:"amenities-check-box" %><br>
               <%= f.label "Washer", class: "amenities-label" %><%= f.check_box :washer, class:"amenities-check-box" %><br>
               <%= f.label "Dishwasher", class: "amenities-label" %><%= f.check_box :dishwasher, class:"amenities-check-box" %><br>
               <%= f.label "Stove", class: "amenities-label" %><%= f.check_box :stove, class:"amenities-check-box" %><br>
@@ -156,9 +152,9 @@
               <%= f.label "Gym", class: "amenities-label" %><%= f.check_box :gym, class: "amenities-check-box" %><br>
               <%= f.label "Amenities Room", class: "amenities-label" %><%= f.check_box :amenities_room, class: "amenities-check-box" %><br>
               <%= f.label "Hot Tub", class: "amenities-label" %><%= f.check_box :hot_tub, class: "amenities-check-box" %><br>
-              <%= f.label "pool", class: "amenities-label" %><%= f.check_box :pool, class: "amenities-check-box" %><br>
-              <%= f.label "Weelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
-              <%= f.label "doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
+              <%= f.label "Pool", class: "amenities-label" %><%= f.check_box :pool, class: "amenities-check-box" %><br>
+              <%= f.label "Wheelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
+              <%= f.label "Doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
 
           <div class="col-md-12 col-sm-12 col-xs-12"> <!-- summary and desc. -->
                  <div id="server-wrap">
