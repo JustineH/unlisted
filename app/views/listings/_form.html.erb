@@ -66,17 +66,13 @@
         <a href="#" id="to-details">Next</a>
       </div>
 
+<br>
+    <% unless @listing.nil? %>
+        <%=link_to 'edit photos', listing_basic_path(@listing) %> 
+    <% end %>
+
      </div> <!-- basic-page -->
 
-    <% unless @listing.nil? %>
-        <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
-        <%= f.hidden_field :listing_id, value: @listing.id %>
-        <div class="fallback">
-          <%= f.file_field :image %><br>
-          <%= f.submit "Upload my image" %>
-        </div>
-        <% end %>
-    <% end %>
 
 
 <!-- ##################### -->

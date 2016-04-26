@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get :basic
   end
   resources :images
+  resources :vendors
 
 
 
