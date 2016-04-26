@@ -25,19 +25,19 @@
 
       <div class="bed-bath-half">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap1">
+            <div class="col-md-4 col-sm-4 col-xs-12"><div class="bed-bath-half-wrap1">
                 <%= f.label :bedrooms, "BED"%><br>
                 <%= f.select :bedrooms, (1..10).to_a%>
                 </div>
             </div>
 
-         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap2">
+         <div class="col-md-4 col-sm-4 col-xs-12"><div class="bed-bath-half-wrap2">
             <%= f.label :bathrooms, "BATH"%><br>
             <%= f.select :bathrooms, (1..10).to_a%>
             </div>
         </div>
 
-         <div class="col-md-4 col-sm-4 col-xs-4"><div class="bed-bath-half-wrap3">
+         <div class="col-md-4 col-sm-4 col-xs-12"><div class="bed-bath-half-wrap3">
              <%= f.label :half_bathrooms, "HALF BATH"%><br>
             <%= f.select :half_bathrooms, (1..10).to_a%>
             </div>
@@ -47,16 +47,16 @@
 
     <div class="home-neighborhood-form">
     <div class="row">
-    <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="col-md-6 col-sm-6 col-xs-6-12">
        <div class="home-neighbor-wrap-home home-arrow"> 
         <%= f.label :home_type, "TYPE OF HOME"%><br>
         <%= f.select :home_type, type_property %>
         </div>
     </div>
 
-     <div class"col-md-6 col-sm-6 col-xs-6">
+     <div class"col-md-6 col-sm-6 col-xs-12">
         <div class="home-neighbor-wrap neighbour-arrow">
-        <%= f.label :neighbourhood_id, "NEIGHBOURHOOD" %><br>
+        <%= f.label :neighbourhood_id, "NEIGHBOURHOOD", class: "neighbour-label" %><br>
         <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
         </div>
     </div>
@@ -71,9 +71,7 @@
    
 
 <br>
-    <% unless @listing.nil? %>
-        <%=link_to 'edit photos', listing_basic_path(@listing) %> 
-    <% end %>
+ 
 
 
 
@@ -82,7 +80,7 @@
       <div id="details-page">
 <h1 class="details-head">Details</h1>
       <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
+        <div class="col-md-4 col-sm-4 col-xs-4"> <!-- left -->
             
             <div class="form-row">
               <%= f.label :postal_code, "POSTAL CODE", class: "details-label-lg" %><br><%= f.text_field :postal_code, class: "details-input-lg" %>
@@ -98,7 +96,7 @@
 
         </div>
 
-         <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
+         <div class="col-md-4 col-sm-4 col-xs-4"> <!-- right -->
             <div class="form-row">
               <%= f.label :year_built, "YEAR BUILT", class: "details-label-lg" %><br><%= f.text_field :year_built, class: "details-input-lg" %>
             </div>
@@ -112,32 +110,41 @@
             </div>
 
         </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+         <div class="alert alert-success details-hint-box">
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+              </div>
+        </div>
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <div class="col-md-4 col-sm-4 col-xs-4 min-padding">
 
-          <div class="col-md-4 col-sm-4 col-xs-4">
             <%= f.label :levels, "LEVEL", class: "details-label-lg" %><br><%= f.text_field :levels, class: "details-input-sm" %>
           </div>
-          <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="col-md-4 col-sm-4 col-xs-4 min-padding">
             <%= f.label :taxes, "TAXES", class: "details-label-lg" %><br><%= f.text_field :taxes, class: "details-input-sm" %>
           </div>
-          <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="col-md-4 col-sm-4 col-xs-4 min-padding">
           <%= f.label :strata_fees, "STRATA", class: "details-label-lg" %><br><%= f.text_field :strata_fees, class: "details-input-sm" %>
 
           </div>
+          </div>
 
-        <div class="col-md-12 col-sm-12 col-xs-12"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
           <a href="#" id="back-to-basic">Back</a>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
           <a href="#" id="to-amenities">Next</a>
-        </div>
+          </div>
       </div> <!-- details-page -->
         </div> <!-- row end -->
 
 <!-- ##################### -->
 
       <div id="amenities-page">
-      <h1>Amenities</h1>
+      <h1 class="amenities-head">Amenities</h1>
       <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
-            <h3>Insuite</h3>
+            <h3 class="amenities-sub-head">Insuite</h3>
               <%= f.label "Basement", class: "amenities-label" %><%= f.check_box :basement, class:"amenities-check-box" %><br>
               <%= f.label "Storage", class: "amenities-label" %><%= f.check_box :storage, class:"amenities-check-box" %><br>
               <%= f.label "Fireplaces", class: "amenities-label" %><%= f.check_box :fireplaces, class:"amenities-check-box" %><br>
@@ -151,7 +158,7 @@
           </div>
 
         <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
-            <h3>Other</h3>
+            <h3 class="amenities-sub-head">Other</h3>
               <%= f.label :elevator, class: "amenities-label" %><%= f.check_box :elevator, class: "amenities-check-box" %> <br>
               <%= f.label :bike_room, class: "amenities-label"%><%= f.check_box :bike_room, class: "amenities-check-box" %><br>
               <%= f.label :garden, class: "amenities-label" %><%= f.check_box :garden, class: "amenities-check-box" %><br>
@@ -161,22 +168,48 @@
               <%= f.label "pool", class: "amenities-label" %><%= f.check_box :pool, class: "amenities-check-box" %><br>
               <%= f.label "Weelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
               <%= f.label "doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
-
-          <div class="col-md-12 col-sm-12 col-xs-12"> <!-- summary and desc. -->
-                 <div id="server-wrap">
+              </div>
+           <div class="col-md-8 col-sm-8 col-xs-8 no-padding"> <!-- summary and desc. -->
+                 <div id="summary-wrap">
                     <h3>Property Summary</h3>
-                    <%= f.text_field :property_summary%>
+                    <%= f.text_area :property_summary, class: "summary-text-area"%>
                     <h3>Features Description</h3>
-                    <%= f.text_field :features_description%><br>
+                    <%= f.text_area :features_description, class: "summary-text-area"%><br>
+                </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4 no-padding">
+              <div class="hint-box-wrap">
+              <div class="alert alert-success hint-box">
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. 
+              </div>
+              
+              <div class="alert alert-success hint-box">
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+              </div>
+              </div>
+          </div>
+
+          <div class="col-md-5 col-sm-6 col-xs-6">
                     <a href="#" id="back-to-details">Back</a>
+                  </div>
+                  <div class="col-md-5 col-sm-6 col-xs-6">
                     <a href="#" id="to-photos">Next</a>
+                  </div> <!-- end summary wrap -->
                   </div> <!-- end server wrap -->
         <%= f.submit "Submit" %>
     <%end%>
+
                 </div>
           </div> <!-- end row -->
-
+          </div> <!-- amenities wrap -->
+          <br>
+          <br>
       </div> <!-- amenities-page -->
+
+
+
+
+
 
         <!-- ######## PHOTOS ######### -->
         <div id="photos-page">
