@@ -17,3 +17,9 @@
   </div>
   <%= link_to "Delete", image, method: :delete %>
 <% end %>
+<br>
+
+<%= link_to 'Listings Page', listings_path %> 
+<% if @listing.user == current_user %>
+  <%= link_to 'Edit', edit_listing_path(@listing) %> 
+<% end %>
