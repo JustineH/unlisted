@@ -248,7 +248,8 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     height: 1500px;
     position:fixed;
     float: right;
-
+    right: 0;
+    display: none; /*remove this on deploy*/
     overflow-y: auto;
     z-index: 1000;
     padding-right: 250px;
