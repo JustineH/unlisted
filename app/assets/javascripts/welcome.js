@@ -53,6 +53,7 @@ $('.carousel').carousel({
 
 $('#bookmark-btn').click(function() {
     $('.bookmark-bar').toggleClass("bookmark-bar-toggle");
+    $('.listing').toggleClass("listing-collapse");
 });
 
 

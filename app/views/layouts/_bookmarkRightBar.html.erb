@@ -17,10 +17,13 @@
 <script>
   var current_user_bookmarks = [];
 
+  <% if current_user %>
   <% 
   current_user.bookmarks
   .map { |bm| bm.as_json(include: :listing).to_json }
   .each do |bookmark| %>
     current_user_bookmarks.push(<%= raw bookmark %>);
+  <% end %>
+
   <% end %>
 </script>

@@ -152,6 +152,11 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
   .listing{
     padding: 0em 5em 0em 5em;
+    transition: all 0.4s ease 0s;
+  }
+
+  .listing-collapse {
+    padding: 0em 30em 0em 5em;
   }
 
   #home-page-listing{
@@ -246,7 +251,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     margin-top: 5em;
     background: white;
     box-shadow: 0 2px 3px #ccc;
-    width: 500px;
+    width: 400px;
     height: 1500px;
     position:fixed;
     float: right;
@@ -281,20 +286,20 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 /*div{
   border: 1px dashed black;
 }*/
-#listing-details {
-  /*padding-top: 2em;*/
+/* #listing-details {
+  padding-top: 2em;
   width: 100%;
-  max-width: 80%; /* 800 */
+  max-width: 80%; 800
   text-align: left;
   margin: 0 auto;
-  /*display:none;*/
+  display:none;
   #image{
-    /*max-height: 300px;*/
+    max-height: 300px;
   }
 }
 
 #listing-details-carousel{
-  /*width: 40%;*/
+  width: 40%;
 }
 
 #address{
@@ -312,5 +317,5 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 }
 
 
-
+ */
 
