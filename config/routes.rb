@@ -13,8 +13,9 @@ Rails.application.routes.draw do
 
   resources :listings do
     get :add_bookmark 
+    get :basic
   end
-  resources :images, only: [:index, :create]
+  resources :images
 
 
 

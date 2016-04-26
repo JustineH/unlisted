@@ -1,131 +1,19 @@
-<%= render 'layouts/sidebar' %>
-
-<div id="basic-page">
-        <div id="load">
-<%= form_for @listing do |f| %>
-    <div class="form-row">
-        <%= f.label :unit_number, "Unit number" %>
-        <%= f.text_field :unit_number %>
+     
+ <h1>Photo Edit</h1>
+ <% if @listing.user == current_user %>
+  <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
+    <%= f.hidden_field :listing_id, value: @listing.id%>
+    <div class="fallback">
+      <%= f.file_field :image %><br>
+      <%= f.submit "Upload my image" %>
     </div>
-     <div class="form-row">
-        <%= f.label :street_name, "Street name" %>
-        <%= f.text_field :street_name %>
-    </div>
-    <div class="form-row">
-        <%= f.label :postal_code, "Postal Code" %>
-        <%= f.text_field :postal_code %>
-    </div>
-    <div class="form-row">
-        <%= f.label :city %>
-        <%= f.text_field :city %>
-    </div>
-    <div class"form-row">
-        <%= f.label :neighbourhood_id, "Neighbourhood" %>
-        <%= f.collection_select :neighbourhood_id, Neighbourhood.all, :id, :name%>
-    </div>
-    <button type="button" id="to-details">Next</button>
+  <% end %>
+<% end %>
 
-    <div class="details-page">
-    <div class="form-row">
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-</div>
-<div class="form-row">
-  <%= f.label :year_built, "year built" %>
-  <%= f.text_field :year_built %>
-</div>
-<div class="form-row">
-  <%= f.label :lot_size, "lot size" %>
-  <%= f.text_field :lot_size %>
-</div>
-<div class="form-row">
-  <%= f.label :size %>
-  <%= f.text_field :size %>
-</div>
-<div class="form-row">
-  <%= f.label :levels %>
-  <%= f.text_field :levels%>
-</div>
-<div class="form-row">
-  <%= f.label :basement %>
-  <%= f.select :basement, [['Yes', true], ['No', false]] %>
-</div>
-<div class="form-row">
-  <%= f.label :garage %>
-  <%= f.select :garage, [['Yes', true], ['No', false]] %>
-</div>
-  <div class="form-row">
-  <%= f.label :garden %>
-  <%= f.select :garden, [['Yes', true], ['No', false]] %>
-</div>
- <button type="button" id="to-amenities">Next</button>
-</div>
 
-<div class="amenities-page">
-<div class="form-row">
-    <%= f.label "Fireplaces" %>
-    <%= f.check_box :fireplaces %>
- </div>
-    
-  <div class="form-row">
-    <%= f.label "Gym" %>
-    <%= f.check_box :gym %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Amenities Room" %>
-    <%= f.check_box :amenities_room%>
- </div>
-
-<div class="form-row">
-    <%= f.label "A/C" %>
-    <%= f.check_box :air_conditioning %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Insuite Laundry" %>
-    <%= f.check_box :insuite_laundry %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Stove" %>
-    <%= f.check_box :stove %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Fridge" %>
-    <%= f.check_box :fridge %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Hot Tub" %>
-    <%= f.check_box :hot_tub %>
- </div>
-
-<div class="form-row">
-    <%= f.label "pool" %>
-    <%= f.check_box :pool %>
- </div>
-
-<div class="form-row">
-    <%= f.label "Weelchair Accessible" %>
-    <%= f.check_box :wheelchair_accessible %>
- </div>
- <div class="form-row">
-    <%= f.label "doorman" %>
-    <%= f.check_box :doorman %>
- </div>
-
-    </div>
-    <div>
-    <%= f.submit "Submit" %> 
+<% @listing.images.each do |image| %>
+  <div class="img-thumbnail">
+    <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
   </div>
-  </div>
-<%end%>
-
-  </div>
-
-
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxtuexS3LgdiMGA4Z5Syb2ZHGy9_1b3s&callback=initMap"></script>
-
+  <%= link_to "Delete", image, method: :delete %>
+<% end %>

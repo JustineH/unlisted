@@ -4,15 +4,7 @@
       <div class="panel panel-default">
 
         <p>
-        <% if @listing.user == current_user %>
-          <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
-            <%= f.hidden_field :listing_id, value: @listing.id%>
-            <div class="fallback">
-              <%= f.file_field :image %><br>
-              <%= f.submit "Upload my image" %>
-            </div>
-          <% end %>
-        <% end %>
+
 
         <% @listing.images.each do |image| %>
           <div class="img-thumbnail">
