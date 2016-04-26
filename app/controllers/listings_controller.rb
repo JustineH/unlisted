@@ -56,7 +56,7 @@ class ListingsController < ApplicationController
   end
 
   def basic
-    @listing = Listing.new
+    @listing = Listing.find(params[:listing_id])
   end
 
   def details

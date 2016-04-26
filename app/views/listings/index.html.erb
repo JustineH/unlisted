@@ -12,7 +12,9 @@
 
           <div class="carousel-inner">
             <div class="item active">
-               <%= link_to image_tag(listing.image.url), listing %>
+              <% if listing.images.first %>
+               <%= link_to image_tag(listing.images.first), listing %>
+              <%end%>
             </div>
             <div class="item">
                <%= image_tag "listing_images/property1_2.jpg" %>
@@ -35,7 +37,7 @@
         </div>
 
         <div class="listing-box-info">
-          <h4 class="regular property-price">$<%= listing.price %></h4>
+          <h4 class="regular property-price">$<%= link_to listing.price, listing %></h4>
           <div class="feature-short-info">
             <p class="muted regular address"><em><%= listing.address %></em></p>
             <div class="muted regular area">

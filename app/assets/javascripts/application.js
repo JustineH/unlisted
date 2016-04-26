@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
+//= require dropzone
 //= require ./googlemaps
 //= require ./form-wizard
 //= require_tree .
@@ -50,6 +51,11 @@
 
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
+Dropzone.options.listingImages = {
+  paramName: "image[image]", // The name that will be used to transfer the file
+  maxFilesize: 2 // MB
+  
+};
 
 $(function(){
 
