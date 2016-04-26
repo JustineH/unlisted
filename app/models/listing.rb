@@ -1,10 +1,10 @@
 class Listing < ActiveRecord::Base
+  searchkick synonyms: [["Kitsilano", "Kits"], ["Avenue", "Ave", "Av", "Ave.", "Av."], ["Street", "St", "St."], ["East", "E"], ["West", "W"]]
+            # autocomplete: ['neighbourhood_id'] 
+
   belongs_to :user
   belongs_to :neighbourhood
-
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" } 
-  # validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-
+  has_many :images
 
 
   # validates :address, presence: true, length: { minimum: 10}
@@ -52,7 +52,7 @@ class Listing < ActiveRecord::Base
   # validates :wheelchair_accessible, inclusion: [true, false]
   # validates :image, presence: true, :file_size {maximum: 1.0.megabytes.to_i}
 
-private 
+# private 
  
 end
 

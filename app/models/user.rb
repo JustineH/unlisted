@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_many :listings
   has_many :bookmarks
 
+  has_many :bookmarked_listings, through: :bookmarks, source: :listing
+
   def self.new_guest
     new { |u| u.guest = true }
   end

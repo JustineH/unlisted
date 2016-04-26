@@ -3,24 +3,21 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'welcome#index'
-  resources :listings 
 
-  # get 'welcome/index'
-  # get 'vendors/index'
-  # get 'vendors/new'
-  
-  # get 'users/index'
-  # get 'users/new'
-  # get 'users/edit'
-  # get 'users/show'
+#   resources :listings do
+#     get :add_bookmark
+#     collection do
+#       get :search
+#     end
+#   end
 
-  # get 'listings/index'
-  # get 'listings/show'
-  # get 'listings/new'
-  # get 'listings/edit'
+  resources :listings do
+    get :add_bookmark 
+    get :basic
+  end
+  resources :images
 
-  # resources :listings
 
-  # root 'welcome#index'
+
 
 end
