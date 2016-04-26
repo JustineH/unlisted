@@ -5,7 +5,10 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-    @user = current_user.id
+
+    if current_user
+      @user = current_user.id
+    end
 
     # @bookmarked_listings = current_user.bookmarked_listings
     # @bookmarked_listing = Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id)

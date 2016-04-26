@@ -45,7 +45,6 @@
             <div class="bedbath"><%= listing.bedrooms %>
               <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
                 <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container>
-
                 <%= link_to 'Bookmark',listing_add_bookmark_path(:listing_id=>listing.id), 'data-method' => 'post', 'data-remote' => 'true', 'data-type' => 'json', 'class' => 'bookmark' %>
               </p>
             </div>
