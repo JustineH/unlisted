@@ -68,15 +68,7 @@
 
      </div> <!-- basic-page -->
 
-    <% unless @listing.nil? %>
-        <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
-        <%= f.hidden_field :listing_id, value: @listing.id %>
-        <div class="fallback">
-          <%= f.file_field :image %><br>
-          <%= f.submit "Upload my image" %>
-        </div>
-        <% end %>
-    <% end %>
+   
 
 
 <!-- ##################### -->
@@ -206,6 +198,15 @@
         <!-- ######## PHOTOS ######### -->
         <div id="photos-page">
         <h1>Photos</h1>
+         <% unless @listing.nil? %>
+        <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
+        <%= f.hidden_field :listing_id, value: @listing.id %>
+        <div class="fallback">
+          <%= f.file_field :image %><br>
+          <%= f.submit "Upload my image" %>
+        </div>
+        <% end %>
+    <% end %>
         <div class="form-row">
         
     </div>
