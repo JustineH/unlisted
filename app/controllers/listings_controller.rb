@@ -3,8 +3,11 @@ class ListingsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy] 
 
   def index
-    @listings = Listing.all
-    @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
+    if params[:query]
+      @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
+    else
+      @listings = Listing.limit(12).all
+    end
 
     if current_user
       @user = current_user.id
