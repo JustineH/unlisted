@@ -126,12 +126,9 @@
 
           </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-12 col-sm-12 col-xs-12"> 
           <a href="#" id="back-to-basic">Back</a>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-6">
           <a href="#" id="to-amenities">Next</a>
-          </div>
         </div>
       </div> <!-- details-page -->
         </div> <!-- row end -->
@@ -139,10 +136,9 @@
 <!-- ##################### -->
 
       <div id="amenities-page">
-      <div class="amenities-wrap">
-      <h1 id="amenities-head">Amenities</h1>
+      <h1>Amenities</h1>
       <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-2"> <!-- left -->
+        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
             <h3>Insuite</h3>
               <%= f.label "Basement", class: "amenities-label" %><%= f.check_box :basement, class:"amenities-check-box" %><br>
               <%= f.label "Storage", class: "amenities-label" %><%= f.check_box :storage, class:"amenities-check-box" %><br>
@@ -156,7 +152,7 @@
               <%= f.label "Pet Friendly", class: "amenities-label" %><%= f.check_box :pet_friendly, class:"amenities-check-box" %><br>
           </div>
 
-        <div class="col-md-4 col-sm-4 col-xs-4"> <!-- right -->
+        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
             <h3>Other</h3>
               <%= f.label :elevator, class: "amenities-label" %><%= f.check_box :elevator, class: "amenities-check-box" %> <br>
               <%= f.label :bike_room, class: "amenities-label"%><%= f.check_box :bike_room, class: "amenities-check-box" %><br>
@@ -167,40 +163,21 @@
               <%= f.label "pool", class: "amenities-label" %><%= f.check_box :pool, class: "amenities-check-box" %><br>
               <%= f.label "Weelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
               <%= f.label "doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
-              </div>
-          <div class="col-md-8 col-sm-8 col-xs-8"> <!-- summary and desc. -->
-                 <div id="summary-wrap">
-                    <h3>Property Summary</h3>
-                    <%= f.text_area :property_summary, class: "summary-text-area"%>
-                    <h3>Features Description</h3>
-                    <%= f.text_area :features_description, class: "summary-text-area"%><br>
-          </div>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4">
-              <div class="alert alert-warning">
-                <strong>Hint!</strong> THIS IS A HINT
-              </div>
 
-            <div class="hint-two">
-              <p> This is a hint. you should fill this out with something useful!</p>
-            </div>
-          
-          </div>
-          <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="col-md-12 col-sm-12 col-xs-12"> <!-- summary and desc. -->
+                 <div id="server-wrap">
+                    <h3>Property Summary</h3>
+                    <%= f.text_field :property_summary%>
+                    <h3>Features Description</h3>
+                    <%= f.text_field :features_description%><br>
                     <a href="#" id="back-to-details">Back</a>
-                  </div>
-                  <div class="col-md-5 col-sm-6 col-xs-6">
                     <a href="#" id="to-photos">Next</a>
-                  </div> <!-- end summary wrap -->
                   </div> <!-- end server wrap -->
         <%= f.submit "Submit" %>
     <%end%>
-
                 </div>
           </div> <!-- end row -->
-          </div> <!-- amenities wrap -->
-          <br>
-          <br>
+
       </div> <!-- amenities-page -->
 
         <!-- ######## PHOTOS ######### -->
