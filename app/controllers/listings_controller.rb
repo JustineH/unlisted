@@ -4,20 +4,18 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
+    @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
 
-    # @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
-
-    # Listing.search("Killarn", autocomplete: true, limit: 10)
-
-     @user = current_user.id
-
-    @bookmarked_listings = current_user.bookmarked_listings
+    if current_user
+      @user = current_user.id
+      @bookmarked_listings = current_user.bookmarked_listings
+    end
     # @bookmarked_listing = Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id)
     # @test = current_user.bookmarked_listings.create(listing_id: params[:listing_id])
   end
 
   def show
-    @neighbourhoods = Neighbourhood.all
+ 
   end
 
   def add_bookmark
@@ -34,7 +32,7 @@ class ListingsController < ApplicationController
     # @listing.user = current_user
     @listing = current_user.listings.build(listing_params)
     if @listing.save
-      redirect_to @listing, notice: 'Listing was successfully entered'
+      redirect_to @listing, notice: 'Listing was successfully entered.'
     else
       render action: 'new'
     end
@@ -56,16 +54,6 @@ class ListingsController < ApplicationController
     @listing.destroy
     redirect_to action: "index"
   end
-
-  # def autocomplete
-  #   render json: Listing.search(params[:query], {
-  #     fields: ["neighbourhood_id"],
-  #     limit: 10,
-  #     load: false,
-  #     misspellings: {below: 3}
-  #   }).map(&:neighbourhood_id)
-  # end
-
 
   def basic
     @listing = Listing.find(params[:listing_id])

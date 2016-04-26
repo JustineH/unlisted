@@ -4,11 +4,13 @@
 
 <ul>
 
-<% current_user.bookmarked_listings.each do |listing|  %>
-<li>
-  Size: <%= listing.size %>
-  Address: <%= listing.address %>
-  </li>
+<% if current_user %>
+  <% current_user.bookmarked_listings.each do |listing|  %>
+  <li>
+    Size: <%= listing.size %>
+    Address: <%= listing.address %>
+    </li>
+  <% end %>
 <% end %>
 
 
