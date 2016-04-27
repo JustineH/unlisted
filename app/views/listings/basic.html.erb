@@ -1,25 +1,45 @@
-     
- <h1>Photo Edit</h1>
- <% if @listing.user == current_user %>
-  <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
-    <%= f.hidden_field :listing_id, value: @listing.id%>
-    <div class="fallback">
-      <%= f.file_field :image %><br>
-      <%= f.submit "Upload my image" %>
-    </div>
-  <% end %>
-<% end %>
-
-
-<% @listing.images.each do |image| %>
-  <div class="img-thumbnail">
-    <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
+<div class="col-md-12 col-sm-12 col-xs-12" id="head-top"> <!-- form-head grid -->
+  <div class="form-head-left">
+  <br>
+  <br>
+  <p><span id="address-title"></span></p>
   </div>
-  <%= link_to "Delete", image, method: :delete %>
-<% end %>
-<br>
+  <div class="form-head">
+    <h4 class="form-header" id="basic-upload-header">Upload Photos</h4>
+  </div>
+</div> <!-- end form-head grid -->
 
-<%= link_to 'Listings Page', listings_path %> 
-<% if @listing.user == current_user %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %> 
-<% end %>
+<div class="col-md-3 col-sm-3 col-xs-12"> <!-- sidebar grid -->
+  <div class="side-bar">
+  <div id="detaildiv"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br>  <% if @listing.user == current_user %>
+    <%= link_to 'Edit Listing', edit_listing_path(@listing), class:"side-nav-a" %> 
+  <% end %> </div>
+  <div id="basicdiv"><i class="fa fa-home fa-2x" aria-hidden="true"></i><br> <%= link_to 'Your Listing Page', listing_path(@listing), class:"side-nav-a" %></div>
+  
+
+  </div>
+</div> <!-- end sidebar grid -->     
+
+<div class="col-md-9 col-sm-9 col-xs-12"><!--photo uploader-->
+  <% if @listing.user == current_user %>
+    <%= form_for(Image.new, html: { multipart: true, class: "dropzone", id:"listing-images"}) do |f|  %>
+      <%= f.hidden_field :listing_id, value: @listing.id%>
+      <div class="fallback">
+        <%= f.file_field :image %><br>
+        <%= f.submit "Upload my image" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<!--end photo uploader-->
+
+<!--photo output-->
+  <% @listing.images.each do |image| %>
+<div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="img-thumbnail">
+      <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
+    <%= link_to "Delete", image, method: :delete %>
+    </div>
+</div>
+  <% end %>
+<!--photo output-->

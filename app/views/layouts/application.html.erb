@@ -2,12 +2,10 @@
 <html>
 <head>
   <title>Unlisted</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <!-- include specific stylesheet for each view and layouts -->
-  <%= stylesheet_link_tag controller.controller_name %>
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ 
+  <%= stylesheet_link_tag    'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', params[:controller] %>
    
 <script src="
 https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -21,6 +19,8 @@ https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></scrip
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
 </head>
 <body>
   <%= render 'layouts/header' %>
