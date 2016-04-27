@@ -150,7 +150,7 @@ footer {
 }
 // SIDEBAR
 .side-bar {
-  height: 100vh;
+  height: 120vh;
   width: 200px;
   background-color: #F5F5F5;
 }
@@ -205,6 +205,13 @@ footer {
 }
 
 #photodiv{
+  height: 100px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+#deletediv{
   height: 100px;
   width: 100%;
   position: relative;
@@ -772,4 +779,151 @@ footer {
       line-height: 1.43;
       font-weight: 600;
     }
+}
+
+// SHOW PAGE ---
+
+#address-show-box {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#price-show-box{
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#property-description-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#general-features-show-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+#indoor-outdoor-features-show-box{
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#property-description-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
+}
+
+#special-features-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
+}
+
+#special-features-box > h4 {
+  padding-top: 15px;
+}
+#special-features-box > p {
+  padding: 30px;
+  padding-top: 0;
+}
+
+.show-heading-light {
+  font-weight: 200;
+  font-size: 25px;
+  padding-left: 12px;
+}
+#property-description-box > p {
+  padding: 30px;
+  padding-top: 0;
+  font-weight: 200;
+  font-size: 15px; 
+}
+
+
+#general-features-show-box > div > p {
+  font-size: 15px;
+  font-weight: 0;
+  font-weight: 200;
+  font-size: 15px; 
+}
+
+#general-features-show-box > div > p:last-child {
+  padding-bottom: 30px;
+}
+
+#indoor-outdoor-features-show-box > div > p {
+  font-size: 15px;
+  font-weight: 0;
+  font-weight: 200;
+  font-size: 15px; 
+}
+
+#indoor-outdoor-features-show-box > div > p:last-child {
+  padding-bottom: 30px;
+}
+
+#map {
+  height: 350px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#address-show-box > p {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 10px;
+}
+
+
+#price-show-box > p {
+  text-align: right;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+#indoor-outdoor-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 200;
+  margin-left: 15px;
+  width: 97.5%;
+}
+
+// #indoor-outdoor-wrap > p{
+//   font-weight: 200;
+//   font-size: 15px; 
+// }
+
+#general-features-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
+}
+
+.show-bg {
+  background-color: #ecf0f1;
 }

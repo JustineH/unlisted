@@ -1,36 +1,137 @@
-<div class="main-content">
-  <div class="row">
-    <div class="col-md-offset-2 col-md-8">
-      <div class="panel panel-default">
-
-        <p>
-
-
-        <% @listing.images.each do |image| %>
-          <div class="img-thumbnail">
-            <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
-          </div>
-        <% end %>
-     
-        <p>Address: <span id="address"><%= @listing.address.titleize %></span></p>
-        <p>Price: $<%= to_currency(@listing.price) %></p>
-        <p><%= @listing.bedrooms %> bathrooms</p>
-        <p><%= @listing.bathrooms %> bathrooms</p>
-        <p>Size: <%= @listing.size %> sqft</p>
-        <p>Neighbourhood: <%= @listing.neighbourhood.name%></p>
-        <p>Storage: <%= human_boolean(@listing.storage) %></p>
-        <p>Insuite laundry: <%= human_boolean(@listing.insuite_laundry) %></p>
-        <p>Gym: <%= human_boolean(@listing.gym) %></p>
-        <p>Doorman: <%= human_boolean(@listing.doorman) %></p>
-      <% if @listing.user == current_user %>
-        <%= link_to 'Edit', edit_listing_path(@listing) %> 
-      <% end %>
-
-      <div id="map"></div>
-        <%= link_to 'Listings Page', listings_path %> 
+<div class="show-bg">
+<br>
+<br>
+<br>
+<div class="container">
 
 
 
+
+<div class="col-md-6 col-sm-6 col-xs-12"> <!-- address -->
+  <div id="address-show-box"> <!-- address-show-box -->
+     <p> <span id="address"><%= @listing.address.titleize %>- Vancouver</span></p>
+  </div> <!-- end-address-show-box -->
+</div> <!-- address end -->
+
+<div class="col-md-6 col-sm-6 col-xs-12"> <!-- price -->
+  <div id="price-show-box">  <!-- price-show-box -->
+    <p>$<%= to_currency(@listing.price) %></p>
+  </div> <!-- end price-show-box -->
+</div> <!-- price end -->
+
+<div class="col-md-12 col-sm-12 col-xs-12"> <!-- picture/carasel -->
+<section class="carousel slide carousel-fade anchor" data-ride="carousel">
+  <div id="welcome-carousel">
+    <div class="shadow-layer"></div>
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag "welcome_bg1_1900_700.png" %>
+      </div>
+      <div class="item">
+        <%= image_tag "welcome_bg2_1900_700.png" %>
+      </div>
+      <div class="item">
+        <%= image_tag "welcome_bg3_1900_700.png" %>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<% @listing.images.each do |image| %>
+<%= image_tag image.image.url(:large), alt: image.image.url(:thumb) %>
+<% end %>
+</div> <!-- picture/carasel end -->
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12" id="property-description-wrap"> <!-- property summary -->
+  <div id="property-description-box">
+    <h4 class="show-heading-light">Property Summary</h4><br>
+    <p><%= @listing.property_summary %></p>
+  </div>
+</div> <!-- end property summary  -->
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12" id="general-features-wrap"> <!-- general features -->
+  <div id="general-features-show-box"> <!-- general features show box -->
+  <h4 class="show-heading-light">General Features</h4><br>
+  
+    <div class="col-md-4 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- left-col -->
+      <p><strong>Bedroom(s):</strong> <%= @listing.bedrooms %> </p>
+      <p><strong>Bathroom(s):</strong> <%= @listing.bathrooms %></p>
+      <p><strong>Half Bathrooms:</strong> <%= @listing.half_bathrooms %></p>
+      <p><strong>Size:</strong> <%= @listing.size %> sqft</p>
+      <p><strong>Levels:</strong> <%= @listing.levels%></p>
+    </div><!--  end left col -->
+
+    <div class="col-md-4 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- right col -->
+      <p><strong>Year Built:</strong> <%= @listing.year_built %> </p>
+      <p><strong>Home Type:</strong> <%= @listing.home_type %> </p>
+      <p><strong>Type Ownership:</strong> <%= @listing.type_ownership %></p>
+      <p><strong>Neighbourhood:</strong> <%= @listing.neighbourhood.name%></p>      
+    </div> <!-- end right col -->
+    <div class="col-md-4 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- right col -->
+      <p><strong>Fireplaces:</strong> <%= @listing.fireplaces%></p>
+      <p><strong>Taxes:</strong> <%= @listing.taxes %></p>
+      <p><strong>Strata Fees:</strong> <%= @listing.strata_fees %> </p>
+      <p><strong>Lot Size:</strong> <%= @listing.lot_size%></p>
+      
+    </div> <!-- end right col -->
+
+  </div> <!-- end general features show box -->
+</div> <!-- general features end -->
+
+<div class="col-md-12 col-sm-12 col-xs-12" id="special-features-wrap"> <!-- special features -->
+  <div id="special-features-box">
+    <h4 class="show-heading-light">Special Features Description</h4><br>
+    <p><%= @listing.features_description%></p>
+  </div>
+</div> <!-- end special features -->
+
+<br>
+<div class="col-md-12 col-sm-12 col-xs-12" id="indoor-outdoor-wrap"> <!-- indoor/outdoor features -->
+  <div id="indoor-outdoor-features-show-box"> <!-- indoor-outdoor-features-show-box -->
+    <h4 class="show-heading-light">Indoor/Outdoor</h4><br>
+    <div class="col-md-3 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- left-col -->
+      <p><strong>Storage:</strong> <%= human_boolean(@listing.storage) %></p>
+      <p><strong>Insuite Laundry:</strong> <%= human_boolean(@listing.insuite_laundry) %></p>
+      <p><strong>Basement:</strong> <%= human_boolean(@listing.basement) %></p>
+      <p><strong>Gym:</strong> <%= human_boolean(@listing.gym) %></p>
+    </div><!--  end left col -->
+  </div> <!-- end indoor-outdoor-features-show-box -->
+  <div class="col-md-3 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- right col -->
+    <p><strong>Bike Room:</strong> <%= human_boolean(@listing.bike_room) %></p>
+    <p><strong>Elevator:</strong> <%= human_boolean(@listing.elevator) %></p>
+    <p><strong>Garden:</strong> <%= human_boolean(@listing.garden) %></p>
+    <p><strong>Doorman:</strong> <%= human_boolean(@listing.doorman) %></p>
+  </div> <!-- end right col -->
+  <div class="col-md-3 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- right col -->
+    <p><strong>Amenities Room:</strong> <%= human_boolean(@listing.amenities_room) %></p>
+    <p><strong>Air Conditioner:</strong> <%= human_boolean(@listing.air_conditioning) %></p>
+    <p><strong>Washer:</strong> <%= human_boolean(@listing.washer) %></p>
+    <p><strong>Dishwasher:</strong> <%= human_boolean(@listing.dishwasher) %></p>
+  </div> <!-- end right col -->
+  <div class="col-md-3 col-sm-4 col-xs-12" style="
+    padding-left: 30px;"> <!-- right col -->
+    <p><strong>Stove:</strong> <%= human_boolean(@listing.stove) %></p>
+    <p><strong>Hot Tub:</strong> <%= human_boolean(@listing.hot_tub) %></p>
+    <p><strong>Pool:</strong> <%= human_boolean(@listing.pool) %></p>
+    <p><strong>Pet Friendly:</strong> <%= human_boolean(@listing.pet_friendly) %></p>
+  </div> <!-- end right col -->
+</div> <!-- indoor/outdoor features end -->
+ 
+<br>
+<div class="col-md-12 col-sm-12 col-xs-12"> <!-- map -->
+  <div id="map"></div>
+</div> <!-- end map -->
+<br>
+<br>
+
+</div> <!-- end container -->
+</div> <!-- end show-bg -->
