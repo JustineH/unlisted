@@ -57,7 +57,7 @@ def random_ownership
 end
 
 def random_property_summary(listing)
-  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
+  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type.downcase}."
 end
 
 @addresses.length.times do 

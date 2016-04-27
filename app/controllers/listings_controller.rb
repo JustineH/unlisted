@@ -7,15 +7,11 @@ class ListingsController < ApplicationController
         @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
     else
       @listings = Listing.page(params[:page]).per(12)
+
     end
 
     if @listings.empty?
       flash[:notice] = "No matching results found for #{params[:query]}. Please modify your search criteria and try searching again."
-    end
-
-    if current_user
-      @user = current_user.id
-      @bookmarked_listings = current_user.bookmarked_listings
     end
   end
 
@@ -24,7 +20,17 @@ class ListingsController < ApplicationController
   end
 
   def add_bookmark
-    @bookmark = Bookmark.create user_id: current_user.id, listing_id: params[:listing_id]
+
+    @bookmark = Bookmark.new user_id: current_user.id, listing_id: params[:listing_id]
+    if @bookmark.save
+      render json: @bookmark.as_json(include: :listing)
+    end
+   
+  end
+
+  def del_bookmark
+    Bookmark.find_by(user_id: current_user.id, listing_id: params[:listing_id]).destroy
+    render nothing: true
   end
 
   def new
