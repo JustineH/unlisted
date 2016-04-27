@@ -6,6 +6,10 @@ $(function(){
     Bookmarks.add(data);
   });
 
+  $('.user_bookmarks').on('ajax:success', '.remove_bookmark', function () {
+    $(this).parent('.bookmark_item').fadeOut(function () { this.remove(); });
+  });
+
   function BookmarksManager () {
     this.template = Handlebars.compile($('#bookmark_item_template').text());
 

@@ -29,6 +29,11 @@ class ListingsController < ApplicationController
    
   end
 
+  def del_bookmark
+    Bookmark.find_by(user_id: current_user.id, listing_id: params[:listing_id]).destroy
+    render nothing: true
+  end
+
   def new
     # @listing = Listing.new
     @listing = current_user.listings.build

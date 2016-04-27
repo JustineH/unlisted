@@ -250,15 +250,14 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   .bookmark-bar{
     margin-top: 5em;
     background: white;
+    text-align: left;
     box-shadow: 0 2px 3px #ccc;
     width: 400px;
-    height: 1500px;
+    height: 80%;
     position:fixed;
-    float: right;
-
     overflow-y: auto;
     z-index: 1000;
-    padding-right: 250px;
+    padding: 1em;
     transition: all 0.4s ease 0s;
     right: 0;
     transform: translate(510px);
@@ -269,6 +268,31 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     transform: translate(0);
   }
 
+
+  ul{
+    list-style-type: none;
+  }
+  .user_bookmarks li{
+    position: relative;
+    padding-bottom: 2em;
+    font-size: 16px;
+
+  }
+
+  .user_bookmarks img{
+    width: 120px;
+    float: left;
+    padding-right: 2em;
+  }
+
+  .user_bookmarks .price{
+    display: inline-block;
+    padding-right: 2em;
+  }
+
+  .user_bookmarks .remove-bookmark{
+    float: right;
+  }
 
 /*  @media (max-width:767px) {
     .bookmark-bar{

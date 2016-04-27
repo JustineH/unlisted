@@ -1,17 +1,25 @@
 <section class="bookmark-bar pull-right">
 
-<h4>Bookmarked Listing</h4>
+<h4>Bookmarked Listings</h4>
 
-<ul class="user_bookmarks"></ul>
+<div class="user_bookmarks"></div>
 
 
 </section>
 
 <script id="bookmark_item_template" type="text/template">
-  <li>
-    Size: {{ listing.size }}
-    Address: {{ listing.address }}
-  </li>
+
+  <div class="bookmark_item" data-listing-id="{{ listing.id }}">
+    <a href="/listings/{{listing.id}}/del_bookmark" data-remote="true" data-method="delete" class="remove_bookmark">&times;</a>
+    <a href="/listings/{{listing.id}}">
+      <%= image_tag "listing_images/property1_1.jpg" %>
+      <span class="price">$ {{ listing.price }}</span>
+      {{ listing.size }} sqr/ft
+      <br>
+      {{ listing.address }}
+    </a>
+  </div>
+
 </script>
 
 <script>
