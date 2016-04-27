@@ -25,6 +25,12 @@ $color_star_dust_approx: #989da0;
   .title {
     margin: 50px 0;
   }
+
+  .title p {
+    position: relative;
+    bottom: 15px;
+  }
+
   .cover .overlay {
     height: 250px;
     padding-top: 60px;
