@@ -2,17 +2,10 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-# Rails.application.config.assets.precompile += %w( unlisted_custom.css )
-# Rails.application.config.assets.precompile += %w( carousel.css )
 
-# Adding individual css according to view
-Rails.application.config.assets.precompile += %w( 
-welcome.css
-listings.css
-users.css
-vendors.css
- )
-
+%w(images listings users vendors welcome).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
+end
 
 
 # Precompile additional assets.

@@ -1,4 +1,6 @@
+
 <%= render 'layouts/bookmarkRightBar' %>
+<%#= render 'layouts/search' %>
 
 <!-- Listing Box Begins -->
 <div class="row listing">
@@ -41,6 +43,7 @@
       </div>
     </div>
   <% end %>
+  <%= paginate @listings %>
 </div>
 
 <!-- Listing Box Ends -->

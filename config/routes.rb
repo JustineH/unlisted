@@ -6,11 +6,10 @@ Rails.application.routes.draw do
 
   resources :listings do
     post :add_bookmark 
-    delete :del_bookmark
-    # resource :bookmark, only: [:create, :destroy]
+    delete :del_bookmark 
+    get :basic
   end
-
-
-
+  resources :images
+  resources :vendors
 
 end

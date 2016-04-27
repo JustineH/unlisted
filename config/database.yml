@@ -83,3 +83,4 @@ production:
   database: unlisted_production
   username: unlisted
   password: <%= ENV['UNLISTED_DATABASE_PASSWORD'] %>
+

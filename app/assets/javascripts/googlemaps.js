@@ -1,7 +1,7 @@
 var map;  // Google map object
   
   // Initialize and display a google map
-  $(function() {  
+  function initialize() {
     // Create a Google coordinate object for where to initially center the map
     var latlng = new google.maps.LatLng( 49.2827, -123.1207 ); // Vancouver, BC
     
@@ -46,7 +46,7 @@ var map;  // Google map object
 //       ]
 //     }
 // ]);
-  } );
+  };
   
   // Show the location (address) on the map.
   function ShowLocation( latlng, address, addr_type )
@@ -73,7 +73,7 @@ var map;  // Google map object
     var contentString = "<b>" + address + "</b>"; // HTML text to display in the InfoWindow
     var infowindow = new google.maps.InfoWindow( { content: contentString } );
     
-    google.maps.event.addListener( marker, 'click', function() { infowindow.open( map, marker ); });
+    google.maps.event.addListener( window, "load", initialize, marker, 'click', function() { infowindow.open( map, marker ); });
   
   
   }

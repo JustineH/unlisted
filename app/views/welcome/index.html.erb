@@ -1,5 +1,3 @@
-<!-- require 'pry' -->
-
 <!-- Carousel Begins-->
 
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
@@ -21,114 +19,43 @@
 
 <!-- Carousel Ends-->
 
-
 <!-- Search Box Cluster Begins-->
 
-<section class="overlay search">
-  <div class="vertical-center">
-    <div class="container text-center">
-      <h1 id="tagline">The easiest way to list and buy a home.</h1>
-        <div class="col-lg-6 col-md-6 col-xs-6">
-          <form action="/listings/search" method="get">
-            <div class="input-group">
-              <input name="text" class="form-control" placeholder="Location, Price, Address, Neighbourhood, # of Bedrooms">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">
-                  <span class="glyphicon glyphicon-search"></span>
-                </button>
-              </span>
-            </div>
-          </form>
-        </div>
-      <!-- </div> -->
-
-      <!-- Search Box Ends -->
-
-
-      <!-- Optional Selection Begins-->
-
-      <div class='row seletion-menu'>
-        <div class='col-sm-3'>    
-          <div class='form-group'>
-            <select class="form-control">
-              <option value="null">Min Price</option>
-              <option value="50000">$50,000</option>
-              <option value="60000">$60,000</option>
-              <option value="70000">$70,000</option>
-              <option value="80000">$80,000</option>
-            </select>
-          </div>
-        </div>
-        <div class='col-sm-3'>
-          <div class='form-group'>
-            <select class="form-control">
-              <option value="null">Max Price</option>
-              <option value="100000">$100,000</option>
-              <option value="200000">$200,000</option>
-              <option value="300000">$300,000</option>
-              <option value="400000">$400,000</option>
-            </select>
-          </div>
-        </div>
-        <div class='col-sm-3'>
-          <div class='form-group'>
-            <select class="form-control">
-              <option value="null">Any Bed</option>
-              <option value="2">2+ Bedrooms</option>
-              <option value="3">3+ Bedrooms</option>
-              <option value="4">4+ Bedrooms</option>
-              <option value="5">5+ Bedrooms</option>
-            </select>
-          </div>
-        </div>
-        <div class='col-sm-3'>
-          <div class='form-group'>
-            <select class="form-control">
-              <option value="null">Any Bath</option>
-              <option value="2">2+ Bathrooms</option>
-              <option value="3">3+ Bathrooms</option>
-              <option value="4">4+ Bathrooms</option>
-              <option value="5">5+ Bathrooms</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div> 
-  <!-- Optional Selection Ends--> 
-</section>
+<%= render 'layouts/search' %>
 
 <!-- Search Box Cluster Ends -->
 
-<!-- Choose us! Begins-->
 
+
+<!-- Choose Us Begins -->
 
 <section id="choose-us" class="anchor">
 
   <div class="row">
-    <h3 class="heading">Why us?</h3>
-    <h5 class="sub-heading">Blah blah blah say sth smart here</h5>
+    <h3 class="heading">Why Unlisted?</h3>
+    <h5 class="sub-heading"></h5>
     <div class="col-md-4 col-sm-6 cols-xs-12">
      <i class="fa fa-usd fa-5x" aria-hidden="true"></i>
-     <h4 class="heading">Cost Efficient</h4>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dignissimos, repellat assumenda.</p>
+     <h4 class="heading">Save Money</h4>
+     <p>Saving you thousands of dollars in lieu of a real estate agent.</p>
    </div>
    <div class="col-md-4 col-sm-6 cols-xs-12">
     <i class="fa fa-clock-o fa-5x" aria-hidden="true"></i>
-    <h4 class="heading">Time Efficient</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ex, eaque totam.</p>
+    <h4 class="heading">Save Time</h4>
+    <p>Giving you your weekends back.</p>
   </div>
 
   <div class="col-md-4 col-sm-6 cols-xs-12">
     <i class="fa fa-paper-plane fa-5x" aria-hidden="true"></i>
-    <h4 class="heading">Easy Listing</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam consequatur cum, enim?</p>
+    <h4 class="heading">Easy to List</h4>
+    <p>Have your home listed in under than 5 minutes!</p>
   </div>
 </div>
 </section>
-<!-- Choose us! Ends-->
+
+<!-- Choose Us Ends -->
+
+
 
 
 <!-- Feature Listing Begins -->

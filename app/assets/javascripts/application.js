@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require listings
-//= require welcome
+//= require dropzone
 //= require ./form-wizard
 //= require ./googlemaps
 // require_tree .
@@ -52,63 +51,9 @@
 
 // Top nav bar behaviour
 // Creates bg and font colour when scrolled
-
-// $(function(){
-// console.log('sdsfds')
-// console.log($('#bookmark-btn'));
-
-// $('#bookmark-btn').on(function() {
-//     alert("yoyo");
-//     $('.bookmark-bar').toggleClass("bookmark-bar-toggle");
-// });
-
-// if ($('#welcome-carousel').length > 0){
-//     window.addEventListener("scroll", function() {
-//         if (window.scrollY > 11) {
-//             $('.navbar').addClass("navbar-bg");
-//             $('.navbar-nav > li > a').css({
-//                 'color': '#262626',
-//                 'padding-top': '10px'
-//             });
-//             console.log("activated");
-//         }
-//         else {
-//           $('.navbar').removeClass("navbar-bg");
-//             $('.navbar-nav > li > a').css({
-//                 'color': '#fff',
-//                 'padding-top': '20px'
-//             });
-//             console.log("deactivated");
-//         }
-//     },false);
-// }else{
-//     window.addEventListener("scroll", function() {
-//         if (window.scrollY > 11) {
-//             $('.navbar').addClass("navbar-bg");
-//             $('.navbar-nav > li > a').css({
-//                 'color': '#262626',
-//                 'padding-top': '10px'
-//             });
-//             console.log("activated");
-//         }
-//         else {
-//           $('.navbar').removeClass("navbar-bg");
-//             $('.navbar-nav > li > a').css({
-//                 'color': '#262626',
-//                 'padding-top': '20px'
-//             });
-//             console.log("deactivated");
-//         }
-//     },false);
-// }
-
-
-    
-
-
-// });
-
-
-
-
+Dropzone.options.listingImages = {
+  paramName: "image[image]", // The name that will be used to transfer the file
+  maxFilesize: 2 // MB
+  
+};
 

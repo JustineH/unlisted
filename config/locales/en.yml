@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+
+  
+# Faker data locale specified to Vancouver, BC Canada
+  en-CA:
+  faker:
+    address:
+      postcode: /[V][0-9][A-CEJ-NPR-TV-Z] ?[0-9][A-CEJ-NPR-TV-Z][0-9]/
+      city: [Vancouver]
+      state: [British Columbia]
+      state_abbr: ["BC"]
+      default_country: [Canada]

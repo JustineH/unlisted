@@ -1,10 +1,20 @@
 class Listing < ActiveRecord::Base
+  searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."], ["street", "st", "st."], ["east", "e"], ["west", "w"]]
+
   belongs_to :user
   belongs_to :neighbourhood
+  has_many :images
 
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" } 
-  # validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-
+  def search_data
+    {
+      address: address,
+      neighbourhood: neighbourhood.name,
+      bedrooms: bedrooms,
+      bathrooms: bathrooms,
+      price: price,
+      home_type: home_type
+    }
+  end
 
 
   # validates :address, presence: true, length: { minimum: 10}
@@ -52,7 +62,7 @@ class Listing < ActiveRecord::Base
   # validates :wheelchair_accessible, inclusion: [true, false]
   # validates :image, presence: true, :file_size {maximum: 1.0.megabytes.to_i}
 
-private 
+# private 
  
 end
 
