@@ -17,117 +17,6 @@ $black_8: rgba(0, 0, 0, 0.08);
 $alto: #dbdbdb;
 //form fonts
 $font_0: sans-serif;
-//form scss
-// .form-basic {
-//   max-width: 640px;
-//   margin: 0 auto;
-//   padding: 55px;
-//   box-sizing: border-box;
-//   background-color: $white;
-//   /*box-shadow: 0 1px 3px 0 $black_10;*/
-//   font: bold 14px $font_0;
-//   text-align: center;
-//   .form-row {
-//     text-align: left;
-//     margin-bottom: 22px;
-//     > label span {
-//       display: inline-block;
-//       box-sizing: border-box;
-//       /*color: $color_chicago_approx;*/
-//       /*width: 180px;*/
-//       text-align: left;
-//       vertical-align: top;
-//       padding: 12px 25px;
-//     }
-//   }
-//   .form-title-row {
-//     text-align: left;
-//     margin-left: 18px;
-//     margin-bottom: 15px;
-//   }
-//   .form-row {
-//     margin: 0;
-//   }
-//   h1 {
-//     display: inline-block;
-//     box-sizing: border-box;
-//     color: $color_trout_approx;
-//     font-size: 24px;
-//     padding: 0 10px 15px;
-//     /*border-bottom: 2px solid $color_cornflower_blue_approx;*/
-//     margin: 0;
-//     margin-left: 11px;
-//   }
-//   input {
-//     color: $color_chicago_approx;
-//     box-sizing: border-box;
-//     width: 240px;
-//     box-shadow: 1px 2px 4px 0 $black_8;
-//     padding: 10px;
-//     border: 1px solid $alto;
-//     margin-left: 38px;
-//   }
-  
-//   .form-input[type=radio] {
-//     box-shadow: none;
-//     width: auto;
-//   }
-
-//   .form-input[type=checkbox] {
-//     box-shadow: none;
-//     width: auto;
-//     margin-top: 13px;
-//   }
-
-//   select {
-//     background-color: $white;
-//     color: $color_chicago_approx;
-//     box-sizing: border-box;
-//     width: 240px;
-//     height: 40px !important;
-//     box-shadow: 1px 2px 4px 0 $black_8;
-//     padding: 12px 8px;
-//     border: 1px solid $alto;
-//     margin-top: 10px;
-//     margin-left: 38px;
-//   }
-
-//   .form-span {
-//     margin-left: -24px;
-//   }
-
-//   textarea {
-//     color: $color_chicago_approx;
-//     box-sizing: border-box;
-//     width: 240px;
-//     height: 80px;
-//     // box-shadow: 1px 2px 4px 0 $black_8;
-//     font: normal 13px $font_0;
-//     padding: 12px;
-//     border: 1px solid $alto;
-//     resize: vertical;
-//   }
-//   .form-radio-buttons {
-//     display: inline-block;
-//     vertical-align: top;
-//     > div {
-//       margin-top: 10px;
-//     }
-//     .form-input {
-//       width: auto;
-//     }
-  
-//     label > span {
-//       margin-left: 18px;
-//       color: $color_chicago_approx;
-//       font-weight: normal;
-//       display: inline-block;
-//       width: 140px;
-//       text-align: left;
-//     }
-//   }
-
-// }
 
 #next {
   float: left;
@@ -643,7 +532,7 @@ footer {
 .hint-box {
   margin-top: 20%;
   // margin-right: 25%;
-  max-height: 120px;
+  max-height: 135px;
   overflow: hidden;
 }
 

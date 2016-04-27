@@ -113,7 +113,7 @@
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
          <div class="alert alert-success details-hint-box">
-                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong><br> To help us list your property, we will need the following: Postal Code, Year Built, Price, Type of Ownership & Size .
               </div>
         </div>
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -187,11 +187,11 @@
           <div class="col-md-4 col-sm-4 col-xs-4 no-padding">
               <div class="hint-box-wrap">
               <div class="alert alert-success hint-box">
-                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. 
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> <br>This is a general summary of your property. (Key information such as: number of bedrooms, bathrooms,neighbourhood etc.)  
               </div>
               
               <div class="alert alert-success hint-box">
-                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong> You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+                <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hint!</strong><br>Examples: new renovations, new appliances, deck, unique features etc.
               </div>
               </div>
           </div>
@@ -200,11 +200,11 @@
                     <a href="#" id="back-to-details">Back</a>
                   </div>
                   <div class="col-md-5 col-sm-6 col-xs-4">
-                    <a href="#" id="to-photos">Next</a>
+                    <%= f.submit "Submit", id:"to-photos"%>
+    <%end%>
                   </div> <!-- end summary wrap -->
                   </div> <!-- end server wrap -->
-        <%= f.submit "Submit" %>
-    <%end%>
+     
 
                 </div>
           </div> <!-- end row -->
