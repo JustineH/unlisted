@@ -1,3 +1,10 @@
+
+/*
+ *= require dropzone_custom
+ */
+
+
+
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -5,8 +12,6 @@ html, body{
   -webkit-font-smoothing: antialiased;
 }
 
-
-//form colors
 //form colors
 $white: #ffffff;
 $black_10: rgba(0, 0, 0, 0.1);
@@ -531,8 +536,7 @@ footer {
 
 .hint-box {
   margin-top: 20%;
-  // margin-right: 25%;
-  max-height: 135px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -560,15 +564,6 @@ footer {
     transition: all .3s linear;
   }
 }
-
-// #basicdiv{
-//   height: 100px;
-//   width: 100%;
-//   cursor: pointer;
-//   position: relative;
-//   text-align: center;
-//   padding-top: 20px;
-// }
 
 @media screen and (max-width: 800px){
 
@@ -778,4 +773,3 @@ footer {
       font-weight: 600;
     }
 }
-

@@ -3,6 +3,7 @@ class ListingsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy] 
 
   def index
+  
     if params[:query]
       @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
     else
@@ -13,8 +14,6 @@ class ListingsController < ApplicationController
       @user = current_user.id
       @bookmarked_listings = current_user.bookmarked_listings
     end
-    # @bookmarked_listing = Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id)
-    # @test = current_user.bookmarked_listings.create(listing_id: params[:listing_id])
   end
 
   def show
@@ -26,13 +25,10 @@ class ListingsController < ApplicationController
   end
 
   def new
-    # @listing = Listing.new
     @listing = current_user.listings.build
   end
 
   def create
-    # @listing = Listing.new(listing_params)
-    # @listing.user = current_user
     @listing = current_user.listings.build(listing_params)
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully entered.'
