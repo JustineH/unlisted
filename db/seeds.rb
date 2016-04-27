@@ -46,19 +46,19 @@ def townhouse_address_factory
   add
 end
 
-  def random_neighbourhood
-    words = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
-    words.sample
-  end
+def random_neighbourhood
+  words = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
+  words.sample
+end
 
-  def random_ownership
-    words = ["Freehold Strata", "Leasehold Prepaid-Strata"]
-    words.sample
-  end
+def random_ownership
+  words = ["Freehold Strata", "Leasehold Prepaid-Strata"]
+  words.sample
+end
 
-  def random_property_summary(listing)
-    "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
-  end
+def random_property_summary(listing)
+  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
+end
 
 @addresses.length.times do 
   t = Listing.new
