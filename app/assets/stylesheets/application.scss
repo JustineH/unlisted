@@ -229,6 +229,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     right: 30px;
     bottom: 15px;
     font-size: 30px;
+    color: #3498db
   }
 
 
@@ -268,7 +269,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     color: white;
     font-size: 22px;
     font-weight: 200;
-    background-color: #C7885A;
+    background-color: #bdc3c7;
   }
   .bookmark-bar{
     margin-top: 5.5em;
@@ -289,7 +290,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   
   .bookmark-bar #bottom-background-box{
     margin: .4em .4em 10em .4em;
-    background-color: #F2E2C8;
+    background-color: #ecf0f1;
     height: 100%
   }
 
@@ -342,6 +343,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
   .user_bookmarks a{
     text-decoration: none;
+    color: #2c3e50;
   }
 
  /* .user_bookmarks a:active{
