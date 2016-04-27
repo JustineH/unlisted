@@ -106,10 +106,15 @@ footer {
 .side-nav-a:hover {
   text-decoration: none; }
 
+.side-nav-a:active {
+  text-decoration: none; }
+
+.side-nav-a:focus {
+  text-decoration: none; }
+
 #basicdiv {
   height: 100px;
   width: 100%;
-  cursor: pointer;
   position: relative;
   text-align: center;
   padding-top: 20px; }
@@ -117,7 +122,6 @@ footer {
 #detaildiv {
   height: 100px;
   width: 100%;
-  cursor: pointer;
   position: relative;
   text-align: center;
   padding-top: 20px; }
@@ -125,7 +129,6 @@ footer {
 #amenitydiv {
   height: 100px;
   width: 100%;
-  cursor: pointer;
   position: relative;
   text-align: center;
   padding-top: 20px; }
@@ -133,7 +136,6 @@ footer {
 #photodiv {
   height: 100px;
   width: 100%;
-  cursor: pointer;
   position: relative;
   text-align: center;
   padding-top: 20px; }

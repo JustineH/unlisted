@@ -35,3 +35,36 @@ $(document).on('keyup', 'input.address-form', function(){
 });
   $('#address-title').text(sellerAddress);
 });
+
+//-----------
+// sidebar 
+//----------- 
+
+$(document).on('click', 'a#basic-side-click', function(){
+  $('#basic-page').show();
+  $('#details-page').hide();
+  $('#amenities-page').hide();
+  $('#photos-page').hide();
+});
+
+$(document).on('click', 'a#detail-side-click', function(){
+  $('#details-page').show();
+  $('#basic-page').hide();
+  $('#amenities-page').hide();
+  $('#photos-page').hide();
+});
+
+$(document).on('click', 'a#amenity-side-click', function(){
+  $('#amenities-page').show();
+  $('#details-page').hide();
+  $('#basic-page').hide();
+  $('#photos-page').hide();
+});
+
+$(document).on('click', 'a#photo-side-click', function(){
+  $('#photos-page').show();
+  $('#amenities-page').hide();
+  $('#details-page').hide();
+  $('#basic-page').hide();
+});
+
