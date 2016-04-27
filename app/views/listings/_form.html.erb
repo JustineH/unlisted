@@ -80,6 +80,7 @@
       <div id="details-page">
 <h1 class="details-head">Details</h1>
       <div class="row">
+
         <div class="col-md-4 col-sm-4 col-xs-12"> <!-- left -->
             
             <div class="form-row">
@@ -145,7 +146,8 @@
       <div id="amenities-page">
       <h1 class="amenities-head">Amenities</h1>
       <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- left -->
+      <div class="amenities-check-wrap">
+        <div class="col-md-6 col-sm-6 col-xs-12"> <!-- left -->
             <h3 class="amenities-sub-head">Insuite</h3>
               <%= f.label "Basement", class: "amenities-label" %><%= f.check_box :basement, class:"amenities-check-box" %><br>
               <%= f.label "Storage", class: "amenities-label" %><%= f.check_box :storage, class:"amenities-check-box" %><br>
@@ -159,7 +161,8 @@
               <%= f.label "Pet Friendly", class: "amenities-label" %><%= f.check_box :pet_friendly, class:"amenities-check-box" %><br>
           </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-6"> <!-- right -->
+        <div class="col-md-6 col-sm-6 col-xs-12"> <!-- right -->
+          <div class="amenities-check-right-wrap">
             <h3 class="amenities-sub-head">Other</h3>
               <%= f.label :elevator, class: "amenities-label" %><%= f.check_box :elevator, class: "amenities-check-box" %> <br>
               <%= f.label :bike_room, class: "amenities-label"%><%= f.check_box :bike_room, class: "amenities-check-box" %><br>
@@ -171,7 +174,9 @@
               <%= f.label "Weelchair Accessible", class: "amenities-label" %><%= f.check_box :wheelchair_accessible, class: "amenities-check-box" %><br>
               <%= f.label "doorman", class: "amenities-label" %><%= f.check_box :doorman, class: "amenities-check-box" %><br>
               </div>
-           <div class="col-md-8 col-sm-8 col-xs-8 no-padding"> <!-- summary and desc. -->
+              </div>
+              </div>
+           <div class="col-md-8 col-sm-8 col-xs-12 no-padding"> <!-- summary and desc. -->
                  <div id="summary-wrap">
                     <h3>Property Summary</h3>
                     <%= f.text_area :property_summary, class: "summary-text-area"%>
@@ -191,10 +196,10 @@
               </div>
           </div>
 
-          <div class="col-md-5 col-sm-6 col-xs-6">
+          <div class="col-md-5 col-sm-6 col-xs-4 min-padding">
                     <a href="#" id="back-to-details">Back</a>
                   </div>
-                  <div class="col-md-5 col-sm-6 col-xs-6">
+                  <div class="col-md-5 col-sm-6 col-xs-4">
                     <a href="#" id="to-photos">Next</a>
                   </div> <!-- end summary wrap -->
                   </div> <!-- end server wrap -->
