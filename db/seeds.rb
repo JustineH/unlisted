@@ -37,7 +37,6 @@ def condo_address_factory
   add
 end
 
-
 def townhouse_address_factory
   if @townhouse_addresses.length == 0
     return Faker::Address.street_address
@@ -46,31 +45,20 @@ def townhouse_address_factory
   @townhouse_addresses.delete(add)
   add
 end
-  # neighbourhoods = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
 
-  # neighbourhoods.each do |neighbourhood|
-  #   Neighbourhood.create(name:neighbourhood)
-  # end
+def random_neighbourhood
+  words = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
+  words.sample
+end
 
-   def random_neighbourhood
-    words = ["Downtown Vancouver", "West End", "Yaletown", "Coal Harbour", "Gastown", "Chinatown", "Downtown Eastside", "False Creek", "Kitsilano", "Marpole", "Point Grey", "Commercial Drive", "Mount Pleasant", "Oakridge", "Kerrisdale", "Arbutus Ridge", "Dunbar-Southlands", "False Creek", "Granville Island/Fairview", "Shaughnessy", "South Cambie", "Grandview-Woodland", "Hastings-Sunrise", "Killarney", "Strathcona", "Riley Park-Little Mountain", "Sunset", "Victoria-Fairview", "Dunbar"]
-    words.sample
-  end
+def random_ownership
+  words = ["Freehold Strata", "Leasehold Prepaid-Strata"]
+  words.sample
+end
 
-  # def random_type
-  #   words = ["Condo", "House", "Townhouse"]
-  #   words.sample
-  # end
-
-  def random_ownership
-    words = ["Freehold Strata", "Leasehold Prepaid-Strata"]
-    words.sample
-  end
-
-  def random_property_summary(listing)
-    "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
-  end
-
+def random_property_summary(listing)
+  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
+end
 
 @addresses.length.times do 
   t = Listing.new
@@ -79,15 +67,15 @@ end
   t.city = "Vancouver"
   t.postal_code = Faker::Address.postcode
   t.price = Faker::Number.between(300000, 10000000)
-  t.bedrooms = Faker::Number.digit
-  t.bathrooms = Faker::Number.digit
+  t.bedrooms = Faker::Number.between(1, 7)
+  t.bathrooms = Faker::Number.between(1, 4)
   t.size = Faker::Number.between(1300, 12000)
   t.year_built = Faker::Number.between(1900, 2016)
   t.home_type = "House" 
   t.type_ownership = "Freehold Nonstrata"
   t.levels = Faker::Number.between(1, 3)
-  t.full_bathrooms = Faker::Number.digit
-  t.half_bathrooms = Faker::Number.digit
+  t.full_bathrooms = Faker::Number.between(1, 4)
+  t.half_bathrooms = Faker::Number.between(0, 2)
   t.fireplaces = Faker::Number.between(0, 1)
   t.taxes = Faker::Number.between(5000, 13500)
   t.strata_fees = ""
