@@ -286,7 +286,12 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     transform: translate(510px);
     /*transform: translate(0);*/
   }
-
+  
+  .bookmark-bar #bottom-background-box{
+    margin: .4em .4em 10em .4em;
+    background-color: #F2E2C8;
+    height: 100%
+  }
 
 
   .bookmark-bar-toggle{
@@ -301,7 +306,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   .user_bookmarks {
     margin: .4em .4em .4em .4em;
     padding-top: 2em;
-    background-color: #F2E2C8;
+    
   }
 
   .user_bookmarks li{
@@ -329,7 +334,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
   .user_bookmarks .remove_bookmark{
     position: relative;
-    right: 1em;
+    right: .3em;
     float: right;
     font-size: 25px;
 
