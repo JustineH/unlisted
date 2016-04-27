@@ -1,7 +1,7 @@
 /*
- *= require_self
  *= require dropzone/dropzone
- *= require_tree .
+ *= require_self
+
  */
 
 @import "bootstrap-sprockets";
@@ -78,7 +78,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   }
 
   .navbar-nav > li > a {
-    color: #fff;
+    color: #7f8c8d;
     padding-top:20px; 
     padding-bottom:10px;
   }

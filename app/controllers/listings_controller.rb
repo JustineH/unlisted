@@ -9,7 +9,7 @@ class ListingsController < ApplicationController
 
     # Listing.search("Killarn", autocomplete: true, limit: 10)
 
-     @user = current_user.id
+    @user = current_user.id
 
     @bookmarked_listings = current_user.bookmarked_listings
     # @bookmarked_listing = Listing.find(Bookmark.where(user_id: current_user.id).first.listing_id)

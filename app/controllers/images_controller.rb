@@ -13,6 +13,7 @@ class ImagesController < ApplicationController
       render json: { error: @image.errors.full_messages.join(',')}, status: 400
     end
   end
+
   def destroy
     @image = Image.find(params[:id])
     @image.destroy 
