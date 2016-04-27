@@ -1,7 +1,8 @@
 /*
+
  *= require dropzone/dropzone
  *= require_self
-
+ 
  */
 
 @import "bootstrap-sprockets";
@@ -166,6 +167,22 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   height: 220px;
 }
 
+/*Bookmark Bar*/
+  .bookmark-bar{
+    background: white;
+    box-shadow: 0 2px 3px #ccc;
+    width: 500px;
+    height: 1500px;
+    position:fixed;
+    float: right;
+    right: 0;
+    display: none; /*remove this on deploy*/
+    overflow-y: auto;
+    z-index: 1000;
+    padding-right: 250px;
+    transition: all 0.4s ease 0s;
+  }
+
 .featureList .item img {
   position: absolute;
   top: 0;
@@ -182,7 +199,6 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   width: 30%;
   background: rgba(255, 255, 255, 0.85);
 }
-
 
 .feature-short-info{
   position: relative;

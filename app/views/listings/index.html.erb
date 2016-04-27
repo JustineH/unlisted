@@ -42,7 +42,7 @@
           <div class="feature-short-info">
             <p class="muted regular address"><em><%= listing.address %></em></p>
             <div class="muted regular area">
-              <%= listing.size %> sqr/ft
+              <%= listing.size %> sqft
             </div>
             <div class="bedbath"><%= listing.bedrooms %>
               <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
@@ -57,6 +57,7 @@
             <%= link_to 'Bookmark',listing_add_bookmark_path(:listing_id=>listing.id) %>
     <!-- Listing box Ends-->
 <% end %>
+<%= paginate @listings %>
 
 </div>
 
