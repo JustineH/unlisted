@@ -288,6 +288,13 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     /*transform: translate(0);*/
   }
   
+  #no-bookmark-yet{
+    /*position: fixed;*/
+    font-size: 23px;
+    text-align: center;
+    color: white;
+  }
+
   .bookmark-bar #bottom-background-box{
     margin: .4em .4em 10em .4em;
     background-color: #ecf0f1;
