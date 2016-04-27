@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
     if params[:query]
         @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
     else
-      @listings = Listing.page(params[:query]).per(12).all
+      @listings = Listing.page(params[:page]).per(12)
     end
 
     if @listings.empty?
