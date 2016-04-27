@@ -67,7 +67,9 @@
       </div>
 
 <br>
-
+    <% unless @listing.new_record? %>
+        <%=link_to 'edit photos', listing_basic_path(@listing) %> 
+    <% end %>
 
      </div> <!-- basic-page -->
 
