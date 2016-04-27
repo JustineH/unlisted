@@ -151,13 +151,25 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   }*/
 
   .listing{
-    padding: 0em 5em 0em 5em;
+    margin-top: 2%;
+    margin-left: 10%;
     transition: all 0.4s ease 0s;
   }
 
-  .listing-collapse {
-    padding: 0em 30em 0em 5em;
+  .listing-collapse{
+    margin-left: 1%;
+    transition: all 0.4s ease 0s;
   }
+  .listing-box{
+    position: inline-block;
+    width: 500px;
+     margin: 0 auto;
+    transition: all 0.4s ease 0s;
+  }
+
+/*  .listing-collapse {
+    padding: 0em 30em 0em 5em;
+  }*/
 
   #home-page-listing{
     padding-top: 2em;
@@ -195,7 +207,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     padding-left: .5em;
     padding-right: .5em;
     font-size: 20px;
-    width: 150px;
+    width: 120px;
     background: rgba(255, 255, 255, 0.85);
     /*top: -1.5em;*/
     top: 1em;
@@ -206,21 +218,19 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     position: relative;
     text-align: left;
     font-size: 16px;
-    /*top: -2.0em;*/
     top: 1em;
+    line-height: .8em;
   }
 
-  .area{
+  /*Bookmark icon*/
+  .bookmark{
     position: relative;
     float: right;
     right: 30px;
-    top: -2.1em;
+    bottom: 15px;
+    font-size: 30px;
   }
 
-  .bedbath{
-    position: relative;
-    top: -0.7em;
-  }
 
 
 /*footer*/
@@ -247,22 +257,37 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   }
 
 /*Bookmark Bar*/
+  #bookmark_count{
+  }
+
+  #bookmark-heading{
+    border-bottom: 1px;
+    padding: 1em 1em 1em 1em;
+    margin: .3em .3em .3em .3em;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+    background-color: #C7885A;
+  }
   .bookmark-bar{
-    margin-top: 5em;
+    margin-top: 5.5em;
     background: white;
     text-align: left;
     box-shadow: 0 2px 3px #ccc;
-    width: 400px;
-    height: 80%;
+    width: 350px;
+    height: 90%;
     position:fixed;
     overflow-y: auto;
     z-index: 1000;
-    padding: 1em;
+   /* padding: 1em;*/
     transition: all 0.4s ease 0s;
     right: 0;
     transform: translate(510px);
     /*transform: translate(0);*/
   }
+
+
 
   .bookmark-bar-toggle{
     transform: translate(0);
@@ -272,17 +297,29 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   ul{
     list-style-type: none;
   }
+
+  .user_bookmarks {
+    margin: .4em .4em .4em .4em;
+    padding-top: 2em;
+    background-color: #F2E2C8;
+  }
+
   .user_bookmarks li{
     position: relative;
-    padding-bottom: 2em;
-    font-size: 16px;
+    padding-bottom: 5em;
+    font-size: 20px;
 
+  }
+
+  .bookmark_item {
+    padding-bottom: 3em;
   }
 
   .user_bookmarks img{
     width: 120px;
     float: left;
     padding-right: 2em;
+    padding-left: 1em;
   }
 
   .user_bookmarks .price{
@@ -290,9 +327,30 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     padding-right: 2em;
   }
 
-  .user_bookmarks .remove-bookmark{
+  .user_bookmarks .remove_bookmark{
+    position: relative;
+    right: 1em;
     float: right;
+    font-size: 25px;
+
   }
+
+  .user_bookmarks a{
+    text-decoration: none;
+  }
+
+ /* .user_bookmarks a:active{
+    text-decoration: none;
+  }
+  .user_bookmarks a:active{
+    text-decoration: none;
+  }
+
+  .user_bookmarks a:active{
+    text-decoration: none;
+  }
+*/
+
 
 /*  @media (max-width:767px) {
     .bookmark-bar{

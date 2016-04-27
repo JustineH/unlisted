@@ -7,7 +7,8 @@ $(function(){
   });
 
   $('.user_bookmarks').on('ajax:success', '.remove_bookmark', function () {
-    $(this).parent('.bookmark_item').fadeOut(function () { this.remove(); });
+    $(this).parent('.bookmark_item').remove();
+    // $(this).parent('.bookmark_item').fadeOut(function () { this.remove(); });
   });
 
   function BookmarksManager () {
