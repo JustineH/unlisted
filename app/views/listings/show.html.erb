@@ -13,7 +13,7 @@
         <% end %>
      
         <p>Address: <span id="address"><%= @listing.address.titleize %></span></p>
-        <p>Price: $<%= @listing.price %></p>
+        <p>Price: $<%= to_currency(@listing.price) %></p>
         <p><%= @listing.bedrooms %> bathrooms</p>
         <p><%= @listing.bathrooms %> bathrooms</p>
         <p>Size: <%= @listing.size %> sqft</p>
