@@ -17,7 +17,7 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy 
-    redirect_to @image.listing
+    redirect_to :back
   end
 
 
