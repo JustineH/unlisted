@@ -819,7 +819,9 @@ footer {
   margin-top: 10px;
   background-color: #fff;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
 }
 
 #special-features-wrap {
@@ -827,7 +829,9 @@ footer {
   margin-top: 10px;
   background-color: #fff;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
 }
 
 #special-features-box > h4 {
@@ -836,20 +840,26 @@ footer {
 #special-features-box > p {
   padding: 30px;
   padding-top: 0;
-  font-size: 20px;
-  font-weight: 0; 
 }
 
+.show-heading-light {
+  font-weight: 200;
+  font-size: 25px;
+  padding-left: 12px;
+}
 #property-description-box > p {
   padding: 30px;
   padding-top: 0;
-  font-size: 20px;
-  font-weight: 0; 
+  font-weight: 200;
+  font-size: 15px; 
 }
 
+
 #general-features-show-box > div > p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 0;
+  font-weight: 200;
+  font-size: 15px; 
 }
 
 #general-features-show-box > div > p:last-child {
@@ -857,8 +867,10 @@ footer {
 }
 
 #indoor-outdoor-features-show-box > div > p {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 0;
+  font-weight: 200;
+  font-size: 15px; 
 }
 
 #indoor-outdoor-features-show-box > div > p:last-child {
@@ -873,11 +885,17 @@ footer {
 }
 
 #address-show-box > p {
-  font-size: 22px;
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 10px;
 }
 
+
 #price-show-box > p {
-  font-size: 22px;
+  text-align: right;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 28px;
 }
 
 #indoor-outdoor-wrap {
@@ -885,15 +903,25 @@ footer {
   margin-top: 10px;
   background-color: #fff;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 200;
+  margin-left: 15px;
+  width: 97.5%;
 }
+
+// #indoor-outdoor-wrap > p{
+//   font-weight: 200;
+//   font-size: 15px; 
+// }
 
 #general-features-wrap {
   position: relative;
   margin-top: 10px;
   background-color: #fff;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 97.5%;
 }
 
 .show-bg {
