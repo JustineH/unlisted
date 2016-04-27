@@ -138,86 +138,115 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   transform: translateY(0);
 }
 
+
+
+
 /*Listing Box*/
 
-#feature-listing{
-  padding: 5em 5em 1em 5em; 
-}
-.featureList{
-  margin: 40px 0;
-  padding-bottom: 60px;
-  background: white;
-  box-shadow: 0 2px 3px #ccc;
-  /*height: 350px;*/
-  height: 220px;
-}
-
-/*
-.listing > .item > img{
-  width:100%;
-  max-height: 220px;
-}
-*/
-.listing-box-info{
-  position: relative;
-  top: -3.7em;
-  left: 1.0em;
-}
-
-.featureList .carousel .item {
-  height: 220px;
-}
-
-/*Bookmark Bar*/
-  .bookmark-bar{
+  #feature-listing{
+    padding: 1em 5em 1em 5em; 
+    background: #E3E5EB;
+  }
+  .featureList{
+    margin: 40px 0;
+    padding-bottom: 60px;
     background: white;
     box-shadow: 0 2px 3px #ccc;
-    width: 500px;
-    height: 1500px;
-    position:fixed;
-    float: right;
-    right: 0;
-    display: none; /*remove this on deploy*/
-    overflow-y: auto;
-    z-index: 1000;
-    padding-right: 250px;
+    height: 275px;
+    /*width: 420px;*/
+    /*max-width: 420px;*/
+    /*need to center this block*/
+  }
+
+/*  #feature-listing{
+    padding-top: 2em;
+    background-color: #E7E9EB;
+  }*/
+
+  .listing{
+    margin-top: 2%;
+    margin-left: 10%;
     transition: all 0.4s ease 0s;
   }
 
-.featureList .item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 220px;
-}
+  .listing-collapse{
+    margin-left: 1%;
+    transition: all 0.4s ease 0s;
+  }
+  .listing-box{
+    position: inline-block;
+    width: 500px;
+     margin: 0 auto;
+    transition: all 0.4s ease 0s;
+  }
 
-.property-price{
-  position: relative;
-  text-align: left;
-  top: -1.5em;
-  padding-left: .5em;
-  padding-right: .5em;
-  width: 30%;
-  background: rgba(255, 255, 255, 0.85);
-}
+/*  .listing-collapse {
+    padding: 0em 30em 0em 5em;
+  }*/
 
-.feature-short-info{
-  position: relative;
-  text-align: left;
-  top: -2.3em;
-}
+  #home-page-listing{
+    padding-top: 2em;
+  }
+  .listing .c-control{
+    height: 220px;
+  }
 
-.area{
-  position: relative;
-  float: right;
-  right: 30px;
-  top: -2.1em;
-}
+  .carousel-control.left, .carousel-control.right {
+    background-image: none
+  }
 
-.bedbath{
-  position: relative;
-  top: -1em;
-}
+  .listing-box-info{
+    position: relative;
+    top: -3.7em;
+    left: 1.0em;
+  }
+
+  .featureList .carousel .item {
+    height: 220px;
+    /*width: 420px;*/
+  }
+
+  .featureList .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 220px;
+    /*max-width: 420px;*/
+  }
+
+  .property-price{
+    position: relative;
+    text-align: left;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: 20px;
+    width: 120px;
+    background: rgba(255, 255, 255, 0.85);
+    /*top: -1.5em;*/
+    top: 1em;
+  }
+
+
+  .feature-short-info{
+    position: relative;
+    text-align: left;
+    font-size: 16px;
+    top: 1em;
+    line-height: .8em;
+  }
+
+  /*Bookmark icon*/
+  .bookmark{
+    position: relative;
+    float: right;
+    right: 30px;
+    bottom: 15px;
+    font-size: 30px;
+    color: #3498db
+  }
+
+
+
 
 footer {
   padding-top: 1em;

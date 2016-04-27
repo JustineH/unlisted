@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :listings do
-    get :add_bookmark 
+    post :add_bookmark 
+    delete :del_bookmark 
     get :basic
   end
   resources :images
