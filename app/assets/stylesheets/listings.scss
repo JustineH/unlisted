@@ -263,7 +263,7 @@ footer {
 
 
 #head-top {
-  margin-top: -20px;
+  position: relative;
 }
 
 .side-nav-a {
@@ -336,7 +336,10 @@ footer {
   opacity: 0.5;
 }
 
-
+.side-nav-clicked {
+  background-color: #EDEFED;
+  transition: 0.2s;
+}
 
 //----------
 //----------
@@ -630,12 +633,6 @@ footer {
 
 .amenities-wrap {
   width: 60%;
-}
-
-#summary-wrap {
-}
-
-.hint-box-wrap{
 }
 
 .no-padding {

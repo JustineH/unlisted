@@ -96,7 +96,7 @@ footer {
   background-color: #F5F5F5; }
 
 #head-top {
-  margin-top: -20px; }
+  position: relative; }
 
 .side-nav-a {
   text-align: center;
@@ -151,6 +151,10 @@ footer {
 
 #photodiv:hover {
   opacity: 0.5; }
+
+.side-nav-clicked {
+  background-color: #EDEFED;
+  transition: 0.2s; }
 
 .basics-header {
   text-align: center;
