@@ -53,10 +53,7 @@ $font_0: sans-serif;
   margin-left: 38px;
 }
 
-#map {
-  height: 550px;
-  width: 100%;
-}
+
 
 .no-padding {
   padding-right: 0;
@@ -773,3 +770,124 @@ footer {
       font-weight: 600;
     }
 }
+
+// SHOW PAGE ---
+
+#address-show-box {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#price-show-box{
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#property-description-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#general-features-show-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+#indoor-outdoor-features-show-box{
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#property-description-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+#special-features-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+#special-features-box > h4 {
+  padding-top: 15px;
+}
+#special-features-box > p {
+  padding: 30px;
+  padding-top: 0;
+  font-size: 20px;
+  font-weight: 0; 
+}
+
+#property-description-box > p {
+  padding: 30px;
+  padding-top: 0;
+  font-size: 20px;
+  font-weight: 0; 
+}
+
+#general-features-show-box > div > p {
+  font-size: 16px;
+  font-weight: 0;
+}
+
+#general-features-show-box > div > p:last-child {
+  padding-bottom: 30px;
+}
+
+#indoor-outdoor-features-show-box > div > p {
+  font-size: 16px;
+  font-weight: 0;
+}
+
+#indoor-outdoor-features-show-box > div > p:last-child {
+  padding-bottom: 30px;
+}
+
+#map {
+  height: 350px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#address-show-box > p {
+  font-size: 22px;
+}
+
+#price-show-box > p {
+  font-size: 22px;
+}
+
+#indoor-outdoor-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+#general-features-wrap {
+  position: relative;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.show-bg {
+  background-color: #ecf0f1;
+}
+
+
