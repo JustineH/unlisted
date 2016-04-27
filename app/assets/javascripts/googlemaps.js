@@ -65,8 +65,8 @@ var map;  // Google map object
     map.setZoom( zoom ); 
 
     var image = {
-      url: 'http://missao.cancaonova.com/images/house_marker_on.png',
-      size: new google.maps.Size(29, 54), 
+      url: 'https://www.afbostader.se/Views/assets/img/house_marker.png',
+      size: new google.maps.Size(43, 52), 
     };
   
     var shape = {

@@ -4,9 +4,6 @@
 <br>
 <div class="container">
 
-
-
-
 <div class="col-md-6 col-sm-6 col-xs-12"> <!-- address -->
   <div id="address-show-box"> <!-- address-show-box -->
      <p> <span id="address"><%= @listing.address.titleize %>- Vancouver</span></p>
@@ -61,7 +58,7 @@
       <p><strong>Bedroom(s):</strong> <%= @listing.bedrooms %> </p>
       <p><strong>Bathroom(s):</strong> <%= @listing.bathrooms %></p>
       <p><strong>Half Bathrooms:</strong> <%= @listing.half_bathrooms %></p>
-      <p><strong>Size:</strong> <%= @listing.size %> sqft</p>
+      <p><strong>Size:</strong> <%= to_currency(@listing.size) %> sqft</p>
       <p><strong>Levels:</strong> <%= @listing.levels%></p>
     </div><!--  end left col -->
 
@@ -77,7 +74,7 @@
       <p><strong>Fireplaces:</strong> <%= @listing.fireplaces%></p>
       <p><strong>Taxes:</strong> $<%= to_currency(@listing.taxes) %></p>
       <p><strong>Strata Fees:</strong> $<%= to_currency(@listing.strata_fees) %> </p>
-      <p><strong>Lot Size:</strong> <%= @listing.lot_size%></p>
+      <p><strong>Lot Size:</strong> <%= to_currency(@listing.lot_size) %></p>
       
     </div> <!-- end right col -->
 
