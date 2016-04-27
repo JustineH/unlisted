@@ -21,9 +21,16 @@ $color_star_dust_approx: #989da0;
     width: 100px;
     border: 2px solid #fff;
   }
+
   .title {
     margin: 50px 0;
   }
+
+  .title p {
+    position: relative;
+    bottom: 15px;
+  }
+
   .cover .overlay {
     height: 250px;
     padding-top: 60px;
@@ -34,6 +41,7 @@ $color_star_dust_approx: #989da0;
     opacity: 1;
   }
 }
+
 .muted {
   color: $color_star_dust_approx;
   width: 80%;

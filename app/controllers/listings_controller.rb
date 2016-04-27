@@ -12,11 +12,6 @@ class ListingsController < ApplicationController
     if @listings.empty?
       flash[:notice] = "No matching results found for #{params[:query]}. Please modify your search criteria and try searching again."
     end
-
-    if current_user
-      @user = current_user.id
-      @bookmarked_listings = current_user.bookmarked_listings
-    end
   end
 
   def show
