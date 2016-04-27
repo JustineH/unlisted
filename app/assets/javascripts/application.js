@@ -17,6 +17,8 @@
 //= require dropzone
 //= require ./form-wizard
 //= require ./googlemaps
+//= require masonry/jquery.masonry
+
 // require_tree .
 
 
