@@ -1,3 +1,6 @@
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "alert alert-info") %>
+<% end %>
 
 <section class="overlay search">
   <div class="vertical-center">

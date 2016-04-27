@@ -4,9 +4,13 @@ class ListingsController < ApplicationController
 
   def index
     if params[:query]
-      @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
+        @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
     else
       @listings = Listing.page(params[:query]).per(12).all
+    end
+
+    if @listings.empty?
+      flash[:notice] = "No matching results found for #{params[:query]}. Please modify your search criteria and try searching again."
     end
 
     if current_user
