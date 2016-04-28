@@ -37,17 +37,21 @@
     </div>
   </div>
 </section>
-<% @listing.images.each do |image| %>
-<%= image_tag image.image.url(:large), alt: image.image.url(:thumb) %>
-<% end %>
+
 </div> <!-- picture/carasel end -->
 
 
-
 <div class="col-md-12 col-sm-12 col-xs-12" id="property-description-wrap"> <!-- property summary -->
+
   <div id="property-description-box">
+  <div class="contact-wrap">
+    <%= mail_to User.find(current_user.id).email do %>
+      <strong>Contact Seller</strong> 
+    <% end %>
+  </div>
     <h4 class="show-heading-light">Property Summary</h4><br>
     <p><%= @listing.property_summary %></p>
+    
   </div>
 </div> <!-- end property summary  -->
 
