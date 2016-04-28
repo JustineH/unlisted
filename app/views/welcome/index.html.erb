@@ -1,3 +1,7 @@
+<%= render 'layouts/header' %>
+
+
+
 <!-- Carousel Begins-->
 
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
@@ -5,13 +9,13 @@
     <div class="shadow-layer"></div>
     <div class="carousel-inner">
       <div class="item active">
-        <%= image_tag "welcome_bg1_1900_700.png" %>
+        <%= image_tag "welcome_bg1_1900_1200.png" %>
       </div>
       <div class="item">
-        <%= image_tag "welcome_bg2_1900_700.png" %>
+        <%= image_tag "welcome_bg2_1900_1200.png" %>
       </div>
       <div class="item">
-        <%= image_tag "welcome_bg3_1900_700.png" %>
+        <%= image_tag "welcome_bg3_1900_1200.png" %>
       </div>
     </div>
   </div>
@@ -20,10 +24,14 @@
 <!-- Carousel Ends-->
 
 <!-- Search Box Cluster Begins-->
-
+<h1 id="tagline">The easiest way to list and buy a home.</h1>
 <%= render 'layouts/search' %>
 
 <!-- Search Box Cluster Ends -->
+
+
+
+<!-- Choose Us Begins -->
 
 <section id="choose-us" class="anchor">
 
@@ -49,31 +57,40 @@
 </div>
 </section>
 
+<!-- Choose Us Ends -->
+
+
+
+
 <!-- Feature Listing Begins -->
 
 <section id="feature-listing"> 
+
   <h3 class="heading">Featured Listings</h3>
   <h5 class="sub-heading"><em>Vancouver</em></h5>
-   <div class="row">
 
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12 ">
+
+
+
+<!-- Listing Box Begins -->
+<div class="row listing">
+
+
+
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/property1_1.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/property1_2.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/property1_3.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -82,44 +99,37 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$3459053</h4>
+            <div class="feature-short-info">
+              <p class="address">123 Alberta St.</p>
+              <p>
+                <span class="bedroom">2 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
 
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12">
+
+
+<div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-2" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/1.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/17.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/3.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-2" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -128,44 +138,36 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$2456783</h4>
+            <div class="feature-short-info">
+              <p class="address">123 Georgia St.</p>
+              <p>
+                <span class="bedroom">2 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
 
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12">
+
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-3" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/4.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/5.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/6.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-3" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -174,44 +176,36 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$586023</h4>
+            <div class="feature-short-info">
+              <p class="address">12 Howe St.</p>
+              <p>
+                <span class="bedroom">1 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
-    
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12">
+
+
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-4" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/7.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/999.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/9.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-4" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -220,44 +214,37 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$1345123</h4>
+            <div class="feature-short-info">
+              <p class="address">123 Yew St.</p>
+              <p>
+                <span class="bedroom">1 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
 
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12">
+
+
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-5" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/10.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/11.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/12.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-5" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -266,44 +253,37 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$623123</h4>
+            <div class="feature-short-info">
+              <p class="address">1231 Hastings St.</p>
+              <p>
+                <span class="bedroom">1 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
 
-    <!-- Listing box Begins-->
-    <div class="col-md-4 col-sm-6 cols-xs-12">
+
+
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
         <div id="carousel-listing-6" class="carousel slide" data-ride="carousel">
-
           <div class="carousel-inner">
             <div class="item active">
-               <%= image_tag "listing_images/property1_1.jpg" %>
+              <%= image_tag "listing_images/14.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/15.jpg" %>
             </div>
             <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/16.jpg" %>
             </div>
           </div>
-
           <a class="left carousel-control c-control" href="#carousel-listing-6" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -312,28 +292,32 @@
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$1,400,000</h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em>1234 Cambie St. Vancouver</em></p>
-            <div class="muted regular area">
-              2,345 sq ft
-            </div>
-            <div class="bedbath">
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$783123</h4>
+            <div class="feature-short-info">
+              <p class="address">1231 Broadway St.</p>
+              <p>
+                <span class="bedroom">2 Bedrooms</span>
+                <span class="bathroom">3 Bathrooms</span>
+                <span class="size">3214 sqr/ft</span>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Listing box Ends-->
-  </div>
+
+
+
+
+</div>
+
+<!-- Listing Box Ends -->
+
+
 </section>
 <!-- Feature Listing Ends -->
 
 
 
+  <%= render 'layouts/footer' %>

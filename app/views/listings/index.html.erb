@@ -1,63 +1,55 @@
+<%= render 'layouts/header' %>
 <%= render 'layouts/bookmarkRightBar' %>
-<%= render 'layouts/search' %>
+<%#= render 'layouts/search' %>
 
-
-
-<br>
-   <div class="row listing">
-    <% @listings.each do |listing| %>
-    <!-- Listing box Begins-->
-    <div class=" col-md-4 col-sm-6 cols-xs-12 ">
+<!-- Listing Box Begins -->
+<div class="row listing">
+  <% @listings.each_with_index do |listing, index| %>
+    <div class=" listing-box col-md-4 col-sm-4 cols-xs-12 ">
       <div class="featureList text-center">
-
-        <div id="carousel-listing-1" class="carousel slide" data-ride="carousel">
-
+        <div id="carousel-listing-<%= index+1 %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="item active">
-              <% if listing.images.first %>
-               <%= link_to image_tag(listing.images.first), listing %>
-              <%end%>
+            
+
+        <% listing.images.each_with_index do |image, index| %>
+            <div class=
+            <% if index==0 %> "item active" <% else %> "item" <% end %>
+            >
+              <%= image_tag image.image.url(:large), alt: image.image.url(:thumb) %>
             </div>
-            <div class="item">
-               <%= image_tag "listing_images/property1_2.jpg" %>
-            </div>
-            <div class="item">
-               <%= image_tag "listing_images/property1_3.jpg" %>
-            </div>
+          <% end %>
+
+
+
           </div>
-        
-        
-          
-          <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">
+          <a class="left carousel-control c-control" href="#carousel-listing-<%= index+1 %>" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="next">
+          <a class="right carousel-control c-control" href="#carousel-listing-<%= index+1 %>" role="button" data-slide="next">
             <span class="icon-next" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        <div class="listing-box-info">
-          <h4 class="regular property-price">$<%= link_to listing.price, listing %></h4>
-          <div class="feature-short-info">
-            <p class="muted regular address"><em><%= listing.address %></em></p>
-            <div class="muted regular area">
-              <%= listing.size %> sqft
-            </div>
-            <div class="bedbath"><%= listing.bedrooms %>
-              <p class="muted regular bedroom"><em><i class="fa fa-bed" aria-hidden="true"></i></em>
-                <container class="bathroom"><em><%= listing.bathrooms %>bath</em></container>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$<%= to_currency(listing.price) %></h4>
+            <div class="feature-short-info">
+              <p class="address"><%= listing.address %></p>
+              <p>
+                <span class="bedroom"><%= listing.bedrooms %> Bedrooms</span>
+                <span class="bathroom"><%= listing.bathrooms %> Bathrooms</span>
+                <span class="size"><%= to_currency(listing.size) %> sqr/ft</span>
+                <%= link_to '<i class="fa fa-bookmark-o" aria-hidden="true"></i>'.html_safe,listing_add_bookmark_path(:listing_id=>listing.id), 'data-method' => 'post', 'data-remote' => 'true', 'data-type' => 'json', 'class' => 'bookmark' %>
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-                <p><%= listing.id %></p>
-            <%= link_to 'Bookmark',listing_add_bookmark_path(:listing_id=>listing.id) %>
-    <!-- Listing box Ends-->
-<% end %>
-<%= paginate @listings %>
-
+  <% end %>
 </div>
+
+<!-- Listing Box Ends -->
+
+<div id="page_number">  <%= paginate @listings %> </div>
+  <%= render 'layouts/footer' %>
+

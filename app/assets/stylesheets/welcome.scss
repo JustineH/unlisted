@@ -7,11 +7,7 @@
   
 
   /*carousel*/
-.carousel{
 
-  position: relative;
-  top: -50px;
-}
   .carousel-fade {
     .carousel-inner {
       .item {
@@ -45,6 +41,7 @@
   }
 
 
+
   .shadow-layer {
     position: absolute;
     top: 0;
@@ -70,14 +67,20 @@
 
 
   #tagline {
+    text-align: center; 
     color: #fff;
     font-size: 60px;
-    font-weight: 100;
+    font-weight: 200;
     padding-bottom: .5em;
+    position: relative;
+    top: -700px;
+    z-index: 9;
   }
 
   .search{
-    top: 150px;
+    /*top: 150px;*/
+    position: relative;
+    top: -700px;
     width: 100%;
   }
 
@@ -124,7 +127,7 @@
 /*section global*/
   .heading{
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
   }
 
@@ -138,6 +141,8 @@
 /*choose us*/
   #choose-us{
     text-align: center;
+    position: relative;
+    top: -100px;
     padding: 0em 8em 10em 8em;
   }
 

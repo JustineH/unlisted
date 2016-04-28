@@ -1,4 +1,3 @@
-
 /*
  *= require dropzone_custom
  */
@@ -11,6 +10,108 @@
 html, body{
   -webkit-font-smoothing: antialiased;
 }
+
+
+
+
+/*Bookmark Bar*/
+  #bookmark_count{
+  }
+
+  #bookmark-heading{
+    border-bottom: 1px;
+    padding: 1em 1em 1em 1em;
+    margin: .3em .3em .3em .3em;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+    background-color: #bdc3c7;
+  }
+  .bookmark-bar{
+    margin-top: 2.5em;
+    background: white;
+    text-align: left;
+    box-shadow: 0 2px 3px #ccc;
+    width: 350px;
+    height: 90%;
+    position:fixed;
+    overflow-y: auto;
+    z-index: 1000;
+   /* padding: 1em;*/
+    transition: all 0.4s ease 0s;
+    right: 0;
+    transform: translate(510px);
+    /*transform: translate(0);*/
+  }
+  
+  #no-bookmark-yet{
+    /*position: fixed;*/
+    font-size: 23px;
+    text-align: center;
+    color: white;
+  }
+
+  .bookmark-bar #bottom-background-box{
+    margin: .4em .4em 10em .4em;
+    background-color: #ecf0f1;
+    height: 100%
+  }
+
+
+  .bookmark-bar-toggle{
+    transform: translate(0);
+  }
+
+
+  ul{
+    list-style-type: none;
+  }
+
+  .user_bookmarks {
+    margin: .4em .4em .4em .4em;
+    padding-top: 2em;
+    
+  }
+
+  .user_bookmarks li{
+    position: relative;
+    padding-bottom: 5em;
+    font-size: 20px;
+
+  }
+
+  .bookmark_item {
+    padding-bottom: 3em;
+  }
+
+  .user_bookmarks img{
+    width: 120px;
+    float: left;
+    padding-right: 2em;
+    padding-left: 1em;
+  }
+
+  .user_bookmarks .price{
+    display: inline-block;
+    padding-right: 2em;
+  }
+
+  .user_bookmarks .remove_bookmark{
+    position: relative;
+    right: .3em;
+    float: right;
+    font-size: 25px;
+
+  }
+
+  .user_bookmarks a{
+    text-decoration: none;
+    color: #2c3e50;
+  }
+
+
+
 
 //form colors
 $white: #ffffff;
@@ -150,7 +251,8 @@ footer {
 }
 // SIDEBAR
 .side-bar {
-  height: 120vh;
+  height: 900px;
+  margin-bottom: -10%;
   width: 200px;
   background-color: #F5F5F5;
 }
@@ -446,8 +548,8 @@ footer {
 .home-neighbor-wrap select {
   -webkit-appearance: menulist-button;
   background-color: #fff;
-  height: 50px;
-  width: 430px;
+  height: 40px;
+  width: 50%;
 }
 }
 
@@ -472,6 +574,7 @@ footer {
 .details-input-sm {
   width: 100%;
   height: 40px;
+  padding-left: 10px;
   margin-right: 10px;
 }
 
@@ -702,11 +805,10 @@ footer {
 
     .details-button-wrap{
       margin-top: 5px;
-      width: 220%;
+      width: 90%;
       vertical-align: middle;
       padding-right: 80%;
       display: inline-block;
-      // border: 1px solid black;
     }
 
     .details-head {
@@ -908,11 +1010,6 @@ footer {
   margin-left: 15px;
   width: 97.5%;
 }
-
-// #indoor-outdoor-wrap > p{
-//   font-weight: 200;
-//   font-size: 15px; 
-// }
 
 #general-features-wrap {
   position: relative;

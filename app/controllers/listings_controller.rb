@@ -19,7 +19,17 @@ class ListingsController < ApplicationController
   end
 
   def add_bookmark
-    @bookmark = Bookmark.create user_id: current_user.id, listing_id: params[:listing_id]
+
+    @bookmark = Bookmark.new user_id: current_user.id, listing_id: params[:listing_id]
+    if @bookmark.save
+      render json: @bookmark.as_json(include: :listing)
+    end
+   
+  end
+
+  def del_bookmark
+    Bookmark.find_by(user_id: current_user.id, listing_id: params[:listing_id]).destroy
+    render nothing: true
   end
 
   def new
