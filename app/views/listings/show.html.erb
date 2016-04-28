@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <div class="show-bg">
 <br>
 <br>
@@ -5,9 +7,6 @@
 <div class="container">
 
 
-
-
-<%= render 'layouts/header' %>
 
 <div class="col-md-6 col-sm-6 col-xs-12"> <!-- address -->
   <div id="address-show-box"> <!-- address-show-box -->
@@ -63,7 +62,7 @@
       <p><strong>Bedroom(s):</strong> <%= @listing.bedrooms %> </p>
       <p><strong>Bathroom(s):</strong> <%= @listing.bathrooms %></p>
       <p><strong>Half Bathrooms:</strong> <%= @listing.half_bathrooms %></p>
-      <p><strong>Size:</strong> <%= @listing.size %> sqft</p>
+      <p><strong>Size:</strong> <%= to_currency(@listing.size) %> sqft</p>
       <p><strong>Levels:</strong> <%= @listing.levels%></p>
     </div><!--  end left col -->
 
@@ -71,15 +70,15 @@
     padding-left: 30px;"> <!-- right col -->
       <p><strong>Year Built:</strong> <%= @listing.year_built %> </p>
       <p><strong>Home Type:</strong> <%= @listing.home_type %> </p>
-      <p><strong>Type Ownership:</strong> <%= @listing.type_ownership %></p>
+      <p><strong>Type Ownership:</strong> <%= @listing.type_ownership.capitalize %></p>
       <p><strong>Neighbourhood:</strong> <%= @listing.neighbourhood.name%></p>      
     </div> <!-- end right col -->
     <div class="col-md-4 col-sm-4 col-xs-12" style="
     padding-left: 30px;"> <!-- right col -->
       <p><strong>Fireplaces:</strong> <%= @listing.fireplaces%></p>
-      <p><strong>Taxes:</strong> <%= @listing.taxes %></p>
-      <p><strong>Strata Fees:</strong> <%= @listing.strata_fees %> </p>
-      <p><strong>Lot Size:</strong> <%= @listing.lot_size%></p>
+      <p><strong>Taxes:</strong> $<%= to_currency(@listing.taxes) %></p>
+      <p><strong>Strata Fees:</strong> $<%= to_currency(@listing.strata_fees) %> </p>
+      <p><strong>Lot Size:</strong> <%= to_currency(@listing.lot_size) %></p>
       
     </div> <!-- end right col -->
 
@@ -136,4 +135,4 @@
 <br>
 
 </div> <!-- end container -->
-</div> <!-- end show-bg -->
+  <%= render 'layouts/footer' %>
