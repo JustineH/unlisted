@@ -1,7 +1,7 @@
 var map;  // Google map object
   
   // Initialize and display a google map
-  function initialize() {
+  function initMap() {
     // Create a Google coordinate object for where to initially center the map
     var latlng = new google.maps.LatLng( 49.2827, -123.1207 ); // Vancouver, BC
     

@@ -38,10 +38,10 @@
   <% @listing.images.each do |image| %>
     <div class="upload_photos_box">
       <div class="col-md-4 col-sm-4 col-xs-12">
-        <div class="img-thumbnail">
+        <!-- <div class="img-thumbnail"> -->
           <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
           <%= link_to "Delete", image, method: :delete %>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   <% end %>
