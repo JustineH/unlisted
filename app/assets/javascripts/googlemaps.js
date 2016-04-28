@@ -67,7 +67,7 @@ var map;  // Google map object
     map.setZoom( zoom ); 
 
     var image = {
-      url: '/assets/home_marker_50x50.png',
+      url: '/assets/goog_marker.png',
       size: new google.maps.Size(50, 50), 
     };
   
