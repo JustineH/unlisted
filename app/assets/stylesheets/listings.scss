@@ -325,6 +325,7 @@ footer {
 }
 
 
+
 #basicdiv:hover{
   opacity: 0.5;
 }
@@ -516,12 +517,13 @@ footer {
 #to-photos{
   float: left;
   background-color: #ff5a5f;
-  padding: 9px 27px;
+  padding: 9px 23px;
   margin-top: 20px;
   border-radius: 2px;
   color: #fff;
   line-height: 1.43;
   font-weight: 600;
+  border: none;
 }
 
 #to-photos:hover{
@@ -1026,4 +1028,20 @@ footer {
 
 .show-bg {
   background-color: #ecf0f1;
+}
+
+.contact-wrap {
+  padding: 9px 27px;
+  background: #fff;
+  border: 1px solid black;
+  display: inline-block;
+  float: right;
+}
+
+.contact-wrap a:hover{
+  text-decoration: none;
+}
+
+.contact-wrap:hover {
+  text-decoration: none;
 }
