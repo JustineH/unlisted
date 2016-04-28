@@ -15,10 +15,11 @@
 /*Font*/
 
  /* use Proxima Nova? need to import font */
-/*body {
-  font-family: "SOURCE SANS PRO", serif;
-  font-family: "arial", sans-serif;
-}*/
+body, html {
+  // font-family: "SOURCE SANS PRO", serif;
+  // font-family: "arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
 #content_container{
   
@@ -246,15 +247,84 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   }
 
 
-
+ // footer
+ // ------
+ // ------
 .footer {
   position: relative;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  margin-top: 10%;
   background-color: #454550;
-  height: 300px;
+  height: 280px;
   text-align: center;
+  margin-top: 10%;
+}
+
+.footer-nav-ul > li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 7%;
+  padding-right: 20px;
+}
+
+.footer-nav-ul > li > a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.24;
+}
+
+.footer-extra-nav-ul > li:first-child {
+  margin-top: 10%;
+}
+
+.footer-extra-nav-ul > li > a {
+  color: #909096;
+  font-size: 16px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.listings-footer-btn {
+  padding: 13px 26px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.listings-footer-btn:hover{
+  text-decoration: none;
+  background-color: #1E1E22;
+  color: #fff;
+}
+
+.foot-pad {
+  margin-top: -5%;
+  padding: 0;
+}
+
+.footer-hr {
+ display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #909096;
+    margin: 0 auto;
+    padding: 0; 
+    width: 40%;
+}
+
+.footer-p {
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 3%;
+}
+
+.footer-p-wrap {
+  width: 80%;
+  margin: 0 auto;
 }
