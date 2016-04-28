@@ -22,7 +22,6 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12"> <!-- picture/carasel -->
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
-  <div id="welcome-carousel">
     <div class="shadow-layer"></div>
     <div class="carousel-inner">
       <div class="item active">
@@ -35,7 +34,6 @@
         <%= image_tag "welcome_bg3_1900_700.png" %>
       </div>
     </div>
-  </div>
 </section>
 
 </div> <!-- picture/carasel end -->
@@ -132,11 +130,11 @@
 </div> <!-- indoor/outdoor features end -->
  
 <br>
-<div class="col-md-12 col-sm-12 col-xs-12"> <!-- map -->
+<div class="col-md-12 col-sm-12 col-xs-12" id="map-wrap"> <!-- map -->
   <div id="map"></div>
 </div> <!-- end map -->
 <br>
 <br>
 
 </div> <!-- end container -->
-  <%= render 'layouts/footer' %>
+  <%#= render 'layouts/footer' %>

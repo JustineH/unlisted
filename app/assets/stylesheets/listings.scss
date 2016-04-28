@@ -14,6 +14,7 @@ html, body{
 
 
 
+
 /*Bookmark Bar*/
   #bookmark_count{
   }
@@ -158,7 +159,9 @@ $font_0: sans-serif;
   height: 550px;
   width: 100%;
 }
-
+#map-wrap{
+  margin-bottom: 10%;
+}
 .no-padding {
   padding-right: 0;
 }
