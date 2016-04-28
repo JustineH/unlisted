@@ -37,7 +37,7 @@
               <p>
                 <span class="bedroom"><%= listing.bedrooms %> Bedrooms</span>
                 <span class="bathroom"><%= listing.bathrooms %> Bathrooms</span>
-                <span class="size"><%= to_currency(listing.size) %> sqr/ft</span>
+                <span class="size"><%= to_currency(listing.size) %> sq ft</span>
                 <%= link_to '<i class="fa fa-bookmark-o" aria-hidden="true"></i>'.html_safe,listing_add_bookmark_path(:listing_id=>listing.id), 'data-method' => 'post', 'data-remote' => 'true', 'data-type' => 'json', 'class' => 'bookmark' %>
               </p>
             </div>
