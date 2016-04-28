@@ -180,10 +180,14 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
 /*Listing Box*/
 
-  #feature-listing{
-    padding-top: 3em;
-    background: #E3E5EB;
+
+  .listing{
+
+    margin-top: 5%;
+    margin-left: 10%;
+    transition: all 0.4s ease 0s;
   }
+
   .featureList{
     margin: 40px 0;
     padding-bottom: 60px;
@@ -193,18 +197,6 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     /*width: 420px;*/
     /*max-width: 420px;*/
     /*need to center this block*/
-  }
-
-/*  #feature-listing{
-    padding-top: 2em;
-    background-color: #E7E9EB;
-  }*/
-
-  .listing{
-
-    margin-top: 5%;
-    margin-left: 10%;
-    transition: all 0.4s ease 0s;
   }
 
   .listing-collapse{

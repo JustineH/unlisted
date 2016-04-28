@@ -73,14 +73,14 @@
     font-weight: 200;
     padding-bottom: .5em;
     position: relative;
-    top: -700px;
+    top: -750px;
     z-index: 9;
   }
 
   .search{
     /*top: 150px;*/
     position: relative;
-    top: -700px;
+    top: -750px;
     width: 100%;
   }
 
@@ -153,6 +153,12 @@
 
   #choose-us p{
     font-size: 18px;
+  }
+
+/*Feature Listings*/
+  #feature-listing{
+    padding-top: 3em;
+    background: #E3E5EB;
   }
 
 
