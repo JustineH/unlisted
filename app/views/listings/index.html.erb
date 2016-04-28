@@ -12,6 +12,7 @@
             
 
         <% listing.images.each_with_index do |image, index| %>
+
             <div class=
             <% if index==0 %> "item active" <% else %> "item" <% end %>
             >
@@ -31,7 +32,7 @@
             <span class="sr-only">Next</span>
           </a>
           <div class="listing-box-info">
-            <h4 class="regular property-price">$<%= to_currency(listing.price) %></h4>
+            <h4 class="regular property-price">$<%= link_to to_currency(listing.price), listing %></h4>
             <div class="feature-short-info">
               <p class="address"><%= listing.address %></p>
               <p>
