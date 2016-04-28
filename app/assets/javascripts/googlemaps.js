@@ -67,8 +67,8 @@ var map;  // Google map object
     map.setZoom( zoom ); 
 
     var image = {
-      url: 'https://www.afbostader.se/Views/assets/img/house_marker.png',
-      size: new google.maps.Size(43, 52), 
+      url: '/assets/home_marker_50x50.png',
+      size: new google.maps.Size(50, 50), 
     };
   
     var shape = {

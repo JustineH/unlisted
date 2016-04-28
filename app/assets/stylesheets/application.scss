@@ -255,7 +255,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  // padding: 1rem;
   background-color: #454550;
   height: 280px;
   text-align: center;
@@ -276,6 +276,10 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   line-height: 1.24;
 }
 
+.footer-extra-nav-ul {
+  list-style-type: none;
+}
+
 .footer-extra-nav-ul > li:first-child {
   margin-top: 10%;
 }
@@ -283,7 +287,6 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 .footer-extra-nav-ul > li > a {
   color: #909096;
   font-size: 16px;
-  text-decoration: underline;
   letter-spacing: 2px;
 }
 
@@ -308,13 +311,13 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 }
 
 .footer-hr {
- display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #909096;
-    margin: 0 auto;
-    padding: 0; 
-    width: 40%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #909096;
+  margin: 0 auto;
+  padding: 0; 
+  width: 40%;
 }
 
 .footer-p {
@@ -328,3 +331,8 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
   width: 80%;
   margin: 0 auto;
 }
+
+.footer-grid-pad {
+  padding: 0;
+}
+
