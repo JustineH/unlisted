@@ -9,7 +9,9 @@
       <div class="featureList text-center">
         <div id="carousel-listing-<%= index+1 %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
+
              <div class="item active"><%= image_tag listing.image %></div>      
+
           </div>
           <a class="left carousel-control c-control" href="#carousel-listing-<%= index+1 %>" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
@@ -20,7 +22,7 @@
             <span class="sr-only">Next</span>
           </a>
           <div class="listing-box-info">
-            <h4 class="regular property-price">$<%= to_currency(listing.price) %></h4>
+            <h4 class="regular property-price">$<%= link_to to_currency(listing.price), listing %></h4>
             <div class="feature-short-info">
               <p class="address"><%= listing.address %></p>
               <p>
