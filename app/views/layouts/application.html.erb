@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Unlisted</title>
 
  
@@ -10,18 +11,34 @@
 <script src="
 https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2AwGXCoSJMTHk520P9orETcdmJQdr-l0&callback=initMap"
+<<<<<<< HEAD
    55      async defer></script>
+=======
+  55      async defer></script>
+>>>>>>> 021dff9f34c1c1c303f38dae9b6b8422ea17e0ea
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
   <%= csrf_meta_tags %>
-  <meta charset="utf-8">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
 
+  <%= stylesheet_link_tag    'application', params[:controller], media: 'all', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <%= javascript_include_tag 'application', params[:controller] %>  
+  <script src="
+  https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2AwGXCoSJMTHk520P9orETcdmJQdr-l0&callback=initMap"
+  55      async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  
+
+  
+  <title>Unlisted</title>
 
 
 </head>

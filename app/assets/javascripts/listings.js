@@ -35,6 +35,11 @@ $(function(){
       $('.listing').toggleClass("listing-collapse");
       // $('.listing').toggleClass("listing-collapse");
   });
+  
+  $('#upload_photos_basic').imagesLoaded ->
+  $('#upload_photos_basic').masonry
+    itemSelector: '.upload_photos_box'
+    isFitWidth: true
 
   
 });

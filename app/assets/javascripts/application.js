@@ -17,6 +17,8 @@
 //= require dropzone
 //= require ./form-wizard
 //= require ./googlemaps
+//= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
 
 
 // require_tree .
@@ -58,7 +60,6 @@ Dropzone.options.listingImages = {
   maxFilesize: 2 // MB
   
 };
-
 
 $(function(){
 
@@ -115,3 +116,4 @@ $('.carousel').carousel({
 
 
 });
+
