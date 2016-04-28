@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
   resources :images
   resources :vendors
+  resources :charts
 
 end

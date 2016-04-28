@@ -4,14 +4,13 @@
 <img id="nav-logo" src="/assets/unlisted-logo.png" />
   <div class="navbar-collapse collapse navbar-right">
     <ul class="nav navbar-nav">
-
-
       <li class="hvr-underline-reveal"><a href="/">Home</a></li>
       <li class="hvr-underline-reveal"><a href="#choose-us">Why us?</a></li>
       <li class="hvr-underline-reveal"><a href="#feature-listing">Featured Listings</a></li>
+      <li class ="hvr-underline-reveal"><%= link_to "Housing Analytics", charts_path %>
+      <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %>
 
       <li class ="hvr-underline-reveal"><a href="#" id="bookmark-btn">Bookmarks</a></li>
-
       <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %>
      <% if user_signed_in? %>
         <li class ="hvr-underline-reveal"><%= link_to "New Listing", new_listing_path %></li>
@@ -23,9 +22,6 @@
       <% if user_signed_in? %>
       <li class="hvr-underline-reveal"><a><%= User.find(current_user.id).firstname %></a></li>
       <% end %>
-   
-
- 
     </ul>
   </div>
 </section>
