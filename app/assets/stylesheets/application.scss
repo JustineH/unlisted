@@ -25,29 +25,7 @@ body {
   padding-top: 50px;
 }
 
-/*Anchor*/
-.anchor:before { 
-  display: block; 
-  content: " "; 
-    height: 50px;      /* Give height of your fixed element */
-        margin-top: -50px; /* Give negative margin of your fixed element */    
-        visibility: hidden; 
-}
-/* Scrolling
 
-a[ id= "welcome-carousel" ]:target ~ .carousel div.section1 {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
-}
-
-a[ id= "choose-us" ]:target ~ section.anchor {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
-}
-a[ id= "feature-listing" ]:target ~ section.feature-listing {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
-} */
 
 
 /*nav bar*/
