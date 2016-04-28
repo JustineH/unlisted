@@ -126,7 +126,7 @@
 /*section global*/
   .heading{
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
   }
 
@@ -140,6 +140,8 @@
 /*choose us*/
   #choose-us{
     text-align: center;
+    position: relative;
+    top: -100px;
     padding: 0em 8em 10em 8em;
   }
 
