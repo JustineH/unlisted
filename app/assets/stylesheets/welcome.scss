@@ -31,6 +31,14 @@
       transform: translateY( -1000px );
   } */
 
+
+  /*Nav Specific to Welcome*/
+   .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
+  }
+
   /*carousel*/
 
   .carousel-fade {

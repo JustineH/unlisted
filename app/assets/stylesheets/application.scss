@@ -60,7 +60,7 @@ body {
   }
 
   .navbar-nav > li > a {
-    color: #fff;
+    color: #000;
     padding-top:20px; 
     padding-bottom:10px;
   }
@@ -133,6 +133,7 @@ body {
     display: inline-block;
     padding: 0;
     margin: 0;
+    margin-bottom: 10%;
   }
 
 
@@ -158,9 +159,7 @@ body {
 
 /*Listing Box*/
 
-
-  .listing{
-
+ .listing{
     margin-top: 5%;
     margin-left: 10%;
     transition: all 0.4s ease 0s;
@@ -265,7 +264,7 @@ body {
   background-color: #454550;
   height: 280px;
   text-align: center;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
 }
 
 .footer-nav-ul > li {
