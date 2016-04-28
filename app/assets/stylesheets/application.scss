@@ -50,6 +50,14 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
 
 /*nav bar*/
 
+
+  #nav-logo{
+    margin-left: 2em;
+    /*width: 140px;*/
+    width:300px;
+
+  }
+
   .overlay { 
     position: absolute;
     z-index:2;
@@ -61,6 +69,7 @@ a[ id= "feature-listing" ]:target ~ section.feature-listing {
     background:#fff;
     background: transparent;
     font-weight: 200;
+    font-size: 18px;
     width:100%;
     padding-right: 1.5em;
     transition: all 0.3s cubic-bezier(0.300, 0.100, 0.580, 1.000);
