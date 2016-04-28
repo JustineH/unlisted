@@ -9,18 +9,8 @@
       <div class="featureList text-center">
         <div id="carousel-listing-<%= index+1 %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            
 
-        <% listing.images.each_with_index do |image, index| %>
-
-            <div class=
-            <% if index==0 %> "item active" <% else %> "item" <% end %>
-            >
-              <%= image_tag image.image.url(:large), alt: image.image.url(:thumb) %>
-            </div>
-          <% end %>
-
-
+             <div class="item active"><%= image_tag listing.image %></div>      
 
           </div>
           <a class="left carousel-control c-control" href="#carousel-listing-<%= index+1 %>" role="button" data-slide="prev">
@@ -38,7 +28,7 @@
               <p>
                 <span class="bedroom"><%= listing.bedrooms %> Bedrooms</span>
                 <span class="bathroom"><%= listing.bathrooms %> Bathrooms</span>
-                <span class="size"><%= to_currency(listing.size) %> sqr/ft</span>
+                <span class="size"><%= to_currency(listing.size) %> sq ft</span>
                 <%= link_to '<i class="fa fa-bookmark-o" aria-hidden="true"></i>'.html_safe,listing_add_bookmark_path(:listing_id=>listing.id), 'data-method' => 'post', 'data-remote' => 'true', 'data-type' => 'json', 'class' => 'bookmark' %>
               </p>
             </div>
