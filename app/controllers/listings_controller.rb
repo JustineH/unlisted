@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
     if params[:query]
       @listings = Listing.search(params[:query] + "*", misspellings: {edit_distance: false}, where: params[:query_options].deep_symbolize_keys)
     else
-      @listings = Listing.page(params[:page]).per(12)
+      @listings = Listing.page(params[:page]).per(12).order(created_at: :desc)
     end
 
     if @listings.empty?
@@ -19,12 +19,10 @@ class ListingsController < ApplicationController
   end
 
   def add_bookmark
-
     @bookmark = Bookmark.new user_id: current_user.id, listing_id: params[:listing_id]
     if @bookmark.save
       render json: @bookmark.as_json(include: :listing)
     end
-   
   end
 
   def del_bookmark
