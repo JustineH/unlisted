@@ -3,7 +3,7 @@
       <%= form_for @listing do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+      <h2>You done goofed</h2>
 
       <ul>
       <% @listing.errors.full_messages.each do |msg| %>
@@ -124,7 +124,7 @@
                 Examples of type ownership include: Freehold Strata, Freehold NonStrata, Leasehold Prepaid-Strata.
               </div>
         </div>
-        <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="col-md-8 col-sm-12 col-xs-12" id="detail-label-wrap">
           <div class="col-md-4 col-sm-4 col-xs-12 min-padding">
 
             <%= f.label :levels, "LEVEL", class: "details-label-lg" %><br><%= f.text_field :levels, class: "details-input-sm" %>

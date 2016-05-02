@@ -1,9 +1,15 @@
 class Listing < ActiveRecord::Base
+
   searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."], ["street", "st", "st."], ["east", "e"], ["west", "w"]]
 
   belongs_to :user
   belongs_to :neighbourhood
   has_many :images
+
+  validates :address, presence: true
+  validates :price, presence: true, numericality: true
+  validates :year_built, numericality: true
+  validates :postal_code, presence: true, :postcode_format => {:country_code => :ca, :message => "is invalid."}
 
   def search_data
     {
@@ -17,13 +23,12 @@ class Listing < ActiveRecord::Base
   end
 
 
-  # validates :address, presence: true, length: { minimum: 10}
+
   # validates :unit_number, numericality: true
   # validates :street_number, presence: true, numericality: true
   # validates :street_name, presence: true, length: {minimum: 5}
   # # validates :city
   # validates :postal_code, presence: true, :postcode_format => {:country_code => :ca, :message => "Please enter a valid postal code"}
-  # validates :price, presence: true, numericality: true
   # validates :bedrooms, presence: true, numericality: true
   # validates :bathrooms, presence: true, numericality: true
   # validates :size, presence: true, numericality: true
