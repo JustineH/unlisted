@@ -1,56 +1,44 @@
+<%= render 'layouts/header' %>
 <div class="login-page">
   <div class="form-signin">
+
     <div class="panel-heading">
       <h1>Sign up</h1>
     </div>
-
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
       <div class="form-group">
-        <label>
-          <span>First Name</span>
-            <%= f.text_field :firstname, autofocus: true %>
-        </label>
+            <%= f.text_field :firstname, placeholder: "First Name", autofocus: true %>
+        
       </div>
       <div class="form-group">
-        <label>
-          <span>Last Name</span>
-            <%= f.text_field :lastname, autofocus: true %>
-        </label>
+            <%= f.text_field :lastname, placeholder: "Last Name", autofocus: true %>
+        
       </div>
       <div class="form-group">
-        <label>
-          <span>Email</span>
-            <%= f.email_field :email, autofocus: true %>
-        </label>
+            <%= f.email_field :email, placeholder: "Email Address",  autofocus: true %>
+        
       </div>
 
       <div class="form-group">
-        <label>
-          <span>Password</span>
             <% if @validatable %>
             <% end %>
-            <%= f.password_field :password, autocomplete: "off" %>
+            <%= f.password_field :password, placeholder: "Password",autocomplete: "off" %>
  <!--            <br><em>(<%= @minimum_password_length %> characters minimum: must include letters &number)</em> -->
-        </label>
       </div>
       <div class="form-group">
-        <label>
-          <span>Confirm Password</span>
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        </label>
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password",autocomplete: "off" %>
       </div>
 
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
-  </div>
 
-  <div class="panel-footer">
     <%= render "devise/shared/links" %>
   </div>
+
 
 </div>
