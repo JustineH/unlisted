@@ -7,6 +7,7 @@ class Listing < ActiveRecord::Base
   has_many :images
 
   validates :address, presence: true
+  validates_uniqueness_of :address
   validates :price, presence: true, numericality: true
   validates :year_built, numericality: true
   validates :postal_code, presence: true, :postcode_format => {:country_code => :ca, :message => "is invalid."}
@@ -28,6 +29,8 @@ class Listing < ActiveRecord::Base
       home_type: home_type
     }
   end
+
+
  
 end
 

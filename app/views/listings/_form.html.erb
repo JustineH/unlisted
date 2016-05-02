@@ -1,9 +1,10 @@
 <div class="form-container">
     <!-- <div id="load"> -->
+    
       <%= form_for @listing do |f| %>
   <% if @listing.errors.any? %>
     <div class="alert alert-danger" id="alert-wrap">
-      <h2 class="alert-head">Please complete all required fields</h2>
+      <h2 class="alert-head">Please complete all required fields:</h2>
 
       <ul>
       <% @listing.errors.full_messages.each do |msg| %>
@@ -217,13 +218,7 @@
                 </div>
           </div> <!-- end row -->
           </div> <!-- amenities wrap -->
-          <br>
-          <br>
       </div> <!-- amenities-page -->
-
-
-
-
 
 
         <!-- ######## PHOTOS ######### -->
