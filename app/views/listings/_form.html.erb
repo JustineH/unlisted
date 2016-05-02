@@ -2,8 +2,8 @@
     <!-- <div id="load"> -->
       <%= form_for @listing do |f| %>
   <% if @listing.errors.any? %>
-    <div id="error_explanation">
-      <h2>You done goofed</h2>
+    <div class="alert alert-danger" id="alert-wrap">
+      <h2 class="alert-head">Please complete all required fields</h2>
 
       <ul>
       <% @listing.errors.full_messages.each do |msg| %>
@@ -39,7 +39,7 @@
 
          <div class="col-md-4 col-sm-4 col-xs-12"><div class="bed-bath-half-wrap3">
              <%= f.label :half_bathrooms, "HALF BATH"%><br>
-            <%= f.select :half_bathrooms, (1..10).to_a%>
+            <%= f.select :half_bathrooms, (0..10).to_a%>
             </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
             </div>
 
             <div class="form-row">
-              <%= f.label :size, class: "details-label-lg" %><br><%= f.text_field :size, class: "details-input-lg" %>
+              <%= f.label :size, "SIZE", class: "details-label-lg" %><br><%= f.text_field :size, class: "details-input-lg" %>
             </div>
 
         </div>
