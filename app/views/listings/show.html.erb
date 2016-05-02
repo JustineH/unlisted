@@ -10,7 +10,7 @@
 
 <div class="col-md-6 col-sm-6 col-xs-12"> <!-- address -->
   <div id="address-show-box"> <!-- address-show-box -->
-     <p> <span id="address"><%= @listing.address.titleize %>- Vancouver</span></p>
+     <p> <span id="address"><%= @listing.address.titleize %>, Vancouver</span></p>
   </div> <!-- end-address-show-box -->
 </div> <!-- address end -->
 
@@ -22,7 +22,6 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12"> <!-- picture/carasel -->
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
-    <div class="shadow-layer"></div>
     <div class="carousel-inner">
       <div class="item active">
         <%= image_tag "welcome_bg1_1900_700.png" %>
@@ -34,6 +33,8 @@
         <%= image_tag "welcome_bg3_1900_700.png" %>
       </div>
     </div>
+
+    
 </section>
 
 </div> <!-- picture/carasel end -->
