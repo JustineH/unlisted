@@ -190,10 +190,12 @@
 
 /*choose us*/
   #choose-us{
-    height: 100vh;
+    /*height: 100vh;*/
+    height: 400px;
     text-align: center;
     position: relative;
-    top: 300px;
+    /*top: 300px;*/
+    top:-80px;
     padding: 0em 8em 10em 8em;
   }
 
@@ -209,7 +211,7 @@
 /*Feature Listings*/
   #feature-listing{
     height: 100vh;
-    padding-top: 3em;
+    padding-top: 10%;
     background: #E3E5EB;
   }
 
