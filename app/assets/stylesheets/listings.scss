@@ -577,10 +577,17 @@ footer {
 }
 
 .details-input-sm {
-  width: 100%;
+  width: 100px;
   height: 40px;
   padding-left: 10px;
   margin-right: 10px;
+}
+
+#details-select-wrap select{
+  -webkit-appearance: menulist-button;
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
 }
 
 .min-padding {
