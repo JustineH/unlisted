@@ -6,6 +6,39 @@
 
   
 
+
+  /*Anchor Fix Position*/
+/*   .anchor:before { 
+  display: block; 
+  content: " "; 
+  height: 50px;      Give height of your fixed element
+  margin-top: -50px; Give negative margin of your fixed element    
+  visibility: hidden; 
+} */
+  /* Scrolling
+
+  a[ id= "welcome-carousel" ]:target ~ .carousel div.section1 {
+      -webkit-transform: translateY( 0px);
+      transform: translateY( 0px );
+  }
+
+  a[ id= "choose-us" ]:target ~ section.anchor {
+      -webkit-transform: translateY( -500px );
+      transform: translateY( -500px );
+  }
+  a[ id= "feature-listing" ]:target ~ section.feature-listing {
+      -webkit-transform: translateY( -1000px );
+      transform: translateY( -1000px );
+  } */
+
+
+  /*Nav Specific to Welcome*/
+   .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
+  }
+
   /*carousel*/
 
   .carousel-fade {
@@ -73,14 +106,14 @@
     font-weight: 200;
     padding-bottom: .5em;
     position: relative;
-    top: -700px;
+    top: -750px;
     z-index: 9;
   }
 
   .search{
     /*top: 150px;*/
     position: relative;
-    top: -700px;
+    top: -750px;
     width: 100%;
   }
 
@@ -140,9 +173,10 @@
 
 /*choose us*/
   #choose-us{
+    height: 100vh;
     text-align: center;
     position: relative;
-    top: -100px;
+    top: 300px;
     padding: 0em 8em 10em 8em;
   }
 
@@ -153,6 +187,12 @@
 
   #choose-us p{
     font-size: 18px;
+  }
+
+/*Feature Listings*/
+  #feature-listing{
+    padding-top: 3em;
+    background: #E3E5EB;
   }
 
 

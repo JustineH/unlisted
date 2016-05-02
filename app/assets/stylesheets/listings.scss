@@ -12,6 +12,10 @@ html, body{
 }
 
 
+.navbar-nav > li > a {
+    color: #000;
+}
+
 
 
 /*Bookmark Bar*/
@@ -158,7 +162,9 @@ $font_0: sans-serif;
   height: 550px;
   width: 100%;
 }
-
+#map-wrap{
+  margin-bottom: 10%;
+}
 .no-padding {
   padding-right: 0;
 }

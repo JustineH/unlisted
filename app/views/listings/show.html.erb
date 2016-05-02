@@ -10,7 +10,7 @@
 
 <div class="col-md-6 col-sm-6 col-xs-12"> <!-- address -->
   <div id="address-show-box"> <!-- address-show-box -->
-     <p> <span id="address"><%= @listing.address.titleize %>- Vancouver</span></p>
+     <p> <span id="address"><%= @listing.address.titleize %>, Vancouver</span></p>
   </div> <!-- end-address-show-box -->
 </div> <!-- address end -->
 
@@ -22,8 +22,6 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12"> <!-- picture/carasel -->
 <section class="carousel slide carousel-fade anchor" data-ride="carousel">
-  <div id="welcome-carousel">
-    <div class="shadow-layer"></div>
     <div class="carousel-inner">
       <div class="item active">
         <%= image_tag "welcome_bg1_1900_700.png" %>
@@ -35,7 +33,8 @@
         <%= image_tag "welcome_bg3_1900_700.png" %>
       </div>
     </div>
-  </div>
+
+    
 </section>
 
 </div> <!-- picture/carasel end -->
@@ -45,7 +44,7 @@
 
   <div id="property-description-box">
   <div class="contact-wrap">
-    <%= mail_to User.find(current_user.id).email do %>
+    <%= mail_to "chris.m.milbourne@gmail.com" do %>
       <strong>Contact Seller</strong> 
     <% end %>
   </div>
@@ -132,11 +131,11 @@
 </div> <!-- indoor/outdoor features end -->
  
 <br>
-<div class="col-md-12 col-sm-12 col-xs-12"> <!-- map -->
+<div class="col-md-12 col-sm-12 col-xs-12" id="map-wrap"> <!-- map -->
   <div id="map"></div>
 </div> <!-- end map -->
 <br>
 <br>
 
 </div> <!-- end container -->
-  <%= render 'layouts/footer' %>
+  <%#= render 'layouts/footer' %>
