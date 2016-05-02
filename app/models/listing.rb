@@ -16,7 +16,7 @@ class Listing < ActiveRecord::Base
   validates :taxes, numericality: true
   validates :strata_fees, numericality: true
   validates :property_summary, presence: true
-  validates :feature_description, presence: true
+  validates :features_description, presence: true
   
   def search_data
     {
