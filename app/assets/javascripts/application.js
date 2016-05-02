@@ -71,6 +71,12 @@ if ($('#welcome-carousel').length > 0){
                 'color': '#262626',
                 'padding-top': '10px'
             });
+            $('.navbar-nav').css({
+                'position': 'relative',
+                'top': '0px'
+            });
+            
+            $('.nav-logo-lg').addClass("nav-logo");
             console.log("activated");
         }
         else {
@@ -79,6 +85,11 @@ if ($('#welcome-carousel').length > 0){
                 'color': '#fff',
                 'padding-top': '20px'
             });
+            $('.navbar-nav').css({
+                'position': 'relative',
+                'top': '40px'
+            });
+            $('.nav-logo-lg').removeClass("nav-logo");
             console.log("deactivated");
         }
     },false);
