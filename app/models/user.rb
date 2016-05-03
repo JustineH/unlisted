@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
             :uniqueness =>true,
             :format => {:with => /.+@.+\..+/i}
+            
   has_many :listings
   has_many :bookmarks
 
@@ -27,5 +28,6 @@ class User < ActiveRecord::Base
   def move_to(user)
     tasks.update_all(user_id: user.id)
   end
+
 
 end
