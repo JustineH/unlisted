@@ -28,4 +28,5 @@ class User < ActiveRecord::Base
     tasks.update_all(user_id: user.id)
   end
 
+  
 end
