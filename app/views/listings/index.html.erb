@@ -9,20 +9,13 @@
       <div class="featureList text-center">
         <div id="carousel-listing-<%= index+1 %>" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-
-          <!-- <div class="item active"><%#= image_tag listing.image %></div>       -->
-
-
-          <% listing.images.each_with_index do |image, index| %>
+            <% listing.images.each_with_index do |image, index| %>
             <div class=
-            <% if index==0 %> "item active" <% else %> "item" <% end %>
+              <% if index==0 %> "item active" <% else %> "item" <% end %>
             >
-              <%= image_tag image.image.url(:large), alt: image.image.url(:thumb) %>
+             <%= image_tag(image.image.url(:large), alt: image.image.url(:thumb)) %>
             </div>
-          <% end %>
-
-
-
+            <% end %>      
           </div>
           <a class="left carousel-control c-control" href="#carousel-listing-<%= index+1 %>" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>

@@ -61,14 +61,9 @@ def random_property_summary(listing)
 end
 
 def random_images
-  images = ["welcome_bg1_1900_700.png", "welcome_bg2_1900_700.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpeg"]
-  images.sample
+  images = ["welcome_bg1_1900_700.png", "welcome_bg2_1900_700.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpeg"]
+  images.sample(3)
 end
-
-# def random_images
-#   images = ["https://photos.lilypad.ca/4249-hudson-street-vancouver-R2059256-2.jpg?2016-04-19+23%3A23%3A00", "https://photos.lilypad.ca/4249-hudson-street-vancouver-R2059256-3.jpg?2016-04-19+23%3A23%3A00", "https://photos.lilypad.ca/4249-hudson-street-vancouver-R2059256-4.jpg?2016-04-19+23%3A23%3A00", "https://photos.lilypad.ca/4249-hudson-street-vancouver-R2059256-15.jpg?2016-04-19+23%3A23%3A00", "https://photos.lilypad.ca/4249-hudson-street-vancouver-R2059256-19.jpg?2016-04-19+23%3A23%3A00"].to_s
-#   images.sample
-# end
 
 @addresses.length.times do 
   t = Listing.new
@@ -112,9 +107,11 @@ end
   t.pool = Faker::Boolean.boolean(0.1)
   t.pet_friendly = true
   t.wheelchair_accessible = Faker::Boolean.boolean(0.1)
-  t.image = random_images
   t.dryer = Faker::Boolean.boolean(0.6)
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 @condo_addresses.length.times do 
@@ -159,9 +156,11 @@ end
   t.pool = Faker::Boolean.boolean(0.5)
   t.pet_friendly = Faker::Boolean.boolean(0.5)
   t.wheelchair_accessible = Faker::Boolean.boolean(0.4)
-  t.image = random_images
   t.dryer = Faker::Boolean.boolean(0.6)
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 @townhouse_addresses.length.times do 
@@ -206,9 +205,11 @@ end
   t.pool = false
   t.pet_friendly = Faker::Boolean.boolean(0.7)
   t.wheelchair_accessible = Faker::Boolean.boolean(0.4)
-  t.image = random_images
   t.dryer = Faker::Boolean.boolean(0.6)
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 
