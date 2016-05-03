@@ -1,3 +1,41 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-nav-wrap {
+  height: 50px;
+  width: 100%;
+}
+
+.profile-nav{
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #CFD1EA;
+  border-bottom: 1px solid #CFD1EA;
+}
+
+.profile-nav h1{
+  text-align: center;
+  margin-bottom: 10%;
+  letter-spacing: 1px;
+}
+
+#profile-jumbotron {
+  height: 450px;
+  background-image: url('/assets/welcome_bg3_1900_700.png');
+  background-size: cover;
+  margin: 0;
+}
+
+#profile-side-nav-wrap {
+  background-color: #FEFEFE;
+  height: 100vh;
+  border-right: 1px solid #CFD1EA;
+  width: 100%;
+}
+
+// ---------------
+// ---------------
+// profile side nav
+// ---------------
+// ---------------
