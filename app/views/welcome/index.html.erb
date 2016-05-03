@@ -1,4 +1,49 @@
-<%= render 'layouts/header' %>
+
+<!-- Header Home Page Version Begins -->
+<section class="overlay nav navbar">
+
+<img class="nav-logo-lg" src="/assets/unlisted-logo.png" />
+<!-- <img class="nav-logo-lg logo-light" src="/assets/unlisted-logo-light.png" /> -->
+  <div class="navbar-collapse collapse navbar-right">
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li><a href="/">Home</a></li>
+           <li><a href="#choose-us-top">Why us?</a></li>
+           <li><a href="#feature-listing">Featured Listings</a></li>
+         </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Real Estate<span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li class ="hvr-underline-reveal"><%= link_to "Housing Analytics", charts_path %></li>
+          <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %></li>           
+         </ul>
+      </li>
+
+      <li class ="hvr-underline-reveal"><a href="#" id="bookmark-btn">Bookmarks</a></li>
+      
+     <% if user_signed_in? %>
+        <li class ="hvr-underline-reveal"><%= link_to "New Listing", new_listing_path %></li>
+        <li class="hvr-underline-reveal"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+     <% else %>
+        <li class="hvr-underline-reveal"><%= link_to "Log in", new_user_session_path%></a></li>
+        <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li> 
+    <% end %>  
+      <% if user_signed_in? %>
+      <li class="hvr-underline-reveal"><a><%= User.find(current_user.id).firstname %></a></li>
+      <% end %>
+      
+    </ul>
+  </div>
+</section>
+<!-- Header Home Page Version Ends -->
+
+
+
 
 <!-- Carousel Begins-->
 
@@ -73,10 +118,10 @@
               <%= image_tag "listing_images/property1_1.jpg" %>
             </div>
             <div class="item">
-              <%= image_tag "listing_images/property1_2.jpg" %>
+              <%= image_tag "listing_images/property1_1.jpg" %>
             </div>
             <div class="item">
-              <%= image_tag "listing_images/property1_3.jpg" %>
+              <%= image_tag "listing_images/property1_1.jpg" %>
             </div>
           </div>
           <a class="left carousel-control c-control" href="#carousel-listing-1" role="button" data-slide="prev">

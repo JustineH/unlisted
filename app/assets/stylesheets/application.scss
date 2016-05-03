@@ -17,7 +17,6 @@ body {
 }
 
 #content_container{
-  
   padding-top: 50px;
 }
 
@@ -35,11 +34,20 @@ body {
 /*nav bar*/
 
 
-  #nav-logo{
+  .nav-logo-lg {
+    position: relative;
+    margin-left: 2em;
+    width: 260px;
+    top: 20px;
+    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  }
+
+  .nav-logo{
+    position: relative;
     margin-left: 2em;
     width: 140px;
-    /*width:300px;*/
-
+    top: 0px;
+    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
   }
 
   .overlay { 
@@ -421,3 +429,36 @@ body {
   padding: 0;
 }
 
+//login
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form-signin {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form-group {
+  width: 100%;
+  border: 0;
+  font-size: 14px;
+}
+.form-signin input {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-wieght: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}

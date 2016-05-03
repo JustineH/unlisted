@@ -1,2 +1,210 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <!-- nav start -->
+
+
+      <div class="profile-nav-wrap">
+        <section class="overlay nav navbar">
+          <img id="nav-logo" src="/assets/unlisted-logo.png">
+
+          <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class=
+                "dropdown-toggle" data-toggle="dropdown" href="#">Home
+                <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+
+
+                  <li>
+                    <a href="#choose-us-top">Why us?</a>
+                  </li>
+
+
+                  <li>
+                    <a href="#feature-listing">Featured Listings</a>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class=
+                "dropdown-toggle" data-toggle="dropdown" href="#">Real
+                Estate<span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                  <li class="hvr-underline-reveal">
+                  <%= link_to "Housing Analytics", charts_path %>
+                  </li>
+
+
+                  <li class="hvr-underline-reveal">
+                  <%= link_to "Vendors", vendors_path %>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="hvr-underline-reveal">
+                <a href="#" id="bookmark-btn">Bookmarks</a>
+              </li>
+              <%if user_signed_in? %>
+
+              <li class="hvr-underline-reveal">
+              <%= link_to "New Listing", new_listing_path %>
+              </li>
+
+
+              <li class="hvr-underline-reveal">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              </li>
+              <%else %>
+
+              <li class="hvr-underline-reveal">
+              <%= link_to "Log in", new_user_session_path%>
+              </li>
+
+
+              <li class="hvr-underline-reveal">
+              <%= link_to "Sign up", new_user_registration_path%>
+              </li>
+              <%end %><%if user_signed_in? %>
+
+              <li class="hvr-underline-reveal">
+                <a><%= User.find(current_user.id).firstname %></a>
+              </li>
+              <%end %>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--  end profile-nav-wrap -->
+    </div>
+    <!-- nav end -->
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <!-- profile nav start -->
+      <!--   <div class="profile-nav">
+      <h1>Profile</h1>
+    </div> -->
+    </div>
+    <!-- profilenav end -->
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <!-- profile jumbo start -->
+
+
+      <div class="jumbotron" id="profile-jumbotron">
+      </div>
+    </div>
+    <!-- profile jumbo end -->
+
+
+    <div class="col-md-3 col-sm-3 col-xs-12 no-padding-profile">
+      <!-- profile-side-nav -->
+
+
+      <div id="profile-side-nav-wrap">
+        <div id="user-profile-name">
+          <h2><%=User.find(current_user.id).firstname %></h2></div><!-- end user profile name -->
+
+        <div id="profile-nav-home">
+          <a href="/"><i aria-hidden="true" class="fa fa-home fa-2x"></i><br>
+          Home</a>
+        </div>
+        <!-- end profile-nav-home
+ -->
+
+
+        <div id="profile-nav-analytics">
+          <a href="#"><i aria-hidden="true" class="fa fa-area-chart fa-2x"></i><br>
+          Housing Analytics</a>
+        </div>
+        <!-- end house-nav-analytics -->
+
+        <div id="profile-edit-user-side-nav">
+        <a href="<%= edit_user_registration_path %>"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Edit Profile</a>
+        </div>
+      </div>
+      <!-- end profile-side-nav-wrap -->
+    </div>
+    <!--  end profile side nav -->
+
+
+    <div class="col-md-9 col-sm-9 col-xs-12 ">
+      <!-- main profile content -->
+
+
+      <div id="main-content-wrap">
+        <div class="container">
+          <!-- container (for listings) -->
+
+
+          <div class="profile-listing-wrap">
+            <div id="listing-head-div">
+              <h3>Your Listings</h3>
+            </div>
+            <!-- end listing-head-div -->
+
+
+            <div id="profile-user-listing-div">
+              
+              <div id="profile-user-listing-img-wrap">
+                 <div class="featureList text-center">
+        <div id="carousel-listing-2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "listing_images/1.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "listing_images/17.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "listing_images/3.jpg" %>
+            </div>
+          </div>
+          <a class="left carousel-control c-control" href="#carousel-listing-2" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control c-control" href="#carousel-listing-2" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <div class="listing-box-info">
+            <h4 class="regular property-price">$2,456,783</h4>
+            <div class="feature-short-info">
+              <p class="address">123 Georgia St.</p>
+              <p>
+                <span class="bedroom">3 Bedrooms</span>
+                <span class="bathroom">2 Bathrooms</span>
+                <span class="size">2,214 sq ft</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+              </div>
+              
+              <div id="profile-listing-btn-wrap">
+                <a href="#" id="profile-edit-btn">Edit</a>
+                <a href="#" id="profile-delete-btn">Delete</a>
+              </div> <!-- end profile-listing-btn-wrap -->
+            </div>
+            <!-- end profile user listing div -->
+          </div>
+          <!-- end profile-listing-wrap -->
+        </div>
+        <!-- end container (for listings) -->
+      </div>
+    </div>
+    <!-- end main profile content -->
+  </div>
+  <!--  row end -->
