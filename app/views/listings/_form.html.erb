@@ -1,6 +1,7 @@
 <div class="form-container">
     <!-- <div id="load"> -->
-    
+    <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
       <%= form_for @listing do |f| %>
   <% if @listing.errors.any? %>
     <div class="alert alert-danger" id="alert-wrap">
@@ -11,6 +12,8 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+    </div>
+    </div>
     </div>
   <% end %>
 
@@ -218,7 +221,13 @@
                 </div>
           </div> <!-- end row -->
           </div> <!-- amenities wrap -->
+          <br>
+          <br>
       </div> <!-- amenities-page -->
+
+
+
+
 
 
         <!-- ######## PHOTOS ######### -->
