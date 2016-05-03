@@ -397,6 +397,7 @@ footer {
 
 .bed-bath-half-wrap1 select {
   -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-textfield;
   background-color: #fff;
   height: 40px;
   width: 100%;
@@ -404,6 +405,7 @@ footer {
 
 .bed-bath-half-wrap2 select {
   -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-textfield;
   background-color: #fff;
   height: 40px;
   width: 100%;
@@ -411,6 +413,7 @@ footer {
 
 .bed-bath-half-wrap3 select {
   -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-textfield;
   background-color: #fff;
   height: 40px;
   width: 100%;
@@ -431,6 +434,7 @@ footer {
   -webkit-border-radius: 0;
   -webkit-font-smoothing: antialiased;
   -webkit-writing-mode: horizontal-tb;
+  -moz-appearance: menulist-textfield;
   letter-spacing: normal;
   background-color: #fff;
   height: 40px;
@@ -445,6 +449,7 @@ footer {
   -webkit-border-radius: 0;
   -webkit-font-smoothing: antialiased;
   -webkit-writing-mode: horizontal-tb;
+  -moz-appearance: menulist-textfield;
   letter-spacing: normal;
   background-color: #fff;
   height: 40px;
@@ -582,12 +587,14 @@ footer {
 }
   .bed-bath-half-wrap select {
   -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-textfield;
   background-color: #fff;
   height: 50px;
   width: 160px;
 }
 .home-neighbor-wrap select {
   -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-textfield;
   background-color: #fff;
   height: 40px;
   width: 50%;
@@ -604,6 +611,7 @@ footer {
 
 .details-label-lg {
   padding-top: 15px;
+  
 }
 
 .details-input-lg {
