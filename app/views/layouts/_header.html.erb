@@ -5,12 +5,22 @@
   <div class="navbar-collapse collapse navbar-right">
     <ul class="nav navbar-nav">
 
-      <li class="hvr-underline-reveal"><a href="/">Home</a></li>
-      <li class="hvr-underline-reveal"><a href="#choose-us-top">Why us?</a></li>
-      <li class="hvr-underline-reveal"><a href="#feature-listing">Featured Listings</a></li>
-      <li class ="hvr-underline-reveal"><%= link_to "Housing Analytics", charts_path %></li>
-      <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %></li>
+     <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li><a href="/">Home</a></li>
+           <!-- <li><a href="#choose-us-top">Why us?</a></li>
+           <li><a href="#feature-listing">Featured Listings</a></li> -->
+         </ul>
+      </li>
 
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Real Estate<span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li class ="hvr-underline-reveal"><%= link_to "Housing Analytics", charts_path %></li>
+          <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %></li>           
+         </ul>
+      </li>
       <li class ="hvr-underline-reveal"><a href="#" id="bookmark-btn">Bookmarks</a></li>
       
      <% if user_signed_in? %>
@@ -21,8 +31,13 @@
         <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li> 
     <% end %>  
       <% if user_signed_in? %>
-      <li class="hvr-underline-reveal"><a><%= User.find(current_user.id).firstname %></a></li>
-      <% end %>
+      <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false"><%= User.find(current_user.id).firstname %> <span class="caret"></span></a>   
+        <ul class="dropdown-menu">
+          <li><%= link_to "Edit Profile", user_path(current_user.id) %></li>
+         </ul>
+      </li>
+    <% end %>
       
     </ul>
   </div>
