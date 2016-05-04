@@ -9,19 +9,6 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :neighbourhood
   has_many :images
-
-  validates :address, presence: true
-  validates_uniqueness_of :address
-  validates :price, presence: true, numericality: true
-  validates :year_built, numericality: true
-  validates :postal_code, presence: true, :postcode_format => {:country_code => :ca, :message => "is invalid."}
-  validates :size, presence: true, numericality: true
-  validates :lot_size, numericality: true
-  validates :levels, numericality: true
-  validates :taxes, numericality: true
-  validates :strata_fees, numericality: true
-  validates :property_summary, presence: true
-  validates :features_description, presence: true
   
   def search_data
     {

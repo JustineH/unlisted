@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
     end
 
     if @listings.empty?
-      flash[:notice] = "No matching results found for #{params[:query]}. Please modify your search criteria and try searching again."
+      flash[:notice] = "No matching results found for #{params[:query]}. All listings shown."
     end
   end
 
