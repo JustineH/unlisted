@@ -14,7 +14,7 @@
     <br>
     <h4>Housing Units Sold in Vancouver West and East</h4>  
     <h4>March 2015 - March 2016</h4>
-    <canvas id="unitsChart"></canvas>
+    <canvas id="units_chart"></canvas>
   </div>
   <div id="chart_price_sold">
     <br>
@@ -23,16 +23,15 @@
     <br>
     <h4>Average Price of Homes Sold in Vancouver West and East</h4>
     <h4>March 2015 - March 2016</h4>
-    <canvas id="priceChart"></canvas>
+    <canvas id="price_chart"></canvas>
   </div> 
   <br>
   <br>
   <br>
   <br>
   <br>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js"></script>
-  <script>
 
+<script>
   var chart1data = {
     labels: [
       "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March"
@@ -44,8 +43,7 @@
       backgroundColor: "rgba(22, 160, 133, 1)", 
       pointBorderColor: "rgba(22, 160, 133, 1)", 
       borderColor: "rgba(22, 160, 133, 1)",
-      pointStrokeColor: "#454550",
-      // fontColor: "#3a4754",
+      color: "#3a4754",
       // fontSize: 15,
     },
     {
@@ -94,110 +92,104 @@
       yAxes: [{
         ticks: {
           beginAtZero:true,
-          fontColor: "#454550",
-          fontSize: 15,
         }
       }],
-      xAxes: [{
-          ticks: {
-          fontColor: "#454550",
-          fontSize: 15,
-        }
-      }]
+    },
+    legend: {
+      display: true,
+      labels: {
+        fontSize: 13,
+      },
     }
   };
-  var ctx = document.getElementById("unitsChart");
-  var unitsChart = new Chart(ctx,
+  var ctx = document.getElementById("units_chart");
+  var units_chart = new Chart(ctx,
     {
       type: 'line',
       data: chart1data,
       options: chart1options
-    }
-  );
-
+    });
 
   var chart2data = {
     labels: ["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February", "March"],
     datasets: [{
-        label: 'Houses - Van West',
-        fill: false,
-        data: [2447700, 2490600, 2554900, 2599700, 2653200, 2695100, 2743800, 2773000, 2864600, 2885000, 2928800, 3003800, 3072000], 
-        backgroundColor: "rgba(22, 160, 133, 1)", 
-        pointBorderColor: "rgba(22, 160, 133, 1)", 
-        borderColor: "rgba(22, 160, 133, 1)",
+      label: 'Houses - Van West',
+      fill: false,
+      data: [2447700, 2490600, 2554900, 2599700, 2653200, 2695100, 2743800, 2773000, 2864600, 2885000, 2928800, 3003800, 3072000], 
+      backgroundColor: "rgba(22, 160, 133, 1)", 
+      pointBorderColor: "rgba(22, 160, 133, 1)", 
+      borderColor: "rgba(22, 160, 133, 1)",
     },
     {
-        label: 'Townhouses - Van West',
-        fill: false,
-        data: [771400, 783400, 792700, 805500, 809000, 811200, 813900, 830700, 866500, 897400, 892600, 907200, 939000], 
-        backgroundColor: "rgba(241, 196, 15, 1)",
-        pointBorderColor: "rgba(241, 196, 15, 1)", 
-        borderColor: "rgba(241, 196, 15, 1)",
+      label: 'Townhouses - Van West',
+      fill: false,
+      data: [771400, 783400, 792700, 805500, 809000, 811200, 813900, 830700, 866500, 897400, 892600, 907200, 939000], 
+      backgroundColor: "rgba(241, 196, 15, 1)",
+      pointBorderColor: "rgba(241, 196, 15, 1)", 
+      borderColor: "rgba(241, 196, 15, 1)",
     },
     {
-        label: 'Condos - Van West',
-        fill: false,
-        data: [514400, 524000, 525800, 528000, 529900, 542200, 555500, 570600, 586100, 590400, 599200, 624600, 635300], 
-        backgroundColor: "rgba(41, 128, 185, 1)",
-        pointBorderColor: "rgba(41, 128, 185, 1)", 
-        borderColor: "rgba(41, 128, 185, 1)",
+      label: 'Condos - Van West',
+      fill: false,
+      data: [514400, 524000, 525800, 528000, 529900, 542200, 555500, 570600, 586100, 590400, 599200, 624600, 635300], 
+      backgroundColor: "rgba(41, 128, 185, 1)",
+      pointBorderColor: "rgba(41, 128, 185, 1)", 
+      borderColor: "rgba(41, 128, 185, 1)",
     },
     {
-        label: 'Houses - Van East',
-        fill: false,
-        data: [1015200, 1046000, 1070400, 1093900, 1116100, 1136000, 1160900, 1175400, 1208800, 1222900, 1234100, 1265800, 1288400], 
-        backgroundColor: "rgba(243, 156, 18, 1)", 
-        pointBorderColor: "rgba(243, 156, 18, 1)", 
-        borderColor: "rgba(243, 156, 18, 1)",
+      label: 'Houses - Van East',
+      fill: false,
+      data: [1015200, 1046000, 1070400, 1093900, 1116100, 1136000, 1160900, 1175400, 1208800, 1222900, 1234100, 1265800, 1288400], 
+      backgroundColor: "rgba(243, 156, 18, 1)", 
+      pointBorderColor: "rgba(243, 156, 18, 1)", 
+      borderColor: "rgba(243, 156, 18, 1)",
     },
     {
-        label: 'Townhouses - Van East',
-        fill: false,
-        data: [532600, 552700, 560900, 562100, 570900, 566300, 579100, 602700, 626400, 651200, 661200, 683600, 714000], 
-        backgroundColor: "rgba(142, 68, 173, 1)",
-        pointBorderColor: "rgba(142, 68, 173, 1)", 
-        borderColor: "rgba(142, 68, 173, 1)",
+      label: 'Townhouses - Van East',
+      fill: false,
+      data: [532600, 552700, 560900, 562100, 570900, 566300, 579100, 602700, 626400, 651200, 661200, 683600, 714000], 
+      backgroundColor: "rgba(142, 68, 173, 1)",
+      pointBorderColor: "rgba(142, 68, 173, 1)", 
+      borderColor: "rgba(142, 68, 173, 1)",
     },
     {
-        label: 'Condos - Van East',
-        fill: false,
-        data: [316300, 318700, 322300, 330300, 330300, 331400, 338400, 350400, 360900, 364500, 373800, 385300, 390200], 
-        backgroundColor: "rgba(211, 84, 0, 1)",
-        pointBorderColor: "rgba(211, 84, 0, 1)", 
-        borderColor: "rgba(211, 84, 0, 1)",
+      label: 'Condos - Van East',
+      fill: false,
+      data: [316300, 318700, 322300, 330300, 330300, 331400, 338400, 350400, 360900, 364500, 373800, 385300, 390200], 
+      backgroundColor: "rgba(211, 84, 0, 1)",
+      pointBorderColor: "rgba(211, 84, 0, 1)", 
+      borderColor: "rgba(211, 84, 0, 1)",
     }]
   };
 
-    var chart2options = {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero:true,
-            fontColor: "#454550",
-            fontSize: 15,
-            userCallback: function(label) {
-              return '$' + label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            }
+  var chart2options = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero:true,
+          userCallback: function(label) {
+            return '$' + label.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
           }
-        }],
-        xAxes: [{
-          ticks: {
-          fontColor: "#454550",
-          fontSize: 15,
-          }
-        }]
-      }     
-    };
+        }
+      }]
+    },
+    legend: {
+      display: true,
+      labels: {
+        fontSize: 13,
+      },
+    }    
+  };
   
-   var ctx2 = document.getElementById("priceChart");
-   var priceChart = new Chart(ctx2,
-    {
-      type: 'line',
-      data: chart2data,
-      options: chart2options
-    });
+ var ctx2 = document.getElementById("price_chart");
+ var price_chart = new Chart(ctx2,
+  {
+    type: 'line',
+    data: chart2data,
+    options: chart2options
+  });
 
-  </script>
+</script>
 
 </section>
 <%= render 'layouts/footer' %>
