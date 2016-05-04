@@ -1,6 +1,10 @@
 class Listing < ActiveRecord::Base
 
-  searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."], ["street", "st", "st."], ["east", "e"], ["west", "w"]]
+  searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."],\
+   ["street", "str", "st", "st."], ["drive", "dr", "dr."], ["road", "rd", "rd."], ["boulevard", "blvd", "boul"],\
+    ["court", "crt"], ["square", "sqr"], ["crescent", "cres", "crsent"], ["crossing", "xing"], ["alley", "ally"], \
+    ["annex", "anex"], ["lane", "ln"], ["parkway", "pkwy", "pky"], ["place", "pl"], ["terrace", "terr"], \
+    ["valley", "vally", "vlly"], ["way", "wy"], ["east", "e"], ["west", "w"]]
 
   belongs_to :user
   belongs_to :neighbourhood
