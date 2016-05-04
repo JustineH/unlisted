@@ -83,7 +83,7 @@ end
   t.half_bathrooms = Faker::Number.between(0, 2)
   t.fireplaces = Faker::Number.between(0, 1)
   t.taxes = Faker::Number.between(5000, 13500)
-  t.strata_fees = ""
+  t.strata_fees = 0
   t.lot_size = Faker::Number.between(1700, 20000)
   t.walkscore = Faker::Number.between(20, 99)
   t.property_summary = random_property_summary(t)
@@ -157,6 +157,7 @@ end
   t.pet_friendly = Faker::Boolean.boolean(0.5)
   t.wheelchair_accessible = Faker::Boolean.boolean(0.4)
   t.dryer = Faker::Boolean.boolean(0.6)
+
   t.save
   random_images.each do |image|
     t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
