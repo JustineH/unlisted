@@ -210,8 +210,9 @@
 
 /*Feature Listings*/
   #feature-listing{
-    height: 100vh;
-    padding-top: 10%;
+    /*height: 100vh;*/
+    min-height: 1200px;
+    padding-top: 5%;
     background: #E3E5EB;
   }
 
