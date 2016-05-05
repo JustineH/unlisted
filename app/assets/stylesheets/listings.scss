@@ -634,6 +634,12 @@ footer {
   // margin-top: 50%;
 }
 
+#details-select-wrap-left, #details-select-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+
 #details-select-wrap select{
   -webkit-appearance: menulist-button;
   // -moz-appearance: menulist-button;
@@ -653,6 +659,7 @@ footer {
 
 #detail-label-wrap {
   margin-top: -20%;
+  clear: both;
 }
 // AMENITIES
 .amenities-head {
