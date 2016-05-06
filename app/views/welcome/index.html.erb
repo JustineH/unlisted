@@ -2,7 +2,8 @@
 <!-- Header Home Page Version Begins -->
 <section class="overlay nav navbar">
 
-<img class="nav-logo-lg" src="/assets/unlisted-logo.png" />
+<!-- <img class="nav-logo-lg" src="/assets/unlisted-logo.png" /> -->
+<%= image_tag "unlisted-logo.png", class: "nav-logo-lg" %>
 <!-- <img class="nav-logo-lg logo-light" src="/assets/unlisted-logo-light.png" /> -->
   <div class="navbar-collapse collapse navbar-right">
     <ul class="nav navbar-nav">
@@ -24,6 +25,9 @@
          </ul>
       </li>
 
+
+    <li class ="hvr-underline-reveal"><%= link_to "All Listings", listings_path %></li>
+      
     <!--   <li class ="hvr-underline-reveal"><a href="#" id="bookmark-btn">Bookmarks</a></li> -->
       
      <% if user_signed_in? %>
@@ -48,9 +52,6 @@
   </div>
 </section>
 <!-- Header Home Page Version Ends -->
-
-
-
 
 <!-- Carousel Begins-->
 
@@ -144,8 +145,8 @@
             <div class="feature-short-info">
               <p class="address">123 Alberta St.</p>
               <p>
-                <span class="bedroom">2 Bedrooms</span>
-                <span class="bathroom">2 Bathrooms</span>
+                <span class="bedroom">2 Bedrooms |</span>
+                <span class="bathroom">2 Bathrooms |</span>
                 <span class="size">3,214 sq ft</span>
               </p>
             </div>
@@ -181,8 +182,8 @@
             <div class="feature-short-info">
               <p class="address">123 Georgia St.</p>
               <p>
-                <span class="bedroom">3 Bedrooms</span>
-                <span class="bathroom">2 Bathrooms</span>
+                <span class="bedroom">3 Bedrooms |</span>
+                <span class="bathroom">2 Bathrooms |</span>
                 <span class="size">2,214 sq ft</span>
               </p>
             </div>
@@ -218,8 +219,8 @@
             <div class="feature-short-info">
               <p class="address">12 Howe St.</p>
               <p>
-                <span class="bedroom">2 Bedrooms</span>
-                <span class="bathroom">2 Bathrooms</span>
+                <span class="bedroom">2 Bedrooms |</span>
+                <span class="bathroom">2 Bathrooms |</span>
                 <span class="size">2,200 sq ft</span>
               </p>
             </div>
@@ -255,8 +256,8 @@
             <div class="feature-short-info">
               <p class="address">123 Yew St.</p>
               <p>
-                <span class="bedroom">1 Bedrooms</span>
-                <span class="bathroom">1 Bathrooms</span>
+                <span class="bedroom">1 Bedrooms |</span>
+                <span class="bathroom">1 Bathrooms |</span>
                 <span class="size">1,994 sq ft</span>
               </p>
             </div>
@@ -292,8 +293,8 @@
             <div class="feature-short-info">
               <p class="address">1231 Hastings St.</p>
               <p>
-                <span class="bedroom">2 Bedrooms</span>
-                <span class="bathroom">1 Bathrooms</span>
+                <span class="bedroom">2 Bedrooms |</span>
+                <span class="bathroom">1 Bathrooms |</span>
                 <span class="size">2,220 sq ft</span>
               </p>
             </div>
@@ -329,8 +330,8 @@
             <div class="feature-short-info">
               <p class="address">1231 Broadway St.</p>
               <p>
-                <span class="bedroom">2 Bedrooms</span>
-                <span class="bathroom">2 Bathrooms</span>
+                <span class="bedroom">2 Bedrooms |</span>
+                <span class="bathroom">2 Bathrooms |</span>
                 <span class="size">1,910 sq ft</span>
               </p>
             </div>

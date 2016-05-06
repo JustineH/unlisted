@@ -195,7 +195,7 @@
     text-align: center;
     position: relative;
     /*top: 300px;*/
-    top:-80px;
+    top: -100px;
     padding: 0em 8em 10em 8em;
   }
 
@@ -210,8 +210,9 @@
 
 /*Feature Listings*/
   #feature-listing{
-    height: 100vh;
-    padding-top: 10%;
+    /*height: 100vh;*/
+    min-height: 1200px;
+    padding-top: 5%;
     background: #E3E5EB;
   }
 
