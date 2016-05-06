@@ -42,7 +42,7 @@
 
   .navbar-nav{
     position: relative;
-    top: 40px;
+    top: 20px;
   }
 
   .logo-dark-away{
@@ -119,18 +119,18 @@
   #tagline {
     text-align: center; 
     color: #fff;
-    font-size: 60px;
-    font-weight: 200;
+    font-size: 50px;
+    font-weight: 0;
     padding-bottom: .5em;
     position: relative;
-    top: -750px;
+    top: -650px;
     z-index: 9;
   }
 
   .search{
     /*top: 150px;*/
     position: relative;
-    top: -750px;
+    top: -650px;
     width: 100%;
   }
 
@@ -178,7 +178,7 @@
   .heading{
     text-align: center;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .sub-heading{
