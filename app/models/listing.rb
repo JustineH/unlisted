@@ -9,11 +9,7 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :neighbourhood
   has_many :images
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 9d752db13431466508cc185edd5d082031f000d8
   
   def search_data
     {
