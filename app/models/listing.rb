@@ -1,5 +1,7 @@
 class Listing < ActiveRecord::Base
 
+  # include Elasticsearch::Model
+
   searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."],\
    ["street", "str", "st", "st."], ["drive", "dr", "dr."], ["road", "rd", "rd."], ["boulevard", "blvd", "boul"],\
     ["court", "crt"], ["square", "sqr"], ["crescent", "cres", "crsent"], ["crossing", "xing"], ["alley", "ally"], \
