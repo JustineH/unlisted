@@ -9,9 +9,9 @@ class ListingsController < ApplicationController
       @listings = Listing.page(params[:page]).per(12).order(created_at: :desc)
     end
 
-    if @listings.empty?
-      flash[:notice] = "No matching results found for #{params[:query]}. All listings shown."
-    end
+    # if @listings.empty?
+    #   flash[:notice] = "No matching results found for #{params[:query]}. All listings shown."
+    # end
   end
 
   def show
