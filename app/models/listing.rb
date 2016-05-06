@@ -1,5 +1,7 @@
 class Listing < ActiveRecord::Base
 
+  # include Elasticsearch::Model
+
   searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."],\
    ["street", "str", "st", "st."], ["drive", "dr", "dr."], ["road", "rd", "rd."], ["boulevard", "blvd", "boul"],\
     ["court", "crt"], ["square", "sqr"], ["crescent", "cres", "crsent"], ["crossing", "xing"], ["alley", "ally"], \
@@ -9,11 +11,7 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :neighbourhood
   has_many :images
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 9d752db13431466508cc185edd5d082031f000d8
   
   def search_data
     {
