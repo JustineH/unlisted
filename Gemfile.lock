@@ -69,6 +69,7 @@ GEM
       elasticsearch-transport (= 1.0.17)
     elasticsearch-api (1.0.17)
       multi_json
+    elasticsearch-rails (0.1.9)
     elasticsearch-transport (1.0.17)
       faraday
       multi_json
@@ -191,6 +192,7 @@ DEPENDENCIES
   colorize
   devise (~> 3.4.1)
   dropzonejs-rails
+  elasticsearch-rails
   faker (~> 1.6.3)
   jbuilder (~> 2.0)
   jquery-rails

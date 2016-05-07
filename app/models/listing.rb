@@ -1,6 +1,10 @@
+require 'elasticsearch/model'
+
+
 class Listing < ActiveRecord::Base
 
-  # include Elasticsearch::Model
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."],\
    ["street", "str", "st", "st."], ["drive", "dr", "dr."], ["road", "rd", "rd."], ["boulevard", "blvd", "boul"],\
@@ -26,3 +30,5 @@ class Listing < ActiveRecord::Base
 
 end
 
+
+Listing.import

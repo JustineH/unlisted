@@ -47,6 +47,6 @@ gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails', '~> 0.2.0'
 
 
+gem 'elasticsearch-rails'
 gem 'bonsai-elasticsearch-rails'
-
 
