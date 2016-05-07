@@ -2,19 +2,14 @@
 <%= render 'layouts/bookmarkRightBar' %>
 
   <div class="col-md-4 col-sm-12 col-xs-12 col-md-offset-4">
-      <% if @listings.empty? %>
+    <% if @listings.empty? %>
+      <div class="alert alert-danger" role="alert" id="alert-message-search">
+        <h4 class="alert-message-head">No matching results found. All listings shown.</h4>
       <% @listings = Listing.page(params[:page]).per(12).order(created_at: :desc) %>
-    <div class="alert alert-danger" role="alert" id="alert-message">
-    <h3 class="alert-message-head">No matching results found. All listings shown.</h3>
-    </div>
+      </div>
     <% end %>
   </div>
-
-  <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="search_layout">
-      <%= render 'layouts/search' %>
-    </div>
-  </div>
+ <%= render 'layouts/search' %>
 
 
 <!-- Listing Box Begins -->
