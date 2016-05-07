@@ -194,8 +194,10 @@
               </div>
               
               <div id="profile-listing-btn-wrap">
-                <a href="#" id="profile-edit-btn">Edit</a>
-                <a href="#" id="profile-delete-btn">Delete</a>
+                <% current_user.listings.each do |listing| %>
+                 <%= link_to "Edit", edit_listing_path(listing), id: "profile-edit-btn" %>
+                 <%= link_to "Delete", listing_path(listing), id: "profile-delete-btn", method: :delete %>
+                 <% end %>
               </div> <!-- end profile-listing-btn-wrap -->
             </div>
             <!-- end profile user listing div -->
