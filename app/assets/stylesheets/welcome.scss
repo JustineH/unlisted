@@ -135,8 +135,14 @@
     }
 
     #tagline {
-      font-size: 18px;
+      font-size: 35px;
     }
+
+    #query_options_price_gte, #query_options_price_lte, #query_options_bedrooms_gte, #query_options_bathrooms_gte {
+      display: none;
+    }
+
+
   }
 
 /*section global*/
