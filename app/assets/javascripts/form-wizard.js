@@ -4,6 +4,7 @@ $(document).on('click', 'a#to-details', function () {
     $('a#detail-side-click').parent().addClass('side-nav-clicked').siblings().removeClass('side-nav-clicked');
 });
 
+
 $(document).on('click', 'a#back-to-basic', function(){
   $('#details-page').hide();
   $('#basic-page').show();

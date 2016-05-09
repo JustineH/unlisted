@@ -101,8 +101,8 @@
       <!-- profile jumbo start -->
 
 
-      <div class="jumbotron" id="profile-jumbotron">
-      </div>
+    <!--   <div class="jumbotron" id="profile-jumbotron">
+      </div> -->
     </div>
     <!-- profile jumbo end -->
 
@@ -124,7 +124,7 @@
 
 
         <div id="profile-nav-analytics">
-          <a href="#"><i aria-hidden="true" class="fa fa-area-chart fa-2x"></i><br>
+          <a href="/charts"><i aria-hidden="true" class="fa fa-area-chart fa-2x"></i><br>
           Housing Analytics</a>
         </div>
         <!-- end house-nav-analytics -->
@@ -161,13 +161,13 @@
         <div id="carousel-listing-2" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-              <%= image_tag "listing_images/1.jpg" %>
+              <%= image_tag "listing_images/1.jpg", class: 'img-responsive' %>
             </div>
             <div class="item">
-              <%= image_tag "listing_images/17.jpg" %>
+              <%= image_tag "listing_images/17.jpg", class: 'img-responsive' %>
             </div>
             <div class="item">
-              <%= image_tag "listing_images/3.jpg" %>
+              <%= image_tag "listing_images/3.jpg", class: 'img-responsive' %>
             </div>
           </div>
           <a class="left carousel-control c-control" href="#carousel-listing-2" role="button" data-slide="prev">
@@ -194,8 +194,10 @@
               </div>
               
               <div id="profile-listing-btn-wrap">
-                <a href="#" id="profile-edit-btn">Edit</a>
-                <a href="#" id="profile-delete-btn">Delete</a>
+                <% current_user.listings.each do |listing| %>
+                 <%= link_to "Edit", edit_listing_path(listing), id: "profile-edit-btn" %>
+                 <%= link_to "Delete", listing_path(listing), id: "profile-delete-btn", method: :delete %>
+                 <% end %>
               </div> <!-- end profile-listing-btn-wrap -->
             </div>
             <!-- end profile user listing div -->

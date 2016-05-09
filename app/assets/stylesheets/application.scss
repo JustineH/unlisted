@@ -37,7 +37,7 @@ body {
   .nav-logo-lg {
     position: relative;
     margin-left: 2em;
-    width: 260px;
+    width: 160px;
     top: 20px;
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
   }
@@ -45,7 +45,7 @@ body {
   .nav-logo{
     position: relative;
     margin-left: 2em;
-    width: 140px;
+    width: 120px;
     top: 0px;
     transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
   }
@@ -76,6 +76,7 @@ body {
     padding-top:20px; 
     padding-bottom:10px;
   }
+
   .navbar {
     min-height:20px;
   }
@@ -87,14 +88,14 @@ body {
     /*background: rgba(255, 255, 255, 0.95);*/
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-    }
+  }
+  
   /* Nav bar */
 
-  #nav-logo{
+  #nav-logo {
     margin-left: 2em;
     width: 140px;
     /*width:300px;*/
-
   }
 
 .overlay { 
@@ -119,7 +120,7 @@ body {
 }
 
 .navbar-nav > li > a {
-  color: #fff;
+  color: #000;
   padding-top:20px; 
   padding-bottom:10px;
 }
@@ -175,6 +176,29 @@ body {
 .hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+
+.icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 700px){
+  .nav-logo-lg {
+    width: 110px;
+  }
+ .hamburger {
+      display: block;
+      float: right;
+      color: #000;
+      margin-top: 2px;
+    }
+  .footer-nav-ul {
+    margin-bottom: 30px;
+  }
+  #footer-id {
+    height: 300px;
+  }
 }
 
 
@@ -291,13 +315,13 @@ body {
 .property-price{
   position: relative;
   text-align: left;
-  padding-left: .5em;
+  padding-left: 14px;
   padding-right: .5em;
   font-size: 20px;
   width: 120px;
   background: rgba(255, 255, 255, 0.85);
-  /*top: -1.5em;*/
-  top: 1em;
+  top: 21px;
+  left: -14px;
 }
 
 
@@ -353,6 +377,10 @@ body {
   height: 280px;
   text-align: center;
   /*margin-top: 10%;*/
+}
+
+.footer-nav-ul{
+ margin-top: 70px;
 }
 
 .footer-nav-ul > li {
@@ -419,6 +447,11 @@ body {
   letter-spacing: 1px;
   font-size: 14px;
   margin-bottom: 3%;
+}
+.footer-p2 {
+  color: #fff;
+  font-size: 10px;
+  margin-bottom: 2%;
 }
 
 .footer-p-wrap {
