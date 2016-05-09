@@ -174,11 +174,33 @@
 
   }
 
-  // .icon {
-  //   display: none;
-  // }
+@media screen and (max-width: 1100px) {
+  #tagline, .search {
+    top: -500px;
+  }
 
-  @media screen and (max-width: 800px){
+}
+
+@media screen and (max-width: 800px) {
+  #feature-heading {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #tagline {
+    font-size: 40px;
+  }
+
+  #tagline, .search {
+    top: -280px;
+  }
+
+  #query_options_price_gte, #query_options_price_lte, #query_options_bedrooms_gte, #query_options_bathrooms_gte {
+    font-size: 12px;
+  }
+}
+
+  @media screen and (max-width: 750px){
     .hamburger {
       display: block;
       float: right;
@@ -203,6 +225,15 @@
   #choose-us > .heading {
     font-size: 20px;
   }
+
+  .featureList {
+      width: 90%;
+    }
+  
+  .carousel-inner {
+    height: 80%;
+  }
+
   }
   @media screen and (max-width: 500px){
 
