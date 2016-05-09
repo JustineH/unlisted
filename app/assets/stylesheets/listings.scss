@@ -12,6 +12,57 @@ html, body{
 }
 
 
+/*Listings Search*/
+
+.search {
+  top: 150px;
+  margin-bottom: 190px;
+  position: relative;
+  width: 100%;
+}
+
+.col-lg-6 {
+  width: 100%;
+}
+
+.input-group {
+   width: 60%;
+   margin: 0 auto;
+}
+
+.col-centered {
+  margin: 0 auto;
+  float: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.welcome-selection {
+  width: 10%;
+  margin: 0 auto;
+}
+
+
+.selection-menu {
+  width: 59%;
+  margin: 0 auto;
+}
+
+.col-sm-3 {
+  padding-top: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+
+/*Listing Nav*/
 .navbar-nav > li > a {
     color: #000;
 }
@@ -19,102 +70,100 @@ html, body{
 
 
 /*Bookmark Bar*/
-  #bookmark_count{
-  }
+#bookmark_count {
+}
 
-  #bookmark-heading{
-    border-bottom: 1px;
-    padding: 1em 1em 1em 1em;
-    margin: .3em .3em .3em .3em;
-    text-align: center;
-    color: white;
-    font-size: 22px;
-    font-weight: 200;
-    background-color: #bdc3c7;
-  }
-  .bookmark-bar{
-    margin-top: 2.5em;
-    background: white;
-    text-align: left;
-    box-shadow: 0 2px 3px #ccc;
-    width: 350px;
-    height: 90%;
-    position:fixed;
-    overflow-y: auto;
-    z-index: 1000;
-   /* padding: 1em;*/
-    transition: all 0.4s ease 0s;
-    right: 0;
-    transform: translate(510px);
-    /*transform: translate(0);*/
-  }
+#bookmark-heading {
+  border-bottom: 1px;
+  padding: 1em 1em 1em 1em;
+  margin: .3em .3em .3em .3em;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 200;
+  background-color: #bdc3c7;
+}
+.bookmark-bar{
+  margin-top: 2.5em;
+  background: white;
+  text-align: left;
+  box-shadow: 0 2px 3px #ccc;
+  width: 350px;
+  height: 90%;
+  position:fixed;
+  overflow-y: auto;
+  z-index: 1000;
+ /* padding: 1em;*/
+  transition: all 0.4s ease 0s;
+  right: 0;
+  transform: translate(510px);
+  /*transform: translate(0);*/
+}
+
+#no-bookmark-yet{
+  /*position: fixed;*/
+  font-size: 23px;
+  text-align: center;
+  color: white;
+}
+
+.bookmark-bar #bottom-background-box{
+  margin: .4em .4em 10em .4em;
+  background-color: #ecf0f1;
+  height: 100%
+}
+
+
+.bookmark-bar-toggle{
+  transform: translate(0);
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+.user_bookmarks {
+  margin: .4em .4em .4em .4em;
+  padding-top: 2em;
   
-  #no-bookmark-yet{
-    /*position: fixed;*/
-    font-size: 23px;
-    text-align: center;
-    color: white;
-  }
+}
 
-  .bookmark-bar #bottom-background-box{
-    margin: .4em .4em 10em .4em;
-    background-color: #ecf0f1;
-    height: 100%
-  }
+.user_bookmarks li {
+  position: relative;
+  padding-bottom: 5em;
+  font-size: 20px;
 
+}
 
-  .bookmark-bar-toggle{
-    transform: translate(0);
-  }
+.bookmark_item {
+  padding-bottom: 3em;
+}
 
+.user_bookmarks img {
+  width: 120px;
+  float: left;
+  padding-right: 2em;
+  padding-left: 1em;
+}
 
-  ul{
-    list-style-type: none;
-  }
+.user_bookmarks .price {
+  display: inline-block;
+  padding-right: 2em;
+}
 
-  .user_bookmarks {
-    margin: .4em .4em .4em .4em;
-    padding-top: 2em;
-    
-  }
+.user_bookmarks .remove_bookmark {
+  position: relative;
+  right: .3em;
+  float: right;
+  font-size: 25px;
 
-  .user_bookmarks li{
-    position: relative;
-    padding-bottom: 5em;
-    font-size: 20px;
+}
 
-  }
-
-  .bookmark_item {
-    padding-bottom: 3em;
-  }
-
-  .user_bookmarks img{
-    width: 120px;
-    float: left;
-    padding-right: 2em;
-    padding-left: 1em;
-  }
-
-  .user_bookmarks .price{
-    display: inline-block;
-    padding-right: 2em;
-  }
-
-  .user_bookmarks .remove_bookmark{
-    position: relative;
-    right: .3em;
-    float: right;
-    font-size: 25px;
-
-  }
-
-  .user_bookmarks a{
-    text-decoration: none;
-    color: #2c3e50;
-  }
-
-
+.user_bookmarks a {
+  text-decoration: none;
+  color: #2c3e50;
+}
 
 
 //form colors
@@ -138,7 +187,7 @@ $font_0: sans-serif;
 }
 
 
-#feature-search{
+#feature-search {
   padding-top: 10em;
 }
 
@@ -162,14 +211,14 @@ $font_0: sans-serif;
   height: 550px;
   width: 100%;
 }
-#map-wrap{
+#map-wrap {
   margin-bottom: 10%;
 }
 .no-padding {
   padding-right: 0;
 }
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1280px) {
 .side-menu {
   width: 200px;
 }
@@ -193,6 +242,7 @@ $font_0: sans-serif;
     width: 250px;
     // height: 250px;
   }
+
   #map {
     width: 380px;
   }
@@ -211,13 +261,9 @@ $font_0: sans-serif;
   margin-left: 37%;
 }
 
-
 footer {
   margin-top: -4.65%;
 }
-
-
-
 
 // form wizard css
 #amenities-page{
@@ -316,7 +362,6 @@ footer {
   position: relative;
   text-align: center;
   padding-top: 20px;
-
 }
 
 #amenitydiv{
@@ -346,7 +391,6 @@ footer {
 #basicdiv:hover {
   opacity: 0.5;
 }
-
 
 #detaildiv:hover {
   opacity: 0.5;
@@ -474,8 +518,31 @@ footer {
   margin-top: -3%;
 }
 
+.alert-message-head {
+  margin: auto;
+  text-align: center;
+  color: #a94442;
+}
+
 #alert-wrap {
   margin-top: 1.5em;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#alert-message {
+  margin-top: 1.5em;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#alert-message-search {
+  margin-top: 10em;
+  margin-bottom: -80px;
   top:0;
   left:0;
   width:100%;
@@ -731,6 +798,8 @@ footer {
   overflow: hidden;
 }
 
+
+
 @media screen and (max-width: 900px){
 
   .amenities-label {
@@ -781,6 +850,7 @@ footer {
     margin-left: 35px;
   }
 }
+
 @media screen and (max-width: 800px) and (min-width: 700px){
   .form-container {
     width: 100%;
@@ -799,10 +869,9 @@ footer {
     clear: both;
     width: 70%;
     /* margin-right: -10%; */
+  }
 }
 
-
-}
 @media screen and (max-width: 500px){
 
     // sidebar mobile
@@ -1180,4 +1249,12 @@ footer {
 
 .contact-wrap:hover {
   text-decoration: none;
+}
+
+.jumbotron {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding-top: 168px;
+  height: 480px;
+  margin-bottom: -40px;
 }

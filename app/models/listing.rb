@@ -11,8 +11,7 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   belongs_to :neighbourhood
   has_many :images
-
-  
+ 
   def search_data
     {
       address: address,

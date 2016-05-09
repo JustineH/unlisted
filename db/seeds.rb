@@ -61,7 +61,7 @@ def random_property_summary(listing)
 end
 
 def random_images
-  images = ["welcome_bg1_1900_700.png", "welcome_bg2_1900_700.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpeg"]
+  images = ["welcome_bg1_1900_700.png", "welcome_bg2_1900_700.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "14.jpg", "15.jpg", "16.jpg"]
   images.sample(3)
 end
 

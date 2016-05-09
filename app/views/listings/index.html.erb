@@ -1,6 +1,14 @@
 <%= render 'layouts/header' %>
 <%= render 'layouts/bookmarkRightBar' %>
-<%= render 'layouts/search' %>
+
+
+  <% if @listings.empty? %>
+    <div class="jumbotron">
+      <h3 class="alert-message-head">No matching results found. All listings shown.</h3>
+      <% @listings = Listing.page(params[:page]).per(12).order(created_at: :desc) %>
+  <% end %>
+     <%= render 'layouts/search' %>
+    </div>
 
 <!-- Listing Box Begins -->
 <div class="row listing">
