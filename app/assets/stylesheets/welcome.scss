@@ -174,7 +174,18 @@
 
   }
 
+  .icon-hamburger {
+    display: none;
+  }
+
   @media screen and (max-width: 500px){
+
+    .icon-hamburger {
+      display: block;
+      float: right;
+      color: #000;
+      margin-top: 2px;
+    }
     #welcome-carousel {
       height: 500px;
       width: 200%;
