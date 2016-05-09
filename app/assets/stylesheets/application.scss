@@ -178,6 +178,22 @@ body {
   transform: translateY(0);
 }
 
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 700px){
+  .nav-logo-lg {
+    width: 110px;
+  }
+ .hamburger {
+      display: block;
+      float: right;
+      color: #000;
+      margin-top: 2px;
+    }
+}
+
 
 /*Pagination*/
 

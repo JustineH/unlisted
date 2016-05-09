@@ -61,6 +61,11 @@ Dropzone.options.listingImages = {
   
 };
 
+$(document).on('click', '.navbar-bg', function(){
+  console.log('test')
+  $('.collapse').toggle();
+});
+
 $(function(){
 
 if ($('#welcome-carousel').length > 0){
@@ -75,8 +80,8 @@ if ($('#welcome-carousel').length > 0){
                 'position': 'relative',
                 'top': '0px'
             });
-            
             $('.nav-logo-lg').addClass("nav-logo");
+            $('.icon').addClass("hamburger");
             console.log("activated");
         }
         else {
@@ -90,6 +95,7 @@ if ($('#welcome-carousel').length > 0){
                 'top': '40px'
             });
             $('.nav-logo-lg').removeClass("nav-logo");
+            $('.icon').removeClass("hamburger");
             console.log("deactivated");
         }
     },false);
@@ -101,10 +107,12 @@ if ($('#welcome-carousel').length > 0){
                 'color': '#262626',
                 'padding-top': '10px'
             });
+            $('.icon').addClass("hamburger");
             console.log("activated");
         }
         else {
           $('.navbar').removeClass("navbar-bg");
+          $('.icon').removeClass("hamburger");
             $('.navbar-nav > li > a').css({
                 'color': '#262626',
                 'padding-top': '20px'
@@ -124,6 +132,7 @@ $('section.carousel').carousel({
 $('.carousel').carousel({
   interval: false
 });
+
 
 
 });
