@@ -178,6 +178,14 @@ body {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 500px){
+  .nav-logo-lg {
+    width: 110px;
+  }
+
+  
+}
+
 
 /*Pagination*/
 

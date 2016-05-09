@@ -177,18 +177,27 @@
   @media screen and (max-width: 500px){
     #welcome-carousel {
       height: 500px;
-      width: 1230px;
+      width: 200%;
     }
 
     .shadow-layer {
-      height: 500px;
+      display: none;
     }
+
     .vertical-center {
-      // margin-top: 90%;
+      margin-top: 90%;
     }
 
     #tagline {
       font-size: 35px;
+    }
+
+    #query{
+      width: 250px;
+    }
+
+    #query, .input-group-btn > button {
+      margin-top: 40px;
     }
 
     #query_options_price_gte, #query_options_price_lte, #query_options_bedrooms_gte, #query_options_bathrooms_gte {
