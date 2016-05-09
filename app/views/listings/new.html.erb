@@ -1,4 +1,41 @@
 
+<section class="overlay nav navbar">
+
+<img id="nav-logo" src="/assets/unlisted-logo.png" />
+  <div class="navbar-collapse collapse navbar-right">
+    <ul class="nav navbar-nav">
+
+     <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li><a href="/">Home</a></li>
+         </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roll="button"aria-haspopup="true" aria-expanded="false">Real Estate<span class="caret"></span></a>        
+        <ul class="dropdown-menu">
+          <li class ="hvr-underline-reveal"><%= link_to "Housing Analytics", charts_path %></li>
+          <li class ="hvr-underline-reveal"><%= link_to "Vendors", vendors_path %></li>           
+         </ul>
+      </li>
+      
+     <% if user_signed_in? %>
+        <li class ="hvr-underline-reveal"><%= link_to "New Listing", new_listing_path %></li>
+        <li class="hvr-underline-reveal"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+     <% else %>
+        <li class="hvr-underline-reveal"><%= link_to "Log in", new_user_session_path%></a></li>
+        <li class="hvr-underline-reveal"><%= link_to "Sign up", new_user_registration_path%></a></li> 
+    <% end %>  
+      <% if user_signed_in? %>
+      <li class="hvr-underline-reveal"><a><%= User.find(current_user.id).firstname %></a></li>
+      <% end %>
+      
+    </ul>
+  </div>
+</section>
+
+
 <div class="row">
 <div class="col-md-12 col-sm-12 col-xs-12" id="head-top"> <!-- form-head grid -->
   <div class="form-head-left">
@@ -8,18 +45,20 @@
   </div>
   <div class="form-head">
     <h4 class="form-header">Listing Details</h4>
+
   </div>
 </div> <!-- end form-head grid -->
 
 <div class="col-md-3 col-sm-3 col-xs-12"> <!-- sidebar grid -->
   <div class="side-bar">
-   <div id="basicdiv" class="side-nav-clicked"><a  class="side-nav-a" id="basic-side-click" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i><br> Basic </a></div>
-   <div id="detaildiv"><a class="side-nav-a" id="detail-side-click" href="#"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br> Details </a></div>
+   <div id="basicdiv" class="side-nav-clicked"><a  class="side-nav-a" id="basic-side-click" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i><br> Basic Details</a></div>
+   <div id="detaildiv"><a class="side-nav-a" id="detail-side-click" href="#"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br> Property Details </a></div>
    <div id="amenitydiv"><a class="side-nav-a" id="amenity-side-click" href="#"><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i><br> Amenities </a></div>
   
   </div>
 </div> <!-- end sidebar grid -->
-<div class="col-md-8 col-sm-8 col-xs-12"> <!-- form content grid -->
+
+<div class="col-md-9 col-sm-9 col-xs-12"> <!-- form content grid -->
     <%= render 'form' %>
 </div> <!-- end form content grid -->
 

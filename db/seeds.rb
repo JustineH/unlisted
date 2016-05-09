@@ -57,7 +57,12 @@ def random_ownership
 end
 
 def random_property_summary(listing)
-  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type}."
+  "#{listing.bedrooms} bedrooms, #{listing.bathrooms} bathrooms #{listing.home_type.downcase}."
+end
+
+def random_images
+  images = ["welcome_bg1_1900_700.png", "welcome_bg2_1900_700.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpeg"]
+  images.sample(3)
 end
 
 @addresses.length.times do 
@@ -78,7 +83,7 @@ end
   t.half_bathrooms = Faker::Number.between(0, 2)
   t.fireplaces = Faker::Number.between(0, 1)
   t.taxes = Faker::Number.between(5000, 13500)
-  t.strata_fees = ""
+  t.strata_fees = 0
   t.lot_size = Faker::Number.between(1700, 20000)
   t.walkscore = Faker::Number.between(20, 99)
   t.property_summary = random_property_summary(t)
@@ -104,6 +109,9 @@ end
   t.wheelchair_accessible = Faker::Boolean.boolean(0.1)
   t.dryer = Faker::Boolean.boolean(0.6)
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 @condo_addresses.length.times do 
@@ -149,7 +157,11 @@ end
   t.pet_friendly = Faker::Boolean.boolean(0.5)
   t.wheelchair_accessible = Faker::Boolean.boolean(0.4)
   t.dryer = Faker::Boolean.boolean(0.6)
+
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 @townhouse_addresses.length.times do 
@@ -196,6 +208,9 @@ end
   t.wheelchair_accessible = Faker::Boolean.boolean(0.4)
   t.dryer = Faker::Boolean.boolean(0.6)
   t.save
+  random_images.each do |image|
+    t.images.create(image: File.new(Rails.root.join('app', 'assets', 'images', image)))
+  end
 end
 
 

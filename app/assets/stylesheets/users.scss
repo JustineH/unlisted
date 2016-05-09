@@ -1,3 +1,210 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.no-padding-profile{
+  padding: 0;
+  margin: 0;
+}
+
+.profile-nav-wrap {
+  height: 50px;
+  width: 100%;
+}
+
+.profile-nav{
+  height: 60px;
+  width: 100%;
+  border-top: 1px solid #CFD1EA;
+  border-bottom: 1px solid #CFD1EA;
+}
+
+.profile-nav h1{
+  text-align: center;
+  margin-bottom: 10%;
+  letter-spacing: 1px;
+}
+
+#profile-jumbotron {
+  height: 450px;
+  background-image: url('/assets/welcome_bg3_1900_700.png');
+  background-size: cover;
+  margin: 0;
+}
+
+// ---------------
+// ---------------
+// profile side nav
+// ---------------
+// ---------------
+
+#profile-side-nav-wrap {
+  background-color: #ecf0f1;
+  height: 100vh;
+  // border-right: 1px solid #CFD1EA;
+  width: 100%;
+}
+
+#user-profile-name, #profile-nav-home, #profile-nav-analytics, #profile-edit-user-side-nav {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  display: block;
+  padding-top: 8%;
+}
+
+
+#profile-nav-home > a {
+  color: #000;
+}
+
+#profile-nav-analytics > a {
+  color: #000;
+}
+
+#profile-edit-user-side-nav > a {
+  color: #000;
+}
+
+
+// ---------------
+// ---------------
+// Main Content
+// ---------------
+// ---------------
+
+#main-content-wrap {
+  background-color: #FEFEFE;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.profile-listing-wrap {
+  // border: 1px solid #CFD1EA;
+  margin-top: 5%;
+  width: 70%;
+  height: 100%;
+}
+
+#listing-head-div {
+  // border: 1px solid #CFD1EA;
+  text-align: center;
+  background-color: #ECF0F1;
+  height: 60px;
+}
+
+#listing-head-div h3 {
+  padding-top: 18px;
+}
+
+#profile-user-listing-div{
+  // border: 1px solid #CFD1EA;
+  padding: 10px;
+}
+
+#profile-user-listing-img-wrap{
+  height: 180px;
+  width: 450px;
+  margin: 0;
+}
+
+
+
+#profile-edit-btn, #profile-delete-btn {
+  padding: 15px 45px;
+  background-color: #ff5a5f;
+  color: #fff;
+}
+
+#profile-listing-btn-wrap {
+  float: right;
+  margin-top: -8%;
+}
+
+@media screen and (max-width: 750px){
+ 
+  #profile-side-nav-wrap > div {
+    width: inherit;
+    margin: -1%;
+    padding: 10px;
+  }
+
+  #user-profile-name, #profile-nav-home, #profile-nav-analytics, #profile-edit-user-side-nav {
+    display: inline-block;
+
+  }
+
+  #profile-jumbotron{
+    height: 250px;
+  }
+
+  #profile-side-nav-wrap{
+    height: 100%;
+  }
+
+  #profile-side-nav-wrap > div{
+    width: inherit;
+  }
+
+  #main-content-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .profile-listing-wrap {
+    // border: 1px solid #CFD1EA;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+  // #profile-user-listing-img-wrap {
+  //   height: 75px;
+  //   width: 100px;
+  // }
+
+#profile-listing-btn-wrap {
+    margin: 0;
+    float: right;
+    // margin-top: -12%;
+    width: 10%;
+  }
+
+  #carousel-listing-2 {
+    width: 100%;
+    height: 100px;
+  }
+
+  .featureList {
+    width: 80%; 
+  }
+
+  #profile-listing-btn-wrap {
+    float: none;
+    margin-top: 9.9%;
+    margin-left: 60%;
+    width: 90%;
+}
+  
+}
+
+@media screen and (max-width: 500px){
+  #profile-listing-btn-wrap {
+    margin: 0;
+    float: right;
+    margin-top: -12%;
+  }
+
+  #carousel-listing-2 {
+    width: 100%;
+    height: 100px;
+  }
+
+  #profile-listing-btn-wrap {
+    float: none;
+    margin-top: 40%;
+    margin-left: 15%;
+    width: 90%;
+  }
+}
+

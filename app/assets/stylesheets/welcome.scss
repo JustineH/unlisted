@@ -6,12 +6,58 @@
 
   
 
-  /*carousel*/
-.carousel{
 
-  position: relative;
-  top: -50px;
-}
+  /*Anchor Fix Position*/
+/*   .anchor:before { 
+  display: block; 
+  content: " "; 
+  height: 50px;      Give height of your fixed element
+  margin-top: -50px; Give negative margin of your fixed element    
+  visibility: hidden; 
+} */
+  /* Scrolling
+
+  a[ id= "welcome-carousel" ]:target ~ .carousel div.section1 {
+      -webkit-transform: translateY( 0px);
+      transform: translateY( 0px );
+  }
+
+  a[ id= "choose-us" ]:target ~ section.anchor {
+      -webkit-transform: translateY( -500px );
+      transform: translateY( -500px );
+  }
+  a[ id= "feature-listing" ]:target ~ section.feature-listing {
+      -webkit-transform: translateY( -1000px );
+      transform: translateY( -1000px );
+  } */
+
+
+  /*Nav Specific to Welcome*/
+
+ /*   .nav{
+      position: relative;
+      top: 45px;
+
+    }*/
+
+  .navbar-nav{
+    position: relative;
+    top: 10px !important;
+  }
+
+  .logo-dark-away{
+    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+    top: -90px;
+  }
+
+   .navbar-nav > li > a {
+    color: #fff;
+    padding-top:20px; 
+    padding-bottom:10px;
+  }
+
+  /*carousel*/
+
   .carousel-fade {
     .carousel-inner {
       .item {
@@ -45,6 +91,7 @@
   }
 
 
+
   .shadow-layer {
     position: absolute;
     top: 0;
@@ -53,12 +100,12 @@
     width: 100%;
     height: 100%;
     background-color: #f0f0f2;
-    background: -webkit-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
-    background: -webkit-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
-    background: -moz-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
-    background: -ms-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
-    background: -o-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
-    background: linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35),rgba(0,0,0,.15));
+    background: -webkit-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+    background: -ms-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
     background-color: transparent;
   }
 
@@ -70,14 +117,20 @@
 
 
   #tagline {
+    text-align: center; 
     color: #fff;
-    font-size: 60px;
-    font-weight: 100;
+    font-size: 50px;
+    font-weight: 0;
     padding-bottom: .5em;
+    position: relative;
+    top: -650px;
+    z-index: 9;
   }
 
   .search{
-    top: 150px;
+    /*top: 150px;*/
+    position: relative;
+    top: -650px;
     width: 100%;
   }
 
@@ -148,8 +201,8 @@
 /*section global*/
   .heading{
     text-align: center;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 300;
   }
 
   .sub-heading{
@@ -161,7 +214,12 @@
 
 /*choose us*/
   #choose-us{
+    /*height: 100vh;*/
+    height: 400px;
     text-align: center;
+    position: relative;
+    /*top: 300px;*/
+    top: -100px;
     padding: 0em 8em 10em 8em;
   }
 
@@ -172,6 +230,14 @@
 
   #choose-us p{
     font-size: 18px;
+  }
+
+/*Feature Listings*/
+  #feature-listing{
+    /*height: 100vh;*/
+    min-height: 1200px;
+    padding-top: 5%;
+    background: #E3E5EB;
   }
 
 

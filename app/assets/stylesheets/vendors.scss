@@ -6,6 +6,12 @@ $black_7: rgba(0, 0, 0, 0.07);
 $color_dodger_blue_90_approx: rgba(0, 168, 255, 0.9);
 $color_star_dust_approx: #989da0;
 
+
+.navbar-nav > li > a {
+    color: #000;
+}
+
+
 .team {
   margin: 40px 0;
   padding-bottom: 60px;
@@ -21,9 +27,16 @@ $color_star_dust_approx: #989da0;
     width: 100px;
     border: 2px solid #fff;
   }
+
   .title {
     margin: 50px 0;
   }
+
+  .title p {
+    position: relative;
+    bottom: 15px;
+  }
+
   .cover .overlay {
     height: 250px;
     padding-top: 60px;
@@ -34,6 +47,15 @@ $color_star_dust_approx: #989da0;
     opacity: 1;
   }
 }
+
+.row {
+    margin-top: -40px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
 .muted {
   color: $color_star_dust_approx;
   width: 80%;

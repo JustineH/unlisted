@@ -17,6 +17,7 @@
    <div id="detaildiv"><a class="side-nav-a" id="detail-side-click" href="#"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br> Details </a></div>
    <div id="amenitydiv"><a class="side-nav-a" id="amenity-side-click" href="#"><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i><br> Amenities </a></div>
    <div id="photodiv"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br> <%=link_to 'edit photos', listing_basic_path(@listing), class:"side-nav-a" %> </div>
+   <div id="deletediv"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i><br> <%= link_to "Delete", listing_path(@listing),class:"side-nav-a", data: { confirm: "Are you sure?" },  method: :delete %></div>
   </div>
 </div> <!-- end sidebar grid -->
 <div class="col-md-8 col-sm-8 col-xs-12"> <!-- form content grid -->

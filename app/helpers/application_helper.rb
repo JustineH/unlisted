@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def human_boolean(boolean)
-    boolean ? 'Yes' : 'No'
+    boolean ? 'Yes' : ' '
   end
 
   def to_currency(number)

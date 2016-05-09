@@ -14,8 +14,11 @@
   <div id="detaildiv"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br>  <% if @listing.user == current_user %>
     <%= link_to 'Edit Listing', edit_listing_path(@listing), class:"side-nav-a" %> 
   <% end %> </div>
-  <div id="basicdiv"><i class="fa fa-home fa-2x" aria-hidden="true"></i><br> <%= link_to 'Your Listing Page', listing_path(@listing), class:"side-nav-a" %></div>
-  
+  <div id="detaildiv"><a class="side-nav-a" id="detail-side-click" href="#"><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i><br> Details </a></div>
+   <div id="amenitydiv"><a class="side-nav-a" id="amenity-side-click" href="#"><i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i><br> Amenities </a></div>
+   <div id="photodiv"><i class="fa fa-camera fa-2x" aria-hidden="true"></i><br> <%=link_to 'edit photos', listing_basic_path(@listing), class:"side-nav-a" %> </div>
+   <div id="deletediv"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i><br> <%= link_to "Delete", listing_path(@listing),class:"side-nav-a", data: { confirm: "Are you sure?" },  method: :delete %></div>
+  </div>
 
   </div>
 </div> <!-- end sidebar grid -->     
@@ -34,12 +37,23 @@
 <!--end photo uploader-->
 
 <!--photo output-->
+<!-- <div id="upload_photos_basic"> -->
   <% @listing.images.each do |image| %>
-<div class="col-md-4 col-sm-4 col-xs-12">
-    <div class="img-thumbnail">
-      <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
-    <%= link_to "Delete", image, method: :delete %>
+    <div class="upload_photos_box">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <!-- <div class="img-thumbnail"> -->
+          <%= image_tag image.image.url(:medium), alt: image.image.url(:thumb) %>
+          <%= link_to "Delete", image, method: :delete %>
+        <!-- </div> -->
+      </div>
+    </div>
+  <% end %>
+<!-- </div> -->
+
+<!--photo output-->
+<div class="row">
+
+  <div class="col-md-4 col-sm-4 col-xs-12" >
+      <button id="submit-listing" class="btn btn-default"><%= link_to 'Submit Listing', listing_path(@listing)%></button>
     </div>
 </div>
-  <% end %>
-<!--photo output-->

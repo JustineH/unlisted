@@ -5,11 +5,10 @@
 <section class="overlay search">
   <div class="vertical-center">
     <div class="container text-center">
-      <h1 id="tagline">The easiest way to list and buy a home.</h1>
         <div class="col-lg-6 col-md-6 col-xs-6">
           <%= form_tag listings_path, method: :get do %>
             <div class="input-group">
-            <%= text_field_tag :query,nil, class: "form-control", placeholder: "City, Neighbourhood, and/or Address" %>
+            <%= text_field_tag :query,nil, class: "form-control", placeholder: "Enter a neighbourhood/address/type of home (condo, house or townhouse)" %>
               <span class="input-group-btn">
                 <%= button_tag(type: "submit", class: "btn btn-default") do %>
                    <i class="glyphicon glyphicon-search"></i>
@@ -19,12 +18,12 @@
             <div class='row seletion-menu'>
               <div class='col-sm-3'>    
                 <div class='form-group'>
-                  <%= select_tag "query_options[price][gte]", options_for_select([["Min Price", 0], ["$300,000", 300000], ["$400,000", 400000], ["$500,000", 500000], ["$600,000", 600000], ["$700,000", 700000], ["$800,000", 800000], ["$900,000", 900000], ["$1,000,000", 1000000], ["$2,000,000", 2000000], ["Min Price", 0]]), class: "form-control"%>
+                  <%= select_tag "query_options[price][gte]", options_for_select([["Min Price", 0], ["$300,000", 300000], ["$500,000", 500000], ["$700,000", 700000], ["$900,000", 900000], ["$1,000,000", 1000000], ["$2,000,000", 2000000], ["$3,000,000", 3000000], ["$4,000,000", 4000000], ["$5,000,000", 5000000]]), class: "form-control"%>
                 </div>
               </div>
               <div class='col-sm-3'>
                 <div class='form-group'>
-                   <%= select_tag "query_options[price][lte]", options_for_select([["Max Price", 999999999999999999], ["$400,000",400000],["$500,000", 500000], ["$600,000", 600000], ["$700,000", 700000], ["$800,000",800000], ["$900,000", 900000], ["$1,000,000", 1000000], ["$2,000,000", 2000000], ["$3,000,000", 3000000], ["$4,000,000", 4000000], ["$5,000,000", 5000000]]), class: "form-control"%>
+                   <%= select_tag "query_options[price][lte]", options_for_select([["Max Price", 999999999999999999], ["$400,000",400000],["$600,000", 600000], ["$800,000", 800000], ["$1,000,000", 1000000], ["$2,000,000",2000000], ["$3,000,000", 3000000], ["$4,000,000", 4000000], ["$5,000,000", 5000000], ["$6,000,000", 6000000]]), class: "form-control"%>
                 </div>
               </div>
               <div class='col-sm-3'>
