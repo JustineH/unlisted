@@ -15,8 +15,8 @@ html, body{
 /*Listings Search*/
 
 .search {
-  top: 100px;
-  margin-bottom: 130px;
+  top: 150px;
+  margin-bottom: 190px;
   position: relative;
   width: 100%;
 }
@@ -50,7 +50,7 @@ html, body{
 }
 
 
-.seletion-menu {
+.selection-menu {
   width: 59%;
   margin: 0 auto;
 }
@@ -513,6 +513,7 @@ footer {
 .alert-message-head {
   margin: auto;
   text-align: center;
+  color: #a94442;
 }
 
 #alert-wrap {
@@ -532,8 +533,8 @@ footer {
 }
 
 #alert-message-search {
-  margin-top: 8em;
-  margin-bottom: -40px;
+  margin-top: 10em;
+  margin-bottom: -80px;
   top:0;
   left:0;
   width:100%;
@@ -1186,4 +1187,12 @@ footer {
 
 .contact-wrap:hover {
   text-decoration: none;
+}
+
+.jumbotron {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding-top: 168px;
+  height: 480px;
+  margin-bottom: -40px;
 }
