@@ -174,9 +174,9 @@
 
   }
 
-  .icon {
-    display: none;
-  }
+  // .icon {
+  //   display: none;
+  // }
 
   @media screen and (max-width: 800px){
     .hamburger {
@@ -184,6 +184,13 @@
       float: right;
       color: #000;
       margin-top: 2px;
+    }
+    .vertical-center {
+      margin-top: 40%;
+    }
+
+    #query_options_price_gte, #query_options_price_lte, #query_options_bedrooms_gte, #query_options_bathrooms_gte {
+      display: none;
     }
   }
   @media screen and (max-width: 500px){

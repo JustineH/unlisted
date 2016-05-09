@@ -107,10 +107,12 @@ if ($('#welcome-carousel').length > 0){
                 'color': '#262626',
                 'padding-top': '10px'
             });
+            $('.icon').addClass("hamburger");
             console.log("activated");
         }
         else {
           $('.navbar').removeClass("navbar-bg");
+          $('.icon').removeClass("hamburger");
             $('.navbar-nav > li > a').css({
                 'color': '#262626',
                 'padding-top': '20px'
