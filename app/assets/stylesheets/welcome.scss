@@ -121,6 +121,24 @@
 
   }
 
+  @media screen and (max-width: 500px){
+    #welcome-carousel {
+      height: 500px;
+      width: 1230px;
+    }
+
+    .shadow-layer {
+      height: 500px;
+    }
+    .vertical-center {
+      // margin-top: 90%;
+    }
+
+    #tagline {
+      font-size: 18px;
+    }
+  }
+
 /*section global*/
   .heading{
     text-align: center;
