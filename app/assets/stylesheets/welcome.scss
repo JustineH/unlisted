@@ -178,7 +178,7 @@
   //   display: none;
   // }
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 750px){
     .hamburger {
       display: block;
       float: right;
@@ -203,6 +203,15 @@
   #choose-us > .heading {
     font-size: 20px;
   }
+
+  .featureList {
+      width: 90%;
+    }
+  
+  .carousel-inner {
+    height: 80%;
+  }
+  
   }
   @media screen and (max-width: 500px){
 
