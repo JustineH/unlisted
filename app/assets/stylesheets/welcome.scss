@@ -174,18 +174,21 @@
 
   }
 
-  .icon-hamburger {
+  .icon {
     display: none;
   }
 
-  @media screen and (max-width: 500px){
-
-    .icon-hamburger {
+  @media screen and (max-width: 800px){
+    .hamburger {
       display: block;
       float: right;
       color: #000;
       margin-top: 2px;
     }
+  }
+  @media screen and (max-width: 500px){
+
+    
     #welcome-carousel {
       height: 500px;
       width: 200%;
