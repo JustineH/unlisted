@@ -192,6 +192,17 @@
     #query_options_price_gte, #query_options_price_lte, #query_options_bedrooms_gte, #query_options_bathrooms_gte {
       display: none;
     }
+
+    #choose-us {
+    margin-top: -400px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    // padding: 0em 8em 10em 8em;
+}
+  #choose-us > .heading {
+    font-size: 20px;
+  }
   }
   @media screen and (max-width: 500px){
 
