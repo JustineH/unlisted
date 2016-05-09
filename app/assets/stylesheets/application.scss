@@ -182,6 +182,7 @@ body {
   display: none;
 }
 
+
 @media screen and (max-width: 700px){
   .nav-logo-lg {
     width: 110px;
@@ -195,7 +196,9 @@ body {
   .footer-nav-ul {
     margin-bottom: 30px;
   }
-
+  #footer-id {
+    height: 300px;
+  }
 }
 
 
