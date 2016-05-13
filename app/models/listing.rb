@@ -30,4 +30,4 @@ end
 
 
 
-Listing.import # This ensures that new users will be auto-indexed.
+# Listing.import # This ensures that new users will be auto-indexed.
