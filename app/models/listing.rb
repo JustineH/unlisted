@@ -5,6 +5,7 @@ class Listing < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
+
   searchkick synonyms: [["kitsilano", "kits"], ["avenue", "ave", "av", "ave.", "av."],\
    ["street", "str", "st", "st."], ["drive", "dr", "dr."], ["road", "rd", "rd."], ["boulevard", "blvd", "boul"],\
     ["court", "crt"], ["square", "sqr"], ["crescent", "cres", "crsent"], ["crossing", "xing"], ["alley", "ally"], \
@@ -30,4 +31,4 @@ end
 
 
 
-# Listing.import # This ensures that new users will be auto-indexed.
+Listing.import # This ensures that new users will be auto-indexed.
