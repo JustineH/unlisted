@@ -5,4 +5,4 @@
 
 
 
-Elasticsearch::Model.client = Elasticsearch::Client.new url: BONSAI_URL, log: true
+Elasticsearch::Model.client = Elasticsearch::Client.new url: 'BONSAI_URL', log: true
