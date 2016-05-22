@@ -46,6 +46,10 @@ gem 'kaminari'
 gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails', '~> 0.2.0'
 
-# gem 'bonsai-elasticsearch-rails'
+
+
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
 
 
